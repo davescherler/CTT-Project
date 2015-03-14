@@ -1,0 +1,16 @@
+plist for all quotes
+plist for authors
+plist for favorite quotes
+
+Segmented control for “all quotes / Favorite quotes”
+
+Turn Nav Bar into black
+
+Change color of Nav Bar?
+
+Carousel to change the background pictures
+
+Change the keys of the dictionary in the viewController to have them match the keys in the API
+
+think about the loading logic (i.e. when to request the quotes, and/or the author info)
+
