@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CTT1.xcscheme</key>
+		<key>Closer To Truth.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7863D0041AB0E23100C823BE</key>
+		<key>785453381AB489F900B73D72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7863D01C1AB0E23200C823BE</key>
+		<key>785453501AB489F900B73D72</key>
 		<dict>
 			<key>primary</key>
 			<true/>

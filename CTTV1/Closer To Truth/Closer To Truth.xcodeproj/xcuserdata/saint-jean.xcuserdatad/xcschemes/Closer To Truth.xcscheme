@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7863D0041AB0E23100C823BE"
-               BuildableName = "CTT1.app"
-               BlueprintName = "CTT1"
-               ReferencedContainer = "container:CTT1.xcodeproj">
+               BlueprintIdentifier = "785453381AB489F900B73D72"
+               BuildableName = "Closer To Truth.app"
+               BlueprintName = "Closer To Truth"
+               ReferencedContainer = "container:Closer To Truth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7863D01C1AB0E23200C823BE"
-               BuildableName = "CTT1Tests.xctest"
-               BlueprintName = "CTT1Tests"
-               ReferencedContainer = "container:CTT1.xcodeproj">
+               BlueprintIdentifier = "785453501AB489F900B73D72"
+               BuildableName = "Closer To TruthTests.xctest"
+               BlueprintName = "Closer To TruthTests"
+               ReferencedContainer = "container:Closer To Truth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7863D01C1AB0E23200C823BE"
-               BuildableName = "CTT1Tests.xctest"
-               BlueprintName = "CTT1Tests"
-               ReferencedContainer = "container:CTT1.xcodeproj">
+               BlueprintIdentifier = "785453501AB489F900B73D72"
+               BuildableName = "Closer To TruthTests.xctest"
+               BlueprintName = "Closer To TruthTests"
+               ReferencedContainer = "container:Closer To Truth.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7863D0041AB0E23100C823BE"
-            BuildableName = "CTT1.app"
-            BlueprintName = "CTT1"
-            ReferencedContainer = "container:CTT1.xcodeproj">
+            BlueprintIdentifier = "785453381AB489F900B73D72"
+            BuildableName = "Closer To Truth.app"
+            BlueprintName = "Closer To Truth"
+            ReferencedContainer = "container:Closer To Truth.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7863D0041AB0E23100C823BE"
-            BuildableName = "CTT1.app"
-            BlueprintName = "CTT1"
-            ReferencedContainer = "container:CTT1.xcodeproj">
+            BlueprintIdentifier = "785453381AB489F900B73D72"
+            BuildableName = "Closer To Truth.app"
+            BlueprintName = "Closer To Truth"
+            ReferencedContainer = "container:Closer To Truth.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7863D0041AB0E23100C823BE"
-            BuildableName = "CTT1.app"
-            BlueprintName = "CTT1"
-            ReferencedContainer = "container:CTT1.xcodeproj">
+            BlueprintIdentifier = "785453381AB489F900B73D72"
+            BuildableName = "Closer To Truth.app"
+            BlueprintName = "Closer To Truth"
+            ReferencedContainer = "container:Closer To Truth.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
