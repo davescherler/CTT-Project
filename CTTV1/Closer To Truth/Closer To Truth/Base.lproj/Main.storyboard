@@ -97,6 +97,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEO-DM-GNj">
+                                <rect key="frame" x="538" y="550" width="39" height="30"/>
+                                <state key="normal" title="Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showVideoVC:" destination="dEY-Oa-G8K" eventType="touchUpInside" id="H64-S0-uwQ"/>
+                                    <segue destination="wpV-0g-O9p" kind="presentation" id="o70-nR-XXx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,17 +115,21 @@
                             <constraint firstItem="xUM-FD-J77" firstAttribute="leading" secondItem="Rch-1S-Lch" secondAttribute="leadingMargin" id="BMQ-fO-3nI"/>
                             <constraint firstItem="Yk9-qA-ael" firstAttribute="leading" secondItem="Rch-1S-Lch" secondAttribute="leadingMargin" id="D2K-iI-F64"/>
                             <constraint firstItem="kVH-T3-qsa" firstAttribute="leading" secondItem="Rch-1S-Lch" secondAttribute="leadingMargin" id="Ecw-Sc-1VJ"/>
+                            <constraint firstItem="9fY-LN-qVZ" firstAttribute="top" secondItem="XEO-DM-GNj" secondAttribute="bottom" constant="20" id="F6T-a8-fCH"/>
                             <constraint firstItem="K2F-My-zac" firstAttribute="trailing" secondItem="Rch-1S-Lch" secondAttribute="trailingMargin" id="Fg9-gH-ivf"/>
                             <constraint firstItem="xUM-FD-J77" firstAttribute="trailing" secondItem="Rch-1S-Lch" secondAttribute="trailingMargin" id="NN0-Iy-IIn"/>
                             <constraint firstItem="9fY-LN-qVZ" firstAttribute="top" secondItem="Yk9-qA-ael" secondAttribute="bottom" constant="20" id="Oig-0m-Uob"/>
                             <constraint firstItem="K2F-My-zac" firstAttribute="leading" secondItem="Rch-1S-Lch" secondAttribute="leadingMargin" id="UiV-ne-bGX"/>
                             <constraint firstItem="F1r-Bg-eep" firstAttribute="top" secondItem="n3P-bg-CqJ" secondAttribute="bottom" constant="-64" id="XmI-yu-7UC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XEO-DM-GNj" secondAttribute="trailing" constant="7" id="XwH-oF-EnJ"/>
                             <constraint firstItem="xUM-FD-J77" firstAttribute="top" secondItem="n3P-bg-CqJ" secondAttribute="bottom" constant="8" id="Xx8-3L-LXH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F1r-Bg-eep" secondAttribute="trailing" constant="-16" id="Xxu-ou-cVZ"/>
                             <constraint firstItem="kVH-T3-qsa" firstAttribute="trailing" secondItem="Rch-1S-Lch" secondAttribute="trailingMargin" id="aa8-0C-2he"/>
                             <constraint firstItem="F1r-Bg-eep" firstAttribute="leading" secondItem="Rch-1S-Lch" secondAttribute="leadingMargin" constant="-16" id="frf-Lu-pBD"/>
                             <constraint firstItem="9fY-LN-qVZ" firstAttribute="top" secondItem="F1r-Bg-eep" secondAttribute="bottom" id="fuM-DI-YdI"/>
                             <constraint firstItem="kVH-T3-qsa" firstAttribute="top" secondItem="K2F-My-zac" secondAttribute="bottom" constant="35" id="jUu-kn-9k5"/>
+                            <constraint firstAttribute="centerY" secondItem="XEO-DM-GNj" secondAttribute="centerY" constant="-265" id="pyt-Ot-7PX"/>
+                            <constraint firstItem="XEO-DM-GNj" firstAttribute="top" secondItem="kVH-T3-qsa" secondAttribute="bottom" constant="8" id="rqi-Xm-4of"/>
                         </constraints>
                     </view>
                     <connections>
@@ -160,6 +174,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcG-5X-XxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2489" y="356"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="bH4-7P-kZ0">
+            <objects>
+                <viewController storyboardIdentifier="videoVC" id="wpV-0g-O9p" customClass="videoViewController" customModule="Closer_To_Truth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kuh-AH-MnB"/>
+                        <viewControllerLayoutGuide type="bottom" id="cP0-ny-gye"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5rd-qR-2ts">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-te-jlZ">
+                                <rect key="frame" x="252" y="20" width="97" height="30"/>
+                                <state key="normal" title="Dismiss Video">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToQuoteVC:" destination="wpV-0g-O9p" eventType="touchUpInside" id="Nld-yr-y0y"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-QM-FEU">
+                                <rect key="frame" x="21" y="109" width="559" height="381"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jMj-te-jlZ" firstAttribute="top" secondItem="kuh-AH-MnB" secondAttribute="bottom" id="Zys-0z-SiG"/>
+                            <constraint firstAttribute="centerX" secondItem="jMj-te-jlZ" secondAttribute="centerX" constant="-0.5" id="oyd-NC-kgy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="fxK-QM-FEU" id="zp2-78-8Wn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgu-m2-vGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="1086"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bGG-6p-eeZ">

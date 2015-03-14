@@ -17,6 +17,7 @@
 		785453621AB48AFB00B73D72 /* Nasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 785453611AB48AFB00B73D72 /* Nasa.jpg */; };
 		785453641AB48CC400B73D72 /* quoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453631AB48CC400B73D72 /* quoteViewController.swift */; };
 		785453661AB48DB100B73D72 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453651AB48DB100B73D72 /* AuthorViewController.swift */; };
+		78DD0F081AB498CB00EB1244 /* videoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD0F071AB498CB00EB1244 /* videoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		785453611AB48AFB00B73D72 /* Nasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nasa.jpg; sourceTree = "<group>"; };
 		785453631AB48CC400B73D72 /* quoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quoteViewController.swift; sourceTree = "<group>"; };
 		785453651AB48DB100B73D72 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		78DD0F071AB498CB00EB1244 /* videoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				7854533E1AB489F900B73D72 /* AppDelegate.swift */,
 				785453431AB489F900B73D72 /* ViewController.swift */,
 				785453451AB489F900B73D72 /* Main.storyboard */,
+				78DD0F071AB498CB00EB1244 /* videoViewController.swift */,
 				785453651AB48DB100B73D72 /* AuthorViewController.swift */,
 				785453631AB48CC400B73D72 /* quoteViewController.swift */,
 				785453481AB489F900B73D72 /* Images.xcassets */,
@@ -229,6 +232,7 @@
 				785453661AB48DB100B73D72 /* AuthorViewController.swift in Sources */,
 				785453641AB48CC400B73D72 /* quoteViewController.swift in Sources */,
 				785453421AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld in Sources */,
+				78DD0F081AB498CB00EB1244 /* videoViewController.swift in Sources */,
 				7854533F1AB489F900B73D72 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
