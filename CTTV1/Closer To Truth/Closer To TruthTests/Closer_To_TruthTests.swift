@@ -1,15 +1,15 @@
 //
-//  CTT1Tests.swift
-//  CTT1Tests
+//  Closer_To_TruthTests.swift
+//  Closer To TruthTests
 //
-//  Created by Alexis Saint-Jean on 3/11/15.
+//  Created by Alexis Saint-Jean on 3/14/15.
 //  Copyright (c) 2015 Alexis Saint-Jean. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CTT1Tests: XCTestCase {
+class Closer_To_TruthTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

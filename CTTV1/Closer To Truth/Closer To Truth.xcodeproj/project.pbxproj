@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7854533F1AB489F900B73D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854533E1AB489F900B73D72 /* AppDelegate.swift */; };
+		785453421AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 785453401AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld */; };
+		785453441AB489F900B73D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453431AB489F900B73D72 /* ViewController.swift */; };
+		785453471AB489F900B73D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785453451AB489F900B73D72 /* Main.storyboard */; };
+		785453491AB489F900B73D72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785453481AB489F900B73D72 /* Images.xcassets */; };
+		7854534C1AB489F900B73D72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7854534A1AB489F900B73D72 /* LaunchScreen.xib */; };
+		785453581AB489F900B73D72 /* Closer_To_TruthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453571AB489F900B73D72 /* Closer_To_TruthTests.swift */; };
+		785453621AB48AFB00B73D72 /* Nasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 785453611AB48AFB00B73D72 /* Nasa.jpg */; };
+		785453641AB48CC400B73D72 /* quoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453631AB48CC400B73D72 /* quoteViewController.swift */; };
+		785453661AB48DB100B73D72 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453651AB48DB100B73D72 /* AuthorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		785453521AB489F900B73D72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 785453311AB489F900B73D72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 785453381AB489F900B73D72;
+			remoteInfo = "Closer To Truth";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		785453391AB489F900B73D72 /* Closer To Truth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Closer To Truth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7854533D1AB489F900B73D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7854533E1AB489F900B73D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		785453411AB489F900B73D72 /* Closer_To_Truth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Closer_To_Truth.xcdatamodel; sourceTree = "<group>"; };
+		785453431AB489F900B73D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		785453461AB489F900B73D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		785453481AB489F900B73D72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7854534B1AB489F900B73D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		785453511AB489F900B73D72 /* Closer To TruthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Closer To TruthTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		785453561AB489F900B73D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785453571AB489F900B73D72 /* Closer_To_TruthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closer_To_TruthTests.swift; sourceTree = "<group>"; };
+		785453611AB48AFB00B73D72 /* Nasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nasa.jpg; sourceTree = "<group>"; };
+		785453631AB48CC400B73D72 /* quoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quoteViewController.swift; sourceTree = "<group>"; };
+		785453651AB48DB100B73D72 /* AuthorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		785453361AB489F900B73D72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7854534E1AB489F900B73D72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		785453301AB489F900B73D72 = {
+			isa = PBXGroup;
+			children = (
+				7854533B1AB489F900B73D72 /* Closer To Truth */,
+				785453541AB489F900B73D72 /* Closer To TruthTests */,
+				7854533A1AB489F900B73D72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7854533A1AB489F900B73D72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				785453391AB489F900B73D72 /* Closer To Truth.app */,
+				785453511AB489F900B73D72 /* Closer To TruthTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7854533B1AB489F900B73D72 /* Closer To Truth */ = {
+			isa = PBXGroup;
+			children = (
+				7854533E1AB489F900B73D72 /* AppDelegate.swift */,
+				785453431AB489F900B73D72 /* ViewController.swift */,
+				785453451AB489F900B73D72 /* Main.storyboard */,
+				785453651AB48DB100B73D72 /* AuthorViewController.swift */,
+				785453631AB48CC400B73D72 /* quoteViewController.swift */,
+				785453481AB489F900B73D72 /* Images.xcassets */,
+				7854534A1AB489F900B73D72 /* LaunchScreen.xib */,
+				785453401AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld */,
+				7854533C1AB489F900B73D72 /* Supporting Files */,
+			);
+			path = "Closer To Truth";
+			sourceTree = "<group>";
+		};
+		7854533C1AB489F900B73D72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				785453611AB48AFB00B73D72 /* Nasa.jpg */,
+				7854533D1AB489F900B73D72 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		785453541AB489F900B73D72 /* Closer To TruthTests */ = {
+			isa = PBXGroup;
+			children = (
+				785453571AB489F900B73D72 /* Closer_To_TruthTests.swift */,
+				785453551AB489F900B73D72 /* Supporting Files */,
+			);
+			path = "Closer To TruthTests";
+			sourceTree = "<group>";
+		};
+		785453551AB489F900B73D72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				785453561AB489F900B73D72 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		785453381AB489F900B73D72 /* Closer To Truth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7854535B1AB489F900B73D72 /* Build configuration list for PBXNativeTarget "Closer To Truth" */;
+			buildPhases = (
+				785453351AB489F900B73D72 /* Sources */,
+				785453361AB489F900B73D72 /* Frameworks */,
+				785453371AB489F900B73D72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Closer To Truth";
+			productName = "Closer To Truth";
+			productReference = 785453391AB489F900B73D72 /* Closer To Truth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		785453501AB489F900B73D72 /* Closer To TruthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7854535E1AB489F900B73D72 /* Build configuration list for PBXNativeTarget "Closer To TruthTests" */;
+			buildPhases = (
+				7854534D1AB489F900B73D72 /* Sources */,
+				7854534E1AB489F900B73D72 /* Frameworks */,
+				7854534F1AB489F900B73D72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				785453531AB489F900B73D72 /* PBXTargetDependency */,
+			);
+			name = "Closer To TruthTests";
+			productName = "Closer To TruthTests";
+			productReference = 785453511AB489F900B73D72 /* Closer To TruthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		785453311AB489F900B73D72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Alexis Saint-Jean";
+				TargetAttributes = {
+					785453381AB489F900B73D72 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					785453501AB489F900B73D72 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 785453381AB489F900B73D72;
+					};
+				};
+			};
+			buildConfigurationList = 785453341AB489F900B73D72 /* Build configuration list for PBXProject "Closer To Truth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 785453301AB489F900B73D72;
+			productRefGroup = 7854533A1AB489F900B73D72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				785453381AB489F900B73D72 /* Closer To Truth */,
+				785453501AB489F900B73D72 /* Closer To TruthTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		785453371AB489F900B73D72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785453471AB489F900B73D72 /* Main.storyboard in Resources */,
+				7854534C1AB489F900B73D72 /* LaunchScreen.xib in Resources */,
+				785453621AB48AFB00B73D72 /* Nasa.jpg in Resources */,
+				785453491AB489F900B73D72 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7854534F1AB489F900B73D72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		785453351AB489F900B73D72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785453441AB489F900B73D72 /* ViewController.swift in Sources */,
+				785453661AB48DB100B73D72 /* AuthorViewController.swift in Sources */,
+				785453641AB48CC400B73D72 /* quoteViewController.swift in Sources */,
+				785453421AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld in Sources */,
+				7854533F1AB489F900B73D72 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7854534D1AB489F900B73D72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785453581AB489F900B73D72 /* Closer_To_TruthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		785453531AB489F900B73D72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 785453381AB489F900B73D72 /* Closer To Truth */;
+			targetProxy = 785453521AB489F900B73D72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		785453451AB489F900B73D72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				785453461AB489F900B73D72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7854534A1AB489F900B73D72 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7854534B1AB489F900B73D72 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		785453591AB489F900B73D72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7854535A1AB489F900B73D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7854535C1AB489F900B73D72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Closer To Truth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7854535D1AB489F900B73D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Closer To Truth/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7854535F1AB489F900B73D72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Closer To TruthTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Closer To Truth.app/Closer To Truth";
+			};
+			name = Debug;
+		};
+		785453601AB489F900B73D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Closer To TruthTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Closer To Truth.app/Closer To Truth";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		785453341AB489F900B73D72 /* Build configuration list for PBXProject "Closer To Truth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				785453591AB489F900B73D72 /* Debug */,
+				7854535A1AB489F900B73D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7854535B1AB489F900B73D72 /* Build configuration list for PBXNativeTarget "Closer To Truth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7854535C1AB489F900B73D72 /* Debug */,
+				7854535D1AB489F900B73D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7854535E1AB489F900B73D72 /* Build configuration list for PBXNativeTarget "Closer To TruthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7854535F1AB489F900B73D72 /* Debug */,
+				785453601AB489F900B73D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		785453401AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				785453411AB489F900B73D72 /* Closer_To_Truth.xcdatamodel */,
+			);
+			currentVersion = 785453411AB489F900B73D72 /* Closer_To_Truth.xcdatamodel */;
+			path = Closer_To_Truth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 785453311AB489F900B73D72 /* Project object */;
+}
