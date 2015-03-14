@@ -9,8 +9,6 @@
 import UIKit
 
 class videoViewController: ViewController {
-
-    //http:www.closertotruth.com/series/how-did-our-universe-begin
     
     @IBOutlet weak var webView: UIWebView!
     
@@ -20,15 +18,9 @@ class videoViewController: ViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = NSURL(string: "http://www.google.com") {
-            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                println(response)
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.webView.reload()
-                })
-            })
-            task.resume()
+        if let url = NSURL(string: "http:www.closertotruth.com/series/how-did-our-universe-begin") {
+            let request = NSURLRequest(URL: url)
+            self.webView.loadRequest(request)
         }
     }
 

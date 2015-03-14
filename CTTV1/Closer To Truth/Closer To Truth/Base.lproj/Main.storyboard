@@ -76,14 +76,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nasa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="F1r-Bg-eep">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-FD-J77">
-                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUM-FD-J77">
+                                <rect key="frame" x="16" y="72" width="568" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-My-zac">
-                                <rect key="frame" x="16" y="101" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-My-zac">
+                                <rect key="frame" x="16" y="109" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -98,8 +98,8 @@
                                     <segue destination="MCi-ZN-93M" kind="presentation" id="eXj-nC-TpB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVH-T3-qsa">
-                                <rect key="frame" x="16" y="157" width="568" height="385"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVH-T3-qsa">
+                                <rect key="frame" x="16" y="165" width="568" height="377"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMj-te-jlZ">
-                                <rect key="frame" x="252" y="20" width="97" height="30"/>
+                                <rect key="frame" x="487" y="20" width="97" height="30"/>
                                 <state key="normal" title="Dismiss Video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -205,16 +205,32 @@
                                     <action selector="returnToQuoteVC:" destination="wpV-0g-O9p" eventType="touchUpInside" id="Nld-yr-y0y"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-QM-FEU">
-                                <rect key="frame" x="21" y="109" width="559" height="381"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxK-QM-FEU">
+                                <rect key="frame" x="16" y="60" width="568" height="379"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fxK-QM-FEU" firstAttribute="leading" secondItem="5rd-qR-2ts" secondAttribute="leadingMargin" id="5uX-Zu-kbD"/>
+                            <constraint firstItem="fxK-QM-FEU" firstAttribute="trailing" secondItem="5rd-qR-2ts" secondAttribute="trailingMargin" id="CEE-wr-Oi3"/>
+                            <constraint firstItem="cP0-ny-gye" firstAttribute="top" secondItem="fxK-QM-FEU" secondAttribute="bottom" constant="161" id="Gv6-kz-Vmn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jMj-te-jlZ" secondAttribute="trailing" id="RXO-3l-hwj"/>
+                            <constraint firstItem="fxK-QM-FEU" firstAttribute="top" secondItem="jMj-te-jlZ" secondAttribute="bottom" constant="10" id="SL5-dQ-7T1"/>
                             <constraint firstItem="jMj-te-jlZ" firstAttribute="top" secondItem="kuh-AH-MnB" secondAttribute="bottom" id="Zys-0z-SiG"/>
+                            <constraint firstItem="fxK-QM-FEU" firstAttribute="top" secondItem="jMj-te-jlZ" secondAttribute="bottom" constant="10" id="bhL-K7-L8z"/>
+                            <constraint firstItem="fxK-QM-FEU" firstAttribute="leading" secondItem="5rd-qR-2ts" secondAttribute="leadingMargin" id="hx9-XL-2hT"/>
                             <constraint firstAttribute="centerX" secondItem="jMj-te-jlZ" secondAttribute="centerX" constant="-0.5" id="oyd-NC-kgy"/>
+                            <constraint firstItem="jMj-te-jlZ" firstAttribute="leading" secondItem="5rd-qR-2ts" secondAttribute="leadingMargin" constant="471" id="w1h-nW-rdf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bhL-K7-L8z"/>
+                                <exclude reference="hx9-XL-2hT"/>
+                                <exclude reference="oyd-NC-kgy"/>
+                                <exclude reference="w1h-nW-rdf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="webView" destination="fxK-QM-FEU" id="zp2-78-8Wn"/>
