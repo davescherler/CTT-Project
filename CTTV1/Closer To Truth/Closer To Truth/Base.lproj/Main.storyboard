@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXS-Fn-EmZ">
-                                <rect key="frame" x="273" y="20" width="54" height="30"/>
+                                <rect key="frame" x="530" y="20" width="54" height="30"/>
                                 <state key="normal" title="Dismiss">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -172,13 +172,53 @@
                                     <action selector="returnToQuoteVC:" destination="MCi-ZN-93M" eventType="touchUpInside" id="id1-Dm-ztk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IYI-Ih-NoX">
+                                <rect key="frame" x="166" y="75" width="268" height="175"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afl-Rg-CLR">
+                                <rect key="frame" x="16" y="280" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpf-Lf-qOX">
+                                <rect key="frame" x="16" y="326" width="568" height="274"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TAW-fU-wlU" firstAttribute="top" secondItem="IYI-Ih-NoX" secondAttribute="bottom" constant="350" id="73W-wS-YIc"/>
                             <constraint firstAttribute="centerX" secondItem="YXS-Fn-EmZ" secondAttribute="centerX" id="9Tw-ht-KPc"/>
+                            <constraint firstItem="Cpf-Lf-qOX" firstAttribute="top" secondItem="Afl-Rg-CLR" secondAttribute="bottom" constant="25" id="Fla-cM-zeu"/>
+                            <constraint firstItem="Afl-Rg-CLR" firstAttribute="top" secondItem="IYI-Ih-NoX" secondAttribute="bottom" constant="30" id="ZtG-ox-5Fg"/>
+                            <constraint firstItem="IYI-Ih-NoX" firstAttribute="top" secondItem="YXS-Fn-EmZ" secondAttribute="bottom" constant="25" id="a0H-tI-3Lg"/>
+                            <constraint firstItem="TAW-fU-wlU" firstAttribute="top" secondItem="IYI-Ih-NoX" secondAttribute="bottom" constant="350" id="a1Z-jS-7Va"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cpf-Lf-qOX" secondAttribute="trailing" id="edf-pw-MFs"/>
+                            <constraint firstItem="IYI-Ih-NoX" firstAttribute="leading" secondItem="gB0-cb-Otn" secondAttribute="leadingMargin" constant="150" id="gtl-Jt-V0x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YXS-Fn-EmZ" secondAttribute="trailing" id="hqz-PE-NLQ"/>
                             <constraint firstItem="YXS-Fn-EmZ" firstAttribute="top" secondItem="Fu5-Wu-LZW" secondAttribute="bottom" id="ku0-DF-YYg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Afl-Rg-CLR" secondAttribute="trailing" id="mCr-qn-ay6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IYI-Ih-NoX" secondAttribute="trailing" constant="150" id="nSF-Pi-hRk"/>
+                            <constraint firstItem="Cpf-Lf-qOX" firstAttribute="leading" secondItem="gB0-cb-Otn" secondAttribute="leadingMargin" id="qyw-ZK-YEK"/>
+                            <constraint firstItem="Afl-Rg-CLR" firstAttribute="leading" secondItem="gB0-cb-Otn" secondAttribute="leadingMargin" id="rJm-D4-Ism"/>
+                            <constraint firstItem="TAW-fU-wlU" firstAttribute="top" secondItem="Cpf-Lf-qOX" secondAttribute="bottom" id="xcC-AE-q1V"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Tw-ht-KPc"/>
+                                <exclude reference="a1Z-jS-7Va"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="authorBioText" destination="Cpf-Lf-qOX" id="ClT-5L-RP3"/>
+                        <outlet property="authorName" destination="Afl-Rg-CLR" id="Gf2-ek-yvD"/>
+                        <outlet property="authorPicture" destination="IYI-Ih-NoX" id="r8f-r7-PLK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcG-5X-XxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,7 +250,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fxK-QM-FEU" firstAttribute="leading" secondItem="5rd-qR-2ts" secondAttribute="leadingMargin" id="5uX-Zu-kbD"/>
                             <constraint firstItem="fxK-QM-FEU" firstAttribute="trailing" secondItem="5rd-qR-2ts" secondAttribute="trailingMargin" id="CEE-wr-Oi3"/>

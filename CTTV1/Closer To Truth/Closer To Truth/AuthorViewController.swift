@@ -9,6 +9,13 @@
 import UIKit
 
 class AuthorViewController: ViewController {
+    
+    @IBOutlet weak var authorPicture: UIImageView!
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var authorBioText: UITextView!
+    
+    
+    
     @IBAction func returnToQuoteVC(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
