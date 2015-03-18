@@ -18,7 +18,7 @@ class videoViewController: ViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = NSURL(string: "http:www.closertotruth.com/series/how-did-our-universe-begin") {
+        if let url = NSURL(string: "https://www.youtube.com/embed/5ZtRfACbygY") {
             let request = NSURLRequest(URL: url)
             self.webView.loadRequest(request)
         }
