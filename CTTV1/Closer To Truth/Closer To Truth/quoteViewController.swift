@@ -12,6 +12,9 @@ class quoteViewController: ViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet weak var quoteTextField: UITextView!
+    
+    
+    var fakedata = "stingurl"
 
 //    @IBOutlet weak var quoteTextField: UITextView!
 //    @IBOutlet weak var authorLabel: UILabel!
@@ -47,6 +50,7 @@ class quoteViewController: ViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("videoVC") as videoViewController
         self.presentViewController(next, animated: true, completion: nil)
+        self.videoViewController.request = fakedata
     }
 
 }
