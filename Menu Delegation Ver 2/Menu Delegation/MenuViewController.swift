@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol PassingQuote {
+    func showSelectedQuote(ArrayLocation: Int, listOrigin: String)
+}
+
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var delegate: PassingQuote?
 
     @IBOutlet weak var filterStatus: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
@@ -25,8 +31,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.table.reloadData()
         }
     }
-    var allQuotesData = ["All one","All two","All three"]
-    var favQuotesData = ["fav one","fav two", "fave three"]
+    
+    func re_filter() {
+        filter("allQuotes")
+        self.table.reloadData()
+        println("re filtering the quote list on the table")
+    }
+    
+    var allQuotesData = ["Local All one","Local All two","Local All three"]
+    var favQuotesData = ["Local fav one","Local fav two", "Local fave three"]
 
     var dataForCells: [String] = []
     
@@ -38,9 +51,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         println("The dataForCells value after calling filter is: \(dataForCells)")
     }
     
-    func filter(filter: String) {
-        var dataToUse: [String] = []
-        
+    func filter(filter: String) {        
         if filter == "favQuotes" {
             self.dataForCells = self.favQuotesData
         } else {

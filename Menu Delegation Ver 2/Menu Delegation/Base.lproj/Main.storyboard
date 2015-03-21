@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="mainContainerView" destination="IYO-pj-MuR" id="8zV-7e-wcy"/>
                         <outlet property="mainVCLeftConstraint" destination="saM-he-c3S" id="6gE-8H-aB1"/>
+                        <outlet property="quoteTextField" destination="G8a-0E-RT9" id="zeZ-ly-5qN"/>
                         <outlet property="topBarContainerView" destination="znK-XR-UUm" id="Euo-UQ-8gt"/>
                     </connections>
                 </viewController>

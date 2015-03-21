@@ -10,7 +10,7 @@ import UIKit
 import Snap
 import pop
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, PassingQuote {
     
     let menuButton = UIButton()
     let mainImage = UIImage(named: "orange main") as UIImage?
@@ -25,6 +25,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var topBarContainerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var mainVCLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var quoteTextField: UITextView!
+    
+    var midtempData = ["I see God’s hand in everything around us including the whole universe. If it suited His purposes not just to have one planet that could sustain life that would give rise to intelligence, fine. I don't see any reason to be shaken or object to that at all", "The big bang is not a point in space. It’s a moment in time. It’s a moment when the density of the universe was infinite.", "One of the most important things which our minds undertake is to understand other human beings. We’ve become - we’ve evolved to be - what I call ‘natural psychologists’, who are brilliant at mind reading.", "Is it possible that this idea of God is something more than merely a functional idea. Could it be that under this world as we find it, there is some sort of deeper reality.", "It is remarkable that the complexity of our world can be explained in terms of simple physical laws and that these laws, which we can study in a lab, apply in the remotest galaxies.", "I see God’s hand in everything around us including the whole universe. If it suited His purposes not just to have one planet that could sustain life that would give rise to intelligence, fine. I don't see any reason to be shaken or object to that at all"]
+    
+    var favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
+    
+    func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
+        println("the row selected is \(ArrayLocation) and the list containing that quote is \(listOrigin)")
+        self.quoteTextField.text = midtempData[ArrayLocation]
+    }
 
 
     override func viewDidLoad() {
@@ -57,6 +67,12 @@ class MainViewController: UIViewController {
         }
         self.menuLeftConstraint = NSLayoutConstraint(item: self.menu!.view, attribute: .Left, relatedBy: .Equal, toItem: nil, attribute: .Left, multiplier: 1.0, constant: -self.menu!.view.frame.width)
         self.menu!.view.addConstraint(self.menuLeftConstraint!)
+        
+        //Loading the quotes into the menuViewController
+        self.menu?.allQuotesData = self.midtempData
+        self.menu?.favQuotesData = self.favQuotesArray
+        self.menu?.delegate = self
+        self.menu?.re_filter()
     }
     
     func createMenuButton() {
