@@ -1,0 +1,575 @@
+[
+    {
+        "term_id": "78",
+        "term_name": "Arguing God's Existence",
+        "parent_term_id": "17",
+        "term_order": "0"
+    },
+    {
+        "term_id": "71",
+        "term_name": "Concepts of God",
+        "parent_term_id": "16",
+        "term_order": "0"
+    },
+    {
+        "term_id": "25",
+        "term_name": "Cosmic Fundamentals",
+        "parent_term_id": "11",
+        "term_order": "0"
+    },
+    {
+        "term_id": "32",
+        "term_name": "Cosmic Immensity",
+        "parent_term_id": "12",
+        "term_order": "0"
+    },
+    {
+        "term_id": "11",
+        "term_name": "Deep Laws of Nature",
+        "parent_term_id": "1",
+        "term_order": "0"
+    },
+    {
+        "term_id": "61",
+        "term_name": "ESP and New Realities?",
+        "parent_term_id": "8",
+        "term_order": "0"
+    },
+    {
+        "term_id": "37",
+        "term_name": "Fine-Tuning of the Universe?",
+        "parent_term_id": "13",
+        "term_order": "0"
+    },
+    {
+        "term_id": "86",
+        "term_name": "God The Creator?",
+        "parent_term_id": "19",
+        "term_order": "0"
+    },
+    {
+        "term_id": "90",
+        "term_name": "God's Knowledge and Future Events?",
+        "parent_term_id": "20",
+        "term_order": "0"
+    },
+    {
+        "term_id": "82",
+        "term_name": "God's Nature?",
+        "parent_term_id": "18",
+        "term_order": "0"
+    },
+    {
+        "term_id": "5",
+        "term_name": "Mind-Body Problems",
+        "parent_term_id": "2",
+        "term_order": "0"
+    },
+    {
+        "term_id": "55",
+        "term_name": "Mystery of Consciousness",
+        "parent_term_id": "7",
+        "term_order": "0"
+    },
+    {
+        "term_id": "63",
+        "term_name": "Mystery of Free Will",
+        "parent_term_id": "9",
+        "term_order": "0"
+    },
+    {
+        "term_id": "49",
+        "term_name": "Persons and Selves",
+        "parent_term_id": "6",
+        "term_order": "0"
+    },
+    {
+        "term_id": "16",
+        "term_name": "Philosophy of Religion",
+        "parent_term_id": "3",
+        "term_order": "0"
+    },
+    {
+        "term_id": "42",
+        "term_name": "Science vs. Religion?",
+        "parent_term_id": "14",
+        "term_order": "0"
+    },
+    {
+        "term_id": "21",
+        "term_name": "The Mind-Body Problem",
+        "parent_term_id": "5",
+        "term_order": "0"
+    },
+    {
+        "term_id": "47",
+        "term_name": "The Mystery of Existence",
+        "parent_term_id": "15",
+        "term_order": "0"
+    },
+    {
+        "term_id": "72",
+        "term_name": "Alternative Concepts of God",
+        "parent_term_id": "16",
+        "term_order": "1"
+    },
+    {
+        "term_id": "22",
+        "term_name": "Brain Structure and Function",
+        "parent_term_id": "5",
+        "term_order": "1"
+    },
+    {
+        "term_id": "7",
+        "term_name": "Consciousness",
+        "parent_term_id": "2",
+        "term_order": "1"
+    },
+    {
+        "term_id": "57",
+        "term_name": "Consciousness as Emergent",
+        "parent_term_id": "7",
+        "term_order": "1"
+    },
+    {
+        "term_id": "33",
+        "term_name": "Cosmic Beginnings",
+        "parent_term_id": "12",
+        "term_order": "1"
+    },
+    {
+        "term_id": "62",
+        "term_name": "ESP and the Nonphysical?",
+        "parent_term_id": "8",
+        "term_order": "1"
+    },
+    {
+        "term_id": "17",
+        "term_name": "Existence of God",
+        "parent_term_id": "3",
+        "term_order": "1"
+    },
+    {
+        "term_id": "38",
+        "term_name": "Fine-Tuning the Universe for Life & Mind?",
+        "parent_term_id": "13",
+        "term_order": "1"
+    },
+    {
+        "term_id": "83",
+        "term_name": "God's Essence?",
+        "parent_term_id": "18",
+        "term_order": "1"
+    },
+    {
+        "term_id": "87",
+        "term_name": "God's World?",
+        "parent_term_id": "19",
+        "term_order": "1"
+    },
+    {
+        "term_id": "93",
+        "term_name": "Judgment (Heaven, Hell)?",
+        "parent_term_id": "20",
+        "term_order": "1"
+    },
+    {
+        "term_id": "50",
+        "term_name": "Personal Identity",
+        "parent_term_id": "6",
+        "term_order": "1"
+    },
+    {
+        "term_id": "79",
+        "term_name": "Philosophical Arguments For God",
+        "parent_term_id": "17",
+        "term_order": "1"
+    },
+    {
+        "term_id": "64",
+        "term_name": "Philosophy of Free Will",
+        "parent_term_id": "9",
+        "term_order": "1"
+    },
+    {
+        "term_id": "43",
+        "term_name": "Science and God",
+        "parent_term_id": "14",
+        "term_order": "1"
+    },
+    {
+        "term_id": "99",
+        "term_name": "The Mystery of Laws & Cosmos",
+        "parent_term_id": "15",
+        "term_order": "1"
+    },
+    {
+        "term_id": "26",
+        "term_name": "Time and Space-Time",
+        "parent_term_id": "11",
+        "term_order": "1"
+    },
+    {
+        "term_id": "12",
+        "term_name": "Vast Cosmos",
+        "parent_term_id": "1",
+        "term_order": "1"
+    },
+    {
+        "term_id": "18",
+        "term_name": "Attributes of God",
+        "parent_term_id": "3",
+        "term_order": "2"
+    },
+    {
+        "term_id": "23",
+        "term_name": "Brain Explains Mind?",
+        "parent_term_id": "5",
+        "term_order": "2"
+    },
+    {
+        "term_id": "39",
+        "term_name": "Breathtaking Universe",
+        "parent_term_id": "13",
+        "term_order": "2"
+    },
+    {
+        "term_id": "56",
+        "term_name": "Consciousness as All Physical?",
+        "parent_term_id": "7",
+        "term_order": "2"
+    },
+    {
+        "term_id": "34",
+        "term_name": "Cosmic Structure",
+        "parent_term_id": "12",
+        "term_order": "2"
+    },
+    {
+        "term_id": "80",
+        "term_name": "Experiential Arguments For God",
+        "parent_term_id": "17",
+        "term_order": "2"
+    },
+    {
+        "term_id": "73",
+        "term_name": "Faith and Belief",
+        "parent_term_id": "16",
+        "term_order": "2"
+    },
+    {
+        "term_id": "65",
+        "term_name": "Free Will and Consciousness",
+        "parent_term_id": "9",
+        "term_order": "2"
+    },
+    {
+        "term_id": "89",
+        "term_name": "God's Interactions?",
+        "parent_term_id": "19",
+        "term_order": "2"
+    },
+    {
+        "term_id": "84",
+        "term_name": "God's Powers?",
+        "parent_term_id": "18",
+        "term_order": "2"
+    },
+    {
+        "term_id": "44",
+        "term_name": "How Science and Religion Think",
+        "parent_term_id": "14",
+        "term_order": "2"
+    },
+    {
+        "term_id": "51",
+        "term_name": "Life After Death?",
+        "parent_term_id": "6",
+        "term_order": "2"
+    },
+    {
+        "term_id": "130",
+        "term_name": "Metaphysics of Cosmos",
+        "parent_term_id": "15",
+        "term_order": "2"
+    },
+    {
+        "term_id": "13",
+        "term_name": "Our Special Universe",
+        "parent_term_id": "1",
+        "term_order": "2"
+    },
+    {
+        "term_id": "6",
+        "term_name": "Persons",
+        "parent_term_id": "2",
+        "term_order": "2"
+    },
+    {
+        "term_id": "27",
+        "term_name": "Quantum Theory",
+        "parent_term_id": "11",
+        "term_order": "2"
+    },
+    {
+        "term_id": "91",
+        "term_name": "Resurrection?",
+        "parent_term_id": "20",
+        "term_order": "2"
+    },
+    {
+        "term_id": "40",
+        "term_name": "Alien Intelligences?",
+        "parent_term_id": "13",
+        "term_order": "3"
+    },
+    {
+        "term_id": "81",
+        "term_name": "Arguments Against God",
+        "parent_term_id": "17",
+        "term_order": "3"
+    },
+    {
+        "term_id": "28",
+        "term_name": "Complexity and Emergence",
+        "parent_term_id": "11",
+        "term_order": "3"
+    },
+    {
+        "term_id": "74",
+        "term_name": "Conflict Among Religions",
+        "parent_term_id": "16",
+        "term_order": "3"
+    },
+    {
+        "term_id": "24",
+        "term_name": "Elements of Mind",
+        "parent_term_id": "5",
+        "term_order": "3"
+    },
+    {
+        "term_id": "92",
+        "term_name": "Eschatology (End Times)?",
+        "parent_term_id": "20",
+        "term_order": "3"
+    },
+    {
+        "term_id": "9",
+        "term_name": "Free Will",
+        "parent_term_id": "2",
+        "term_order": "3"
+    },
+    {
+        "term_id": "85",
+        "term_name": "God and Time?",
+        "parent_term_id": "18",
+        "term_order": "3"
+    },
+    {
+        "term_id": "19",
+        "term_name": "God as Creator",
+        "parent_term_id": "3",
+        "term_order": "3"
+    },
+    {
+        "term_id": "35",
+        "term_name": "Multiple Universes (Multiverse)",
+        "parent_term_id": "12",
+        "term_order": "3"
+    },
+    {
+        "term_id": "14",
+        "term_name": "Science and Religion",
+        "parent_term_id": "1",
+        "term_order": "3"
+    },
+    {
+        "term_id": "66",
+        "term_name": "Science of Free Will",
+        "parent_term_id": "9",
+        "term_order": "3"
+    },
+    {
+        "term_id": "52",
+        "term_name": "Souls?",
+        "parent_term_id": "6",
+        "term_order": "3"
+    },
+    {
+        "term_id": "58",
+        "term_name": "States of Consciousness",
+        "parent_term_id": "7",
+        "term_order": "3"
+    },
+    {
+        "term_id": "98",
+        "term_name": "The New Atheism",
+        "parent_term_id": "14",
+        "term_order": "3"
+    },
+    {
+        "term_id": "48",
+        "term_name": "Why Anything at All?",
+        "parent_term_id": "15",
+        "term_order": "3"
+    },
+    {
+        "term_id": "36",
+        "term_name": "Black Holes, Dark Energy, Dark Matter",
+        "parent_term_id": "12",
+        "term_order": "4"
+    },
+    {
+        "term_id": "94",
+        "term_name": "Eternal Life?",
+        "parent_term_id": "20",
+        "term_order": "4"
+    },
+    {
+        "term_id": "8",
+        "term_name": "Extrasensory Perception",
+        "parent_term_id": "2",
+        "term_order": "4"
+    },
+    {
+        "term_id": "41",
+        "term_name": "Far Future of the Universe",
+        "parent_term_id": "13",
+        "term_order": "4"
+    },
+    {
+        "term_id": "67",
+        "term_name": "Free Will and Morality",
+        "parent_term_id": "9",
+        "term_order": "4"
+    },
+    {
+        "term_id": "53",
+        "term_name": "Human Uniqueness",
+        "parent_term_id": "6",
+        "term_order": "4"
+    },
+    {
+        "term_id": "46",
+        "term_name": "Limits of Science",
+        "parent_term_id": "14",
+        "term_order": "4"
+    },
+    {
+        "term_id": "29",
+        "term_name": "Mathematics as Fundamental?",
+        "parent_term_id": "11",
+        "term_order": "4"
+    },
+    {
+        "term_id": "15",
+        "term_name": "Mystery of Existence",
+        "parent_term_id": "1",
+        "term_order": "4"
+    },
+    {
+        "term_id": "59",
+        "term_name": "Sleep and Dreams",
+        "parent_term_id": "7",
+        "term_order": "4"
+    },
+    {
+        "term_id": "75",
+        "term_name": "Theology",
+        "parent_term_id": "16",
+        "term_order": "4"
+    },
+    {
+        "term_id": "20",
+        "term_name": "Ultimate Destinies",
+        "parent_term_id": "3",
+        "term_order": "4"
+    },
+    {
+        "term_id": "54",
+        "term_name": "Creativity",
+        "parent_term_id": "6",
+        "term_order": "5"
+    },
+    {
+        "term_id": "76",
+        "term_name": "How Philosophy Informs Religion",
+        "parent_term_id": "16",
+        "term_order": "5"
+    },
+    {
+        "term_id": "30",
+        "term_name": "Information as Fundamental?",
+        "parent_term_id": "11",
+        "term_order": "5"
+    },
+    {
+        "term_id": "60",
+        "term_name": "Purpose of Consciousness?",
+        "parent_term_id": "7",
+        "term_order": "5"
+    },
+    {
+        "term_id": "240",
+        "term_name": "Search for Meaning",
+        "parent_term_id": "20",
+        "term_order": "5"
+    },
+    {
+        "term_id": "68",
+        "term_name": "Theology of Free Will",
+        "parent_term_id": "9",
+        "term_order": "5"
+    },
+    {
+        "term_id": "100",
+        "term_name": "Belief Systems",
+        "parent_term_id": "6",
+        "term_order": "6"
+    },
+    {
+        "term_id": "239",
+        "term_name": "Metaphysics of Consciousness",
+        "parent_term_id": "7",
+        "term_order": "6"
+    },
+    {
+        "term_id": "77",
+        "term_name": "Religion Without God",
+        "parent_term_id": "16",
+        "term_order": "6"
+    },
+    {
+        "term_id": "31",
+        "term_name": "Universe as Simulation?",
+        "parent_term_id": "11",
+        "term_order": "6"
+    },
+    {
+        "term_id": "101",
+        "term_name": "Mind and Society",
+        "parent_term_id": "6",
+        "term_order": "7"
+    },
+    {
+        "term_id": "102",
+        "term_name": "People and Society",
+        "parent_term_id": "6",
+        "term_order": "8"
+    },
+    {
+        "term_id": "1",
+        "term_name": "Cosmos",
+        "term_order": "96"
+    },
+    {
+        "term_id": "2",
+        "term_name": "Consciousness",
+        "term_order": "97"
+    },
+    {
+        "term_id": "3",
+        "term_name": "Meaning",
+        "term_order": "98"
+    }
+]

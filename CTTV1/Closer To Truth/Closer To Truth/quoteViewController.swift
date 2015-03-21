@@ -13,6 +13,12 @@ class quoteViewController: ViewController, SideMenuDelegate { //SideMenuDelegate
     @IBOutlet weak var professionLabel: UILabel!
     @IBOutlet weak var quoteTextField: UITextView!
     
+<<<<<<< HEAD
+=======
+    
+    var fakedata = "stingurl"
+
+>>>>>>> 8d1d25b30bcea9fe119ca2ad5828b21a530bf85c
 //    @IBOutlet weak var quoteTextField: UITextView!
 //    @IBOutlet weak var authorLabel: UILabel!
 //    @IBOutlet weak var professionLabel: UILabel!
@@ -61,6 +67,7 @@ class quoteViewController: ViewController, SideMenuDelegate { //SideMenuDelegate
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("videoVC") as videoViewController
         self.presentViewController(next, animated: true, completion: nil)
+        self.videoViewController.request = fakedata
     }
 
 }
