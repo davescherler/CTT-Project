@@ -33,17 +33,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("The dataForCells value before calling filter is: \(dataForCells)")
+        //println("The dataForCells value before calling filter is: \(dataForCells)")
         filter("quote_id")
         self.table.reloadData()
-        println("The dataForCells value after calling filter is: \(dataForCells)")
+        //println("The dataForCells value after calling filter is: \(dataForCells)")
     }
     
     func filter(filter: String) {
         var tempArray: [String] = []
         for dictionaries in tableData {
             if let results = dictionaries[filter] {
-                println(results)
+                //println(results)
                 tempArray.append(results)
             }
             dataForCells = tempArray

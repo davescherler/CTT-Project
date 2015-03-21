@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		552FB89F1ABBB51800E1E19A /* Consciousness Source.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 552FB89B1ABBB51800E1E19A /* Consciousness Source.jpg */; };
-		552FB8A01ABBB51800E1E19A /* Cosmos Source.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 552FB89C1ABBB51800E1E19A /* Cosmos Source.jpg */; };
 		552FB8A11ABBB51800E1E19A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FB89D1ABBB51800E1E19A /* logo.png */; };
-		552FB8A21ABBB51800E1E19A /* Meaning Source.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 552FB89E1ABBB51800E1E19A /* Meaning Source.jpg */; };
 		552FB8A61ABBC3A700E1E19A /* new border 44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 552FB8A51ABBC3A700E1E19A /* new border 44.pdf */; };
 		552FB8A81ABBC45E00E1E19A /* border 44 44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */; };
 		557AC47D1ABA34B400935BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557AC47C1ABA34B400935BB7 /* AppDelegate.swift */; };
@@ -22,6 +19,10 @@
 		55DE248F1ABCEED700CC148C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE248E1ABCEED700CC148C /* LaunchViewController.swift */; };
 		55DF52841ABA39BC001F2FEE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF52831ABA39BC001F2FEE /* MenuViewController.swift */; };
 		55DF52861ABA5C27001F2FEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 55DF52851ABA5C27001F2FEE /* Podfile */; };
+		55E67D991ABDC9AD00AF0BEE /* BackgroundImage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E67D981ABDC9AD00AF0BEE /* BackgroundImage.plist */; };
+		55E67DA31ABDEC0A00AF0BEE /* Consciousness Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA21ABDEC0A00AF0BEE /* Consciousness Cropped.jpg */; };
+		55E67DA51ABDEC1600AF0BEE /* Cosmos Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA41ABDEC1600AF0BEE /* Cosmos Cropped.jpg */; };
+		55E67DA71ABDEC2100AF0BEE /* Meaning Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */; };
 		55FD45D01ABC8F610002295E /* white menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FD45CF1ABC8F610002295E /* white menu.png */; };
 		55FD45D21ABC8F710002295E /* orange main.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FD45D11ABC8F710002295E /* orange main.png */; };
 		AEF64CEECE1334C1111CAB1C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA43FF3E4CD0820E9546F5C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -40,10 +41,7 @@
 /* Begin PBXFileReference section */
 		122B4026FC4A908EEC3D46B0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		18CB9C0ACED78FBEC5F99BA3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		552FB89B1ABBB51800E1E19A /* Consciousness Source.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Consciousness Source.jpg"; sourceTree = "<group>"; };
-		552FB89C1ABBB51800E1E19A /* Cosmos Source.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cosmos Source.jpg"; sourceTree = "<group>"; };
 		552FB89D1ABBB51800E1E19A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		552FB89E1ABBB51800E1E19A /* Meaning Source.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meaning Source.jpg"; sourceTree = "<group>"; };
 		552FB8A51ABBC3A700E1E19A /* new border 44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "new border 44.pdf"; sourceTree = "<group>"; };
 		552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "border 44 44.pdf"; sourceTree = "<group>"; };
 		557AC4771ABA34B400935BB7 /* Menu Delegation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Delegation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +57,10 @@
 		55DE248E1ABCEED700CC148C /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		55DF52831ABA39BC001F2FEE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		55DF52851ABA5C27001F2FEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		55E67D981ABDC9AD00AF0BEE /* BackgroundImage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BackgroundImage.plist; sourceTree = "<group>"; };
+		55E67DA21ABDEC0A00AF0BEE /* Consciousness Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Consciousness Cropped.jpg"; sourceTree = "<group>"; };
+		55E67DA41ABDEC1600AF0BEE /* Cosmos Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cosmos Cropped.jpg"; sourceTree = "<group>"; };
+		55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meaning Cropped.jpg"; sourceTree = "<group>"; };
 		55FD45CF1ABC8F610002295E /* white menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white menu.png"; sourceTree = "<group>"; };
 		55FD45D11ABC8F710002295E /* orange main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange main.png"; sourceTree = "<group>"; };
 		6EA43FF3E4CD0820E9546F5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				557AC4831ABA34B400935BB7 /* Images.xcassets */,
 				557AC47A1ABA34B400935BB7 /* Supporting Files */,
 				55DE248C1ABCE23700CC148C /* Launch Screen.xib */,
+				55E67D981ABDC9AD00AF0BEE /* BackgroundImage.plist */,
 			);
 			path = "Menu Delegation";
 			sourceTree = "<group>";
@@ -156,14 +159,14 @@
 		55FD45CE1ABC8F190002295E /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				55E67DA21ABDEC0A00AF0BEE /* Consciousness Cropped.jpg */,
+				55E67DA41ABDEC1600AF0BEE /* Cosmos Cropped.jpg */,
+				55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */,
 				55FD45D11ABC8F710002295E /* orange main.png */,
 				55FD45CF1ABC8F610002295E /* white menu.png */,
 				552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */,
 				552FB8A51ABBC3A700E1E19A /* new border 44.pdf */,
-				552FB89B1ABBB51800E1E19A /* Consciousness Source.jpg */,
-				552FB89C1ABBB51800E1E19A /* Cosmos Source.jpg */,
 				552FB89D1ABBB51800E1E19A /* logo.png */,
-				552FB89E1ABBB51800E1E19A /* Meaning Source.jpg */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -260,16 +263,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552FB89F1ABBB51800E1E19A /* Consciousness Source.jpg in Resources */,
 				557AC4821ABA34B400935BB7 /* Main.storyboard in Resources */,
 				552FB8A81ABBC45E00E1E19A /* border 44 44.pdf in Resources */,
+				55E67DA51ABDEC1600AF0BEE /* Cosmos Cropped.jpg in Resources */,
 				55FD45D01ABC8F610002295E /* white menu.png in Resources */,
 				552FB8A61ABBC3A700E1E19A /* new border 44.pdf in Resources */,
 				55DF52861ABA5C27001F2FEE /* Podfile in Resources */,
 				55FD45D21ABC8F710002295E /* orange main.png in Resources */,
-				552FB8A21ABBB51800E1E19A /* Meaning Source.jpg in Resources */,
+				55E67D991ABDC9AD00AF0BEE /* BackgroundImage.plist in Resources */,
 				55DE248D1ABCE23700CC148C /* Launch Screen.xib in Resources */,
-				552FB8A01ABBB51800E1E19A /* Cosmos Source.jpg in Resources */,
+				55E67DA71ABDEC2100AF0BEE /* Meaning Cropped.jpg in Resources */,
+				55E67DA31ABDEC0A00AF0BEE /* Consciousness Cropped.jpg in Resources */,
 				552FB8A11ABBB51800E1E19A /* logo.png in Resources */,
 				557AC4841ABA34B400935BB7 /* Images.xcassets in Resources */,
 			);

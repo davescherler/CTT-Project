@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     let menuImage = UIImage(named: "white menu") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
     
+    var quoteTextFieldWidth: Int?
     var isMenuOpen: Bool = false
     var menu:MenuViewController?
     var menuLeftConstraint:NSLayoutConstraint?
@@ -25,14 +26,18 @@ class MainViewController: UIViewController {
     @IBOutlet weak var topBarContainerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var mainVCLeftConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var backgroundView: UIImageView!
+    @IBOutlet weak var quoteTextField: UITextView!
+    @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initMenu()
         createMenuButton()
         createLogo()
-        println("the container width is: \(self.mainContainerView.frame.width)")
+        self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
+        //println("the container width is: \(self.mainContainerView.frame.width)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +56,7 @@ class MainViewController: UIViewController {
         self.view.addSubview(self.menu!.view)
         
         self.menu!.view.snp_makeConstraints { (make) -> () in
-            make.width.equalTo(self.view.frame.width - 50)
+            make.width.equalTo(325) //(self.view.frame.width - 50)
             make.height.equalTo(self.view.snp_height)
             make.top.equalTo(0)
         }
@@ -88,6 +93,7 @@ class MainViewController: UIViewController {
             showMenu()
         } else {
             hideMenu()
+            changeBackgroundImage()
         } }
     
     func showMenu(){
@@ -98,10 +104,19 @@ class MainViewController: UIViewController {
         self.menuLeftConstraint?.pop_addAnimation(toggleMenuIn, forKey: "toggleMenuIn.move")
                 
         let toggleMainVCOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        toggleMainVCOut.toValue = self.menu!.view.frame.width - 5
+        toggleMainVCOut.toValue = 320//self.menu!.view.frame.width - 5
         toggleMainVCOut.springBounciness = 10
         toggleMainVCOut.springSpeed = 10
         self.mainVCLeftConstraint?.pop_addAnimation(toggleMainVCOut, forKey: "toggleMainVCOut.move")
+        
+        let slideBackgroundOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+        slideBackgroundOut.toValue = 320//self.mainVCLeftConstraint.constant
+        slideBackgroundOut.springBounciness = 10
+        slideBackgroundOut.springSpeed = 10
+        self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundOut, forKey: "slideBackgroundOut.move")
+        
+        self.mainContainerView.removeConstraint(quoteTextFieldTrailingConstraint)
+        //self.quoteTextField.frame.size.width = 300//CGFloat(self.quoteTextFieldWidth!)
         
         self.view.updateConstraints()
         self.view.layoutIfNeeded()
@@ -112,7 +127,7 @@ class MainViewController: UIViewController {
             self.menuButton.setImage(self.menuImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = true
-        println("the container width is: \(self.mainContainerView.frame.width)")
+        //println("the container width is: \(self.mainContainerView.frame.width)")
         }
 
     func hideMenu() {
@@ -128,6 +143,15 @@ class MainViewController: UIViewController {
         toggleMainVCIn.springSpeed = 15
         self.mainVCLeftConstraint?.pop_addAnimation(toggleMainVCIn, forKey: "toggleMainVCIn.move")
         
+        let slideBackgroundIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+        slideBackgroundIn.toValue = 0
+        slideBackgroundIn.springBounciness = 0
+        slideBackgroundIn.springSpeed = 15
+        self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundIn, forKey: "slideBackgroundIn.move")
+        
+        self.quoteTextField.frame.size.width = CGFloat(self.quoteTextFieldWidth!)
+        self.mainContainerView.addConstraint(quoteTextFieldTrailingConstraint)
+        
         self.view.updateConstraints()
         self.view.layoutIfNeeded()
             
@@ -138,6 +162,25 @@ class MainViewController: UIViewController {
             self.menuButton.setImage(self.mainImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = false
-        println("the container width is: \(self.mainContainerView.frame.width)")
+        //println("the container width is: \(self.mainContainerView.frame.width)")
         }
+    
+    func changeBackgroundImage() {
+        var imageToChangeTo: String?
+        var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImage", ofType: "plist")
+        var imageNames = NSArray(contentsOfFile: imagePath!)
+        //println("the image names are: \(imageNames)")
+        
+        var numberOfImages = imageNames?.count
+        var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
+//        println("there are :\(numberOfImages) images")
+//        println("the random number is: \(randomNumber)")
+        
+        let imageArray: [String] = imageNames as Array
+        
+        var randomImageName = imageArray[randomNumber]
+//        println("the random image is: \(randomImageName)")
+        self.backgroundView.image = UIImage(named:randomImageName)
+        self.backgroundView.frame = self.view.frame
+    }
 }
