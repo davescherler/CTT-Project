@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,24 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYO-pj-MuR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYO-pj-MuR" userLabel="MainContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-XR-UUm">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-XR-UUm" userLabel="TopBarView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="DH6-AQ-lep"/>
                                         </constraints>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Consciousness Source.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-mu-Mjw">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8a-0E-RT9">
+                                        <rect key="frame" x="8" y="82" width="584" height="420"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="420" id="P4Q-wD-f3V"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.99407677979999998" blue="0.96585191699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="RiT-mu-Mjw" firstAttribute="top" secondItem="IYO-pj-MuR" secondAttribute="top" constant="64" id="A6W-Dz-P6d"/>
+                                    <constraint firstItem="G8a-0E-RT9" firstAttribute="top" secondItem="IYO-pj-MuR" secondAttribute="top" constant="82" id="L8X-oN-GMs"/>
+                                    <constraint firstAttribute="bottom" secondItem="RiT-mu-Mjw" secondAttribute="bottom" id="Pyi-tn-X4o"/>
                                     <constraint firstItem="znK-XR-UUm" firstAttribute="leading" secondItem="IYO-pj-MuR" secondAttribute="leading" id="VyT-I4-rek"/>
+                                    <constraint firstItem="RiT-mu-Mjw" firstAttribute="leading" secondItem="IYO-pj-MuR" secondAttribute="leading" id="W3W-W2-IkS"/>
+                                    <constraint firstAttribute="trailing" secondItem="RiT-mu-Mjw" secondAttribute="trailing" id="WFt-n0-luY"/>
                                     <constraint firstItem="znK-XR-UUm" firstAttribute="top" secondItem="IYO-pj-MuR" secondAttribute="top" id="h2c-QK-LyK"/>
                                     <constraint firstAttribute="trailing" secondItem="znK-XR-UUm" secondAttribute="trailing" id="khT-fb-Ost"/>
+                                    <constraint firstItem="G8a-0E-RT9" firstAttribute="leading" secondItem="IYO-pj-MuR" secondAttribute="leading" constant="8" id="qDb-LN-CzH"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8a-0E-RT9" secondAttribute="trailing" constant="8" id="xz8-W5-GWJ"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="NAY-HU-MNS" appends="YES" id="mp7-Y9-Gkz"/>
@@ -85,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-pN-FZc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-pN-FZc">
                                 <rect key="frame" x="181" y="236" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Udh-kO-iJg"/>
@@ -190,6 +211,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Consciousness Source.jpg" width="2048" height="3072"/>
         <image name="logo.png" width="2166" height="910"/>
         <image name="menu.pdf" width="44" height="44"/>
     </resources>
