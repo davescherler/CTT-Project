@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Closer To Truth/SideMenuTableViewController.swift"
+            timestampString = "448165790.563939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.delegate.setter : Swift.Optional&lt;Closer_To_Truth.SideMenuTableViewControllerDelegate&gt;"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.3138"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.delegate.materializeForSet : Swift.Optional&lt;Closer_To_Truth.SideMenuTableViewControllerDelegate&gt;"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.314047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.init (Closer_To_Truth.SideMenuTableViewController.Type)(style : C.UITableViewStyle) -&gt; Closer_To_Truth.SideMenuTableViewController"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.31429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.init (Closer_To_Truth.SideMenuTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Closer_To_Truth.SideMenuTableViewController"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.314531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.init (Closer_To_Truth.SideMenuTableViewController.Type)() -&gt; Closer_To_Truth.SideMenuTableViewController"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.314775"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Closer_To_Truth.SideMenuTableViewController.init (Closer_To_Truth.SideMenuTableViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Closer_To_Truth.SideMenuTableViewController"
+                  moduleName = "Closer To Truth"
+                  urlString = "file:///Users/Dave/CTT-Project/CTTV1/Closer%20To%20Truth/Closer%20To%20Truth/SideMenuTableViewController.swift"
+                  timestampString = "448156121.315009"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Closer To Truth/SideMenuTableViewController.swift"
+            timestampString = "448165790.563939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Closer To Truth/SideMenuTableViewController.swift"
+            timestampString = "448165790.563939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Closer To Truth/SideMenuTableViewController.swift"
+            timestampString = "448165790.563939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

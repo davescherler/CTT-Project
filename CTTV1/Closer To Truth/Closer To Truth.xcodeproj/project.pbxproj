@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		558BD1541AB65724007BFF15 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558BD1531AB65724007BFF15 /* SideMenu.swift */; };
+		558BD1561AB65755007BFF15 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558BD1551AB65755007BFF15 /* SideMenuTableViewController.swift */; };
 		7854533F1AB489F900B73D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854533E1AB489F900B73D72 /* AppDelegate.swift */; };
 		785453421AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 785453401AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld */; };
 		785453441AB489F900B73D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785453431AB489F900B73D72 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		558BD1531AB65724007BFF15 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		558BD1551AB65755007BFF15 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		785453391AB489F900B73D72 /* Closer To Truth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Closer To Truth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7854533D1AB489F900B73D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7854533E1AB489F900B73D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		558BD14E1AB642C8007BFF15 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				558BD1531AB65724007BFF15 /* SideMenu.swift */,
+				558BD1551AB65755007BFF15 /* SideMenuTableViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
 		785453301AB489F900B73D72 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 		7854533B1AB489F900B73D72 /* Closer To Truth */ = {
 			isa = PBXGroup;
 			children = (
+				558BD14E1AB642C8007BFF15 /* SideMenu */,
 				7854533E1AB489F900B73D72 /* AppDelegate.swift */,
 				785453431AB489F900B73D72 /* ViewController.swift */,
 				785453451AB489F900B73D72 /* Main.storyboard */,
@@ -231,9 +245,11 @@
 				785453441AB489F900B73D72 /* ViewController.swift in Sources */,
 				785453661AB48DB100B73D72 /* AuthorViewController.swift in Sources */,
 				785453641AB48CC400B73D72 /* quoteViewController.swift in Sources */,
+				558BD1541AB65724007BFF15 /* SideMenu.swift in Sources */,
 				785453421AB489F900B73D72 /* Closer_To_Truth.xcdatamodeld in Sources */,
 				78DD0F081AB498CB00EB1244 /* videoViewController.swift in Sources */,
 				7854533F1AB489F900B73D72 /* AppDelegate.swift in Sources */,
+				558BD1561AB65755007BFF15 /* SideMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
