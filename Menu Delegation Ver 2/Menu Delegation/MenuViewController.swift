@@ -52,33 +52,33 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //println("The dataForCells value before calling filter is: \(dataForCells)")
         filter("quote_id")
-=======
+//=======
         println("The dataForCells value before calling filter is: \(dataForCells)")
         filter("allQuotes")
->>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
+//>>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
         self.table.reloadData()
         //println("The dataForCells value after calling filter is: \(dataForCells)")
     }
     
-<<<<<<< HEAD
+//<<<<<<< HEAD
+//    func filter(filter: String) {
+//        var tempArray: [String] = []
+//        for dictionaries in tableData {
+//            if let results = dictionaries[filter] {
+//                //println(results)
+//                tempArray.append(results)
+//            }
+//            dataForCells = tempArray
+//=======
     func filter(filter: String) {
-        var tempArray: [String] = []
-        for dictionaries in tableData {
-            if let results = dictionaries[filter] {
-                //println(results)
-                tempArray.append(results)
-            }
-            dataForCells = tempArray
-=======
-    func filter(filter: String) {        
         if filter == "favQuotes" {
             self.dataForCells = self.favQuotesData
         } else {
             self.dataForCells = self.allQuotesData
->>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
+//>>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
         }
 
     }
