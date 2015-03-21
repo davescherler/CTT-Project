@@ -15,39 +15,38 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func filterQuotes(sender: UISegmentedControl) {
         switch filterStatus.selectedSegmentIndex {
         case 0:
-            filter("quote_id")
+            filter("allQuotes")
             self.table.reloadData()
         case 1:
-            filter("fav")
+            filter("favQuotes")
             self.table.reloadData()
         default:
-            filter("quote_id")
+            filter("allQuotes")
             self.table.reloadData()
         }
     }
-    var tableData = [
-        ["quote_id":"one"], ["quote_id":"two"], ["quote_id":"three"],
-        ["fav":"first quote"], ["fav":"second quote"], ["fav":"why is the third quote."]
-    ]
+    var allQuotesData = ["All one","All two","All three"]
+    var favQuotesData = ["fav one","fav two", "fave three"]
+
     var dataForCells: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         println("The dataForCells value before calling filter is: \(dataForCells)")
-        filter("quote_id")
+        filter("allQuotes")
         self.table.reloadData()
         println("The dataForCells value after calling filter is: \(dataForCells)")
     }
     
     func filter(filter: String) {
-        var tempArray: [String] = []
-        for dictionaries in tableData {
-            if let results = dictionaries[filter] {
-                println(results)
-                tempArray.append(results)
-            }
-            dataForCells = tempArray
+        var dataToUse: [String] = []
+        
+        if filter == "favQuotes" {
+            self.dataForCells = self.favQuotesData
+        } else {
+            self.dataForCells = self.allQuotesData
         }
+
     }
 
     override func didReceiveMemoryWarning() {
