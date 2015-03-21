@@ -11,7 +11,8 @@ import Snap
 import pop
 
 class MainViewController: UIViewController, PassingQuote {
-    
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     let menuButton = UIButton()
     let mainImage = UIImage(named: "orange main") as UIImage?
     let menuImage = UIImage(named: "white menu") as UIImage?
