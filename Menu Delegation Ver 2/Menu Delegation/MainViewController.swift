@@ -33,7 +33,13 @@ class MainViewController: UIViewController, PassingQuote {
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("the row selected is \(ArrayLocation) and the list containing that quote is \(listOrigin)")
-        self.quoteTextField.text = midtempData[ArrayLocation]
+        if listOrigin == "All" {
+            self.quoteTextField.text = midtempData[ArrayLocation]
+        } else {
+            self.quoteTextField.text = favQuotesArray[ArrayLocation]
+        }
+        // toggle the menu back to the right
+        self.hideMenu()
     }
 
 
