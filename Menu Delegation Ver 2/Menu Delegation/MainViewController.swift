@@ -34,6 +34,10 @@ class MainViewController: UIViewController, PassingQuote {
 //<<<<<<< HEAD
 //=======
     @IBOutlet weak var authorLabel: UILabel!
+    @IBAction func showVideo(sender: UIButton) {
+    }
+    @IBAction func showAuthorInfo(sender: UIButton) {
+    }
     @IBOutlet weak var infoLabel: UILabel!
 //>>>>>>> 24d9ea0b2bf156253b288bdcead4dcddb834a547
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!

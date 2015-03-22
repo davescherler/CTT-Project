@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "235"
             endingLineNumber = "235"
-            landmarkName = "createLaunchOverlay()"
+            landmarkName = "hideMenu()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
             endingLineNumber = "248"
-            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkName = "changeBackgroundImage()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -77,7 +77,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "249"
             endingLineNumber = "249"
-            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkName = "changeBackgroundImage()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -137,7 +137,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "254"
             endingLineNumber = "254"
-            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkName = "changeBackgroundImage()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
