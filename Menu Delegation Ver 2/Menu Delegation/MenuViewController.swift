@@ -16,6 +16,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var delegate: PassingQuote?
     var favListSelected: Bool?
+    
+    var allQuotesData = ["Local All One","Local All Two","Local All Three"]
+    var favQuotesData = ["Local Fav One","Local Fav Two", "Local Fav Three"]
 
     @IBOutlet weak var filterStatus: UISegmentedControl!
     @IBOutlet weak var table: UITableView!
@@ -42,45 +45,29 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func re_filter() {
         filter("allQuotes")
         self.table.reloadData()
-        println("re filtering the quote list on the table")
+        println("MenuViewVC: re_filter() called. The number of quotes in allQuotes is now: \(allQuotesData.count)\n")
     }
     
-    var allQuotesData = ["Local All One","Local All Two","Local All Three"]
-    var favQuotesData = ["Local Fav One","Local Fav Two", "Local Fav Three"]
 
     var dataForCells: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//<<<<<<< HEAD
-        //println("The dataForCells value before calling filter is: \(dataForCells)")
-        filter("quote_id")
-//=======
-        println("The dataForCells value before calling filter is: \(dataForCells)")
+
+        println("MenuViewVC: The dataForCells value before calling filter is: \(dataForCells)")
         filter("allQuotes")
-//>>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
+
         self.table.reloadData()
-        //println("The dataForCells value after calling filter is: \(dataForCells)")
     }
     
-//<<<<<<< HEAD
-//    func filter(filter: String) {
-//        var tempArray: [String] = []
-//        for dictionaries in tableData {
-//            if let results = dictionaries[filter] {
-//                //println(results)
-//                tempArray.append(results)
-//            }
-//            dataForCells = tempArray
-//=======
     func filter(filter: String) {
         if filter == "favQuotes" {
             self.dataForCells = self.favQuotesData
+            println("MenuViewVC: filter() called for favQuotes. Number of favQuotes is \(self.favQuotesData.count)")
         } else {
             self.dataForCells = self.allQuotesData
-//>>>>>>> 333c2d14795254408d9fbc9f0e14388112f9e198
+            println("MenuViewVC: filter() called for allQuotes. Number of allQuotes is \(self.allQuotesData.count)")
         }
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,7 +80,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println("The number of rows in section is: \(dataForCells.count)")
         return dataForCells.count
     }
     
@@ -116,7 +102,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as? LocationTableViewCell
         
-        println("the row selected is \(indexPath.row)")
+        println("MenuViewVC: The selected row is \(indexPath.row)")
         var stringToPass: String?
         if self.favListSelected == true {
             stringToPass = "Favorites"
