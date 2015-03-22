@@ -11,26 +11,28 @@ import Snap
 import pop
 
 class MainViewController: UIViewController, PassingQuote {
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var infoLabel: UILabel!
+
     let menuButton = UIButton()
     let mainImage = UIImage(named: "orange main") as UIImage?
     let menuImage = UIImage(named: "white menu") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
+    let logoImageView = UIImageView()
+    let overlay = UIView()
     
     var quoteTextFieldWidth: Int?
     var isMenuOpen: Bool = false
     var menu:MenuViewController?
     var menuLeftConstraint:NSLayoutConstraint?
+    var logoTopConstraint = NSLayoutConstraint()
     //var logoCenterXConstraint: NSLayoutConstraint?
     
     @IBOutlet weak var topBarContainerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var mainVCLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundView: UIImageView!
-
     @IBOutlet weak var quoteTextField: UITextView!
-    
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     
@@ -49,14 +51,18 @@ class MainViewController: UIViewController, PassingQuote {
         }
         // toggle the menu back to the right
         hideMenu()
+        changeBackgroundImage()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initMenu()
         createMenuButton()
-        createLogo()
-        self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
+        createLaunchOverlay()
+        performLaunchOverlayAnimation()
+        //miniaturizeLaunchOverlay()
+        //self.view.removeFromSuperview(self.overlay)
+        //self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         //println("the container width is: \(self.mainContainerView.frame.width)")
     }
 
@@ -97,7 +103,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.menuButton.snp_makeConstraints { (make) -> () in
             make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(10)
             make.leading.equalTo(12)
-            make.width.equalTo(25)
+            make.width.equalTo(26)
             make.height.equalTo(30)
         }
     }
@@ -106,11 +112,11 @@ class MainViewController: UIViewController, PassingQuote {
         let logo = UIImageView(image: logoImage)
         self.topBarContainerView.addSubview(logo)
         logo.snp_makeConstraints { (make) -> () in
-            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(10)
+            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(10.5)
             //make.centerX.equalTo(self.topBarContainerView.snp_centerX)
-            make.leading.equalTo(150)
+            make.leading.equalTo(142.5)
             make.width.equalTo(90)
-            make.height.equalTo(30)
+            make.height.equalTo(36)
         }
     }
 
@@ -140,12 +146,10 @@ class MainViewController: UIViewController, PassingQuote {
         slideBackgroundOut.springBounciness = 10
         slideBackgroundOut.springSpeed = 10
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundOut, forKey: "slideBackgroundOut.move")
-        
-        self.mainContainerView.removeConstraint(quoteTextFieldTrailingConstraint)
-        //self.quoteTextField.frame.size.width = 300//CGFloat(self.quoteTextFieldWidth!)
-        
-        self.view.updateConstraints()
-        self.view.layoutIfNeeded()
+
+        self.quoteTextField.alpha = 0
+        self.authorLabel.alpha = 0
+        self.infoLabel.alpha = 0
         self.view.backgroundColor = self.menu!.view.backgroundColor
                 
         let transitionOptions = UIViewAnimationOptions.TransitionFlipFromLeft
@@ -153,7 +157,7 @@ class MainViewController: UIViewController, PassingQuote {
             self.menuButton.setImage(self.menuImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = true
-        //println("the container width is: \(self.mainContainerView.frame.width)")
+
         }
 
     func hideMenu() {
@@ -175,12 +179,6 @@ class MainViewController: UIViewController, PassingQuote {
         slideBackgroundIn.springSpeed = 15
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundIn, forKey: "slideBackgroundIn.move")
         
-        self.quoteTextField.frame.size.width = CGFloat(self.quoteTextFieldWidth!)
-        self.mainContainerView.addConstraint(quoteTextFieldTrailingConstraint)
-        
-        self.view.updateConstraints()
-        self.view.layoutIfNeeded()
-            
         self.isMenuOpen = false
             
         let transitionOptions = UIViewAnimationOptions.TransitionFlipFromRight
@@ -188,24 +186,30 @@ class MainViewController: UIViewController, PassingQuote {
             self.menuButton.setImage(self.mainImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = false
-        //println("the container width is: \(self.mainContainerView.frame.width)")
+        
+        UIView.animateWithDuration(1, animations: {
+            self.quoteTextField.alpha = 1
+            self.authorLabel.alpha = 1
+            self.infoLabel.alpha = 1
+        })
+        
         }
     
     func changeBackgroundImage() {
         var imageToChangeTo: String?
         var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImage", ofType: "plist")
         var imageNames = NSArray(contentsOfFile: imagePath!)
-        //println("the image names are: \(imageNames)")
+         println("the image names are: \(imageNames)")
         
         var numberOfImages = imageNames?.count
         var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
-//        println("there are :\(numberOfImages) images")
-//        println("the random number is: \(randomNumber)")
+        println("there are :\(numberOfImages) images")
+        println("the random number is: \(randomNumber)")
         
         let imageArray: [String] = imageNames as Array
         
         var randomImageName = imageArray[randomNumber]
-//        println("the random image is: \(randomImageName)")
+        println("the random image is: \(randomImageName)")
         self.backgroundView.image = UIImage(named:randomImageName)
         self.backgroundView.frame = self.view.frame
     }
@@ -215,4 +219,61 @@ class MainViewController: UIViewController, PassingQuote {
         self.quoteTextField.font = UIFont(name: "Avenir", size: 20)
         self.quoteTextField.textAlignment = .Center
     }
+    
+    func createLaunchOverlay() {
+        self.logoImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.logoTopConstraint = NSLayoutConstraint(item: self.logoImageView, attribute: .Top, relatedBy: .Equal, toItem: self.overlay, attribute: .Top, multiplier: 1, constant: 250)
+        println("top constraint is: \(logoTopConstraint.constant)")
+        
+        self.view.addSubview(self.overlay)
+        self.view.addSubview(logoImageView)
+        self.view.addConstraint(logoTopConstraint)
+        self.overlay.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.overlay.backgroundColor = UIColor.darkGrayColor()
+        
+        self.logoImageView.image = logoImage
+        self.logoImageView.snp_makeConstraints { (make) -> () in
+            make.width.equalTo(300)
+            make.height.equalTo(128)
+            make.centerX.equalTo(self.overlay.snp_centerX)
+            //make.centerY.equalTo(self.overlay.snp_centerY)
+        }
+        
+
+    }
+    
+    func performLaunchOverlayAnimation() {
+        UIView.animateWithDuration(1, animations: {
+            let scale = CGAffineTransformMakeScale(0.3, 0.285)
+            self.logoImageView.transform = scale
+            }, completion: { (Bool) -> Void in
+                let slideUp = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+                slideUp.toValue = -21
+                slideUp.springBounciness = 2
+                slideUp.springSpeed = 1
+                self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
+                
+                self.destroyLaunchOverlay()
+                //self.createLogo()
+            })
+            //destroyLaunchOverlay()
+//                UIView.animateWithDuration(2.0, animations: {
+//                    self.overlay.alpha = 0
+//                    
+//                    }, completion: { (Bool) -> Void In
+//                         self.logoImageView.removeFromSuperview()
+//                })
+       
+    }
+    
+    func destroyLaunchOverlay() {
+        UIView.animateWithDuration(1.7, animations: { () -> Void in
+        self.overlay.alpha = 0
+        }) { (Bool) -> Void in
+            self.createLogo()
+            self.logoImageView.removeFromSuperview()
+        }
+    }
+    
 }
+
