@@ -31,17 +31,22 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var mainVCLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var quoteTextField: UITextView!
+//<<<<<<< HEAD
+//=======
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+//>>>>>>> 24d9ea0b2bf156253b288bdcead4dcddb834a547
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     
-    var midtempData = ["I see God’s hand in everything around us including the whole universe. If it suited His purposes not just to have one planet that could sustain life that would give rise to intelligence, fine. I don't see any reason to be shaken or object to that at all", "The big bang is not a point in space. It’s a moment in time. It’s a moment when the density of the universe was infinite.", "One of the most important things which our minds undertake is to understand other human beings. We’ve become - we’ve evolved to be - what I call ‘natural psychologists’, who are brilliant at mind reading.", "Is it possible that this idea of God is something more than merely a functional idea. Could it be that under this world as we find it, there is some sort of deeper reality.", "It is remarkable that the complexity of our world can be explained in terms of simple physical laws and that these laws, which we can study in a lab, apply in the remotest galaxies.", "I see God’s hand in everything around us including the whole universe. If it suited His purposes not just to have one planet that could sustain life that would give rise to intelligence, fine. I don't see any reason to be shaken or object to that at all"]
+    var json: NSArray?
     
-    var favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
+    var midtempData:[String] = []
+    
+    var favQuotesArray = ["Before","ViewDidLoad Changes","Changes to the Array"]
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
-        println("the row selected is \(ArrayLocation) and the list containing that quote is \(listOrigin)")
+        println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
             self.quoteTextField.text = midtempData[ArrayLocation]
             updateQuoteTextAppearance()
@@ -56,14 +61,55 @@ class MainViewController: UIViewController, PassingQuote {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initMenu()
         createMenuButton()
+//<<<<<<< HEAD
+        createLogo()
+        self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
+        self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
+        
+        // working on loading JSON
+        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes.json") {
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                    self.json = jsonDict as? NSArray
+                    
+                    println("MainViewVC: json in viewDidLoad(). json count is now \(self.json!.count)")
+                    
+                    
+                    if let jsonData = self.json {
+                        println("MainViewVC: json in viewDidLoad(). jsonData exists")
+                        for i in jsonData {
+                            if let quote = i["quote_text"] as? NSString {
+                                self.midtempData.append(quote)
+                            }
+                        }
+                        println("MainViewVC: json in viewDidLoad(). midtempData count is now \(self.midtempData.count)")
+                        self.menu!.allQuotesData = self.midtempData
+                        var menuVCArray = self.menu!.allQuotesData
+                        println("MainViewVC: json in viewDidLoad(). The number of quotes in MenuViewVC's allQuotes is \(menuVCArray.count)")
+                        self.menu!.re_filter()
+                    }
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    // IMPORTANT we need to reload the data we got into our table view
+                    self.menu!.table.reloadData()
+                })
+            })
+            task.resume()
+                }
+
+        initMenu()
+        println("MainViewVC: reaching the end of viewDidload()")
+
+//=======
         createLaunchOverlay()
         performLaunchOverlayAnimation()
         //miniaturizeLaunchOverlay()
         //self.view.removeFromSuperview(self.overlay)
         //self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         //println("the container width is: \(self.mainContainerView.frame.width)")
+//>>>>>>> 24d9ea0b2bf156253b288bdcead4dcddb834a547
     }
 
     override func didReceiveMemoryWarning() {
@@ -267,7 +313,7 @@ class MainViewController: UIViewController, PassingQuote {
     }
     
     func destroyLaunchOverlay() {
-        UIView.animateWithDuration(1.7, animations: { () -> Void in
+        UIView.animateWithDuration(2.0, animations: { () -> Void in
         self.overlay.alpha = 0
         }) { (Bool) -> Void in
             self.createLogo()
