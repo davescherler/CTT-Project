@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		552FB8A11ABBB51800E1E19A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 552FB89D1ABBB51800E1E19A /* logo.png */; };
-		552FB8A61ABBC3A700E1E19A /* new border 44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 552FB8A51ABBC3A700E1E19A /* new border 44.pdf */; };
-		552FB8A81ABBC45E00E1E19A /* border 44 44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */; };
 		557AC47D1ABA34B400935BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557AC47C1ABA34B400935BB7 /* AppDelegate.swift */; };
 		557AC47F1ABA34B400935BB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557AC47E1ABA34B400935BB7 /* MainViewController.swift */; };
 		557AC4821ABA34B400935BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557AC4801ABA34B400935BB7 /* Main.storyboard */; };
@@ -42,8 +40,6 @@
 		122B4026FC4A908EEC3D46B0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		18CB9C0ACED78FBEC5F99BA3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		552FB89D1ABBB51800E1E19A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		552FB8A51ABBC3A700E1E19A /* new border 44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "new border 44.pdf"; sourceTree = "<group>"; };
-		552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "border 44 44.pdf"; sourceTree = "<group>"; };
 		557AC4771ABA34B400935BB7 /* Menu Delegation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Delegation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		557AC47B1ABA34B400935BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557AC47C1ABA34B400935BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,8 +160,6 @@
 				55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */,
 				55FD45D11ABC8F710002295E /* orange main.png */,
 				55FD45CF1ABC8F610002295E /* white menu.png */,
-				552FB8A71ABBC45E00E1E19A /* border 44 44.pdf */,
-				552FB8A51ABBC3A700E1E19A /* new border 44.pdf */,
 				552FB89D1ABBB51800E1E19A /* logo.png */,
 			);
 			name = Pictures;
@@ -264,10 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				557AC4821ABA34B400935BB7 /* Main.storyboard in Resources */,
-				552FB8A81ABBC45E00E1E19A /* border 44 44.pdf in Resources */,
 				55E67DA51ABDEC1600AF0BEE /* Cosmos Cropped.jpg in Resources */,
 				55FD45D01ABC8F610002295E /* white menu.png in Resources */,
-				552FB8A61ABBC3A700E1E19A /* new border 44.pdf in Resources */,
 				55DF52861ABA5C27001F2FEE /* Podfile in Resources */,
 				55FD45D21ABC8F710002295E /* orange main.png in Resources */,
 				55E67D991ABDC9AD00AF0BEE /* BackgroundImage.plist in Resources */,

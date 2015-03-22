@@ -2,4 +2,144 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Menu Delegation/MainViewController.swift"
+            timestampString = "448672912.001983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "createLaunchOverlay()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Menu Delegation/MainViewController.swift"
+            timestampString = "448672912.001983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Menu_Delegation.MainViewController.performLaunchOverlayAnimation (Menu_Delegation.MainViewController)() -&gt; ()"
+                  moduleName = "Menu Delegation"
+                  urlString = "file:///Users/Dave/CTT-Working-Directory/CTT-Project/Menu%20Delegation%20Ver%202/Menu%20Delegation/MainViewController.swift"
+                  timestampString = "448671403.643013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "243"
+                  endingLineNumber = "243"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Menu_Delegation.MainViewController.(performLaunchOverlayAnimation (Menu_Delegation.MainViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "Menu Delegation"
+                  urlString = "file:///Users/Dave/CTT-Working-Directory/CTT-Project/Menu%20Delegation%20Ver%202/Menu%20Delegation/MainViewController.swift"
+                  timestampString = "448671403.643759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Menu Delegation/MainViewController.swift"
+            timestampString = "448672912.001983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Menu_Delegation.MainViewController.(performLaunchOverlayAnimation (Menu_Delegation.MainViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "Menu Delegation"
+                  urlString = "file:///Users/Dave/CTT-Working-Directory/CTT-Project/Menu%20Delegation%20Ver%202/Menu%20Delegation/MainViewController.swift"
+                  timestampString = "448671413.190654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "382">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Menu_Delegation.MainViewController.(performLaunchOverlayAnimation (Menu_Delegation.MainViewController) -&gt; () -&gt; ()).(closure #2)"
+                  moduleName = "Menu Delegation"
+                  urlString = "file:///Users/Dave/CTT-Working-Directory/CTT-Project/Menu%20Delegation%20Ver%202/Menu%20Delegation/MainViewController.swift"
+                  timestampString = "448671413.190918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@unowned Swift.Bool) -&gt; (@unowned ()) to @callee_owned (@in Swift.Bool) -&gt; (@out ())"
+                  moduleName = "Menu Delegation"
+                  urlString = "file:///Users/Dave/CTT-Working-Directory/CTT-Project/Menu%20Delegation%20Ver%202/Menu%20Delegation/MainViewController.swift"
+                  timestampString = "448671413.191162"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Menu Delegation/MainViewController.swift"
+            timestampString = "448672912.001983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "performLaunchOverlayAnimation()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
