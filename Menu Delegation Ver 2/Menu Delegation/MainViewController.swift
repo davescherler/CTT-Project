@@ -57,6 +57,8 @@ class MainViewController: UIViewController, PassingQuote {
         
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
+        // Now we're passing to the 'next' AuthorViewController the author ID so that it knows what info to display
+        next.contributorID = self.authorID
         self.presentViewController(next, animated: true, completion: nil)
 
     }
@@ -136,7 +138,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
         
         // working on loading JSON for today's quote
-        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/todays-quote.json") {
+        if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
             println("MainViewVC: The json for today's quote url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
