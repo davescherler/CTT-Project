@@ -101,7 +101,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.99407677979999998" blue="0.96585191699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -151,6 +151,7 @@
                     <navigationItem key="navigationItem" id="BIO-XT-Nw8">
                         <barButtonItem key="leftBarButtonItem" image="menu.pdf" id="KPc-t2-bvF"/>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="authorInfoButton" destination="6un-6n-Yjg" id="J2m-99-bLq"/>
                         <outlet property="authorLabel" destination="T3N-Zv-m5j" id="Wfv-XC-NgF"/>
@@ -177,7 +178,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3563" y="337"/>
+            <point key="canvasLocation" x="3548" y="323"/>
         </scene>
         <!--Author Info View Controller-->
         <scene sceneID="Pfs-ES-AxX">
