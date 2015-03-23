@@ -13,6 +13,7 @@ class AuthorInfoViewController: UIViewController {
     var json: NSArray?
     var textForAuthorName = ""
     var textForAuthorBio = ""
+    var dataForPic: NSData?
 
     @IBOutlet weak var authorImage: UIImageView!
     
@@ -40,12 +41,17 @@ class AuthorInfoViewController: UIViewController {
                     if let authorBiography = jsonInfo["contributor_bio"] as? NSString {
                         self.textForAuthorBio = authorBiography
                         }
+                    if let authorPictureLink = jsonInfo["contributor_image"] as? NSString {
+                            let urlForImage = NSURL(string: authorPictureLink)
+                            self.dataForPic = NSData(contentsOfURL: urlForImage!)
+                        }
                     }
                 }
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     // IMPORTANT we need to reload the data we got into our table view
                     self.authorName.text = self.textForAuthorName
                     self.authorBio.text = self.textForAuthorBio
+                    self.authorImage.image = UIImage(data: self.dataForPic!)
                 })
             })
             task.resume()
