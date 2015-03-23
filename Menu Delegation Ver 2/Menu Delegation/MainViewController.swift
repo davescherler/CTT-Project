@@ -13,8 +13,8 @@ import pop
 class MainViewController: UIViewController, PassingQuote {
 
     let menuButton = UIButton()
-    let mainImage = UIImage(named: "orange main") as UIImage?
-    let menuImage = UIImage(named: "white menu") as UIImage?
+    let mainImage = UIImage(named: "menu orange") as UIImage?
+    let menuImage = UIImage(named: "close white") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
     let logoImageView = UIImageView()
     let overlay = UIView()
@@ -32,9 +32,20 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var quoteTextField: UITextView!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var authorInfoButton: UIButton!
+    @IBOutlet weak var videoButton: UIButton!
+    
+    
     @IBAction func showVideo(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
+        self.presentViewController(next, animated: true, completion: nil)
+        
     }
+    
+    // Stated there was a potential conflict with func showAuthorInfo()
     @IBAction func showAuthorInfo(sender: UIButton) {
+
         // Right now, only prints the id of the author
         // in the future we will have to create a new view controller to display the author info
         if self.authorID == "none" {
@@ -44,6 +55,10 @@ class MainViewController: UIViewController, PassingQuote {
             println("The ID for the author of this quote is: \(self.authorID)")
         }
         
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
+        self.presentViewController(next, animated: true, completion: nil)
+
     }
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
@@ -205,7 +220,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.view.addSubview(self.menu!.view)
         
         self.menu!.view.snp_makeConstraints { (make) -> () in
-            make.width.equalTo(325) //(self.view.frame.width - 50)
+            make.width.equalTo(320)
             make.height.equalTo(self.view.snp_height)
             make.top.equalTo(0)
         }
@@ -224,23 +239,27 @@ class MainViewController: UIViewController, PassingQuote {
         self.menuButton.setImage(mainImage, forState: .Normal)
         self.menuButton.addTarget(self, action: "toggle:", forControlEvents: UIControlEvents.TouchUpInside)
         self.menuButton.snp_makeConstraints { (make) -> () in
-            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(10)
-            make.leading.equalTo(12)
-            make.width.equalTo(26)
-            make.height.equalTo(30)
+            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(7)
+            make.leading.equalTo(10)
+            make.width.equalTo(40)
+            make.height.equalTo(40)
         }
     }
     
     func createLogo() {
         let logo = UIImageView(image: logoImage)
         self.topBarContainerView.addSubview(logo)
+        logo.alpha = 0
         logo.snp_makeConstraints { (make) -> () in
-            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(10.5)
+            make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(7)
             //make.centerX.equalTo(self.topBarContainerView.snp_centerX)
             make.leading.equalTo(142.5)
             make.width.equalTo(90)
             make.height.equalTo(36)
         }
+        UIView.animateWithDuration(4, animations: { () -> Void in
+            logo.alpha = 1
+        })
     }
 
     func toggle(sender: UIButton!) {
@@ -259,13 +278,13 @@ class MainViewController: UIViewController, PassingQuote {
         self.menuLeftConstraint?.pop_addAnimation(toggleMenuIn, forKey: "toggleMenuIn.move")
                 
         let toggleMainVCOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        toggleMainVCOut.toValue = 320//self.menu!.view.frame.width - 5
+        toggleMainVCOut.toValue = 315//self.menu!.view.frame.width - 5
         toggleMainVCOut.springBounciness = 10
         toggleMainVCOut.springSpeed = 10
         self.mainVCLeftConstraint?.pop_addAnimation(toggleMainVCOut, forKey: "toggleMainVCOut.move")
         
         let slideBackgroundOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        slideBackgroundOut.toValue = 320//self.mainVCLeftConstraint.constant
+        slideBackgroundOut.toValue = 315//self.mainVCLeftConstraint.constant
         slideBackgroundOut.springBounciness = 10
         slideBackgroundOut.springSpeed = 10
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundOut, forKey: "slideBackgroundOut.move")
@@ -273,6 +292,8 @@ class MainViewController: UIViewController, PassingQuote {
         self.quoteTextField.alpha = 0
         self.authorLabel.alpha = 0
         self.infoLabel.alpha = 0
+        self.authorInfoButton.alpha = 0
+        self.videoButton.alpha = 0
         self.view.backgroundColor = self.menu!.view.backgroundColor
                 
         let transitionOptions = UIViewAnimationOptions.TransitionFlipFromLeft
@@ -309,6 +330,11 @@ class MainViewController: UIViewController, PassingQuote {
             self.menuButton.setImage(self.mainImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = false
+        
+        UIView.animateWithDuration(0.3, animations: {
+            self.authorInfoButton.alpha = 1
+            self.videoButton.alpha = 1
+        })
         
         UIView.animateWithDuration(1, animations: {
             self.quoteTextField.alpha = 1
@@ -371,31 +397,23 @@ class MainViewController: UIViewController, PassingQuote {
             self.logoImageView.transform = scale
             }, completion: { (Bool) -> Void in
                 let slideUp = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-                slideUp.toValue = -21
-                slideUp.springBounciness = 2
+                slideUp.toValue = -24.5
+                slideUp.springBounciness = 0
                 slideUp.springSpeed = 1
                 self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
-                
                 self.destroyLaunchOverlay()
-                //self.createLogo()
             })
-            //destroyLaunchOverlay()
-//                UIView.animateWithDuration(2.0, animations: {
-//                    self.overlay.alpha = 0
-//                    
-//                    }, completion: { (Bool) -> Void In
-//                         self.logoImageView.removeFromSuperview()
-//                })
-       
+            //self.createLogo()
     }
     
     func destroyLaunchOverlay() {
-        UIView.animateWithDuration(2.0, animations: { () -> Void in
+        UIView.animateWithDuration(3, animations: { () -> Void in
         self.overlay.alpha = 0
         }) { (Bool) -> Void in
-            self.createLogo()
             self.logoImageView.removeFromSuperview()
+            self.createLogo()
         }
+        //self.createLogo()
     }
     
 }
