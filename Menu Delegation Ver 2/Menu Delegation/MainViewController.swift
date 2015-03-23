@@ -132,8 +132,8 @@ class MainViewController: UIViewController, PassingQuote {
     override func viewDidLoad() {
         super.viewDidLoad()
         createMenuButton()
-
-        createLogo()
+        
+        //createLogo()
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
         
@@ -251,7 +251,7 @@ class MainViewController: UIViewController, PassingQuote {
     func createLogo() {
         let logo = UIImageView(image: logoImage)
         self.topBarContainerView.addSubview(logo)
-        logo.alpha = 0
+        logo.alpha = 1
         logo.snp_makeConstraints { (make) -> () in
             make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(7)
             //make.centerX.equalTo(self.topBarContainerView.snp_centerX)
@@ -259,9 +259,9 @@ class MainViewController: UIViewController, PassingQuote {
             make.width.equalTo(90)
             make.height.equalTo(36)
         }
-        UIView.animateWithDuration(4, animations: { () -> Void in
-            logo.alpha = 1
-        })
+//        UIView.animateWithDuration(0.5, animations: { () -> Void in
+//            logo.alpha = 1
+//        })
     }
 
     func toggle(sender: UIButton!) {
@@ -269,7 +269,7 @@ class MainViewController: UIViewController, PassingQuote {
             showMenu()
         } else {
             hideMenu()
-            changeBackgroundImage()
+            //changeBackgroundImage()
         } }
     
     func showMenu(){
@@ -400,7 +400,7 @@ class MainViewController: UIViewController, PassingQuote {
             }, completion: { (Bool) -> Void in
                 let slideUp = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
                 slideUp.toValue = -24.5
-                slideUp.springBounciness = 0
+                slideUp.springBounciness = -10
                 slideUp.springSpeed = 1
                 self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
                 self.destroyLaunchOverlay()
@@ -409,7 +409,7 @@ class MainViewController: UIViewController, PassingQuote {
     }
     
     func destroyLaunchOverlay() {
-        UIView.animateWithDuration(3, animations: { () -> Void in
+        UIView.animateWithDuration(2, animations: { () -> Void in
         self.overlay.alpha = 0
         }) { (Bool) -> Void in
             self.logoImageView.removeFromSuperview()
