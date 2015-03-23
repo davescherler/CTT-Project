@@ -31,15 +31,20 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var mainVCLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var quoteTextField: UITextView!
-//<<<<<<< HEAD
-//=======
     @IBOutlet weak var authorLabel: UILabel!
+    
     @IBAction func showVideo(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
+        self.presentViewController(next, animated: true, completion: nil)
+        
     }
     @IBAction func showAuthorInfo(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
+        self.presentViewController(next, animated: true, completion: nil)
     }
     @IBOutlet weak var infoLabel: UILabel!
-//>>>>>>> 24d9ea0b2bf156253b288bdcead4dcddb834a547
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     

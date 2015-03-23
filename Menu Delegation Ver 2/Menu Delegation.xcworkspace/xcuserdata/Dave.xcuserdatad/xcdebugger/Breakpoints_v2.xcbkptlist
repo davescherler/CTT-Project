@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
             endingLineNumber = "248"
-            landmarkName = "changeBackgroundImage()"
+            landmarkName = "hideMenu()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -77,7 +77,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "249"
             endingLineNumber = "249"
-            landmarkName = "changeBackgroundImage()"
+            landmarkName = "hideMenu()"
             landmarkType = "5">
             <Locations>
                <Location
