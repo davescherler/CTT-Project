@@ -42,16 +42,39 @@ class MainViewController: UIViewController, PassingQuote {
         self.presentViewController(next, animated: true, completion: nil)
         
     }
+    
+    // Stated there was a potential conflict with func showAuthorInfo()
     @IBAction func showAuthorInfo(sender: UIButton) {
+
+        // Right now, only prints the id of the author
+        // in the future we will have to create a new view controller to display the author info
+        if self.authorID == "none" {
+            println("not enough information to find author bio")
+        }
+        else {
+            println("The ID for the author of this quote is: \(self.authorID)")
+        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
+        // Now we're passing to the 'next' AuthorViewController the author ID so that it knows what info to display
+        next.contributorID = self.authorID
         self.presentViewController(next, animated: true, completion: nil)
+
     }
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     
     var json: NSArray?
+    var jsonTodaysQuote: NSArray?
+    
+    // the authorID variable stores an ID used to find the right author information from the contributor.json file, in case the user
+    // wants to learn more about the author. By default it is "none" (i.e. no ID found)
+    var authorID = "none"
+    // the interviewLink variable stores the URL of the video associated with the quote on screen.
+    // By default it is "none" (i.e. no URL video for the quote)
+    var interviewLink = "none"
     
     var midtempData:[String] = []
     
@@ -60,7 +83,8 @@ class MainViewController: UIViewController, PassingQuote {
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
-            self.quoteTextField.text = midtempData[ArrayLocation]
+//            self.quoteTextField.text = midtempData[ArrayLocation]
+            refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
             updateQuoteTextAppearance()
         } else {
             self.quoteTextField.text = favQuotesArray[ArrayLocation]
@@ -70,24 +94,82 @@ class MainViewController: UIViewController, PassingQuote {
         hideMenu()
         changeBackgroundImage()
     }
+    
+    // refreshJSONQuoteOnScreen() takes an integer (the row of the table clicked)
+    // and gets the appropriate dictionary with all the quote info (text, author...)
+    // to display that info on the MainVC view
+    func refreshJSONQuoteOnScreen(index:Int, origin:String) {
+        var jsonToUse: NSArray?
+        // since we have two json files ("all quotes" and "today's quotes")
+        // we need to figure out which one to use to refresh the info on screen
+        if origin == "All" {
+            jsonToUse = self.json
+        } else {
+            jsonToUse = self.jsonTodaysQuote
+        }
+        
+        if let jsonData = jsonToUse {
+            if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
+                if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
+                    self.quoteTextField.text = jsonQuoteText
+                }
+                if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
+                    self.authorLabel.text = authorOfQuote
+                }
+                if let infoForQuote = jsonQuoteSelected["term_names"] as? NSString {
+                    self.infoLabel.text = infoForQuote
+                }
+                if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
+                    self.authorID = authorInfo
+                }
+                if let interviewInfo = jsonQuoteSelected["contributor_id"] as? NSString {
+                    self.interviewLink = interviewInfo
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         createMenuButton()
-//<<<<<<< HEAD
+
         createLogo()
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
         
-        // working on loading JSON
-        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes.json") {
+        // working on loading JSON for today's quote
+        if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
+            println("MainViewVC: The json for today's quote url does exist")
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                    self.jsonTodaysQuote = jsonDict as? NSArray
+                    println("MainViewVC: json in viewDidLoad(). jsonTodaysQuote count is now \(self.jsonTodaysQuote!.count)")
+
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    // IMPORTANT we need to reload the data we got into our table view
+                    self.refreshJSONQuoteOnScreen(0, origin: "Today")
+                    self.updateQuoteTextAppearance()
+                })
+            })
+            task.resume()
+        }
+        
+        
+        
+        
+        
+        // working on loading JSON for all quotes
+        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json") {
+            println("MainViewVC: The json url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
                     self.json = jsonDict as? NSArray
-                    
                     println("MainViewVC: json in viewDidLoad(). json count is now \(self.json!.count)")
                     
-                    
+                    // Append all the text of quotes to the midtempData array, so that we can show these quotes 
+                    // in the MenuViewController's table
                     if let jsonData = self.json {
                         println("MainViewVC: json in viewDidLoad(). jsonData exists")
                         for i in jsonData {
