@@ -11,15 +11,17 @@ import UIKit
 class AuthorInfoViewController: UIViewController {
 
     @IBOutlet weak var authorImage: UIImageView!
+    
     @IBOutlet weak var authorName: UILabel!
     @IBOutlet weak var authorBio: UITextView!
     
-    @IBAction func dismissAuthorInfoVC(sender: UIButton) {
-        self.dismissViewControllerAnimated(false, completion: nil)
+    @IBAction func close(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

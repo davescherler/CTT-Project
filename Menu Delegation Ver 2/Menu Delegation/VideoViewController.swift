@@ -14,7 +14,7 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var videoTitle: UILabel!
     
     @IBAction func dismissVideoVC(sender: UIButton!) {
-        dismissViewControllerAnimated(false, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
