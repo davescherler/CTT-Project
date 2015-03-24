@@ -59,6 +59,9 @@ class MainViewController: UIViewController, PassingQuote {
         let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
         // Now we're passing to the 'next' AuthorViewController the author ID so that it knows what info to display
         next.contributorID = self.authorID
+        if let passingName = self.authorLabel.text {
+            next.textForAuthorName = passingName
+        }
         self.presentViewController(next, animated: true, completion: nil)
 
     }
