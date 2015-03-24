@@ -401,7 +401,7 @@ class MainViewController: UIViewController, PassingQuote {
                 let slideUp = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
                 slideUp.toValue = -24.5
                 slideUp.springBounciness = -10
-                slideUp.springSpeed = 1
+                slideUp.springSpeed = 40
                 self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
                 self.destroyLaunchOverlay()
             })
