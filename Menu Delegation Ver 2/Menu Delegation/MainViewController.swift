@@ -128,6 +128,10 @@ class MainViewController: UIViewController, PassingQuote {
             }
         }
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

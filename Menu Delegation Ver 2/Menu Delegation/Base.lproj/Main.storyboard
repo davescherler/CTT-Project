@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,7 +22,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-XR-UUm" userLabel="TopBarView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="DH6-AQ-lep"/>
                                         </constraints>
@@ -151,7 +151,7 @@
                     <navigationItem key="navigationItem" id="BIO-XT-Nw8">
                         <barButtonItem key="leftBarButtonItem" image="menu.pdf" id="KPc-t2-bvF"/>
                     </navigationItem>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="authorInfoButton" destination="6un-6n-Yjg" id="J2m-99-bLq"/>
                         <outlet property="authorLabel" destination="T3N-Zv-m5j" id="Wfv-XC-NgF"/>
@@ -178,7 +178,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3548" y="323"/>
+            <point key="canvasLocation" x="3548" y="337"/>
         </scene>
         <!--Author Info View Controller-->
         <scene sceneID="Pfs-ES-AxX">
@@ -244,7 +244,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="9cs-ML-FcE" secondAttribute="trailing" constant="10" id="5ma-qn-Cry"/>
                             <constraint firstItem="25h-oZ-ITX" firstAttribute="top" secondItem="I7j-rX-fzj" secondAttribute="bottom" constant="70" id="CM3-WU-26c"/>
@@ -260,6 +260,7 @@
                             <constraint firstItem="9cs-ML-FcE" firstAttribute="leading" secondItem="gJi-Zb-9Vm" secondAttribute="leadingMargin" constant="10" id="uac-A3-h09"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="authorBio" destination="WnY-N9-QCo" id="Jmf-iy-nTQ"/>
                         <outlet property="authorImage" destination="25h-oZ-ITX" id="ulF-MH-dqV"/>
@@ -308,6 +309,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="logoImage" destination="YVR-pN-FZc" id="mF3-lO-bu3"/>
                         <outlet property="logoTopConstraint" destination="ztF-eq-d0c" id="mgY-ne-E44"/>
@@ -354,7 +356,7 @@
                                     <outlet property="delegate" destination="0sg-64-sEP" id="lyL-SU-k8B"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-xB-57L">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-xB-57L">
                                 <rect key="frame" x="234" y="35" width="141" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <segments>
@@ -384,6 +386,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="filterStatus" destination="4nT-xB-57L" id="038-NZ-XSO"/>
                         <outlet property="table" destination="Q94-iw-KI5" id="nn1-DB-4uc"/>
@@ -429,7 +432,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YQK-at-zYS" firstAttribute="leading" secondItem="tQ7-vB-Smn" secondAttribute="leadingMargin" constant="10" id="41J-Ta-Jmj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YQK-at-zYS" secondAttribute="trailing" constant="10" id="8Iy-Ba-vez"/>
@@ -448,6 +451,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="videoTitle" destination="A6h-m2-jdd" id="oAu-aJ-jp2"/>
                         <outlet property="videoView" destination="YQK-at-zYS" id="FjL-FE-6Zd"/>

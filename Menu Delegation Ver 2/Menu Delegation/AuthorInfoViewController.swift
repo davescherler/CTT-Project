@@ -23,6 +23,12 @@ class AuthorInfoViewController: UIViewController {
     @IBAction func close(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -25,6 +25,10 @@ class VideoViewController: UIViewController {
             self.videoView.loadRequest(request)
         }
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
      override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
