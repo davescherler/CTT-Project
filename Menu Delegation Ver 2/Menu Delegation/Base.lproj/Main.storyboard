@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,9 +23,23 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-XR-UUm" userLabel="TopBarView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pte-cF-oPw">
+                                                <rect key="frame" x="546" y="18" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="HoJ-7q-eoF"/>
+                                                    <constraint firstAttribute="width" constant="35" id="cAH-De-tpQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Fav" image="bookmark-fill.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="pte-cF-oPw" firstAttribute="top" secondItem="znK-XR-UUm" secondAttribute="top" constant="18" id="4ge-FX-Jwu"/>
                                             <constraint firstAttribute="height" constant="65" id="DH6-AQ-lep"/>
+                                            <constraint firstAttribute="trailing" secondItem="pte-cF-oPw" secondAttribute="trailing" constant="19" id="eHS-gk-ttZ"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Consciousness Cropped.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-mu-Mjw" userLabel="BackgroundImageView">
@@ -61,7 +76,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="5m7-IA-SbD"/>
                                                     <constraint firstAttribute="width" constant="40" id="Jy5-mE-eMF"/>
                                                 </constraints>
-                                                <state key="normal" image="profile orange.png">
+                                                <state key="normal" image="profile white.png">
                                                     <color key="titleColor" red="0.83529411760000005" green="0.61568627450000002" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -76,7 +91,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="IQV-Qw-EEK"/>
                                                     <constraint firstAttribute="width" constant="60" id="dtT-an-tZa"/>
                                                 </constraints>
-                                                <state key="normal" title="Video" image="video orange.png">
+                                                <state key="normal" title="Video" image="video white.png">
                                                     <color key="titleColor" red="0.83529411760000005" green="0.61568627450000002" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -157,6 +172,7 @@
                         <outlet property="authorLabel" destination="T3N-Zv-m5j" id="Wfv-XC-NgF"/>
                         <outlet property="backgroundView" destination="RiT-mu-Mjw" id="nyt-xE-WVE"/>
                         <outlet property="backgroundViewLeadingConstraint" destination="W3W-W2-IkS" id="Vds-9a-u1U"/>
+                        <outlet property="favoriteButton" destination="pte-cF-oPw" id="krw-IG-UIU"/>
                         <outlet property="infoLabel" destination="YFJ-2h-h45" id="Pz7-z6-d8H"/>
                         <outlet property="mainContainerView" destination="IYO-pj-MuR" id="8zV-7e-wcy"/>
                         <outlet property="mainVCLeftConstraint" destination="saM-he-c3S" id="6gE-8H-aB1"/>
@@ -221,6 +237,7 @@
                                     <constraint firstAttribute="height" constant="35" id="0ZO-9R-7nM"/>
                                     <constraint firstAttribute="width" constant="35" id="oM4-ZO-mCS"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="4" height="4"/>
                                 <state key="normal" image="close white.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -399,6 +416,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-m2-jdd">
+                                <rect key="frame" x="26" y="556" width="548" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-at-zYS">
+                                <rect key="frame" x="26" y="116" width="548" height="308"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YQK-at-zYS" secondAttribute="height" multiplier="16:9" id="x2s-Xa-UrQ"/>
+                                </constraints>
+                            </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHL-zR-8ay">
                                 <rect key="frame" x="547" y="18" width="35" height="35"/>
                                 <constraints>
@@ -412,16 +442,6 @@
                                     <action selector="dismissVideoVC:" destination="A7U-Ve-pOt" eventType="touchUpInside" id="sjX-hD-4QQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-m2-jdd">
-                                <rect key="frame" x="26" y="500" width="548" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-at-zYS">
-                                <rect key="frame" x="26" y="90" width="548" height="360"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-T8-Wlx">
                                 <rect key="frame" x="282" y="251" width="37" height="37"/>
                             </activityIndicatorView>
@@ -430,16 +450,16 @@
                         <constraints>
                             <constraint firstItem="YQK-at-zYS" firstAttribute="leading" secondItem="tQ7-vB-Smn" secondAttribute="leadingMargin" constant="10" id="41J-Ta-Jmj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YQK-at-zYS" secondAttribute="trailing" constant="10" id="8Iy-Ba-vez"/>
+                            <constraint firstAttribute="centerY" secondItem="rM7-T8-Wlx" secondAttribute="centerY" constant="30.5" id="9qj-pJ-kTf"/>
                             <constraint firstAttribute="centerX" secondItem="rM7-T8-Wlx" secondAttribute="centerX" constant="-0.5" id="Agv-wT-bgj"/>
                             <constraint firstItem="A6h-m2-jdd" firstAttribute="leading" secondItem="tQ7-vB-Smn" secondAttribute="leadingMargin" constant="10" id="Bbz-rw-vI2"/>
+                            <constraint firstAttribute="centerX" secondItem="YQK-at-zYS" secondAttribute="centerX" id="Rai-Oj-5tT"/>
+                            <constraint firstItem="xgv-ec-hfI" firstAttribute="top" secondItem="A6h-m2-jdd" secondAttribute="bottom" constant="20" id="Tb7-nJ-e1d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rHL-zR-8ay" secondAttribute="trailing" constant="2" id="Z6v-ce-ht8"/>
                             <constraint firstItem="rHL-zR-8ay" firstAttribute="trailing" secondItem="tQ7-vB-Smn" secondAttribute="trailingMargin" constant="10" id="apZ-j5-3hr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A6h-m2-jdd" secondAttribute="trailing" constant="10" id="f6X-0m-Jyw"/>
-                            <constraint firstItem="YQK-at-zYS" firstAttribute="top" secondItem="vUw-va-lsW" secondAttribute="bottom" constant="90" id="hFC-Pi-PCd"/>
-                            <constraint firstAttribute="centerY" secondItem="rM7-T8-Wlx" secondAttribute="centerY" constant="30.5" id="i6I-ts-CMj"/>
-                            <constraint firstItem="xgv-ec-hfI" firstAttribute="top" secondItem="YQK-at-zYS" secondAttribute="bottom" constant="150" id="mvJ-lS-xrn"/>
+                            <constraint firstAttribute="centerY" secondItem="YQK-at-zYS" secondAttribute="centerY" constant="30" id="kka-Tg-tXA"/>
                             <constraint firstItem="rHL-zR-8ay" firstAttribute="top" secondItem="vUw-va-lsW" secondAttribute="bottom" constant="18" id="qeZ-2E-le9"/>
-                            <constraint firstItem="A6h-m2-jdd" firstAttribute="top" secondItem="YQK-at-zYS" secondAttribute="bottom" constant="50" id="trN-aF-JjS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -461,10 +481,11 @@
     </scenes>
     <resources>
         <image name="Consciousness Cropped.jpg" width="2048" height="1671"/>
+        <image name="bookmark-fill.png" width="1200" height="1200"/>
         <image name="close white.png" width="1200" height="1200"/>
         <image name="logo.png" width="2166" height="910"/>
         <image name="menu.pdf" width="44" height="44"/>
-        <image name="profile orange.png" width="1200" height="1200"/>
-        <image name="video orange.png" width="1200" height="1200"/>
+        <image name="profile white.png" width="1200" height="1200"/>
+        <image name="video white.png" width="1200" height="1200"/>
     </resources>
 </document>

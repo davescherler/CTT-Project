@@ -13,7 +13,7 @@ import pop
 class MainViewController: UIViewController, PassingQuote {
 
     let menuButton = UIButton()
-    let mainImage = UIImage(named: "menu orange") as UIImage?
+    let mainImage = UIImage(named: "menu white") as UIImage?
     let menuImage = UIImage(named: "close white") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
     let logoImageView = UIImageView()
@@ -34,6 +34,7 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var authorInfoButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     
     @IBAction func showVideo(sender: UIButton) {
