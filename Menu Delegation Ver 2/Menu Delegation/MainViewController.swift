@@ -13,7 +13,7 @@ import pop
 class MainViewController: UIViewController, PassingQuote {
 
     let menuButton = UIButton()
-    let mainImage = UIImage(named: "menu white") as UIImage?
+    let mainImage = UIImage(named: "menu rounded white") as UIImage?
     let menuImage = UIImage(named: "close white") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
     let logoImageView = UIImageView()
@@ -37,6 +37,11 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var favoriteButton: UIButton!
     
     
+    @IBAction func addToFavorites(sender: UIButton) {
+        
+    }
+    
+
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
@@ -46,7 +51,6 @@ class MainViewController: UIViewController, PassingQuote {
     
     // Stated there was a potential conflict with func showAuthorInfo()
     @IBAction func showAuthorInfo(sender: UIButton) {
-
         // Right now, only prints the id of the author
         // in the future we will have to create a new view controller to display the author info
         if self.authorID == "none" {
@@ -79,9 +83,7 @@ class MainViewController: UIViewController, PassingQuote {
     // the interviewLink variable stores the URL of the video associated with the quote on screen.
     // By default it is "none" (i.e. no URL video for the quote)
     var interviewLink = "none"
-    
     var midtempData:[String] = []
-    
     var favQuotesArray = ["Before","ViewDidLoad Changes","Changes to the Array"]
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
@@ -126,6 +128,7 @@ class MainViewController: UIViewController, PassingQuote {
                 if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
                     self.authorID = authorInfo
                 }
+                //alexis - you are referencing the same index path (contributor_id) for both the authorID and interviewInfo. Don't we need to use the
                 if let interviewInfo = jsonQuoteSelected["contributor_id"] as? NSString {
                     self.interviewLink = interviewInfo
                 }
@@ -140,8 +143,10 @@ class MainViewController: UIViewController, PassingQuote {
     override func viewDidLoad() {
         super.viewDidLoad()
         createMenuButton()
+        initMenu()
+        createLaunchOverlay()
+        performLaunchOverlayAnimation()
         
-        //createLogo()
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
         
@@ -163,10 +168,6 @@ class MainViewController: UIViewController, PassingQuote {
             })
             task.resume()
         }
-        
-        
-        
-        
         
         // working on loading JSON for all quotes
         if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json") {
@@ -200,18 +201,7 @@ class MainViewController: UIViewController, PassingQuote {
             })
             task.resume()
                 }
-
-        initMenu()
         println("MainViewVC: reaching the end of viewDidload()")
-
-//=======
-        createLaunchOverlay()
-        performLaunchOverlayAnimation()
-        //miniaturizeLaunchOverlay()
-        //self.view.removeFromSuperview(self.overlay)
-        //self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
-        //println("the container width is: \(self.mainContainerView.frame.width)")
-//>>>>>>> 24d9ea0b2bf156253b288bdcead4dcddb834a547
     }
 
     override func didReceiveMemoryWarning() {
@@ -239,7 +229,7 @@ class MainViewController: UIViewController, PassingQuote {
         
         //Loading the quotes into the menuViewController
         self.menu?.allQuotesData = self.midtempData
-        self.menu?.favQuotesData = self.favQuotesArray
+        self.menu?.favQuotesData = self.favQuotesArray //here, we need to re-direct to the favorites.plist
         self.menu?.delegate = self
         self.menu?.re_filter()
     }
@@ -251,8 +241,8 @@ class MainViewController: UIViewController, PassingQuote {
         self.menuButton.snp_makeConstraints { (make) -> () in
             make.centerY.equalTo(self.topBarContainerView.snp_centerY).offset(7)
             make.leading.equalTo(10)
-            make.width.equalTo(40)
-            make.height.equalTo(40)
+            make.width.equalTo(35)
+            make.height.equalTo(35)
         }
     }
     
@@ -267,9 +257,6 @@ class MainViewController: UIViewController, PassingQuote {
             make.width.equalTo(90)
             make.height.equalTo(36)
         }
-//        UIView.animateWithDuration(0.5, animations: { () -> Void in
-//            logo.alpha = 1
-//        })
     }
 
     func toggle(sender: UIButton!) {
@@ -277,7 +264,6 @@ class MainViewController: UIViewController, PassingQuote {
             showMenu()
         } else {
             hideMenu()
-            //changeBackgroundImage()
         } }
     
     func showMenu(){
@@ -291,13 +277,13 @@ class MainViewController: UIViewController, PassingQuote {
         self.menuLeftConstraint?.pop_addAnimation(toggleMenuIn, forKey: "toggleMenuIn.move")
                 
         let toggleMainVCOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        toggleMainVCOut.toValue = 315//self.menu!.view.frame.width - 5
+        toggleMainVCOut.toValue = 315
         toggleMainVCOut.springBounciness = 10
         toggleMainVCOut.springSpeed = 10
         self.mainVCLeftConstraint?.pop_addAnimation(toggleMainVCOut, forKey: "toggleMainVCOut.move")
         
         let slideBackgroundOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        slideBackgroundOut.toValue = 315//self.mainVCLeftConstraint.constant
+        slideBackgroundOut.toValue = 315
         slideBackgroundOut.springBounciness = 10
         slideBackgroundOut.springSpeed = 10
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundOut, forKey: "slideBackgroundOut.move")
@@ -407,7 +393,6 @@ class MainViewController: UIViewController, PassingQuote {
             make.width.equalTo(300)
             make.height.equalTo(128)
             make.centerX.equalTo(self.overlay.snp_centerX)
-            //make.centerY.equalTo(self.overlay.snp_centerY)
         }
         
 
@@ -425,7 +410,6 @@ class MainViewController: UIViewController, PassingQuote {
                 self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
                 self.destroyLaunchOverlay()
             })
-            //self.createLogo()
     }
     
     func destroyLaunchOverlay() {
@@ -435,7 +419,6 @@ class MainViewController: UIViewController, PassingQuote {
             self.logoImageView.removeFromSuperview()
             self.createLogo()
         }
-        //self.createLogo()
     }
     
 }

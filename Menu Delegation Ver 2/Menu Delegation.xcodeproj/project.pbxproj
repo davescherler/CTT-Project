@@ -37,6 +37,9 @@
 		55E67DA31ABDEC0A00AF0BEE /* Consciousness Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA21ABDEC0A00AF0BEE /* Consciousness Cropped.jpg */; };
 		55E67DA51ABDEC1600AF0BEE /* Cosmos Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA41ABDEC1600AF0BEE /* Cosmos Cropped.jpg */; };
 		55E67DA71ABDEC2100AF0BEE /* Meaning Cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */; };
+		55EC87781AC1C0FB0016E594 /* menu rounded white.png in Resources */ = {isa = PBXBuildFile; fileRef = 55EC87771AC1C0FB0016E594 /* menu rounded white.png */; };
+		55EC877A1AC1C7430016E594 /* bookmark empty white bordered.png in Resources */ = {isa = PBXBuildFile; fileRef = 55EC87791AC1C7430016E594 /* bookmark empty white bordered.png */; };
+		55EC877C1AC1C81A0016E594 /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55EC877B1AC1C81A0016E594 /* Favorites.plist */; };
 		55FD45D01ABC8F610002295E /* old white menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FD45CF1ABC8F610002295E /* old white menu.png */; };
 		55FD45D21ABC8F710002295E /* old orange main.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FD45D11ABC8F710002295E /* old orange main.png */; };
 		AEF64CEECE1334C1111CAB1C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA43FF3E4CD0820E9546F5C /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -89,6 +92,9 @@
 		55E67DA21ABDEC0A00AF0BEE /* Consciousness Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Consciousness Cropped.jpg"; sourceTree = "<group>"; };
 		55E67DA41ABDEC1600AF0BEE /* Cosmos Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cosmos Cropped.jpg"; sourceTree = "<group>"; };
 		55E67DA61ABDEC2100AF0BEE /* Meaning Cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Meaning Cropped.jpg"; sourceTree = "<group>"; };
+		55EC87771AC1C0FB0016E594 /* menu rounded white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu rounded white.png"; sourceTree = "<group>"; };
+		55EC87791AC1C7430016E594 /* bookmark empty white bordered.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark empty white bordered.png"; sourceTree = "<group>"; };
+		55EC877B1AC1C81A0016E594 /* Favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Favorites.plist; sourceTree = "<group>"; };
 		55FD45CF1ABC8F610002295E /* old white menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "old white menu.png"; sourceTree = "<group>"; };
 		55FD45D11ABC8F710002295E /* old orange main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "old orange main.png"; sourceTree = "<group>"; };
 		6EA43FF3E4CD0820E9546F5C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +163,7 @@
 				557AC47A1ABA34B400935BB7 /* Supporting Files */,
 				55DE248C1ABCE23700CC148C /* Launch Screen.xib */,
 				55E67D981ABDC9AD00AF0BEE /* BackgroundImage.plist */,
+				55EC877B1AC1C81A0016E594 /* Favorites.plist */,
 			);
 			path = "Menu Delegation";
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 		55D7DDA51ABFABC400D06384 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				55EC87791AC1C7430016E594 /* bookmark empty white bordered.png */,
+				55EC87771AC1C0FB0016E594 /* menu rounded white.png */,
 				55D7DDA61ABFABFD00D06384 /* bookmark empty.png */,
 				55D7DDA71ABFABFD00D06384 /* bookmark fill.png */,
 				55D7DDA81ABFABFD00D06384 /* bookmark-empty_alt.png */,
@@ -317,6 +326,9 @@
 				55D7DDBE1ABFABFD00D06384 /* profile orange.png in Resources */,
 				55E67DA51ABDEC1600AF0BEE /* Cosmos Cropped.jpg in Resources */,
 				55D7DDB81ABFABFD00D06384 /* bookmark-fill_alt.png in Resources */,
+				55EC877C1AC1C81A0016E594 /* Favorites.plist in Resources */,
+				55EC87781AC1C0FB0016E594 /* menu rounded white.png in Resources */,
+				55EC877A1AC1C7430016E594 /* bookmark empty white bordered.png in Resources */,
 				55FD45D01ABC8F610002295E /* old white menu.png in Resources */,
 				55DF52861ABA5C27001F2FEE /* Podfile in Resources */,
 				55FD45D21ABC8F710002295E /* old orange main.png in Resources */,

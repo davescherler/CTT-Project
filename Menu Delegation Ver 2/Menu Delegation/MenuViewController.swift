@@ -48,7 +48,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         println("MenuViewVC: re_filter() called. The number of quotes in allQuotes is now: \(allQuotesData.count)\n")
     }
     
-
     var dataForCells: [String] = []
     
     override func viewDidLoad() {

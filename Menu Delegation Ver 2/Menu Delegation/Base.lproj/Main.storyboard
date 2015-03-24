@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -25,21 +25,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pte-cF-oPw">
-                                                <rect key="frame" x="546" y="18" width="35" height="35"/>
+                                                <rect key="frame" x="555" y="20" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="HoJ-7q-eoF"/>
                                                     <constraint firstAttribute="width" constant="35" id="cAH-De-tpQ"/>
                                                 </constraints>
-                                                <state key="normal" title="Fav" image="bookmark-fill.png">
+                                                <state key="normal" title="Fav" image="bookmark empty white bordered.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addToFavorites:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZvK-hG-i6r"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="pte-cF-oPw" firstAttribute="top" secondItem="znK-XR-UUm" secondAttribute="top" constant="18" id="4ge-FX-Jwu"/>
+                                            <constraint firstItem="pte-cF-oPw" firstAttribute="top" secondItem="znK-XR-UUm" secondAttribute="top" constant="20" id="4ge-FX-Jwu"/>
                                             <constraint firstAttribute="height" constant="65" id="DH6-AQ-lep"/>
-                                            <constraint firstAttribute="trailing" secondItem="pte-cF-oPw" secondAttribute="trailing" constant="19" id="eHS-gk-ttZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="pte-cF-oPw" secondAttribute="trailing" constant="10" id="eHS-gk-ttZ"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Consciousness Cropped.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RiT-mu-Mjw" userLabel="BackgroundImageView">
@@ -163,9 +166,6 @@
                             <constraint firstItem="IYO-pj-MuR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="saM-he-c3S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BIO-XT-Nw8">
-                        <barButtonItem key="leftBarButtonItem" image="menu.pdf" id="KPc-t2-bvF"/>
-                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="authorInfoButton" destination="6un-6n-Yjg" id="J2m-99-bLq"/>
@@ -291,8 +291,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-pN-FZc">
-                                <rect key="frame" x="181" y="236" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="YVR-pN-FZc">
+                                <rect key="frame" x="181" y="216" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Udh-kO-iJg"/>
                                     <constraint firstAttribute="width" constant="240" id="nLR-mQ-X6I"/>
@@ -364,8 +364,8 @@
                                     <outlet property="delegate" destination="0sg-64-sEP" id="lyL-SU-k8B"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-xB-57L">
-                                <rect key="frame" x="234" y="35" width="141" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4nT-xB-57L">
+                                <rect key="frame" x="234" y="15" width="141" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <segments>
                                     <segment title="All"/>
@@ -416,8 +416,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-m2-jdd">
-                                <rect key="frame" x="26" y="556" width="548" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6h-m2-jdd">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -481,10 +480,9 @@
     </scenes>
     <resources>
         <image name="Consciousness Cropped.jpg" width="2048" height="1671"/>
-        <image name="bookmark-fill.png" width="1200" height="1200"/>
+        <image name="bookmark empty white bordered.png" width="35" height="35"/>
         <image name="close white.png" width="1200" height="1200"/>
         <image name="logo.png" width="2166" height="910"/>
-        <image name="menu.pdf" width="44" height="44"/>
         <image name="profile white.png" width="1200" height="1200"/>
         <image name="video white.png" width="1200" height="1200"/>
     </resources>
