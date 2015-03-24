@@ -19,9 +19,8 @@
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     </variation>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ni9-SS-Pq0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ni9-SS-Pq0">
                     <rect key="frame" x="120" y="176" width="240" height="128"/>
-
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="rM2-22-39h"/>
                         <constraint firstAttribute="width" constant="300" id="wfk-CB-Ygt"/>
@@ -37,6 +36,7 @@
                 <constraint firstAttribute="centerY" secondItem="ni9-SS-Pq0" secondAttribute="centerY" id="Zjl-dR-eQi"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="404" y="445"/>
         </view>

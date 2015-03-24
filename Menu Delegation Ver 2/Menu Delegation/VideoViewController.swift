@@ -8,22 +8,43 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController, UIWebViewDelegate {
+    
+    // Variable to use in the appDelegate file to help with screen Orientation restrictions
+    var isPresented: Bool?
 
     @IBOutlet weak var videoView: UIWebView!
     @IBOutlet weak var videoTitle: UILabel!
     
     @IBAction func dismissVideoVC(sender: UIButton!) {
+        isPresented = false
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBOutlet weak var loadingVideoIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.videoView.delegate = self
+        self.isPresented = true
         //update this URL based on selection. 
         if let url = NSURL(string: "https://www.youtube.com/embed/5ZtRfACbygY") {
             let request = NSURLRequest(URL: url)
             self.videoView.loadRequest(request)
+            
+            
         }
+    }
+    
+    func webViewDidFinishLoad(webView: UIWebView) {
+        println("the video has finished loading")
+        self.loadingVideoIndicator.stopAnimating()
+        self.loadingVideoIndicator.hidden = true
+    }
+    
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
      override func didReceiveMemoryWarning() {

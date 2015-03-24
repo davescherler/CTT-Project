@@ -13,7 +13,7 @@ import pop
 class MainViewController: UIViewController, PassingQuote {
 
     let menuButton = UIButton()
-    let mainImage = UIImage(named: "menu orange") as UIImage?
+    let mainImage = UIImage(named: "menu white") as UIImage?
     let menuImage = UIImage(named: "close white") as UIImage?
     let logoImage = UIImage(named: "logo.png") as UIImage?
     let logoImageView = UIImageView()
@@ -34,6 +34,7 @@ class MainViewController: UIViewController, PassingQuote {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var authorInfoButton: UIButton!
     @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     
     @IBAction func showVideo(sender: UIButton) {
@@ -59,6 +60,9 @@ class MainViewController: UIViewController, PassingQuote {
         let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
         // Now we're passing to the 'next' AuthorViewController the author ID so that it knows what info to display
         next.contributorID = self.authorID
+        if let passingName = self.authorLabel.text {
+            next.textForAuthorName = passingName
+        }
         self.presentViewController(next, animated: true, completion: nil)
 
     }
@@ -127,6 +131,10 @@ class MainViewController: UIViewController, PassingQuote {
                 }
             }
         }
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 
     override func viewDidLoad() {
@@ -273,6 +281,9 @@ class MainViewController: UIViewController, PassingQuote {
         } }
     
     func showMenu(){
+        // Hide the bookmark button, otherwise there would be overlap when the menu is open
+        self.favoriteButton.hidden = true
+        
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
         toggleMenuIn.springBounciness = 10
@@ -336,12 +347,21 @@ class MainViewController: UIViewController, PassingQuote {
         UIView.animateWithDuration(0.3, animations: {
             self.authorInfoButton.alpha = 1
             self.videoButton.alpha = 1
+            
         })
         
+        // The bookmark button, which was hidden by showMenu()
+        // now needs to come back but fading in
+        // First we unhide it and put its alpha at 0
+        self.favoriteButton.hidden = false
+        self.favoriteButton.alpha = 0
+        
+        // Then we put the alpha progressively to 1
         UIView.animateWithDuration(1, animations: {
             self.quoteTextField.alpha = 1
             self.authorLabel.alpha = 1
             self.infoLabel.alpha = 1
+            self.favoriteButton.alpha = 1
         })
         
         }
