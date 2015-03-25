@@ -147,7 +147,7 @@ class MainViewController: UIViewController, PassingQuote {
         // that is bigger than the array and the app would crash
         if index < bookmarks!.count {
             if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-                self.quoteTextField.text = quoteText
+                self.quoteTextField.text = "\(quoteText)"
             }
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
@@ -184,7 +184,7 @@ class MainViewController: UIViewController, PassingQuote {
         if let jsonData = jsonToUse {
             if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
                 if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
-                    self.quoteTextField.text = jsonQuoteText
+                    self.quoteTextField.text = "\(jsonQuoteText)"
                 }
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
@@ -359,9 +359,9 @@ class MainViewController: UIViewController, PassingQuote {
         self.favoriteButton.hidden = true
         
         // Reset isAFavoriteQuote to false and the bookmark image to the empty one
-        self.isAFavoriteQuote = false
-        var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-        self.favoriteButton.setImage(image, forState: .Normal)
+        //self.isAFavoriteQuote = false
+        //var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        //self.favoriteButton.setImage(image, forState: .Normal)
     
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
