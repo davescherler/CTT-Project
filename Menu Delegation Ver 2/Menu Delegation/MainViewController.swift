@@ -45,8 +45,16 @@ class MainViewController: UIViewController, PassingQuote {
             
             // Creating a dictionary that will store all the info necessary for the quote
             var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_names": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
-            
             println("The addToFavorites button created a dictionary:\n\(quoteDict)")
+            self.favQuotesArray.insert(quoteDict["quote_text"]!, atIndex: 0)
+            println("favQuotesArray is now \(favQuotesArray)")
+            self.menu?.favQuotesData = self.favQuotesArray
+            
+            // Now we will store the dictionary just created into our Favorites plist
+            var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+            var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+            bookmarks!.insertObject(quoteDict, atIndex: 0)
+            bookmarks?.writeToFile(bookmarksPath!, atomically: true)
 
         } else {
             self.isAFavoriteQuote = false
@@ -215,7 +223,7 @@ class MainViewController: UIViewController, PassingQuote {
                 println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
             }
         } else {
-            println("MainViewVC - ViewDidLoad(): the count of quotes in the favorites plist is not > 0")
+            println("MainViewVC - ViewDidLoad(): the count of quotes in the favorites plist is not > 0 it is \(bookmarks!.count)")
         }
         
         createMenuButton()
@@ -307,7 +315,7 @@ class MainViewController: UIViewController, PassingQuote {
         
         //Loading the quotes into the menuViewController
         self.menu?.allQuotesData = self.midtempData
-        self.menu?.favQuotesData = self.favQuotesArray //here, we need to re-direct to the favorites.plist
+        self.menu?.favQuotesData = self.favQuotesArray
         self.menu?.delegate = self
         self.menu?.re_filter()
     }
