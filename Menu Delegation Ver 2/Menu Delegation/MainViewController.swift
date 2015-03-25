@@ -43,6 +43,11 @@ class MainViewController: UIViewController, PassingQuote {
             self.isAFavoriteQuote = true
             image = UIImage(named: "bookmark-fill.png") as UIImage?
             
+            // Creating a dictionary that will store all the info necessary for the quote
+            var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_names": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
+            
+            println("The addToFavorites button created a dictionary:\n\(quoteDict)")
+
         } else {
             self.isAFavoriteQuote = false
             image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
@@ -94,10 +99,11 @@ class MainViewController: UIViewController, PassingQuote {
     // the interviewLink variable stores the URL of the video associated with the quote on screen.
     // By default it is "none" (i.e. no URL video for the quote)
     var interviewLink = "none"
+    var quoteID = "none"
     var midtempData:[String] = []
-    
-    
-    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
+//    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
+    var favQuotesArray:[String] = []
+
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
@@ -146,6 +152,9 @@ class MainViewController: UIViewController, PassingQuote {
             if let interviewInfo = bookmarks![index]["drupal_interview_url"] as? NSString {
                 self.interviewLink = interviewInfo
             }
+            if let quoteIdentifier = bookmarks![index]["quote_id"] as? NSString {
+                self.quoteID = quoteIdentifier
+            }
         }
     }
     
@@ -180,6 +189,9 @@ class MainViewController: UIViewController, PassingQuote {
                 if let interviewInfo = jsonQuoteSelected["drupal_interview_url"] as? NSString {
                     self.interviewLink = interviewInfo
                 }
+                if let quoteIdentifier = jsonQuoteSelected["quote_id"] as? NSString {
+                    self.quoteID = quoteIdentifier
+                }
             }
         }
     }
@@ -197,7 +209,6 @@ class MainViewController: UIViewController, PassingQuote {
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         if bookmarks!.count > 0 {
             self.favQuotesArray = []
-            println("**** we are in viewDidLoad() and bookmarks is > 0 and favQuotesArray is \(self.favQuotesArray)")
             for i in bookmarks! {
                 var newString = i["quote_text"] as NSString
                 self.favQuotesArray.append(newString)
@@ -337,6 +348,11 @@ class MainViewController: UIViewController, PassingQuote {
         // Hide the bookmark button, otherwise there would be overlap when the menu is open
         self.favoriteButton.hidden = true
         
+        // Reset isAFavoriteQuote to false and the bookmark image to the empty one
+        self.isAFavoriteQuote = false
+        var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        self.favoriteButton.setImage(image, forState: .Normal)
+    
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
         toggleMenuIn.springBounciness = 10
