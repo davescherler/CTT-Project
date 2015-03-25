@@ -105,6 +105,11 @@ class MainViewController: UIViewController, PassingQuote {
             refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
             updateQuoteTextAppearance()
         } else {
+            // When selecting a quote on the MenuVC from the 'Favorites' section we need to update the bookmark button
+            // in the MainViewVC to show the quote is a favorite
+            self.isAFavoriteQuote = true
+            var image = UIImage(named: "bookmark-fill.png") as UIImage?
+            self.favoriteButton.setImage(image, forState: .Normal)
             refreshFavQuoteOnScreen(ArrayLocation)
             updateQuoteTextAppearance()
         }
