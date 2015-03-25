@@ -38,7 +38,16 @@ class MainViewController: UIViewController, PassingQuote {
     
     
     @IBAction func addToFavorites(sender: UIButton) {
-        
+        var image: UIImage?
+        if self.isAFavoriteQuote == false {
+            self.isAFavoriteQuote = true
+            image = UIImage(named: "bookmark-fill.png") as UIImage?
+            
+        } else {
+            self.isAFavoriteQuote = false
+            image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        }
+        self.favoriteButton.setImage(image, forState: .Normal)
     }
     
 
@@ -68,14 +77,16 @@ class MainViewController: UIViewController, PassingQuote {
             next.textForAuthorName = passingName
         }
         self.presentViewController(next, animated: true, completion: nil)
-
     }
+    
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     
     var json: NSArray?
     var jsonTodaysQuote: NSArray?
+    // We're using isAFavoriteQuote to help us decide what to do when clicking on the bookmark button in the top right corner, and also whether the icon for that button should be a full or empty bookmark.
+    var isAFavoriteQuote: Bool = false
     
     // the authorID variable stores an ID used to find the right author information from the contributor.json file, in case the user
     // wants to learn more about the author. By default it is "none" (i.e. no ID found)
@@ -91,11 +102,9 @@ class MainViewController: UIViewController, PassingQuote {
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
-//            self.quoteTextField.text = midtempData[ArrayLocation]
             refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
             updateQuoteTextAppearance()
         } else {
-            self.quoteTextField.text = favQuotesArray[ArrayLocation]
             refreshFavQuoteOnScreen(ArrayLocation)
             updateQuoteTextAppearance()
         }
