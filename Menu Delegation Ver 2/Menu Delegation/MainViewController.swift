@@ -84,7 +84,9 @@ class MainViewController: UIViewController, PassingQuote {
     // By default it is "none" (i.e. no URL video for the quote)
     var interviewLink = "none"
     var midtempData:[String] = []
-    var favQuotesArray = ["Before","ViewDidLoad Changes","Changes to the Array"]
+    
+    
+    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
@@ -100,6 +102,38 @@ class MainViewController: UIViewController, PassingQuote {
         hideMenu()
         changeBackgroundImage()
     }
+    
+    // refreshFavQuoteOnScreen() takes an integer (the row of the table clicked)
+    // and gets the appropriate dictionary from the Favorites.plist for all the quote info (text, author...)
+    // to display that info on the MainVC view
+    func refreshFavQuoteOnScreen(index:Int) {
+        // Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        
+        // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
+        // is LESS than the count of quotes in bookmarks array because otherwise we would be calling an index 
+        // that is bigger than the array and the app would crash
+        if index < bookmarks!.count {
+            if let quoteText = bookmarks![index]["quote_text"] as? NSString {
+                self.quoteTextField.text = quoteText
+            }
+            if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
+                self.authorLabel.text = authorOfQuote
+            }
+            if let infoForQuote = bookmarks![index]["term_names"] as? NSString {
+                self.infoLabel.text = infoForQuote
+            }
+            if let authorInfo = bookmarks![index]["contributor_id"] as? NSString {
+                self.authorID = authorInfo
+            }
+            if let interviewInfo = bookmarks![index]["drupal_interview_url"] as? NSString {
+                self.interviewLink = interviewInfo
+            }
+        }
+    }
+    
     
     // refreshJSONQuoteOnScreen() takes an integer (the row of the table clicked)
     // and gets the appropriate dictionary with all the quote info (text, author...)
@@ -128,8 +162,7 @@ class MainViewController: UIViewController, PassingQuote {
                 if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
                     self.authorID = authorInfo
                 }
-                //alexis - you are referencing the same index path (contributor_id) for both the authorID and interviewInfo. Don't we need to use the
-                if let interviewInfo = jsonQuoteSelected["contributor_id"] as? NSString {
+                if let interviewInfo = jsonQuoteSelected["drupal_interview_url"] as? NSString {
                     self.interviewLink = interviewInfo
                 }
             }
@@ -142,13 +175,32 @@ class MainViewController: UIViewController, PassingQuote {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        if bookmarks!.count > 0 {
+            self.favQuotesArray = []
+            println("**** we are in viewDidLoad() and bookmarks is > 0 and favQuotesArray is \(self.favQuotesArray)")
+            for i in bookmarks! {
+                var newString = i["quote_text"] as NSString
+                self.favQuotesArray.append(newString)
+                println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
+            }
+        } else {
+            println("MainViewVC - ViewDidLoad(): the count of quotes in the favorites plist is not > 0")
+        }
+        
         createMenuButton()
         initMenu()
         createLaunchOverlay()
         performLaunchOverlayAnimation()
         
+        
+        
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
-        self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
+        
         
         // working on loading JSON for today's quote
         if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {

@@ -3,18 +3,32 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>drupal_interview_url</key>
-		<string></string>
-		<key>contributor_bio</key>
-		<string></string>
-		<key>term_names</key>
-		<string></string>
-		<key>contributor_id</key>
-		<string></string>
-		<key>contributor_name</key>
-		<string></string>
+		<key>quote_id</key>
+		<string>46474</string>
 		<key>quote_text</key>
-		<string></string>
+		<string>The universe could very well be a simulation</string>
+		<key>term_names</key>
+		<string>Cosmos</string>
+		<key>drupal_interview_url</key>
+		<string>http://www.closertotruth.com/interviews/1852</string>
+		<key>contributor_name</key>
+		<string>Albert Einstein</string>
+		<key>contributor_id</key>
+		<string>890</string>
 	</dict>
+    <dict>
+        <key>quote_id</key>
+        <string>46475</string>
+        <key>quote_text</key>
+        <string>We don't know everything</string>
+        <key>term_names</key>
+        <string>Meaning</string>
+        <key>drupal_interview_url</key>
+        <string>http://www.closertotruth.com/interviews/1852</string>
+        <key>contributor_name</key>
+        <string>Susan Blackmore</string>
+        <key>contributor_id</key>
+        <string>808</string>
+    </dict>
 </array>
 </plist>
