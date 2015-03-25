@@ -47,7 +47,8 @@ class MainViewController: UIViewController, PassingQuote {
             var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
             println("The addToFavorites button created a dictionary:\n\(quoteDict)")
             self.favQuotesArray.insert(quoteDict["quote_text"]!, atIndex: 0)
-            println("favQuotesArray is now \(favQuotesArray)")
+            self.favQuotesIdArray.insert(quoteDict["quote_id"]!, atIndex: 0)
+            println("favQuotesArray is now \(self.favQuotesArray) and favQuotesIdArray is now \(self.favQuotesIdArray)")
             self.menu?.favQuotesData = self.favQuotesArray
             
             // Now we will store the dictionary just created into our Favorites plist
@@ -112,6 +113,8 @@ class MainViewController: UIViewController, PassingQuote {
     var midtempData:[String] = []
 //    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
     var favQuotesArray:[String] = []
+    // favQuotesIdArray is to help us manage the saved quotes in Favorites.plist
+    var favQuotesIdArray:[String] = []
 
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
@@ -147,7 +150,12 @@ class MainViewController: UIViewController, PassingQuote {
         // that is bigger than the array and the app would crash
         if index < bookmarks!.count {
             if let quoteText = bookmarks![index]["quote_text"] as? NSString {
+<<<<<<< HEAD
                 self.quoteTextField.text = "\(quoteText)"
+=======
+                var cleanText = quoteText as String
+                self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
+>>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
             }
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
@@ -184,7 +192,12 @@ class MainViewController: UIViewController, PassingQuote {
         if let jsonData = jsonToUse {
             if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
                 if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
+<<<<<<< HEAD
                     self.quoteTextField.text = "\(jsonQuoteText)"
+=======
+                    var cleanText = jsonQuoteText as String
+                    self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
+>>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
                 }
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
@@ -218,9 +231,11 @@ class MainViewController: UIViewController, PassingQuote {
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         if bookmarks!.count > 0 {
             self.favQuotesArray = []
+            // Loop to load from the plist all the favorite quotes into favQuotesArray and all the quote_id from these quotes into favQuotesIdArray
             for i in bookmarks! {
                 var newString = i["quote_text"] as NSString
                 self.favQuotesArray.append(newString)
+                self.favQuotesIdArray.append(self.quoteID)
                 println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
             }
         } else {
@@ -271,7 +286,8 @@ class MainViewController: UIViewController, PassingQuote {
                         println("MainViewVC: json in viewDidLoad(). jsonData exists")
                         for i in jsonData {
                             if let quote = i["quote_text"] as? NSString {
-                                self.midtempData.append(quote)
+                                var cleanText = quote as String
+                                self.midtempData.append(cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil))
                             }
                         }
                         println("MainViewVC: json in viewDidLoad(). midtempData count is now \(self.midtempData.count)")
