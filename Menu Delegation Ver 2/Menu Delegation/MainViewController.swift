@@ -96,6 +96,7 @@ class MainViewController: UIViewController, PassingQuote {
             updateQuoteTextAppearance()
         } else {
             self.quoteTextField.text = favQuotesArray[ArrayLocation]
+            refreshFavQuoteOnScreen(ArrayLocation)
             updateQuoteTextAppearance()
         }
         // toggle the menu back to the right
