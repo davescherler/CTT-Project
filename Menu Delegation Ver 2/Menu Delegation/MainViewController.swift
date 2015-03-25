@@ -44,7 +44,7 @@ class MainViewController: UIViewController, PassingQuote {
             image = UIImage(named: "bookmark-fill.png") as UIImage?
             
             // Creating a dictionary that will store all the info necessary for the quote
-            var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_names": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
+            var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
             println("The addToFavorites button created a dictionary:\n\(quoteDict)")
             self.favQuotesArray.insert(quoteDict["quote_text"]!, atIndex: 0)
             println("favQuotesArray is now \(favQuotesArray)")
@@ -67,6 +67,7 @@ class MainViewController: UIViewController, PassingQuote {
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
+        next.urlstring = self.interviewLink
         self.presentViewController(next, animated: true, completion: nil)
         
     }
@@ -151,7 +152,7 @@ class MainViewController: UIViewController, PassingQuote {
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
             }
-            if let infoForQuote = bookmarks![index]["term_names"] as? NSString {
+            if let infoForQuote = bookmarks![index]["term_name"] as? NSString {
                 self.infoLabel.text = infoForQuote
             }
             if let authorInfo = bookmarks![index]["contributor_id"] as? NSString {
@@ -188,7 +189,7 @@ class MainViewController: UIViewController, PassingQuote {
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
                 }
-                if let infoForQuote = jsonQuoteSelected["term_names"] as? NSString {
+                if let infoForQuote = jsonQuoteSelected["term_name"] as? NSString {
                     self.infoLabel.text = infoForQuote
                 }
                 if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
@@ -256,7 +257,8 @@ class MainViewController: UIViewController, PassingQuote {
         }
         
         // working on loading JSON for all quotes
-        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json") {
+        // JSON Trial file https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json
+        if let url = NSURL(string: "http://www.closertotruth.com/api/all-quotes") {
             println("MainViewVC: The json url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {

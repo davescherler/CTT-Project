@@ -422,10 +422,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQK-at-zYS">
-                                <rect key="frame" x="26" y="116" width="548" height="308"/>
+                                <rect key="frame" x="26" y="65" width="548" height="411"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YQK-at-zYS" secondAttribute="height" multiplier="16:9" id="x2s-Xa-UrQ"/>
+                                    <constraint firstAttribute="width" secondItem="YQK-at-zYS" secondAttribute="height" multiplier="4:3" id="x2s-Xa-UrQ"/>
                                 </constraints>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHL-zR-8ay">

@@ -12,6 +12,7 @@ class VideoViewController: UIViewController, UIWebViewDelegate {
     
     // Variable to use in the appDelegate file to help with screen Orientation restrictions
     var isPresented: Bool?
+    var urlstring = "https://www.youtube.com/embed/5ZtRfACbygY"
 
     @IBOutlet weak var videoView: UIWebView!
     @IBOutlet weak var videoTitle: UILabel!
@@ -28,7 +29,7 @@ class VideoViewController: UIViewController, UIWebViewDelegate {
         self.videoView.delegate = self
         self.isPresented = true
         //update this URL based on selection. 
-        if let url = NSURL(string: "https://www.youtube.com/embed/5ZtRfACbygY") {
+        if let url = NSURL(string: self.urlstring) {
             let request = NSURLRequest(URL: url)
             self.videoView.loadRequest(request)
             
