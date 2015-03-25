@@ -48,8 +48,12 @@ class AuthorInfoViewController: UIViewController {
 //                        if let authorName = jsonInfo["contributor_name"] as? NSString {
 //                            self.textForAuthorName = authorName
 //                        }
-                    if let authorBiography = jsonInfo["contributor_bio"] as? NSString {
-                        self.textForAuthorBio = authorBiography
+                    if let authorBiography = jsonInfo["contributor_bio"] as? NSString as? String {
+                        // The authorBiography comes from the server with <p></p> html tags which we need to remove
+                        // so we're using a cleanText variable to store the cleaned up version of the biography
+                        var cleanText = authorBiography.stringByReplacingOccurrencesOfString("<p>", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                            cleanText = cleanText.stringByReplacingOccurrencesOfString("</p>", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                        self.textForAuthorBio = cleanText
                         }
                     }
                 }

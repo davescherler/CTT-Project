@@ -38,13 +38,36 @@ class MainViewController: UIViewController, PassingQuote {
     
     
     @IBAction func addToFavorites(sender: UIButton) {
-        
+        var image: UIImage?
+        if self.isAFavoriteQuote == false {
+            self.isAFavoriteQuote = true
+            image = UIImage(named: "bookmark-fill.png") as UIImage?
+            
+            // Creating a dictionary that will store all the info necessary for the quote
+            var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
+            println("The addToFavorites button created a dictionary:\n\(quoteDict)")
+            self.favQuotesArray.insert(quoteDict["quote_text"]!, atIndex: 0)
+            println("favQuotesArray is now \(favQuotesArray)")
+            self.menu?.favQuotesData = self.favQuotesArray
+            
+            // Now we will store the dictionary just created into our Favorites plist
+            var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+            var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+            bookmarks!.insertObject(quoteDict, atIndex: 0)
+            bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+
+        } else {
+            self.isAFavoriteQuote = false
+            image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        }
+        self.favoriteButton.setImage(image, forState: .Normal)
     }
     
 
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
+        next.urlstring = self.interviewLink
         self.presentViewController(next, animated: true, completion: nil)
         
     }
@@ -68,14 +91,16 @@ class MainViewController: UIViewController, PassingQuote {
             next.textForAuthorName = passingName
         }
         self.presentViewController(next, animated: true, completion: nil)
-
     }
+    
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var quoteTextFieldTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundViewLeadingConstraint: NSLayoutConstraint!
     
     var json: NSArray?
     var jsonTodaysQuote: NSArray?
+    // We're using isAFavoriteQuote to help us decide what to do when clicking on the bookmark button in the top right corner, and also whether the icon for that button should be a full or empty bookmark.
+    var isAFavoriteQuote: Bool = false
     
     // the authorID variable stores an ID used to find the right author information from the contributor.json file, in case the user
     // wants to learn more about the author. By default it is "none" (i.e. no ID found)
@@ -83,23 +108,65 @@ class MainViewController: UIViewController, PassingQuote {
     // the interviewLink variable stores the URL of the video associated with the quote on screen.
     // By default it is "none" (i.e. no URL video for the quote)
     var interviewLink = "none"
+    var quoteID = "none"
     var midtempData:[String] = []
-    var favQuotesArray = ["Before","ViewDidLoad Changes","Changes to the Array"]
+//    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
+    var favQuotesArray:[String] = []
+
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
-//            self.quoteTextField.text = midtempData[ArrayLocation]
             refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
             updateQuoteTextAppearance()
         } else {
-            self.quoteTextField.text = favQuotesArray[ArrayLocation]
+            // When selecting a quote on the MenuVC from the 'Favorites' section we need to update the bookmark button
+            // in the MainViewVC to show the quote is a favorite
+            self.isAFavoriteQuote = true
+            var image = UIImage(named: "bookmark-fill.png") as UIImage?
+            self.favoriteButton.setImage(image, forState: .Normal)
+            refreshFavQuoteOnScreen(ArrayLocation)
             updateQuoteTextAppearance()
         }
         // toggle the menu back to the right
         hideMenu()
         changeBackgroundImage()
     }
+    
+    // refreshFavQuoteOnScreen() takes an integer (the row of the table clicked)
+    // and gets the appropriate dictionary from the Favorites.plist for all the quote info (text, author...)
+    // to display that info on the MainVC view
+    func refreshFavQuoteOnScreen(index:Int) {
+        // Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        
+        // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
+        // is LESS than the count of quotes in bookmarks array because otherwise we would be calling an index 
+        // that is bigger than the array and the app would crash
+        if index < bookmarks!.count {
+            if let quoteText = bookmarks![index]["quote_text"] as? NSString {
+                self.quoteTextField.text = quoteText
+            }
+            if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
+                self.authorLabel.text = authorOfQuote
+            }
+            if let infoForQuote = bookmarks![index]["term_name"] as? NSString {
+                self.infoLabel.text = infoForQuote
+            }
+            if let authorInfo = bookmarks![index]["contributor_id"] as? NSString {
+                self.authorID = authorInfo
+            }
+            if let interviewInfo = bookmarks![index]["drupal_interview_url"] as? NSString {
+                self.interviewLink = interviewInfo
+            }
+            if let quoteIdentifier = bookmarks![index]["quote_id"] as? NSString {
+                self.quoteID = quoteIdentifier
+            }
+        }
+    }
+    
     
     // refreshJSONQuoteOnScreen() takes an integer (the row of the table clicked)
     // and gets the appropriate dictionary with all the quote info (text, author...)
@@ -122,15 +189,17 @@ class MainViewController: UIViewController, PassingQuote {
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
                 }
-                if let infoForQuote = jsonQuoteSelected["term_names"] as? NSString {
+                if let infoForQuote = jsonQuoteSelected["term_name"] as? NSString {
                     self.infoLabel.text = infoForQuote
                 }
                 if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
                     self.authorID = authorInfo
                 }
-                //alexis - you are referencing the same index path (contributor_id) for both the authorID and interviewInfo. Don't we need to use the
-                if let interviewInfo = jsonQuoteSelected["contributor_id"] as? NSString {
+                if let interviewInfo = jsonQuoteSelected["drupal_interview_url"] as? NSString {
                     self.interviewLink = interviewInfo
+                }
+                if let quoteIdentifier = jsonQuoteSelected["quote_id"] as? NSString {
+                    self.quoteID = quoteIdentifier
                 }
             }
         }
@@ -142,13 +211,31 @@ class MainViewController: UIViewController, PassingQuote {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        if bookmarks!.count > 0 {
+            self.favQuotesArray = []
+            for i in bookmarks! {
+                var newString = i["quote_text"] as NSString
+                self.favQuotesArray.append(newString)
+                println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
+            }
+        } else {
+            println("MainViewVC - ViewDidLoad(): the count of quotes in the favorites plist is not > 0 it is \(bookmarks!.count)")
+        }
+        
         createMenuButton()
         initMenu()
         createLaunchOverlay()
         performLaunchOverlayAnimation()
         
+        
+        
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
-        self.favQuotesArray = ["my fav quote 1", "my fav quote 2", "my fav quote 3"]
+        
         
         // working on loading JSON for today's quote
         if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
@@ -170,7 +257,8 @@ class MainViewController: UIViewController, PassingQuote {
         }
         
         // working on loading JSON for all quotes
-        if let url = NSURL(string: "https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json") {
+        // JSON Trial file https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json
+        if let url = NSURL(string: "http://www.closertotruth.com/api/all-quotes") {
             println("MainViewVC: The json url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
@@ -229,7 +317,7 @@ class MainViewController: UIViewController, PassingQuote {
         
         //Loading the quotes into the menuViewController
         self.menu?.allQuotesData = self.midtempData
-        self.menu?.favQuotesData = self.favQuotesArray //here, we need to re-direct to the favorites.plist
+        self.menu?.favQuotesData = self.favQuotesArray
         self.menu?.delegate = self
         self.menu?.re_filter()
     }
@@ -270,6 +358,11 @@ class MainViewController: UIViewController, PassingQuote {
         // Hide the bookmark button, otherwise there would be overlap when the menu is open
         self.favoriteButton.hidden = true
         
+        // Reset isAFavoriteQuote to false and the bookmark image to the empty one
+        self.isAFavoriteQuote = false
+        var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        self.favoriteButton.setImage(image, forState: .Normal)
+    
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
         toggleMenuIn.springBounciness = 10

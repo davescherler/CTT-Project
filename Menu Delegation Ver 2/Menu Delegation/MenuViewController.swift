@@ -112,6 +112,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             stringToPass = "All"
         }
+        println("MenuViewVC: the quote selected was from the \(stringToPass) table")
         self.delegate?.showSelectedQuote(indexPath.row, listOrigin: stringToPass!)
         
     }
