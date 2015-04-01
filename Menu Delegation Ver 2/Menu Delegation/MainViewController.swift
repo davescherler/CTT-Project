@@ -39,29 +39,47 @@ class MainViewController: UIViewController, PassingQuote {
     
     @IBAction func addToFavorites(sender: UIButton) {
         var image: UIImage?
+        // Creating a dictionary that will store all the info necessary for the currently onscreen quote
+        var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
+        println("The addToFavorites button created a dictionary")
+
+        // Creating a mutable array that stores all the favorite quotes
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        
         if self.isAFavoriteQuote == false {
             self.isAFavoriteQuote = true
             image = UIImage(named: "bookmark-fill.png") as UIImage?
-            
-            // Creating a dictionary that will store all the info necessary for the quote
-            var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
-            println("The addToFavorites button created a dictionary:\n\(quoteDict)")
             self.favQuotesArray.insert(quoteDict["quote_text"]!, atIndex: 0)
             self.favQuotesIdArray.insert(quoteDict["quote_id"]!, atIndex: 0)
-            println("favQuotesArray is now \(self.favQuotesArray) and favQuotesIdArray is now \(self.favQuotesIdArray)")
             self.menu?.favQuotesData = self.favQuotesArray
             
-            // Now we will store the dictionary just created into our Favorites plist
-            var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
-            var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+            // Now we will store the quoteDict dictionary just created into our Favorites plist
             bookmarks!.insertObject(quoteDict, atIndex: 0)
             bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+            
+            println("The quote and its info was added to favQuotesArray; favQuotesIdArray is now \(self.favQuotesIdArray)")
 
         } else {
             self.isAFavoriteQuote = false
             image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+            for i in 0..<self.favQuotesIdArray.count {
+                if self.favQuotesIdArray[i] == quoteDict["quote_id"] {
+                    println("found the id at position \(i)")
+                    // We need to remove reference to the quote in the variables that holds information about favorites
+                    self.favQuotesArray.removeAtIndex(i)
+                    self.favQuotesIdArray.removeAtIndex(i)
+                    bookmarks!.removeObjectAtIndex(i)
+                    self.menu?.favQuotesData = self.favQuotesArray
+                    break
+                }
+            }
         }
         self.favoriteButton.setImage(image, forState: .Normal)
+        
+        // Refreshing the quote table in the MenuViewVC
+        self.menu?.re_filter()
+        println("Trying to refresh the favorites table")
     }
     
 
@@ -150,12 +168,12 @@ class MainViewController: UIViewController, PassingQuote {
         // that is bigger than the array and the app would crash
         if index < bookmarks!.count {
             if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-<<<<<<< HEAD
+//<<<<<<< HEAD
                 self.quoteTextField.text = "\(quoteText)"
-=======
+//=======
                 var cleanText = quoteText as String
                 self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
->>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
+//>>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
             }
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
@@ -192,12 +210,11 @@ class MainViewController: UIViewController, PassingQuote {
         if let jsonData = jsonToUse {
             if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
                 if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
-<<<<<<< HEAD
                     self.quoteTextField.text = "\(jsonQuoteText)"
-=======
+                    // Getting rid and replacing the HTML code to represent an apostrophe inside a quote. There might be a better way to do this.
                     var cleanText = jsonQuoteText as String
                     self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
->>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
+
                 }
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
@@ -465,17 +482,16 @@ class MainViewController: UIViewController, PassingQuote {
         var imageToChangeTo: String?
         var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImage", ofType: "plist")
         var imageNames = NSArray(contentsOfFile: imagePath!)
-         println("the image names are: \(imageNames)")
+//         println("the image names are: \(imageNames)")
         
         var numberOfImages = imageNames?.count
         var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
-        println("there are :\(numberOfImages) images")
-        println("the random number is: \(randomNumber)")
+        println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
         
         let imageArray: [String] = imageNames as Array
         
         var randomImageName = imageArray[randomNumber]
-        println("the random image is: \(randomImageName)")
+//        println("the random image is: \(randomImageName)")
         self.backgroundView.image = UIImage(named:randomImageName)
         self.backgroundView.frame = self.view.frame
     }

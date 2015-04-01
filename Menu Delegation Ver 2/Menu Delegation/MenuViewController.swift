@@ -16,6 +16,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var delegate: PassingQuote?
     var favListSelected: Bool?
+    var tableSelected: String?
     
     var allQuotesData = ["Local All One","Local All Two","Local All Three"]
     var favQuotesData = ["Local Fav One","Local Fav Two", "Local Fav Three"]
@@ -25,15 +26,18 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func filterQuotes(sender: UISegmentedControl) {
         switch filterStatus.selectedSegmentIndex {
         case 0:
-            filter("allQuotes")
+            self.tableSelected = "allQuotes"
+            filter(self.tableSelected!)
             self.table.reloadData()
             self.favListSelected = false
         case 1:
-            filter("favQuotes")
+            self.tableSelected = "favQuotes"
+            filter(self.tableSelected!)
             self.table.reloadData()
             self.favListSelected = true
         default:
-            filter("allQuotes")
+            self.tableSelected = "allQuotes"
+            filter(self.tableSelected!)
             self.table.reloadData()
             self.favListSelected = false
         }
@@ -43,9 +47,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     // The re_filter function is called by the MainViewController
     // This function ensures that the quotes pushed by the MainViewController actually display
     func re_filter() {
-        filter("allQuotes")
+        filter(self.tableSelected!)
         self.table.reloadData()
         println("MenuViewVC: re_filter() called. The number of quotes in allQuotes is now: \(allQuotesData.count)\n")
+        println("MenuViewVC: re_filter() called. The number of quotes in favQuotes is now: \(favQuotesData.count)\n")
     }
     
     var dataForCells: [String] = []
@@ -54,7 +59,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         println("MenuViewVC: The dataForCells value before calling filter is: \(dataForCells)")
-        filter("allQuotes")
+        self.tableSelected = "allQuotes"
+        filter(self.tableSelected!)
 
         self.table.reloadData()
     }
