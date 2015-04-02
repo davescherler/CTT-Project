@@ -41,7 +41,6 @@ class MainViewController: UIViewController, PassingQuote {
         var image: UIImage?
         // Creating a dictionary that will store all the info necessary for the currently onscreen quote
         var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
-        println("The addToFavorites button created a dictionary")
 
         // Creating a mutable array that stores all the favorite quotes
         var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
@@ -58,28 +57,27 @@ class MainViewController: UIViewController, PassingQuote {
             bookmarks!.insertObject(quoteDict, atIndex: 0)
             bookmarks?.writeToFile(bookmarksPath!, atomically: true)
             
-            println("The quote and its info was added to favQuotesArray; favQuotesIdArray is now \(self.favQuotesIdArray)")
+            println("MainViewVC addToFavorites(): The quote and its info was added to favQuotesArray (count:\(self.favQuotesArray.count)); quote ID is \(self.quoteID) and favQuotesIdArray is now \(self.favQuotesIdArray)")
 
         } else {
             self.isAFavoriteQuote = false
             image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
             for i in 0..<self.favQuotesIdArray.count {
-                if self.favQuotesIdArray[i] == quoteDict["quote_id"] {
+                if self.favQuotesIdArray[i] == quoteDict["quote_id"]! {
                     println("found the id at position \(i)")
                     // We need to remove reference to the quote in the variables that holds information about favorites
                     self.favQuotesArray.removeAtIndex(i)
                     self.favQuotesIdArray.removeAtIndex(i)
                     bookmarks!.removeObjectAtIndex(i)
+                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
                     self.menu?.favQuotesData = self.favQuotesArray
                     break
                 }
             }
         }
         self.favoriteButton.setImage(image, forState: .Normal)
-        
         // Refreshing the quote table in the MenuViewVC
         self.menu?.re_filter()
-        println("Trying to refresh the favorites table")
     }
     
 
@@ -127,7 +125,7 @@ class MainViewController: UIViewController, PassingQuote {
     // the interviewLink variable stores the URL of the video associated with the quote on screen.
     // By default it is "none" (i.e. no URL video for the quote)
     var interviewLink = "none"
-    var quoteID = "none"
+    var quoteID = "noID"
     var midtempData:[String] = []
 //    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
     var favQuotesArray:[String] = []
@@ -139,6 +137,23 @@ class MainViewController: UIViewController, PassingQuote {
         println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
             refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
+            // refreshJSONQuoteOnScreen() just updated all the variables that hold the quote info, among them
+            // self.quoteID. We are going to check whether this quote ID is part of the favorite quotes list.
+            // If it is, then we are going to update self.isAFavoriteQuote to true and also udpate the bookmark Image
+            println("**********\nMainViewVC: self.quoteID is \(self.quoteID)")
+            println("MainViewVC: The array of favoritequotes is \(self.favQuotesIdArray)")
+            for i in 0..<self.favQuotesIdArray.count {
+                if self.favQuotesIdArray[i] == self.quoteID {
+                    self.isAFavoriteQuote = true
+                    var image = UIImage(named: "bookmark-fill.png") as UIImage?
+                    self.favoriteButton.setImage(image, forState: .Normal)
+                    break
+                } else {
+                    self.isAFavoriteQuote = false
+                    var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+                    self.favoriteButton.setImage(image, forState: .Normal)
+                }
+            }
             updateQuoteTextAppearance()
         } else {
             // When selecting a quote on the MenuVC from the 'Favorites' section we need to update the bookmark button
@@ -152,6 +167,7 @@ class MainViewController: UIViewController, PassingQuote {
         // toggle the menu back to the right
         hideMenu()
         changeBackgroundImage()
+        println("isAFavoriteQuote is now \(self.isAFavoriteQuote)")
     }
     
     // refreshFavQuoteOnScreen() takes an integer (the row of the table clicked)
@@ -168,12 +184,9 @@ class MainViewController: UIViewController, PassingQuote {
         // that is bigger than the array and the app would crash
         if index < bookmarks!.count {
             if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-//<<<<<<< HEAD
                 self.quoteTextField.text = "\(quoteText)"
-//=======
                 var cleanText = quoteText as String
                 self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
-//>>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
             }
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
@@ -251,8 +264,9 @@ class MainViewController: UIViewController, PassingQuote {
             // Loop to load from the plist all the favorite quotes into favQuotesArray and all the quote_id from these quotes into favQuotesIdArray
             for i in bookmarks! {
                 var newString = i["quote_text"] as NSString
+                var newID = i["quote_id"] as NSString
                 self.favQuotesArray.append(newString)
-                self.favQuotesIdArray.append(self.quoteID)
+                self.favQuotesIdArray.append(newID)
                 println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
             }
         } else {
@@ -263,8 +277,6 @@ class MainViewController: UIViewController, PassingQuote {
         initMenu()
         createLaunchOverlay()
         performLaunchOverlayAnimation()
-        
-        
         
         self.quoteTextFieldWidth = Int(quoteTextField.frame.size.width)
         
@@ -282,6 +294,21 @@ class MainViewController: UIViewController, PassingQuote {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     // IMPORTANT we need to reload the data we got into our table view
                     self.refreshJSONQuoteOnScreen(0, origin: "Today")
+                    // Now that the screen is refreshed with Today's quote we need to check whether that quote is one of the favorites
+                    for i in 0..<self.favQuotesIdArray.count {
+                        if self.favQuotesIdArray[i] == self.quoteID {
+                            self.isAFavoriteQuote = true
+                            var image = UIImage(named: "bookmark-fill.png") as UIImage?
+                            self.favoriteButton.setImage(image, forState: .Normal)
+                            break
+                        } else {
+                            self.isAFavoriteQuote = false
+                            var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+                            self.favoriteButton.setImage(image, forState: .Normal)
+                        }
+                    }
+
+                    
                     self.updateQuoteTextAppearance()
                 })
             })
@@ -486,7 +513,7 @@ class MainViewController: UIViewController, PassingQuote {
         
         var numberOfImages = imageNames?.count
         var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
-        println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
+//        println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
         
         let imageArray: [String] = imageNames as Array
         
