@@ -81,6 +81,8 @@ class MainViewController: UIViewController, PassingQuote {
     }
     
 
+    
+
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
@@ -134,36 +136,17 @@ class MainViewController: UIViewController, PassingQuote {
 
     
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
-        println("MainViewVC: The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
+        println("MainViewVC showSelectedQuote(): The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
             refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
-            // refreshJSONQuoteOnScreen() just updated all the variables that hold the quote info, among them
-            // self.quoteID. We are going to check whether this quote ID is part of the favorite quotes list.
-            // If it is, then we are going to update self.isAFavoriteQuote to true and also udpate the bookmark Image
-            println("**********\nMainViewVC: self.quoteID is \(self.quoteID)")
-            println("MainViewVC: The array of favoritequotes is \(self.favQuotesIdArray)")
-            for i in 0..<self.favQuotesIdArray.count {
-                if self.favQuotesIdArray[i] == self.quoteID {
-                    self.isAFavoriteQuote = true
-                    var image = UIImage(named: "bookmark-fill.png") as UIImage?
-                    self.favoriteButton.setImage(image, forState: .Normal)
-                    break
-                } else {
-                    self.isAFavoriteQuote = false
-                    var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-                    self.favoriteButton.setImage(image, forState: .Normal)
-                }
-            }
-            updateQuoteTextAppearance()
         } else {
-            // When selecting a quote on the MenuVC from the 'Favorites' section we need to update the bookmark button
-            // in the MainViewVC to show the quote is a favorite
-            self.isAFavoriteQuote = true
-            var image = UIImage(named: "bookmark-fill.png") as UIImage?
-            self.favoriteButton.setImage(image, forState: .Normal)
             refreshFavQuoteOnScreen(ArrayLocation)
-            updateQuoteTextAppearance()
         }
+        // refreshJSONQuoteOnScreen() and refreshFavQuoteOnScreen() just updated all the variables that hold the quote info, among them self.quoteID
+        // We are going to check whether this quote ID is part of the favorite quotes list.
+        // If it is, then we are going to update self.isAFavoriteQuote to true and also udpate the bookmark Image
+        self.checkIfFavorite(self.quoteID)
+        updateQuoteTextAppearance()
         // toggle the menu back to the right
         hideMenu()
         changeBackgroundImage()
@@ -251,6 +234,21 @@ class MainViewController: UIViewController, PassingQuote {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    func checkIfFavorite(idOfQuote: String) {
+        for i in 0..<self.favQuotesIdArray.count {
+            if self.favQuotesIdArray[i] == idOfQuote {
+                self.isAFavoriteQuote = true
+                var image = UIImage(named: "bookmark-fill.png") as UIImage?
+                self.favoriteButton.setImage(image, forState: .Normal)
+                break
+            } else {
+                self.isAFavoriteQuote = false
+                var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+                self.favoriteButton.setImage(image, forState: .Normal)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -263,14 +261,9 @@ class MainViewController: UIViewController, PassingQuote {
             self.favQuotesArray = []
             // Loop to load from the plist all the favorite quotes into favQuotesArray and all the quote_id from these quotes into favQuotesIdArray
             for i in bookmarks! {
-                var newString = i["quote_text"] as NSString
-                var newID = i["quote_id"] as NSString
-                self.favQuotesArray.append(newString)
-                self.favQuotesIdArray.append(newID)
-                println("MainViewVCprinting the favQuotesArray: \(self.favQuotesArray)")
+                self.favQuotesArray.append(i["quote_text"] as NSString)
+                self.favQuotesIdArray.append(i["quote_id"] as NSString)
             }
-        } else {
-            println("MainViewVC - ViewDidLoad(): the count of quotes in the favorites plist is not > 0 it is \(bookmarks!.count)")
         }
         
         createMenuButton()
@@ -295,20 +288,8 @@ class MainViewController: UIViewController, PassingQuote {
                     // IMPORTANT we need to reload the data we got into our table view
                     self.refreshJSONQuoteOnScreen(0, origin: "Today")
                     // Now that the screen is refreshed with Today's quote we need to check whether that quote is one of the favorites
-                    for i in 0..<self.favQuotesIdArray.count {
-                        if self.favQuotesIdArray[i] == self.quoteID {
-                            self.isAFavoriteQuote = true
-                            var image = UIImage(named: "bookmark-fill.png") as UIImage?
-                            self.favoriteButton.setImage(image, forState: .Normal)
-                            break
-                        } else {
-                            self.isAFavoriteQuote = false
-                            var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-                            self.favoriteButton.setImage(image, forState: .Normal)
-                        }
-                    }
+                    self.checkIfFavorite(self.quoteID)
 
-                    
                     self.updateQuoteTextAppearance()
                 })
             })
@@ -417,11 +398,6 @@ class MainViewController: UIViewController, PassingQuote {
     func showMenu(){
         // Hide the bookmark button, otherwise there would be overlap when the menu is open
         self.favoriteButton.hidden = true
-        
-        // Reset isAFavoriteQuote to false and the bookmark image to the empty one
-        //self.isAFavoriteQuote = false
-        //var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-        //self.favoriteButton.setImage(image, forState: .Normal)
     
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
