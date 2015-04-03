@@ -150,12 +150,12 @@ class MainViewController: UIViewController, PassingQuote {
         // that is bigger than the array and the app would crash
         if index < bookmarks!.count {
             if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-<<<<<<< HEAD
+
                 self.quoteTextField.text = "\(quoteText)"
-=======
+
                 var cleanText = quoteText as String
                 self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
->>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
+
             }
             if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
                 self.authorLabel.text = authorOfQuote
@@ -192,12 +192,11 @@ class MainViewController: UIViewController, PassingQuote {
         if let jsonData = jsonToUse {
             if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
                 if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
-<<<<<<< HEAD
+
                     self.quoteTextField.text = "\(jsonQuoteText)"
-=======
+
                     var cleanText = jsonQuoteText as String
                     self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
->>>>>>> 4485c10f58bf91f5faa3124ff2d7d7304d505333
                 }
                 if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
                     self.authorLabel.text = authorOfQuote
@@ -375,9 +374,9 @@ class MainViewController: UIViewController, PassingQuote {
         self.favoriteButton.hidden = true
         
         // Reset isAFavoriteQuote to false and the bookmark image to the empty one
-        //self.isAFavoriteQuote = false
-        //var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-        //self.favoriteButton.setImage(image, forState: .Normal)
+        self.isAFavoriteQuote = false
+        var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
+        self.favoriteButton.setImage(image, forState: .Normal)
     
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
