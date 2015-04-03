@@ -81,27 +81,16 @@ class MainViewController: UIViewController, PassingQuote {
     }
     
 
-    
-
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
         next.urlstring = self.interviewLink
         self.presentViewController(next, animated: true, completion: nil)
-        
     }
     
-    // Stated there was a potential conflict with func showAuthorInfo()
+
     @IBAction func showAuthorInfo(sender: UIButton) {
-        // Right now, only prints the id of the author
-        // in the future we will have to create a new view controller to display the author info
-        if self.authorID == "none" {
-            println("not enough information to find author bio")
-        }
-        else {
-            println("The ID for the author of this quote is: \(self.authorID)")
-        }
-        
+        println("The ID for the author of this quote is: \(self.authorID)")
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as AuthorInfoViewController
         // Now we're passing to the 'next' AuthorViewController the author ID so that it knows what info to display
@@ -129,20 +118,18 @@ class MainViewController: UIViewController, PassingQuote {
     var interviewLink = "none"
     var quoteID = "noID"
     var midtempData:[String] = []
-//    var favQuotesArray = ["Before","ViewDidLoad Changes","to the Array"]
     var favQuotesArray:[String] = []
     // favQuotesIdArray is to help us manage the saved quotes in Favorites.plist
     var favQuotesIdArray:[String] = []
 
-    
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC showSelectedQuote(): The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
-            refreshJSONQuoteOnScreen(ArrayLocation, origin: "All")
+            refreshQuoteOnScreen(ArrayLocation, origin: "All")
         } else {
-            refreshFavQuoteOnScreen(ArrayLocation)
+            refreshQuoteOnScreen(ArrayLocation, origin: "Favorites")
         }
-        // refreshJSONQuoteOnScreen() and refreshFavQuoteOnScreen() just updated all the variables that hold the quote info, among them self.quoteID
+        // refreshQuoteOnScreen() just updated all the variables that hold the quote info, among them self.quoteID
         // We are going to check whether this quote ID is part of the favorite quotes list.
         // If it is, then we are going to update self.isAFavoriteQuote to true and also udpate the bookmark Image
         self.checkIfFavorite(self.quoteID)
@@ -150,85 +137,53 @@ class MainViewController: UIViewController, PassingQuote {
         // toggle the menu back to the right
         hideMenu()
         changeBackgroundImage()
-        println("isAFavoriteQuote is now \(self.isAFavoriteQuote)")
+        println("MainViewVC showSelectedQuote(): isAFavoriteQuote is now \(self.isAFavoriteQuote)")
     }
     
-    // refreshFavQuoteOnScreen() takes an integer (the row of the table clicked)
-    // and gets the appropriate dictionary from the Favorites.plist for all the quote info (text, author...)
+    // refreshQuoteOnScreen() takes an integer (the row of the table clicked)
+    // and gets the appropriate dictionary from the right source to get that quote's info (text, author...)
     // to display that info on the MainVC view
-    func refreshFavQuoteOnScreen(index:Int) {
-        // Now loading the data from the Favorites plist
-        // bookmarksPath is a string that is the path to the Favorites.plist file
-        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
-        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
-        
-        // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
-        // is LESS than the count of quotes in bookmarks array because otherwise we would be calling an index 
-        // that is bigger than the array and the app would crash
-        if index < bookmarks!.count {
-            if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-                self.quoteTextField.text = "\(quoteText)"
-                var cleanText = quoteText as String
-                self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            }
-            if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
-                self.authorLabel.text = authorOfQuote
-            }
-            if let infoForQuote = bookmarks![index]["term_name"] as? NSString {
-                self.infoLabel.text = infoForQuote
-            }
-            if let authorInfo = bookmarks![index]["contributor_id"] as? NSString {
-                self.authorID = authorInfo
-            }
-            if let interviewInfo = bookmarks![index]["drupal_interview_url"] as? NSString {
-                self.interviewLink = interviewInfo
-            }
-            if let quoteIdentifier = bookmarks![index]["quote_id"] as? NSString {
-                self.quoteID = quoteIdentifier
-            }
-        }
-    }
-    
-    
-    // refreshJSONQuoteOnScreen() takes an integer (the row of the table clicked)
-    // and gets the appropriate dictionary with all the quote info (text, author...)
-    // to display that info on the MainVC view
-    func refreshJSONQuoteOnScreen(index:Int, origin:String) {
-        var jsonToUse: NSArray?
-        // since we have two json files ("all quotes" and "today's quotes")
-        // we need to figure out which one to use to refresh the info on screen
+    func refreshQuoteOnScreen(index:Int, origin: String) {
+        var arrayOfQuoteDicts: NSArray?
         if origin == "All" {
-            jsonToUse = self.json
+            arrayOfQuoteDicts = self.json
+        } else if origin == "Favorites" {
+            var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+            arrayOfQuoteDicts = NSArray(contentsOfFile: bookmarksPath!)
         } else {
-            jsonToUse = self.jsonTodaysQuote
+            arrayOfQuoteDicts = self.jsonTodaysQuote
         }
-        
-        if let jsonData = jsonToUse {
-            if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
-                if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
-                    self.quoteTextField.text = "\(jsonQuoteText)"
-                    // Getting rid and replacing the HTML code to represent an apostrophe inside a quote. There might be a better way to do this.
-                    var cleanText = jsonQuoteText as String
-                    self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
-
-                }
-                if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
-                    self.authorLabel.text = authorOfQuote
-                }
-                if let infoForQuote = jsonQuoteSelected["term_name"] as? NSString {
-                    self.infoLabel.text = infoForQuote
-                }
-                if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
-                    self.authorID = authorInfo
-                }
-                if let interviewInfo = jsonQuoteSelected["drupal_interview_url"] as? NSString {
-                    self.interviewLink = interviewInfo
-                }
-                if let quoteIdentifier = jsonQuoteSelected["quote_id"] as? NSString {
-                    self.quoteID = quoteIdentifier
+        // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
+        // is LESS than the count of quotes in arrayOfQuoteDicts because otherwise we would be calling an index
+        // that is bigger than the array and the app would crash
+        if index < arrayOfQuoteDicts!.count {
+            if let allQuotesData = arrayOfQuoteDicts {
+                if let quoteDict = allQuotesData[index] as? NSDictionary {
+                    if let quoteText = quoteDict["quote_text"] as? NSString {
+                        self.quoteTextField.text = "\(quoteText)"
+                        // removing some HTML for quotation mark from the quote. This will need to be improved in the future. There is some function in objective C that does HTML replacement already.
+                        var cleanText = quoteText as String
+                        self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                    }
+                    if let authorOfQuote = quoteDict["contributor_name"] as? NSString {
+                        self.authorLabel.text = authorOfQuote
+                    }
+                    if let infoForQuote = quoteDict["term_name"] as? NSString {
+                        self.infoLabel.text = infoForQuote
+                    }
+                    if let authorInfo = quoteDict["contributor_id"] as? NSString {
+                        self.authorID = authorInfo
+                    }
+                    if let interviewInfo = quoteDict["drupal_interview_url"] as? NSString {
+                        self.interviewLink = interviewInfo
+                    }
+                    if let quoteIdentifier = quoteDict["quote_id"] as? NSString {
+                        self.quoteID = quoteIdentifier
+                    }
                 }
             }
         }
+        println("end of refreshQuoteOnScreen()")
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -281,12 +236,11 @@ class MainViewController: UIViewController, PassingQuote {
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
                     self.jsonTodaysQuote = jsonDict as? NSArray
                     println("MainViewVC: json in viewDidLoad(). jsonTodaysQuote count is now \(self.jsonTodaysQuote!.count)")
-
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     // IMPORTANT we need to reload the data we got into our table view
-                    self.refreshJSONQuoteOnScreen(0, origin: "Today")
+                    self.refreshQuoteOnScreen(0, origin: "Today")
                     // Now that the screen is refreshed with Today's quote we need to check whether that quote is one of the favorites
                     self.checkIfFavorite(self.quoteID)
 
