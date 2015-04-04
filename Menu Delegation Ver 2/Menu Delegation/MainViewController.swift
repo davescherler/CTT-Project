@@ -11,7 +11,7 @@ import Snap
 import pop
 
 class MainViewController: UIViewController, PassingQuote {
-
+    
     let menuButton = UIButton()
     let mainImage = UIImage(named: "menu rounded white") as UIImage?
     let menuImage = UIImage(named: "close white") as UIImage?
@@ -41,7 +41,7 @@ class MainViewController: UIViewController, PassingQuote {
         var image: UIImage?
         // Creating a dictionary that will store all the info necessary for the currently onscreen quote
         var quoteDict = ["quote_id": self.quoteID, "quote_text": self.quoteTextField.text, "term_name": self.infoLabel.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorLabel.text,  "contributor_id": self.authorID]
-
+        
         // Creating a mutable array that stores all the favorite quotes
         var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
@@ -58,7 +58,7 @@ class MainViewController: UIViewController, PassingQuote {
             bookmarks?.writeToFile(bookmarksPath!, atomically: true)
             
             println("MainViewVC addToFavorites(): The quote and its info was added to favQuotesArray (count:\(self.favQuotesArray.count)); quote ID is \(self.quoteID) and favQuotesIdArray is now \(self.favQuotesIdArray)")
-
+            
         } else {
             self.isAFavoriteQuote = false
             image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
@@ -80,7 +80,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.menu?.re_filter()
     }
     
-
+    
     @IBAction func showVideo(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let next = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as VideoViewController
@@ -88,7 +88,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.presentViewController(next, animated: true, completion: nil)
     }
     
-
+    
     @IBAction func showAuthorInfo(sender: UIButton) {
         println("The ID for the author of this quote is: \(self.authorID)")
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -121,7 +121,7 @@ class MainViewController: UIViewController, PassingQuote {
     var favQuotesArray:[String] = []
     // favQuotesIdArray is to help us manage the saved quotes in Favorites.plist
     var favQuotesIdArray:[String] = []
-
+    
     func showSelectedQuote(ArrayLocation: Int, listOrigin: String) {
         println("MainViewVC showSelectedQuote(): The selected row was \(ArrayLocation) and the list containing that quote is \(listOrigin)")
         if listOrigin == "All" {
@@ -140,53 +140,8 @@ class MainViewController: UIViewController, PassingQuote {
         println("MainViewVC showSelectedQuote(): isAFavoriteQuote is now \(self.isAFavoriteQuote)")
     }
     
-<<<<<<< HEAD
-    // refreshFavQuoteOnScreen() takes an integer (the row of the table clicked)
-    // and gets the appropriate dictionary from the Favorites.plist for all the quote info (text, author...)
-    // to display that info on the MainVC view
-    func refreshFavQuoteOnScreen(index:Int) {
-        // Now loading the data from the Favorites plist
-        // bookmarksPath is a string that is the path to the Favorites.plist file
-        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
-        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
-        
-        // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
-        // is LESS than the count of quotes in bookmarks array because otherwise we would be calling an index 
-        // that is bigger than the array and the app would crash
-        if index < bookmarks!.count {
-            if let quoteText = bookmarks![index]["quote_text"] as? NSString {
-
-                self.quoteTextField.text = "\(quoteText)"
-
-                var cleanText = quoteText as String
-                self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
-
-            }
-            if let authorOfQuote = bookmarks![index]["contributor_name"] as? NSString {
-                self.authorLabel.text = authorOfQuote
-            }
-            if let infoForQuote = bookmarks![index]["term_name"] as? NSString {
-                self.infoLabel.text = infoForQuote
-            }
-            if let authorInfo = bookmarks![index]["contributor_id"] as? NSString {
-                self.authorID = authorInfo
-            }
-            if let interviewInfo = bookmarks![index]["drupal_interview_url"] as? NSString {
-                self.interviewLink = interviewInfo
-            }
-            if let quoteIdentifier = bookmarks![index]["quote_id"] as? NSString {
-                self.quoteID = quoteIdentifier
-            }
-        }
-    }
-    
-    
-    // refreshJSONQuoteOnScreen() takes an integer (the row of the table clicked)
-    // and gets the appropriate dictionary with all the quote info (text, author...)
-=======
     // refreshQuoteOnScreen() takes an integer (the row of the table clicked)
     // and gets the appropriate dictionary from the right source to get that quote's info (text, author...)
->>>>>>> db538497c054d54e516c55780bd77f7d5a7d5179
     // to display that info on the MainVC view
     func refreshQuoteOnScreen(index:Int, origin: String) {
         var arrayOfQuoteDicts: NSArray?
@@ -198,32 +153,6 @@ class MainViewController: UIViewController, PassingQuote {
         } else {
             arrayOfQuoteDicts = self.jsonTodaysQuote
         }
-<<<<<<< HEAD
-        
-        if let jsonData = jsonToUse {
-            if let jsonQuoteSelected = jsonData[index] as? NSDictionary {
-                if let jsonQuoteText = jsonQuoteSelected["quote_text"] as? NSString {
-
-                    self.quoteTextField.text = "\(jsonQuoteText)"
-
-                    var cleanText = jsonQuoteText as String
-                    self.quoteTextField.text = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
-                }
-                if let authorOfQuote = jsonQuoteSelected["contributor_name"] as? NSString {
-                    self.authorLabel.text = authorOfQuote
-                }
-                if let infoForQuote = jsonQuoteSelected["term_name"] as? NSString {
-                    self.infoLabel.text = infoForQuote
-                }
-                if let authorInfo = jsonQuoteSelected["contributor_id"] as? NSString {
-                    self.authorID = authorInfo
-                }
-                if let interviewInfo = jsonQuoteSelected["drupal_interview_url"] as? NSString {
-                    self.interviewLink = interviewInfo
-                }
-                if let quoteIdentifier = jsonQuoteSelected["quote_id"] as? NSString {
-                    self.quoteID = quoteIdentifier
-=======
         // Although unlikely, we need to make sure the index returned to us (i.e. the row clicked on the menuVC table)
         // is LESS than the count of quotes in arrayOfQuoteDicts because otherwise we would be calling an index
         // that is bigger than the array and the app would crash
@@ -251,7 +180,6 @@ class MainViewController: UIViewController, PassingQuote {
                     if let quoteIdentifier = quoteDict["quote_id"] as? NSString {
                         self.quoteID = quoteIdentifier
                     }
->>>>>>> db538497c054d54e516c55780bd77f7d5a7d5179
                 }
             }
         }
@@ -276,7 +204,7 @@ class MainViewController: UIViewController, PassingQuote {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -315,7 +243,7 @@ class MainViewController: UIViewController, PassingQuote {
                     self.refreshQuoteOnScreen(0, origin: "Today")
                     // Now that the screen is refreshed with Today's quote we need to check whether that quote is one of the favorites
                     self.checkIfFavorite(self.quoteID)
-
+                    
                     self.updateQuoteTextAppearance()
                 })
             })
@@ -331,7 +259,7 @@ class MainViewController: UIViewController, PassingQuote {
                     self.json = jsonDict as? NSArray
                     println("MainViewVC: json in viewDidLoad(). json count is now \(self.json!.count)")
                     
-                    // Append all the text of quotes to the midtempData array, so that we can show these quotes 
+                    // Append all the text of quotes to the midtempData array, so that we can show these quotes
                     // in the MenuViewController's table
                     if let jsonData = self.json {
                         println("MainViewVC: json in viewDidLoad(). jsonData exists")
@@ -355,10 +283,10 @@ class MainViewController: UIViewController, PassingQuote {
                 })
             })
             task.resume()
-                }
+        }
         println("MainViewVC: reaching the end of viewDidload()")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -368,7 +296,7 @@ class MainViewController: UIViewController, PassingQuote {
     
     @IBAction func swipeToHideMenu(sender: UISwipeGestureRecognizer) {
         hideMenu() }
-
+    
     func initMenu() {
         self.menu = self.storyboard?.instantiateViewControllerWithIdentifier("MenuVC") as? MenuViewController
         self.menu?.view.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -413,7 +341,7 @@ class MainViewController: UIViewController, PassingQuote {
             make.height.equalTo(36)
         }
     }
-
+    
     func toggle(sender: UIButton!) {
         if isMenuOpen == false {
             showMenu()
@@ -424,21 +352,13 @@ class MainViewController: UIViewController, PassingQuote {
     func showMenu(){
         // Hide the bookmark button, otherwise there would be overlap when the menu is open
         self.favoriteButton.hidden = true
-<<<<<<< HEAD
         
-        // Reset isAFavoriteQuote to false and the bookmark image to the empty one
-        self.isAFavoriteQuote = false
-        var image = UIImage(named: "bookmark empty white bordered.png") as UIImage?
-        self.favoriteButton.setImage(image, forState: .Normal)
-=======
->>>>>>> db538497c054d54e516c55780bd77f7d5a7d5179
-    
         let toggleMenuIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuIn.toValue = -5
         toggleMenuIn.springBounciness = 10
         toggleMenuIn.springSpeed = 10
         self.menuLeftConstraint?.pop_addAnimation(toggleMenuIn, forKey: "toggleMenuIn.move")
-                
+        
         let toggleMainVCOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMainVCOut.toValue = 315
         toggleMainVCOut.springBounciness = 10
@@ -450,29 +370,29 @@ class MainViewController: UIViewController, PassingQuote {
         slideBackgroundOut.springBounciness = 10
         slideBackgroundOut.springSpeed = 10
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundOut, forKey: "slideBackgroundOut.move")
-
+        
         self.quoteTextField.alpha = 0
         self.authorLabel.alpha = 0
         self.infoLabel.alpha = 0
         self.authorInfoButton.alpha = 0
         self.videoButton.alpha = 0
         self.view.backgroundColor = self.menu!.view.backgroundColor
-                
+        
         let transitionOptions = UIViewAnimationOptions.TransitionFlipFromLeft
         UIView.transitionWithView(self.menuButton, duration: 0.75, options: transitionOptions, animations: {
             self.menuButton.setImage(self.menuImage, forState: .Normal)
             }, completion: nil)
         self.isMenuOpen = true
-
-        }
-
+        
+    }
+    
     func hideMenu() {
         let toggleMenuOut = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMenuOut.toValue = -self.menu!.view.frame.width
         toggleMenuOut.springBounciness = 0
         toggleMenuOut.springSpeed = 15
         self.menuLeftConstraint?.pop_addAnimation(toggleMenuOut, forKey: "toggleMenuOut.move")
-            
+        
         let toggleMainVCIn = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
         toggleMainVCIn.toValue = 0
         toggleMainVCIn.springBounciness = 0
@@ -486,7 +406,7 @@ class MainViewController: UIViewController, PassingQuote {
         self.backgroundViewLeadingConstraint.pop_addAnimation(slideBackgroundIn, forKey: "slideBackgroundIn.move")
         
         self.isMenuOpen = false
-            
+        
         let transitionOptions = UIViewAnimationOptions.TransitionFlipFromRight
         UIView.transitionWithView(self.menuButton, duration: 0.75, options: transitionOptions, animations: {
             self.menuButton.setImage(self.mainImage, forState: .Normal)
@@ -513,22 +433,22 @@ class MainViewController: UIViewController, PassingQuote {
             self.favoriteButton.alpha = 1
         })
         
-        }
+    }
     
     func changeBackgroundImage() {
         var imageToChangeTo: String?
         var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImage", ofType: "plist")
         var imageNames = NSArray(contentsOfFile: imagePath!)
-//         println("the image names are: \(imageNames)")
+        //         println("the image names are: \(imageNames)")
         
         var numberOfImages = imageNames?.count
         var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
-//        println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
+        //        println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
         
         let imageArray: [String] = imageNames as Array
         
         var randomImageName = imageArray[randomNumber]
-//        println("the random image is: \(randomImageName)")
+        //        println("the random image is: \(randomImageName)")
         self.backgroundView.image = UIImage(named:randomImageName)
         self.backgroundView.frame = self.view.frame
     }
@@ -557,7 +477,7 @@ class MainViewController: UIViewController, PassingQuote {
             make.centerX.equalTo(self.overlay.snp_centerX)
         }
         
-
+        
     }
     
     func performLaunchOverlayAnimation() {
@@ -571,17 +491,16 @@ class MainViewController: UIViewController, PassingQuote {
                 slideUp.springSpeed = 40
                 self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
                 self.destroyLaunchOverlay()
-            })
+        })
     }
     
     func destroyLaunchOverlay() {
         UIView.animateWithDuration(2, animations: { () -> Void in
-        self.overlay.alpha = 0
-        }) { (Bool) -> Void in
-            self.logoImageView.removeFromSuperview()
-            self.createLogo()
+            self.overlay.alpha = 0
+            }) { (Bool) -> Void in
+                self.logoImageView.removeFromSuperview()
+                self.createLogo()
         }
     }
     
-}
-
+}   
