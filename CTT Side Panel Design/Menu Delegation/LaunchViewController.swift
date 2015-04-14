@@ -17,6 +17,7 @@ class LaunchViewController: UIViewController {
     var main: MainViewController?
     
     override func viewDidLoad() {
+        println("LaunchVC: viewDidLoad()")
         UIView.animateWithDuration(1, animations: { () -> Void in
             let scale = CGAffineTransformMakeScale(0.2, 0.25)
             self.logoImage.transform = scale
@@ -27,17 +28,17 @@ class LaunchViewController: UIViewController {
             slideUp.springSpeed = 10
             self.logoTopConstraint.pop_addAnimation(slideUp, forKey: "slideUp.move")
             })
-        present()
+//        present()
     }
 
-    func present() {
-    //self.view.backgroundColor = UIColor.clearColor()
-    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-    self.main = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as? MainViewController
-//    self.main?.view.setTranslatesAutoresizingMaskIntoConstraints(false)
-//    self.view.addSubview(self.main!.view)
-    self.presentViewController(main!, animated: false, completion: nil)
-    }
+//    func present() {
+//    //self.view.backgroundColor = UIColor.clearColor()
+//    let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//    self.main = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as? MainViewController
+////    self.main?.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+////    self.view.addSubview(self.main!.view)
+//    self.presentViewController(main!, animated: false, completion: nil)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

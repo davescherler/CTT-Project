@@ -27,6 +27,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("ContainerVC: viewDidLoad()")
         
         mainViewController = UIStoryboard.mainViewController()
         mainViewController.delegate = self
@@ -42,6 +43,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
     }
     
     func addMenuViewController() {
+        println("ContainerVC: addMenuViewController()")
             if (menuViewController == nil) {
                 menuViewController = UIStoryboard.menuViewController()
                 addChildMenuViewController(menuViewController!)
@@ -49,12 +51,14 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
         }
         
     func addChildMenuViewController(menuViewController: MenuViewController) {
+        println("ContainerVC: addChildMenuViewController()")
             view.insertSubview(menuViewController.view, atIndex: 0)
             addChildViewController(menuViewController)
             menuViewController.didMoveToParentViewController(self)
         }
         
     func animateMenu(#shouldExpand: Bool) {
+        println("ContainerVC: animateMenu()")
             if (shouldExpand) {
                 currentState = .MenuExpanded
                 
@@ -70,12 +74,14 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
         }
         
     func animateMainViewControllerXPosition(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
+        println("ContainerVC: animateMainViewControllerXPosition()")
             UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
                 self.mainNavigationController.view.frame.origin.x = targetPosition
                 }, completion: completion)
         }
     
     func showShadowForMainViewController(shouldShowShadow: Bool) {
+        println("ContainerVC: showShadowForMainViewController()")
             if (shouldShowShadow) {
                 mainNavigationController.view.layer.shadowOpacity = 0.8
             } else {
@@ -84,6 +90,7 @@ class ContainerViewController: UIViewController, MainViewControllerDelegate {
         }
         
     func toggleMenu() {
+        println("ContainerVC: toggleMenu()")
             let notAlreadyExpanded = (currentState != .MenuExpanded)
             
             if notAlreadyExpanded {
