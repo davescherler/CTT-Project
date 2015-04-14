@@ -238,7 +238,8 @@ class MainViewController: UIViewController, PassingQuote {
         makeLogo()
         
         //createMenuButton()
-        initMenu()
+        println("MainViewVC(): viewDidLoad() this is where initMenu() would launch (but commented out now)")
+//        initMenu()
         //createLaunchOverlay()
         //performLaunchOverlayAnimation()
         
@@ -286,16 +287,18 @@ class MainViewController: UIViewController, PassingQuote {
                             }
                         }
                         println("MainViewVC: json in viewDidLoad(). midtempData count is now \(self.midtempData.count)")
-                        self.menu!.allQuotesData = self.midtempData
-                        var menuVCArray = self.menu!.allQuotesData
-                        println("MainViewVC: json in viewDidLoad(). The number of quotes in MenuViewVC's allQuotes is \(menuVCArray.count)")
-                        self.menu!.re_filter()
+                        // Commenting out the lines below because we commented out initmenu() so the lines below now throws an error
+//                        self.menu!.allQuotesData = self.midtempData
+//                        var menuVCArray = self.menu!.allQuotesData
+//                        println("MainViewVC: json in viewDidLoad(). The number of quotes in MenuViewVC's allQuotes is \(menuVCArray.count)")
+//                        self.menu!.re_filter()
                     }
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     // IMPORTANT we need to reload the data we got into our table view
-                    self.menu!.table.reloadData()
+                    // Commenting out the line below because we commented out initmenu() so the line below now throws an error
+//                    self.menu!.table.reloadData()
                 })
             })
             task.resume()
