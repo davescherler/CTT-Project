@@ -1,0 +1,28 @@
+PODS:
+  - google-cast-sdk (2.3.0)
+  - GoogleAds-IMA-iOS-SDK (3.0.beta.11)
+  - player-sdk-native-ios (1.1):
+    - google-cast-sdk (= 2.3.0)
+    - GoogleAds-IMA-iOS-SDK (= 3.0.beta.11)
+  - pop (1.0.7)
+
+DEPENDENCIES:
+  - player-sdk-native-ios (~> 1.1)
+  - pop (from `https://github.com/facebook/pop.git`)
+
+EXTERNAL SOURCES:
+  pop:
+    :git: https://github.com/facebook/pop.git
+
+CHECKOUT OPTIONS:
+  pop:
+    :commit: 5417ae5479293522596413ea3f111d66f8441c99
+    :git: https://github.com/facebook/pop.git
+
+SPEC CHECKSUMS:
+  google-cast-sdk: e86186e3e0c0bd20040fcb9cf2b5d2ad659fc5b8
+  GoogleAds-IMA-iOS-SDK: 361a3ae79799352f393b4f3aab573b830f4220b4
+  player-sdk-native-ios: 68349da51db0f8bf8eddbe67568760b2622ffe9c
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+
+COCOAPODS: 0.36.3

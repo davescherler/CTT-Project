@@ -1,0 +1,8 @@
+#include "Pods-player-sdk-native-ios.xcconfig"
+FRAMEWORK_SEARCH_PATHS = ${PODS_PLAYER_SDK_NATIVE_IOS_FRAMEWORK_SEARCH_PATHS}
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/player-sdk-native-ios" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" "${PODS_ROOT}/Headers/Public/google-cast-sdk" "${PODS_ROOT}/Headers/Public/player-sdk-native-ios" "${PODS_ROOT}/Headers/Public/pop"
+LIBRARY_SEARCH_PATHS = ${PODS_PLAYER_SDK_NATIVE_IOS_LIBRARY_SEARCH_PATHS}
+OTHER_LDFLAGS = ${PODS_PLAYER_SDK_NATIVE_IOS_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

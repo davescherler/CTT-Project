@@ -1,0 +1,1 @@
+../../../player-sdk-native-ios/PlayerSDK/PlayerSDK/KPShareManager.h

@@ -1,0 +1,16 @@
+PODS:
+  - google-cast-sdk (2.3.0)
+  - GoogleAds-IMA-iOS-SDK (3.0.beta.11)
+  - player-sdk-native-ios (1.1):
+    - google-cast-sdk (= 2.3.0)
+    - GoogleAds-IMA-iOS-SDK (= 3.0.beta.11)
+
+DEPENDENCIES:
+  - player-sdk-native-ios (~> 1.1)
+
+SPEC CHECKSUMS:
+  google-cast-sdk: e86186e3e0c0bd20040fcb9cf2b5d2ad659fc5b8
+  GoogleAds-IMA-iOS-SDK: 361a3ae79799352f393b4f3aab573b830f4220b4
+  player-sdk-native-ios: 68349da51db0f8bf8eddbe67568760b2622ffe9c
+
+COCOAPODS: 0.36.3

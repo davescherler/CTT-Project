@@ -1,0 +1,6 @@
+framework module GoogleAds_IMA_iOS_SDK {
+  umbrella header "Pods-GoogleAds-IMA-iOS-SDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

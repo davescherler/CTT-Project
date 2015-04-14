@@ -1,0 +1,1969 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00BEFBE1165B894DA259409E /* NSString+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB47C866368BEAD12AE1B6A /* NSString+Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0171D63573B2E8E48C4562F1 /* DeviceParamsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F675E1EE21A74754040A8FE /* DeviceParamsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0685455CFC96A648B787058A /* Pods-Snap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6303CFF00D6845C4BBE7993 /* Pods-Snap-dummy.m */; };
+		06AFEFB253224890609CEA51 /* IMACompanionAdSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBB93332AC159DD328A8CB0 /* IMACompanionAdSlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AA82A8770D093A5E89A4E83 /* KPWebKitBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62320D07A9CE46C10F56BF49 /* KPWebKitBrowserViewController.m */; };
+		0ABC744ECC2109E512430F6F /* POPSpringAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 63029BC37FC084D1B535E557 /* POPSpringAnimationInternal.h */; };
+		0B46756E9437794E954986BF /* IMAAVPlayerContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 94787CD62299417B1B4EFEF4 /* IMAAVPlayerContentPlayhead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C8DCB01E613375E3B66244E /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 86522FDB603E88A49D1FC4F3 /* NSString+Utilities.m */; };
+		0CCAC5EF99067C5B9F05E62D /* KPLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD17C70F2B7F33CEBDFC0F4 /* KPLogManager.m */; };
+		0CF205AF770D2D5D5A3A5BE7 /* GCKMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F40C97659D2D62444ECE69A /* GCKMediaControlChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D4D600F82177EE503AEC1F2 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0C435658CEA10C12D7801 /* ConstraintItem.swift */; };
+		0DAE3B9FC6B6205BE0F5BF66 /* GCKCastChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE53E33EA41583D33E24887 /* GCKCastChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DC903B9670CE927E291A0D0 /* POPCustomAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 89DA73A64D4F81EC841051F9 /* POPCustomAnimation.mm */; };
+		0E861D79DAA007AC5D5F4368 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B015367DE90FCDE1148794 /* QuartzCore.framework */; };
+		10A9945034C0E0C2089A0FBD /* GCKDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC5C74184613D2CDC248C57 /* GCKDeviceScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B7D2363E1E1DC2A0DA2866 /* IMAAdsRenderingSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD9C5F37F54E81EFD0A4A53 /* IMAAdsRenderingSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15DCB559758B6C731469C42D /* MailStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = EDFDD2C2E4F1B818D486D839 /* MailStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16A2993B1B2F993E975D8A81 /* WVSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A2A552B1907608AF2AF295 /* WVSettings.m */; };
+		1807880A96EBA2B475C2F9A2 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B17600A03ACA30EC508BA561 /* POPDecayAnimation.mm */; };
+		1815486538BDCC345A71AA0E /* KPIMAPlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A6730F3DBCD47A83A2C6DE7 /* KPIMAPlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18F613D917BB5509318D6F2A /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = F83F9BA581D124DA7FE4D54D /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19B73AC67CE47696D67E428D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7565BE3DC46473C76BB68A6B /* AdSupport.framework */; };
+		1A7F4CE1C8882A512E8CF184 /* KPShareManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A76A8569BE9129FC3D378B08 /* KPShareManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AF66574D375D6620A9A1EAC /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 021DB5F8B93FB1AB854860D9 /* POPMath.mm */; };
+		1B1CFCDBB1CB9024D7AE46DA /* TwitterStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C7DE7423CE6D44B808CB5B /* TwitterStrategy.m */; };
+		1C7BAA24D404B04D32E18C10 /* GCKMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A9C311C55D4BB737D8898F /* GCKMediaControlChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CCC467FFB38494982C7281C /* MessageStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9980143CE61AF87D8C1FCE7 /* MessageStrategy.m */; };
+		1D0E1CF701A39F7591AFD5C2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC1F54222F4892EB31DA113 /* CoreMedia.framework */; };
+		1E9217FAA497B007A9876609 /* GCKMediaTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 33BE78D55EB829AA5BC802C7 /* GCKMediaTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21025A648855102109D8BFEF /* KPControlsWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 49EFB312E9530A5414ABB998 /* KPControlsWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2373555332B9CD3F81F479A7 /* IMAAdPlaybackInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E049CDE2B8B3CF79AE0C39 /* IMAAdPlaybackInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2383ED5CE5FB666453606AF3 /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E277985F20AF88F036B5FE64 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2730BA40AF1B04C6E904E54A /* POPAnimationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E05910366A88C6F28271625F /* POPAnimationPrivate.h */; };
+		286289E1B94A9B5A78D15266 /* KPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 679AA1D6A722BC94649CA4E7 /* KPLog.m */; };
+		29F755141A5DCD5900BD4DCC /* GCKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D29D8B162A5B49C4DED43A /* GCKImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A52F5CD9FB38764C12E8C57 /* IMAContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C41B72591BD5F2A374A1F71 /* IMAContentPlayhead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AE7DC4720D1AB3CF66856EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		2BC424677EFFF04808339A6A /* KPBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC73939728004F960F2F29F /* KPBrowserViewController.m */; };
+		2CDCC25662B38C87D4A2AEF2 /* FacebookStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 20D2C4C83F166A8C5CADE5A8 /* FacebookStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D04B06EBA087E1EABDC898F /* KPShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF890549898F20EBE454D87 /* KPShareManager.m */; };
+		2D915F47DF145A4EEF0142C8 /* POPAnimationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E80D54FC7328E8E055968961 /* POPAnimationEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EC2862EE978B4467815D4CE /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F36E1CEDBB3A4DC05375DF /* POPGeometry.mm */; };
+		3038B0456D128DF006B8B49C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC608E4EE8EF9E72EECC6BCE /* MessageUI.framework */; };
+		3154476B694E21C220C69784 /* IMAAVPlayerContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA62EE0FB80FADA727333B8 /* IMAAVPlayerContentPlayhead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		341E56BDB4E07E7D43052B1F /* POPAnimationEventInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA1E86D5CEF7E75ACA84436 /* POPAnimationEventInternal.h */; };
+		35AA484A67F6C987094987AB /* KPControlsWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0059156FF7CE2E125A1611 /* KPControlsWebView.m */; };
+		36B63B24BED1B328D0D97DC1 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4366F3B2DBFB867CEEFA0587 /* ConstraintRelation.swift */; };
+		37055EA0B75623F7639B17FA /* google_cast_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FEB4EFA285693087BB53FE /* google_cast_sdk.framework */; };
+		37ABC10752085D3DF65C6B78 /* GooglePlusStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 658EA2BBF9618B03FC33BF25 /* GooglePlusStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		384B98A061535322C7D1A467 /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 891CCFDF6C85E02D96BFA3B9 /* POPDecayAnimationInternal.h */; };
+		39D0B11BC8A4187E944EBA6D /* GCKApplicationMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = A63812E96FBB8F54B24675BE /* GCKApplicationMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C46E376DCE33DC7F71A4AB2 /* KPPlayerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A7084694AED0BC5CD5596F7 /* KPPlayerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D7527589C6DE3C6256D9F0A /* POPAnimationTracer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 85CE9F77AB7E241FAE35119A /* POPAnimationTracer.mm */; };
+		3DDE446554B4F0950785A0AE /* UnitBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F4DC51D1AB3688CE0BC726C /* UnitBezier.h */; };
+		3E6C182DA0BF2ABEB443E534 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BEC532A6ED978B3FA54FBB3 /* POPCGUtils.mm */; };
+		3F398553B15573E698F153F8 /* POPAnimatorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D3FFCF3766B88C72DD8040 /* POPAnimatorPrivate.h */; };
+		3F6F62459A530972FC125BE9 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052F499F1DA6FF089308C54E /* ConstraintMaker.swift */; };
+		408FE12BD91A3B26C0669704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		434B8E4AB1C84190366554D0 /* Pods-player-sdk-native-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA73E8315120029DE2B92D0 /* Pods-player-sdk-native-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43BA4451A1E68A47CEF67148 /* IMAAdsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A9657D1588821A58BCDF9999 /* IMAAdsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		441C6E381FBBE8D9022BEF2F /* KPPlayerDatasourceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCE98F2E12BFF3C7AB79BAC /* KPPlayerDatasourceHandler.m */; };
+		44FC30D8A5E5B76F89FFA68D /* View+Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE352FE5AFA77D9AD462CC4 /* View+Snap.swift */; };
+		4525A6C0887A62F2656C1E9F /* GCKMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 61BCC094CA20865DA41DEB2F /* GCKMediaStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46E9B44B3C0E23876959A08B /* WViPhoneAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = F225CDCC9AB04B3B491D3304 /* WViPhoneAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EAE3C72D61381F3E9EEA27 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E845C754A683EEA67BB54C2 /* AudioToolbox.framework */; };
+		47770B743B656125B50F8607 /* IMAAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6E2730DDB2E21890286AFA /* IMAAdError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4778075FE3D6750E87FC285F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ACE31C68E5057FF64736DD /* WebKit.framework */; };
+		47783DCBCFC8FA5F06D19013 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34690B6AA74C4459BD2CA2D9 /* ConstraintAttributes.swift */; };
+		47CDE6ED5B533F300695CD78 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7565BE3DC46473C76BB68A6B /* AdSupport.framework */; };
+		47D24D020600AC23B7F9A067 /* IMAAdsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C497FBFE0C834AC24CC612 /* IMAAdsRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48DEEED0A57F1591E9420B2A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC608E4EE8EF9E72EECC6BCE /* MessageUI.framework */; };
+		4A2A31016982324C611828F2 /* IMAAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C9D8ECDE852478BBF49931 /* IMAAd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AADD04A9FF048F25615E791 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472F00CE51D11BF5CD001FBA /* SystemConfiguration.framework */; };
+		4AB144B7BDEF73671C190A37 /* GCKMediaMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E54961D6441E0D82C87194 /* GCKMediaMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B8B914904704ACEDC6BAC75 /* POPAnimator.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC2D77665A5A402F2AB04E29 /* POPAnimator.mm */; };
+		4C48AC9ADA3A1B4299D207F0 /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = F6A6A85FD5A1B143D5668311 /* POPBasicAnimation.mm */; };
+		4C7C8E7BEF1A3924D56E11C5 /* POPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = DA4521745C5632B948DEF215 /* POPAction.h */; };
+		4D2FAB62158D2DEA70D476D8 /* KalturaPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75432B21543FFE97E7B063 /* KalturaPlayer.m */; };
+		4DAE3625DF5D02201862F764 /* IMACompanionAdSlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF402082664420142F786BF /* IMACompanionAdSlot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F58CF43CC8231402EFB570D /* POPAnimatableProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C5D476BFFF115AA68691B6 /* POPAnimatableProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		500BFED13D7A068371D76B31 /* POPAnimationTracerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D06CCF5440F61E54221F96 /* POPAnimationTracerInternal.h */; };
+		50550168471558BFBA50D021 /* GCKLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 774B54F478097060AE361597 /* GCKLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		507A59A925C125BE6472E81E /* IMAAdError.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D367465ADCA987DF4CA180E /* IMAAdError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		516ABA18F771E9FE7FFDCB9D /* POPPropertyAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5AEFFA4FA018391B4B2D54 /* POPPropertyAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		532CEDAE0D721A1D61D870A6 /* POPLayerExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = E49E6BACC291505E3230D9F4 /* POPLayerExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A11D7538BEFDC9370BB02E /* GoogleAds_IMA_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B494CC664F72FEA0DA18371 /* GoogleAds_IMA_iOS_SDK.framework */; };
+		53E3CD773391F0C35490BDEC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FFCCF1A0E58593F0268CF6 /* AVFoundation.framework */; };
+		541977B90EA21074BC5ED96C /* KPWebKitBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 441D7D00C3118C3F2B4F38FF /* KPWebKitBrowserViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54364A15C2B5A01C39014CA8 /* GCKMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A07B8ACE4033ED0C1568F14 /* GCKMediaStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		550D5B47C9FF3CC40FD76F21 /* KPViewControllerProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB8DE2CC66E9EC2A1776F25 /* KPViewControllerProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5573BE64543F3167C1922A63 /* GCKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C6484545904D290BED5E3B /* GCKColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59BDC89B5A3817F15CEAFEAC /* POPVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF2C2776DE045A6F15BC0B3 /* POPVector.h */; };
+		5A8A6C12128AB2C63BB790B2 /* GCKDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = DF34533FD008E34A7AEE7ECD /* GCKDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AA339BADDD89791645F1579 /* GCKApplicationMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0550B5BC31544A52EAC391EF /* GCKApplicationMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C52034622FA3839ED539E92 /* POPAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B915E9B6E52DE2796FCB65DD /* POPAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C756C38FFBF38239C8475B0 /* FacebookStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D8A39C040C5A9BC58CAF8 /* FacebookStrategy.m */; };
+		5CBFC070E063A43113A498E1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E845C754A683EEA67BB54C2 /* AudioToolbox.framework */; };
+		5D3FF25C65B1FF7BF634542D /* KArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = F14A84ADC6AE1AEA07F8BF26 /* KArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EF024DB899CBC1D04A5DE92 /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = B18C22035BD8F2851BC7FAF0 /* POPAnimationExtras.mm */; };
+		5F2A1C9E2672126EE31423DC /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = F480A950E31D104AB818E59F /* POPAnimation.mm */; };
+		655D6F4C1D0695B556E8993E /* KArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7640A3033FCA0CD9391C182E /* KArchiver.m */; };
+		6895054451F8174F4916358E /* GCKCastChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 542FFF4F702D51D47F233999 /* GCKCastChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68D1C043E342D14D40C20043 /* GCKFilterCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = B382CE34A3446CA560A630F1 /* GCKFilterCriteria.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AADFBC724D8B4604DE4E41D /* IMAAdEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 238EE9AC9ABA46D9C2970DD5 /* IMAAdEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AB04843C21BB6739BC6930E /* POPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 82DD7E8EEE5B32C0009E03D4 /* POPGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E20247932E4D9CE738F5BE9 /* ChromecastDeviceController.h in Headers */ = {isa = PBXBuildFile; fileRef = C82414B24CCF9880D41CD9CA /* ChromecastDeviceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EE1561A59011BBF6F42746E /* TransformationMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = ED5F0034F0A56E24C1F424DC /* TransformationMatrix.h */; };
+		7014AB33F58D042A45BE75B5 /* GCKMediaTextTrackStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E08584486C476DDD51A4818 /* GCKMediaTextTrackStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		711BBF68B81177812E9EA9B1 /* IMAAd.h in Headers */ = {isa = PBXBuildFile; fileRef = DFF3766C6E0E8700D7545FBA /* IMAAd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		718A7094173707B66B28B1F5 /* Pods-GoogleAds-IMA-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1451DD257ADFD42F012E9AB /* Pods-GoogleAds-IMA-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		742FB537EDABDB19A2A4F6F0 /* POPMath.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C6A9DFA306348EB2EDF115 /* POPMath.h */; };
+		74E454672EB11894C943E478 /* POPBasicAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CF7B6C1D80BCEC3EF910EEB /* POPBasicAnimationInternal.h */; };
+		772AD58EDBF681455C013A35 /* GCKDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A0CF52B8EC067F57E600D2F /* GCKDeviceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78947E057972747CB9B7AAA5 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF0B7E1C33E76D3C757F44F /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7937806199B758CC18C7F1D9 /* POPPropertyAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9739E6DBCC974220A3794860 /* POPPropertyAnimation.mm */; };
+		7A094BBC8D4D0C34F314B37F /* POPDecayAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5E267EAB526C6DE1A190B8 /* POPDecayAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BA15FE39ABD15BED9C1E45F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		7C08D38ADF2B05B3D4CC5ADF /* KPIMAPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B024891D7097B15DF4162 /* KPIMAPlayerViewController.m */; };
+		7C33E70C7D33BEB5D4816B4B /* GCKFilterCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = EB53DE9CA8DCDE2EBBE73CFA /* GCKFilterCriteria.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C71807E32289059375E70D4 /* GCKNSDictionary+TypedValueLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 72705D4FAFAB83E98A4F72CC /* GCKNSDictionary+TypedValueLookup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CDBC451C862A9911996ECAA /* KPChromecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E7447481CA9DEF5DDE892 /* KPChromecast.m */; };
+		7D0705A7F9E01639957A0436 /* KPLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5101AD132C9C5BEED07AA5 /* KPLogManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		806D78F08ADC0FA58EC404EA /* KPBrowserViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC50D34A64DFDEC65C905B07 /* KPBrowserViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81FA21A0BE4500ED8A438A7B /* POP.h in Headers */ = {isa = PBXBuildFile; fileRef = FF0F74C0C01D29C9B8F80C4A /* POP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8208581DE81AD9528C7226D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		832AF571E4CA2DEA0BD613A3 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24E6A3DC43DBCF6D37B2D143 /* TransformationMatrix.cpp */; };
+		83CA9759D6E0317433281A27 /* Pods-Snap-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F55CC08334D2D853164DD0B /* Pods-Snap-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		846E5C232AB782413DF18956 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472F00CE51D11BF5CD001FBA /* SystemConfiguration.framework */; };
+		868652B9D4D05307553148E3 /* GCKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C46894DBD2FC9C7080481FA7 /* GCKImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		893A17E5AC0ED387BA2BB05A /* IMAUiElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 4548FF89E220432F7ACE3A9F /* IMAUiElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A441D5B9CD898C68F6CB571 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FFCCF1A0E58593F0268CF6 /* AVFoundation.framework */; };
+		8A8329C2A1BFF3FCD08DA7A9 /* Pods-player-sdk-native-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319D90763FE4172F720A6B5 /* Pods-player-sdk-native-ios-dummy.m */; };
+		8B52CF9F5FC12D3E30579CFF /* KPChromecast.h in Headers */ = {isa = PBXBuildFile; fileRef = 102349C294857F54D039F100 /* KPChromecast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BBF279100DF6CBDF1B1A3D5 /* GCKDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FEA2CD8D9B08F777A4B4E6 /* GCKDeviceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C81912EB0E238B778A44E49 /* IMAAdDisplayContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 337A311D8F5DE3FCE306F81D /* IMAAdDisplayContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C83288BB9E74478CEB7FD47 /* NSMutableDictionary+AdSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DFAC5738DD9E1ECFBD1FD04 /* NSMutableDictionary+AdSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF0520A8A41A7F7B17B05D3 /* IMAUiElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 354C4A22E3CC5B12AE84238B /* IMAUiElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D284E7358A0A323B64C3844 /* POPSpringSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4BB311FFD6CA3FA9058716 /* POPSpringSolver.h */; };
+		8E943941CEEE624DF819CADA /* GCKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 6407F4F65AE1229AB900FAB4 /* GCKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EC22BD89BF2C35402DAF784 /* IMAAdPlaybackInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = D89319234F1664D9F3D6A983 /* IMAAdPlaybackInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FAEE20E8DC38BBABD76398D /* GCKError.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A0B7BA5D63B2D191E4DDA9 /* GCKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90E6BBB5AECB7DDC9B6D87AC /* ChromecastDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485C9EA66ED2EF85BED298A8 /* ChromecastDeviceController.m */; };
+		9154D38FB61159F8799B18F7 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = A60EBC6871D20EB50D2013E7 /* POPAnimatableProperty.mm */; };
+		924AF021727E14E546945006 /* GCKJSONUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A0E1AA42A91869E547AC05 /* GCKJSONUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92E4C1A9F075C625C758FE70 /* IMAAdsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5A56CC8F8C1C82906FD2E /* IMAAdsLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9349B8E5D8DA961B7B660515 /* POPAnimationRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = AED37D96D16171CE0B3F8721 /* POPAnimationRuntime.h */; };
+		94667D9BB79CC45068564DCF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38103616AE604279F9878454 /* CoreFoundation.framework */; };
+		96000C01C52D8A69CABD0E6A /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFCCB3CA8D1795124955CA /* EdgeInsets.swift */; };
+		9640C663897F6A9113779DB6 /* KPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951674044AEE1610F24CDE91 /* KPViewController.m */; };
+		97012ABB00B7A4F9155B730F /* POPCGUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BA6F3B8A9414BB7C59B914 /* POPCGUtils.h */; };
+		97C8A056F72B3576742C67B3 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFB34C7055F66C6B34DA6E59 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99483794C210A0978315FEE5 /* POPPropertyAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B36469FB85B99D265F67177 /* POPPropertyAnimationInternal.h */; };
+		99C12CEE14C7D5068108511B /* Pods-google-cast-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D7CCA5A582A574EF1EEF /* Pods-google-cast-sdk-dummy.m */; };
+		9AA4A7F075238F2C9C8D5CA2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF055D55C2A652CEB6DDCDB5 /* CFNetwork.framework */; };
+		9D50D6080300898775EE3166 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C0EBF7912BF8666DAC206C /* CoreGraphics.framework */; };
+		9F63F1996A5F3B78FECFBEC2 /* IMAAdEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 64376246CF75E6AD5262CEB8 /* IMAAdEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A128415818E6C773673AF587 /* GCKMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D993D0C283FCC4E5652247F /* GCKMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A335B94A125B217C29D6431E /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B4AC682D3C91EB11943000F /* POPVector.mm */; };
+		A3B4555E676C4908BB165C1F /* IMAAdDisplayContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3453E65CFAFB0F968679A933 /* IMAAdDisplayContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A45A9EF06AB212479E751410 /* GCKDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 59138594BC13ADE0F97B77A9 /* GCKDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A49EA6F07AF39DA035E12462 /* DeviceParamsHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 95818FF2D971FD44556BFB9D /* DeviceParamsHandler.m */; };
+		A4BED097D8B056B213A55059 /* MailStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B3A415DAF730B24A2037C /* MailStrategy.m */; };
+		A5E97C186BF33BDF7508F2C7 /* IMAAdPodInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 398A2756573A0D9592E1022E /* IMAAdPodInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A60E2C2AA628EA033C5E73CC /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B28B9CDE0C99E19F655374E4 /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62260ED2A5336EFCA6CE855 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B015367DE90FCDE1148794 /* QuartzCore.framework */; };
+		A747FF9C108B9A3077C7A87F /* Pods-pop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF73F1420E70613CE9F9BDF /* Pods-pop-dummy.m */; };
+		A974B73A9C560B00AF85828F /* WVSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 102144796914CE8A6D494A24 /* WVSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA34805BDDBF4E2B68936062 /* POPAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E34C4F716574296F897E66F /* POPAnimationExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB599A4A82CDF0066C8A280A /* GCKMediaTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6379029C9664421202AAE3 /* GCKMediaTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB99190BA287A2CBF21C4FB8 /* MessageStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4826C0574BF027C4D81C90 /* MessageStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACFEC7FE06EF25E76216C268 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3988BBC8C4D7ABE928F51E /* GoogleCast.framework */; };
+		AE5858E78429F5399093E1D2 /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4580203D0FA60F13446BB1 /* MediaAccessibility.framework */; };
+		B5E66F83D4B70FCC7C57D3E2 /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = D9879B0ABA645E367B009D23 /* POPAnimationEvent.mm */; };
+		B6BDCBF5155CF39FD904CCFE /* KPPlayerDatasourceHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BFF860D8F3C63003DEA5C057 /* KPPlayerDatasourceHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71BD4F59A01B62E66179AFA /* GoogleCast.h in Headers */ = {isa = PBXBuildFile; fileRef = B38323C7D7AF160D565E46F2 /* GoogleCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8BC9CFC805D9805230CE357 /* Pods-google-cast-sdk-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF640C86A2A2D8EE2EF9768 /* Pods-google-cast-sdk-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B97D83EA18E253793CF42D1D /* IMAAdsRenderingSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5CE662B3AF16110C8BEB7E /* IMAAdsRenderingSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BACDFF8F78F756B5454BABF0 /* GCKJSONUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9F5A1EF84F1391D528CEDC /* GCKJSONUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BADC39653E8319574118BE62 /* GCKNSDictionary+TypedValueLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E0F79A1ABFD8AA9E70BF9D /* GCKNSDictionary+TypedValueLookup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC2BE921578F49DD895141B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107196105E4B17E914ACF778 /* MediaPlayer.framework */; };
+		BF5F110C08728D7358AF7A14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130F703AB1458C6646A75B7E /* UIKit.framework */; };
+		C2B1A543A4B4395B11E754BC /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9733361AF741217EF19FBBD6 /* POPLayerExtras.mm */; };
+		C2D2C0FA48BE9B40128774F1 /* FloatConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = CFD11CC7D76E3BBB2EE4C845 /* FloatConversion.h */; };
+		C36C845CA9144BDFE230DB61 /* GCKSenderApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = BA2E9451AF762B40D96910D0 /* GCKSenderApplicationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6E6D43D07E8B9E577E7E7F1 /* GCKDeviceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 911AADAAC1B28DE1D927794A /* GCKDeviceFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8D4FC13599776C3943C6253 /* KPPlayerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D3831C77BE3838D8CFA2B0A6 /* KPPlayerConfig.m */; };
+		CDBFC18D6611239749FD42ED /* GCKDeviceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 714DF9A620270F6BD64A580D /* GCKDeviceFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE0A2832FDD178F0465072F4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38103616AE604279F9878454 /* CoreFoundation.framework */; };
+		CEB88F7D7E8616CA6CC5F6D7 /* GCKMediaTextTrackStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = B8D688D79CAE56D27CF575EF /* GCKMediaTextTrackStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D05D1F0752E5613666AFFD43 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724C7461BFD9D75085B10F33 /* LayoutConstraint.swift */; };
+		D0BFA1F896B6DB9AACAB6E85 /* Pods-pop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3C46C7542D5A14F09095CF /* Pods-pop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D457020DF295FF4F6CB0305F /* GCKDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F3567CF88CC1B4531E1B434 /* GCKDeviceScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7D4D3982D7CDDDB1AD4245B /* IMAAdPodInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 352FF9B34377820E0E18622E /* IMAAdPodInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9624253CCC43841B44D74F8 /* GCKLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = AD99FCFDAF228D90DE9FFA9B /* GCKLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB495BB09C6837F283CFCE73 /* POPAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A53EBDBB4299A44BABA72538 /* POPAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB77D4B37B631A707953F9D0 /* IMAAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AC848D22D265CCDCD1CAB796 /* IMAAdsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC3ED9BEFFAAB22FBE504389 /* GCKSenderApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C9B0ECCC90500603EF0741 /* GCKSenderApplicationInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD517BBDA6C6E1FA8FE322FC /* KalturaPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DA192494E0E326C49BD43ED3 /* KalturaPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF9345F8D2044E768B454021 /* POPAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C55DFCAB17BF9243502E40 /* POPAnimationInternal.h */; };
+		E02C9B9E8A8C5B7DF0462A9C /* IMAAdsLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE887B6921D5B9DE175E175 /* IMAAdsLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E17AF5A1EC0A15DF7C01432E /* KPLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CBDDC59F61FF72755C416F2 /* KPLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2D5F69D9806CE0B465BBCDC /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F42F064153A403140C62F4 /* POPSpringAnimation.mm */; };
+		E2EC37654CAE079B2D66A30D /* GCKMediaMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B74B5A95E72B3DDC2E2A63E /* GCKMediaMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E39244942DA605F6982EDD24 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA86CDDC173B1ADB3A151DC /* Social.framework */; };
+		EA4A8CBAD86449C4950025B0 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3988BBC8C4D7ABE928F51E /* GoogleCast.framework */; };
+		EA6F6A0616725D0674F5FF0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		EACAE5F9DE3D9563B1795647 /* IMAContentPlayhead.h in Headers */ = {isa = PBXBuildFile; fileRef = 878F0EA68C8193A33A5FA740 /* IMAContentPlayhead.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED57A37B4C0393B08E0EA8D6 /* GCKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 463A00BC028071DD087DFCA5 /* GCKColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE412F90119898CA290CFFC8 /* NSDictionary+Strategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7600B44533BC40BE12C9734D /* NSDictionary+Strategy.m */; };
+		F1470F5F13668848F749D785 /* GCKMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C359960918546EFACA5F90E /* GCKMediaInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22D986AB19D5C476EEC4933 /* TwitterStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1618303B07C79E49C7988694 /* TwitterStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2968FB6B50F410FC0FFF6D6 /* GooglePlusStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B923FA139713617AE6186 /* GooglePlusStrategy.m */; };
+		F2CB8C1BDDC4D9392599C805 /* POPAnimationTracer.h in Headers */ = {isa = PBXBuildFile; fileRef = B21AD22FD2CB9889B4ED110F /* POPAnimationTracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F317743240597DEC629824F0 /* POPCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = BE2ACE0E5CAF66EBF61207BD /* POPCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5BB2C9D11E2DA8D34EF33FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DC5A764CF7B206496CF85C6 /* Foundation.framework */; };
+		F5BB36226ED33E434169F8E7 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6F8A64E9DE640EA1E0575 /* Constraint.swift */; };
+		F7B49A22E38B14D3287E1603 /* IMAAdsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC598EEBDD8174E72D738EF /* IMAAdsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F81B927FE284000525FE593F /* NSDictionary+Strategy.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4AE10A8A0496996F4F8453 /* NSDictionary+Strategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F87EE746EE060CB18F8F0738 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31921AB767FCC7595CA52F1A /* Pods-dummy.m */; };
+		FA8F551DE5CD2BA3A2A809BF /* POPAnimationRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5872960742F16EF35E96B98F /* POPAnimationRuntime.mm */; };
+		FAC77EFAC64B12541B421F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C0EBF7912BF8666DAC206C /* CoreGraphics.framework */; };
+		FBE5FEDF760D6DE8C6F71F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130F703AB1458C6646A75B7E /* UIKit.framework */; };
+		FC026F56B14EF340BD10DAC3 /* Pods-GoogleAds-IMA-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DFA24A48864F979BA0C6B /* Pods-GoogleAds-IMA-iOS-SDK-dummy.m */; };
+		FC20742312A0577B3F887587 /* KPViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CF6827FE6F89B5E6B9C0DB /* KPViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEED006B54A6C549119939D8 /* GoogleCast.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA0F2276858B9FB772B3FD7 /* GoogleCast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF6EC3191569A9D7009C17C5 /* NSMutableDictionary+AdSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 418D4372E9AB93393BF69EF7 /* NSMutableDictionary+AdSupport.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A037552D2562AEBE4E3AE23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49E98174AE37E1FA73FE6B7;
+			remoteInfo = "Pods-Snap";
+		};
+		461DA3160518F66A3576672D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3142DB8FD20DF4AECDB2E438;
+			remoteInfo = "Pods-GoogleAds-IMA-iOS-SDK";
+		};
+		4D434E4029CD03173928980F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3142DB8FD20DF4AECDB2E438;
+			remoteInfo = "Pods-GoogleAds-IMA-iOS-SDK";
+		};
+		68AA190EC56D65CD839E1C02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 275C91CD1B8DAFEDED629C00;
+			remoteInfo = "Pods-player-sdk-native-ios";
+		};
+		A3488A6412FAE804070D8D95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945B4EA55CC7D9D67F1F8A37;
+			remoteInfo = "Pods-google-cast-sdk";
+		};
+		AF37223CD3008F95E1F693A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945B4EA55CC7D9D67F1F8A37;
+			remoteInfo = "Pods-google-cast-sdk";
+		};
+		CBA02F8F99E785F27789849E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA461969AC063BCF97E8D362 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4214A64CB8343E2C235A415;
+			remoteInfo = "Pods-pop";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		021DB5F8B93FB1AB854860D9 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
+		03A5C997B89E290FE8A342BB /* Pods-Snap-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Snap-Private.xcconfig"; sourceTree = "<group>"; };
+		052F499F1DA6FF089308C54E /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Snap/ConstraintMaker.swift; sourceTree = "<group>"; };
+		0550B5BC31544A52EAC391EF /* GCKApplicationMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKApplicationMetadata.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKApplicationMetadata.h; sourceTree = "<group>"; };
+		05FEB4EFA285693087BB53FE /* google_cast_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = google_cast_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0636C7F6D6E010B6CF9C4908 /* Pods-google-cast-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-google-cast-sdk-prefix.pch"; sourceTree = "<group>"; };
+		0AAFCCB3CA8D1795124955CA /* EdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsets.swift; path = Snap/EdgeInsets.swift; sourceTree = "<group>"; };
+		0B74B5A95E72B3DDC2E2A63E /* GCKMediaMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaMetadata.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaMetadata.h; sourceTree = "<group>"; };
+		0C6B3A415DAF730B24A2037C /* MailStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MailStrategy.m; path = PlayerSDK/PlayerSDK/MailStrategy.m; sourceTree = "<group>"; };
+		0CF7B6C1D80BCEC3EF910EEB /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimationInternal.h; path = pop/POPBasicAnimationInternal.h; sourceTree = "<group>"; };
+		0D367465ADCA987DF4CA180E /* IMAAdError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdError.h; path = PlayerSDK/IMA/IMAAdError.h; sourceTree = "<group>"; };
+		0E34C4F716574296F897E66F /* POPAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = pop/POPAnimationExtras.h; sourceTree = "<group>"; };
+		0E4BB311FFD6CA3FA9058716 /* POPSpringSolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringSolver.h; path = pop/POPSpringSolver.h; sourceTree = "<group>"; };
+		0FC73939728004F960F2F29F /* KPBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPBrowserViewController.m; path = PlayerSDK/PlayerSDK/KPBrowserViewController.m; sourceTree = "<group>"; };
+		102144796914CE8A6D494A24 /* WVSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WVSettings.h; path = PlayerSDK/WVSettings.h; sourceTree = "<group>"; };
+		102349C294857F54D039F100 /* KPChromecast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPChromecast.h; path = PlayerSDK/KPChromecast.h; sourceTree = "<group>"; };
+		102E7447481CA9DEF5DDE892 /* KPChromecast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPChromecast.m; path = PlayerSDK/KPChromecast.m; sourceTree = "<group>"; };
+		107196105E4B17E914ACF778 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		10ACE31C68E5057FF64736DD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		130F703AB1458C6646A75B7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		13BA0CD121D6C36D12355744 /* GoogleAds_IMA_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleAds_IMA_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14C7DE7423CE6D44B808CB5B /* TwitterStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TwitterStrategy.m; path = PlayerSDK/PlayerSDK/TwitterStrategy.m; sourceTree = "<group>"; };
+		1618303B07C79E49C7988694 /* TwitterStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TwitterStrategy.h; path = PlayerSDK/PlayerSDK/TwitterStrategy.h; sourceTree = "<group>"; };
+		1B35D7505F28C97AF5701C2A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE352FE5AFA77D9AD462CC4 /* View+Snap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+Snap.swift"; path = "Snap/View+Snap.swift"; sourceTree = "<group>"; };
+		1BE887B6921D5B9DE175E175 /* IMAAdsLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsLoader.h; path = GoogleIMASDK3/IMAAdsLoader.h; sourceTree = "<group>"; };
+		1D5AEFFA4FA018391B4B2D54 /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
+		1D993D0C283FCC4E5652247F /* GCKMediaInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaInformation.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaInformation.h"; sourceTree = "<group>"; };
+		1F4DC51D1AB3688CE0BC726C /* UnitBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnitBezier.h; path = pop/WebCore/UnitBezier.h; sourceTree = "<group>"; };
+		2031A86FABC3A9C8FEF136E9 /* google_cast_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = google_cast_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C6A9DFA306348EB2EDF115 /* POPMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPMath.h; path = pop/POPMath.h; sourceTree = "<group>"; };
+		20D2C4C83F166A8C5CADE5A8 /* FacebookStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FacebookStrategy.h; path = PlayerSDK/PlayerSDK/FacebookStrategy.h; sourceTree = "<group>"; };
+		228D64ACC7588495B8916817 /* Pods-player-sdk-native-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-player-sdk-native-ios.modulemap"; sourceTree = "<group>"; };
+		22CF6827FE6F89B5E6B9C0DB /* KPViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPViewController.h; path = PlayerSDK/KPViewController.h; sourceTree = "<group>"; };
+		238EE9AC9ABA46D9C2970DD5 /* IMAAdEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdEvent.h; path = PlayerSDK/IMA/IMAAdEvent.h; sourceTree = "<group>"; };
+		24E6A3DC43DBCF6D37B2D143 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
+		27E4400B2A38196F0599F2AE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2919156F020BC1196E75C3B9 /* Pods-player-sdk-native-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-player-sdk-native-ios.xcconfig"; sourceTree = "<group>"; };
+		2A07B8ACE4033ED0C1568F14 /* GCKMediaStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaStatus.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaStatus.h"; sourceTree = "<group>"; };
+		2AF2C2776DE045A6F15BC0B3 /* POPVector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPVector.h; path = pop/POPVector.h; sourceTree = "<group>"; };
+		2C41B72591BD5F2A374A1F71 /* IMAContentPlayhead.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAContentPlayhead.h; path = GoogleIMASDK3/IMAContentPlayhead.h; sourceTree = "<group>"; };
+		2D4DFA24A48864F979BA0C6B /* Pods-GoogleAds-IMA-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GoogleAds-IMA-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		2D7B923FA139713617AE6186 /* GooglePlusStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GooglePlusStrategy.m; path = PlayerSDK/PlayerSDK/GooglePlusStrategy.m; sourceTree = "<group>"; };
+		2DB8DE2CC66E9EC2A1776F25 /* KPViewControllerProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPViewControllerProtocols.h; path = PlayerSDK/PlayerSDK/KPViewControllerProtocols.h; sourceTree = "<group>"; };
+		2DCE98F2E12BFF3C7AB79BAC /* KPPlayerDatasourceHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPPlayerDatasourceHandler.m; path = PlayerSDK/KPPlayerDatasourceHandler.m; sourceTree = "<group>"; };
+		2E845C754A683EEA67BB54C2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		2F55CC08334D2D853164DD0B /* Pods-Snap-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Snap-umbrella.h"; sourceTree = "<group>"; };
+		2F675E1EE21A74754040A8FE /* DeviceParamsHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceParamsHandler.h; path = PlayerSDK/PlayerSDK/DeviceParamsHandler.h; sourceTree = "<group>"; };
+		313C88C13E21FF5C097E1FC0 /* Pods-Snap.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Snap.modulemap"; sourceTree = "<group>"; };
+		31921AB767FCC7595CA52F1A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		32C9D8ECDE852478BBF49931 /* IMAAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAd.h; path = GoogleIMASDK3/IMAAd.h; sourceTree = "<group>"; };
+		32D3FFCF3766B88C72DD8040 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatorPrivate.h; path = pop/POPAnimatorPrivate.h; sourceTree = "<group>"; };
+		3319D90763FE4172F720A6B5 /* Pods-player-sdk-native-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-player-sdk-native-ios-dummy.m"; sourceTree = "<group>"; };
+		337A311D8F5DE3FCE306F81D /* IMAAdDisplayContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdDisplayContainer.h; path = PlayerSDK/IMA/IMAAdDisplayContainer.h; sourceTree = "<group>"; };
+		33BE78D55EB829AA5BC802C7 /* GCKMediaTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTrack.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTrack.h"; sourceTree = "<group>"; };
+		343D2410962ABECFF9FFB4A1 /* Pods-google-cast-sdk-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-cast-sdk-Private.xcconfig"; sourceTree = "<group>"; };
+		3453E65CFAFB0F968679A933 /* IMAAdDisplayContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdDisplayContainer.h; path = GoogleIMASDK3/IMAAdDisplayContainer.h; sourceTree = "<group>"; };
+		34690B6AA74C4459BD2CA2D9 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Snap/ConstraintAttributes.swift; sourceTree = "<group>"; };
+		352FF9B34377820E0E18622E /* IMAAdPodInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdPodInfo.h; path = PlayerSDK/IMA/IMAAdPodInfo.h; sourceTree = "<group>"; };
+		354C4A22E3CC5B12AE84238B /* IMAUiElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAUiElements.h; path = PlayerSDK/IMA/IMAUiElements.h; sourceTree = "<group>"; };
+		38082227F16E5DC4068511A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38103616AE604279F9878454 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		398A2756573A0D9592E1022E /* IMAAdPodInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdPodInfo.h; path = GoogleIMASDK3/IMAAdPodInfo.h; sourceTree = "<group>"; };
+		3B6379029C9664421202AAE3 /* GCKMediaTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTrack.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaTrack.h; sourceTree = "<group>"; };
+		3BA73E8315120029DE2B92D0 /* Pods-player-sdk-native-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-player-sdk-native-ios-umbrella.h"; sourceTree = "<group>"; };
+		3BA86CDDC173B1ADB3A151DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		3BD9C5F37F54E81EFD0A4A53 /* IMAAdsRenderingSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsRenderingSettings.h; path = PlayerSDK/IMA/IMAAdsRenderingSettings.h; sourceTree = "<group>"; };
+		3D7C8795085D9E6145A40901 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		3FB5A56CC8F8C1C82906FD2E /* IMAAdsLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsLoader.h; path = PlayerSDK/IMA/IMAAdsLoader.h; sourceTree = "<group>"; };
+		418D4372E9AB93393BF69EF7 /* NSMutableDictionary+AdSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+AdSupport.m"; path = "PlayerSDK/PlayerSDK/NSMutableDictionary+AdSupport.m"; sourceTree = "<group>"; };
+		41BA15502FFC2DDE2E17F909 /* Pods-pop-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pop-Private.xcconfig"; sourceTree = "<group>"; };
+		4366F3B2DBFB867CEEFA0587 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Snap/ConstraintRelation.swift; sourceTree = "<group>"; };
+		441D7D00C3118C3F2B4F38FF /* KPWebKitBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPWebKitBrowserViewController.h; path = PlayerSDK/PlayerSDK/KPWebKitBrowserViewController.h; sourceTree = "<group>"; };
+		443B024891D7097B15DF4162 /* KPIMAPlayerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPIMAPlayerViewController.m; path = PlayerSDK/KPIMAPlayerViewController.m; sourceTree = "<group>"; };
+		44C55DFCAB17BF9243502E40 /* POPAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationInternal.h; path = pop/POPAnimationInternal.h; sourceTree = "<group>"; };
+		4548FF89E220432F7ACE3A9F /* IMAUiElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAUiElements.h; path = GoogleIMASDK3/IMAUiElements.h; sourceTree = "<group>"; };
+		463A00BC028071DD087DFCA5 /* GCKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKColor.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKColor.h; sourceTree = "<group>"; };
+		472F00CE51D11BF5CD001FBA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		485C9EA66ED2EF85BED298A8 /* ChromecastDeviceController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChromecastDeviceController.m; path = PlayerSDK/ChromecastDeviceController.m; sourceTree = "<group>"; };
+		49EFB312E9530A5414ABB998 /* KPControlsWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPControlsWebView.h; path = PlayerSDK/PlayerSDK/KPControlsWebView.h; sourceTree = "<group>"; };
+		4A0CF52B8EC067F57E600D2F /* GCKDeviceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceManager.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceManager.h"; sourceTree = "<group>"; };
+		4CA0F2276858B9FB772B3FD7 /* GoogleCast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleCast.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GoogleCast.h"; sourceTree = "<group>"; };
+		4DFAC5738DD9E1ECFBD1FD04 /* NSMutableDictionary+AdSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+AdSupport.h"; path = "PlayerSDK/PlayerSDK/NSMutableDictionary+AdSupport.h"; sourceTree = "<group>"; };
+		4E08584486C476DDD51A4818 /* GCKMediaTextTrackStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTextTrackStyle.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaTextTrackStyle.h; sourceTree = "<group>"; };
+		4F99C00F64CE1A60E40F2328 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		542FFF4F702D51D47F233999 /* GCKCastChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastChannel.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKCastChannel.h; sourceTree = "<group>"; };
+		55E0F79A1ABFD8AA9E70BF9D /* GCKNSDictionary+TypedValueLookup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKNSDictionary+TypedValueLookup.h"; path = "PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKNSDictionary+TypedValueLookup.h"; sourceTree = "<group>"; };
+		5872960742F16EF35E96B98F /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
+		59138594BC13ADE0F97B77A9 /* GCKDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDevice.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKDevice.h; sourceTree = "<group>"; };
+		592CC2072E4981BC3B6EFD9E /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		5A0059156FF7CE2E125A1611 /* KPControlsWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPControlsWebView.m; path = PlayerSDK/PlayerSDK/KPControlsWebView.m; sourceTree = "<group>"; };
+		5B2B61ED5513D477F1CD770F /* Pods-GoogleAds-IMA-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoogleAds-IMA-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		5C359960918546EFACA5F90E /* GCKMediaInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaInformation.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaInformation.h; sourceTree = "<group>"; };
+		5CC1F54222F4892EB31DA113 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		5DB47C866368BEAD12AE1B6A /* NSString+Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Utilities.h"; path = "PlayerSDK/PlayerSDK/NSString+Utilities.h"; sourceTree = "<group>"; };
+		61BCC094CA20865DA41DEB2F /* GCKMediaStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaStatus.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaStatus.h; sourceTree = "<group>"; };
+		62320D07A9CE46C10F56BF49 /* KPWebKitBrowserViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPWebKitBrowserViewController.m; path = PlayerSDK/PlayerSDK/KPWebKitBrowserViewController.m; sourceTree = "<group>"; };
+		63029BC37FC084D1B535E557 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
+		6407F4F65AE1229AB900FAB4 /* GCKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKError.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKError.h; sourceTree = "<group>"; };
+		64376246CF75E6AD5262CEB8 /* IMAAdEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdEvent.h; path = GoogleIMASDK3/IMAAdEvent.h; sourceTree = "<group>"; };
+		658EA2BBF9618B03FC33BF25 /* GooglePlusStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GooglePlusStrategy.h; path = PlayerSDK/PlayerSDK/GooglePlusStrategy.h; sourceTree = "<group>"; };
+		679AA1D6A722BC94649CA4E7 /* KPLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPLog.m; path = PlayerSDK/PlayerSDK/KPLog.m; sourceTree = "<group>"; };
+		6A6730F3DBCD47A83A2C6DE7 /* KPIMAPlayerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPIMAPlayerViewController.h; path = PlayerSDK/KPIMAPlayerViewController.h; sourceTree = "<group>"; };
+		6B36469FB85B99D265F67177 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
+		6BF402082664420142F786BF /* IMACompanionAdSlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMACompanionAdSlot.h; path = PlayerSDK/IMA/IMACompanionAdSlot.h; sourceTree = "<group>"; };
+		6CBDDC59F61FF72755C416F2 /* KPLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPLog.h; path = PlayerSDK/PlayerSDK/KPLog.h; sourceTree = "<group>"; };
+		6D5E267EAB526C6DE1A190B8 /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
+		6DC5A764CF7B206496CF85C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6F40C97659D2D62444ECE69A /* GCKMediaControlChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaControlChannel.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKMediaControlChannel.h; sourceTree = "<group>"; };
+		70A0B7BA5D63B2D191E4DDA9 /* GCKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKError.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKError.h"; sourceTree = "<group>"; };
+		7104FF298072EF1B7AA660C0 /* Pods-pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-pop.modulemap"; sourceTree = "<group>"; };
+		714DF9A620270F6BD64A580D /* GCKDeviceFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceFilter.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKDeviceFilter.h; sourceTree = "<group>"; };
+		724C7461BFD9D75085B10F33 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Snap/LayoutConstraint.swift; sourceTree = "<group>"; };
+		72705D4FAFAB83E98A4F72CC /* GCKNSDictionary+TypedValueLookup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKNSDictionary+TypedValueLookup.h"; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKNSDictionary+TypedValueLookup.h"; sourceTree = "<group>"; };
+		7565BE3DC46473C76BB68A6B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		7600B44533BC40BE12C9734D /* NSDictionary+Strategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Strategy.m"; path = "PlayerSDK/PlayerSDK/NSDictionary+Strategy.m"; sourceTree = "<group>"; };
+		7617D48D4293B6C437843EB8 /* Pods-player-sdk-native-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-player-sdk-native-ios-prefix.pch"; sourceTree = "<group>"; };
+		7640A3033FCA0CD9391C182E /* KArchiver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KArchiver.m; path = PlayerSDK/PlayerSDK/KArchiver.m; sourceTree = "<group>"; };
+		76A0E1AA42A91869E547AC05 /* GCKJSONUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKJSONUtils.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKJSONUtils.h; sourceTree = "<group>"; };
+		76E54961D6441E0D82C87194 /* GCKMediaMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaMetadata.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaMetadata.h"; sourceTree = "<group>"; };
+		774B54F478097060AE361597 /* GCKLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLogger.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKLogger.h"; sourceTree = "<group>"; };
+		77D06CCF5440F61E54221F96 /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracerInternal.h; path = pop/POPAnimationTracerInternal.h; sourceTree = "<group>"; };
+		7B494CC664F72FEA0DA18371 /* GoogleAds_IMA_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleAds_IMA_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE5D7CCA5A582A574EF1EEF /* Pods-google-cast-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-google-cast-sdk-dummy.m"; sourceTree = "<group>"; };
+		7F3567CF88CC1B4531E1B434 /* GCKDeviceScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceScanner.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceScanner.h"; sourceTree = "<group>"; };
+		82DD7E8EEE5B32C0009E03D4 /* POPGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = pop/POPGeometry.h; sourceTree = "<group>"; };
+		85CE9F77AB7E241FAE35119A /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
+		86522FDB603E88A49D1FC4F3 /* NSString+Utilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utilities.m"; path = "PlayerSDK/PlayerSDK/NSString+Utilities.m"; sourceTree = "<group>"; };
+		8701C2F06666C182A6469D52 /* player_sdk_native_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = player_sdk_native_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		878F0EA68C8193A33A5FA740 /* IMAContentPlayhead.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAContentPlayhead.h; path = PlayerSDK/IMA/IMAContentPlayhead.h; sourceTree = "<group>"; };
+		891CCFDF6C85E02D96BFA3B9 /* POPDecayAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimationInternal.h; path = pop/POPDecayAnimationInternal.h; sourceTree = "<group>"; };
+		89DA73A64D4F81EC841051F9 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
+		8A1C6EEDFB1CB29EEC10F062 /* Pods-google-cast-sdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-cast-sdk.xcconfig"; sourceTree = "<group>"; };
+		8BA571C6F3FE9B07E50F5799 /* Pods-pop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pop.xcconfig"; sourceTree = "<group>"; };
+		8BEC532A6ED978B3FA54FBB3 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
+		8DA1E86D5CEF7E75ACA84436 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEventInternal.h; path = pop/POPAnimationEventInternal.h; sourceTree = "<group>"; };
+		90E049CDE2B8B3CF79AE0C39 /* IMAAdPlaybackInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdPlaybackInfo.h; path = PlayerSDK/IMA/IMAAdPlaybackInfo.h; sourceTree = "<group>"; };
+		911AADAAC1B28DE1D927794A /* GCKDeviceFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceFilter.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceFilter.h"; sourceTree = "<group>"; };
+		92BA6F3B8A9414BB7C59B914 /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
+		93B015367DE90FCDE1148794 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		93C497FBFE0C834AC24CC612 /* IMAAdsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsRequest.h; path = PlayerSDK/IMA/IMAAdsRequest.h; sourceTree = "<group>"; };
+		94787CD62299417B1B4EFEF4 /* IMAAVPlayerContentPlayhead.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAVPlayerContentPlayhead.h; path = PlayerSDK/IMA/IMAAVPlayerContentPlayhead.h; sourceTree = "<group>"; };
+		94C5D476BFFF115AA68691B6 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = pop/POPAnimatableProperty.h; sourceTree = "<group>"; };
+		951674044AEE1610F24CDE91 /* KPViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPViewController.m; path = PlayerSDK/KPViewController.m; sourceTree = "<group>"; };
+		95818FF2D971FD44556BFB9D /* DeviceParamsHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DeviceParamsHandler.m; path = PlayerSDK/PlayerSDK/DeviceParamsHandler.m; sourceTree = "<group>"; };
+		9733361AF741217EF19FBBD6 /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
+		9739E6DBCC974220A3794860 /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
+		9A4826C0574BF027C4D81C90 /* MessageStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageStrategy.h; path = PlayerSDK/PlayerSDK/MessageStrategy.h; sourceTree = "<group>"; };
+		9A7084694AED0BC5CD5596F7 /* KPPlayerConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPPlayerConfig.h; path = PlayerSDK/KPPlayerConfig.h; sourceTree = "<group>"; };
+		9AF640C86A2A2D8EE2EF9768 /* Pods-google-cast-sdk-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-google-cast-sdk-umbrella.h"; sourceTree = "<group>"; };
+		9B4AC682D3C91EB11943000F /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
+		9BF73F1420E70613CE9F9BDF /* Pods-pop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pop-dummy.m"; sourceTree = "<group>"; };
+		9D09E3659FF992F012646BD6 /* Pods-player-sdk-native-ios-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-player-sdk-native-ios-Private.xcconfig"; sourceTree = "<group>"; };
+		9E430B7917E3888F1E2AD7EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EF2419AEE0885C8B8086933 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4580203D0FA60F13446BB1 /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MediaAccessibility.framework; sourceTree = DEVELOPER_DIR; };
+		9FF0C435658CEA10C12D7801 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Snap/ConstraintItem.swift; sourceTree = "<group>"; };
+		A3A9C311C55D4BB737D8898F /* GCKMediaControlChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaControlChannel.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaControlChannel.h"; sourceTree = "<group>"; };
+		A4794ED6B732A97BC855DDC8 /* Pods-Snap.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Snap.xcconfig"; sourceTree = "<group>"; };
+		A53EBDBB4299A44BABA72538 /* POPAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimator.h; path = pop/POPAnimator.h; sourceTree = "<group>"; };
+		A60EBC6871D20EB50D2013E7 /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
+		A63812E96FBB8F54B24675BE /* GCKApplicationMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKApplicationMetadata.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKApplicationMetadata.h"; sourceTree = "<group>"; };
+		A76A8569BE9129FC3D378B08 /* KPShareManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPShareManager.h; path = PlayerSDK/PlayerSDK/KPShareManager.h; sourceTree = "<group>"; };
+		A9657D1588821A58BCDF9999 /* IMAAdsRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsRequest.h; path = GoogleIMASDK3/IMAAdsRequest.h; sourceTree = "<group>"; };
+		AA3988BBC8C4D7ABE928F51E /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GoogleCast.framework; sourceTree = DEVELOPER_DIR; };
+		AA75432B21543FFE97E7B063 /* KalturaPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KalturaPlayer.m; path = PlayerSDK/KalturaPlayer.m; sourceTree = "<group>"; };
+		AAE55ED52F7640DBCFFA40E3 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB1C2F8696165B6BB6FDDE40 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		AB8E3F699A6432DD9BE7DA80 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		AC2D77665A5A402F2AB04E29 /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
+		AC848D22D265CCDCD1CAB796 /* IMAAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsManager.h; path = GoogleIMASDK3/IMAAdsManager.h; sourceTree = "<group>"; };
+		ACA62EE0FB80FADA727333B8 /* IMAAVPlayerContentPlayhead.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAVPlayerContentPlayhead.h; path = GoogleIMASDK3/IMAAVPlayerContentPlayhead.h; sourceTree = "<group>"; };
+		AD99FCFDAF228D90DE9FFA9B /* GCKLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLogger.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKLogger.h; sourceTree = "<group>"; };
+		AEC5C74184613D2CDC248C57 /* GCKDeviceScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceScanner.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKDeviceScanner.h; sourceTree = "<group>"; };
+		AED37D96D16171CE0B3F8721 /* POPAnimationRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationRuntime.h; path = pop/POPAnimationRuntime.h; sourceTree = "<group>"; };
+		AFB6F8A64E9DE640EA1E0575 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Snap/Constraint.swift; sourceTree = "<group>"; };
+		B1451DD257ADFD42F012E9AB /* Pods-GoogleAds-IMA-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GoogleAds-IMA-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		B17600A03ACA30EC508BA561 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
+		B18C22035BD8F2851BC7FAF0 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
+		B21AD22FD2CB9889B4ED110F /* POPAnimationTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = pop/POPAnimationTracer.h; sourceTree = "<group>"; };
+		B28B9CDE0C99E19F655374E4 /* POPSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = pop/POPSpringAnimation.h; sourceTree = "<group>"; };
+		B2A2A552B1907608AF2AF295 /* WVSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WVSettings.m; path = PlayerSDK/WVSettings.m; sourceTree = "<group>"; };
+		B382CE34A3446CA560A630F1 /* GCKFilterCriteria.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKFilterCriteria.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKFilterCriteria.h; sourceTree = "<group>"; };
+		B38323C7D7AF160D565E46F2 /* GoogleCast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleCast.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GoogleCast.h; sourceTree = "<group>"; };
+		B3C0EBF7912BF8666DAC206C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B5C6484545904D290BED5E3B /* GCKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKColor.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKColor.h"; sourceTree = "<group>"; };
+		B6C9BA0BBC2206DBBC4C557A /* Pods-Snap-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Snap-prefix.pch"; sourceTree = "<group>"; };
+		B8D688D79CAE56D27CF575EF /* GCKMediaTextTrackStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTextTrackStyle.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTextTrackStyle.h"; sourceTree = "<group>"; };
+		B915E9B6E52DE2796FCB65DD /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
+		B96C79E6B76FF84EBC2B188C /* Pods-GoogleAds-IMA-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GoogleAds-IMA-iOS-SDK.modulemap"; sourceTree = "<group>"; };
+		BA2E9451AF762B40D96910D0 /* GCKSenderApplicationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSenderApplicationInfo.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKSenderApplicationInfo.h"; sourceTree = "<group>"; };
+		BDBB93332AC159DD328A8CB0 /* IMACompanionAdSlot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMACompanionAdSlot.h; path = GoogleIMASDK3/IMACompanionAdSlot.h; sourceTree = "<group>"; };
+		BE2ACE0E5CAF66EBF61207BD /* POPCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = pop/POPCustomAnimation.h; sourceTree = "<group>"; };
+		BEEB815F2A6468BF0B980453 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF0B7E1C33E76D3C757F44F /* Utilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = PlayerSDK/PlayerSDK/Utilities.h; sourceTree = "<group>"; };
+		BF9F5A1EF84F1391D528CEDC /* GCKJSONUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKJSONUtils.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKJSONUtils.h"; sourceTree = "<group>"; };
+		BFF860D8F3C63003DEA5C057 /* KPPlayerDatasourceHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPPlayerDatasourceHandler.h; path = PlayerSDK/KPPlayerDatasourceHandler.h; sourceTree = "<group>"; };
+		C46894DBD2FC9C7080481FA7 /* GCKImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKImage.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKImage.h; sourceTree = "<group>"; };
+		C4C9B0ECCC90500603EF0741 /* GCKSenderApplicationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSenderApplicationInfo.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKSenderApplicationInfo.h; sourceTree = "<group>"; };
+		C6303CFF00D6845C4BBE7993 /* Pods-Snap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Snap-dummy.m"; sourceTree = "<group>"; };
+		C82414B24CCF9880D41CD9CA /* ChromecastDeviceController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChromecastDeviceController.h; path = PlayerSDK/ChromecastDeviceController.h; sourceTree = "<group>"; };
+		CAF890549898F20EBE454D87 /* KPShareManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPShareManager.m; path = PlayerSDK/PlayerSDK/KPShareManager.m; sourceTree = "<group>"; };
+		CB6E2730DDB2E21890286AFA /* IMAAdError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdError.h; path = GoogleIMASDK3/IMAAdError.h; sourceTree = "<group>"; };
+		CBD17C70F2B7F33CEBDFC0F4 /* KPLogManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPLogManager.m; path = PlayerSDK/PlayerSDK/KPLogManager.m; sourceTree = "<group>"; };
+		CC50D34A64DFDEC65C905B07 /* KPBrowserViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPBrowserViewController.h; path = PlayerSDK/PlayerSDK/KPBrowserViewController.h; sourceTree = "<group>"; };
+		CCE53E33EA41583D33E24887 /* GCKCastChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastChannel.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKCastChannel.h"; sourceTree = "<group>"; };
+		CE5CE662B3AF16110C8BEB7E /* IMAAdsRenderingSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsRenderingSettings.h; path = GoogleIMASDK3/IMAAdsRenderingSettings.h; sourceTree = "<group>"; };
+		CFB34C7055F66C6B34DA6E59 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		CFD11CC7D76E3BBB2EE4C845 /* FloatConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = pop/WebCore/FloatConversion.h; sourceTree = "<group>"; };
+		D0272CF76EFCED6EDFBBE129 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1FFCCF1A0E58593F0268CF6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D29468DAF01A9E1CCA6B3C99 /* Pods-GoogleAds-IMA-iOS-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoogleAds-IMA-iOS-SDK-Private.xcconfig"; sourceTree = "<group>"; };
+		D3831C77BE3838D8CFA2B0A6 /* KPPlayerConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KPPlayerConfig.m; path = PlayerSDK/KPPlayerConfig.m; sourceTree = "<group>"; };
+		D3FEFDF567003580EDE395EC /* Pods-pop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pop-prefix.pch"; sourceTree = "<group>"; };
+		D89319234F1664D9F3D6A983 /* IMAAdPlaybackInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdPlaybackInfo.h; path = GoogleIMASDK3/IMAAdPlaybackInfo.h; sourceTree = "<group>"; };
+		D8A11A5A6F189CF05106AE7A /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D8F36E1CEDBB3A4DC05375DF /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
+		D8F42F064153A403140C62F4 /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
+		D9879B0ABA645E367B009D23 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
+		D9980143CE61AF87D8C1FCE7 /* MessageStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MessageStrategy.m; path = PlayerSDK/PlayerSDK/MessageStrategy.m; sourceTree = "<group>"; };
+		DA192494E0E326C49BD43ED3 /* KalturaPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KalturaPlayer.h; path = PlayerSDK/KalturaPlayer.h; sourceTree = "<group>"; };
+		DA4521745C5632B948DEF215 /* POPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = pop/POPAction.h; sourceTree = "<group>"; };
+		DC608E4EE8EF9E72EECC6BCE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		DF055D55C2A652CEB6DDCDB5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		DF34533FD008E34A7AEE7ECD /* GCKDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDevice.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKDevice.h"; sourceTree = "<group>"; };
+		DFF3766C6E0E8700D7545FBA /* IMAAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAd.h; path = PlayerSDK/IMA/IMAAd.h; sourceTree = "<group>"; };
+		E05910366A88C6F28271625F /* POPAnimationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
+		E277985F20AF88F036B5FE64 /* POPBasicAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = pop/POPBasicAnimation.h; sourceTree = "<group>"; };
+		E3D29D8B162A5B49C4DED43A /* GCKImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKImage.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKImage.h"; sourceTree = "<group>"; };
+		E49E6BACC291505E3230D9F4 /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
+		E4E86C6281455EBCA6305177 /* Pods-google-cast-sdk.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-google-cast-sdk.modulemap"; sourceTree = "<group>"; };
+		E7ADE7D73B05A05763691FE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E80D54FC7328E8E055968961 /* POPAnimationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = pop/POPAnimationEvent.h; sourceTree = "<group>"; };
+		EA5A4BE611EF528409C27820 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		EB53DE9CA8DCDE2EBBE73CFA /* GCKFilterCriteria.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKFilterCriteria.h; path = "GoogleCastFramework-2.3.0-Release/GoogleCast.framework/Versions/A/Headers/GCKFilterCriteria.h"; sourceTree = "<group>"; };
+		EC7D8A39C040C5A9BC58CAF8 /* FacebookStrategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FacebookStrategy.m; path = PlayerSDK/PlayerSDK/FacebookStrategy.m; sourceTree = "<group>"; };
+		ECC598EEBDD8174E72D738EF /* IMAAdsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IMAAdsManager.h; path = PlayerSDK/IMA/IMAAdsManager.h; sourceTree = "<group>"; };
+		ED5F0034F0A56E24C1F424DC /* TransformationMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransformationMatrix.h; path = pop/WebCore/TransformationMatrix.h; sourceTree = "<group>"; };
+		EDFDD2C2E4F1B818D486D839 /* MailStrategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MailStrategy.h; path = PlayerSDK/PlayerSDK/MailStrategy.h; sourceTree = "<group>"; };
+		EE4AE10A8A0496996F4F8453 /* NSDictionary+Strategy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Strategy.h"; path = "PlayerSDK/PlayerSDK/NSDictionary+Strategy.h"; sourceTree = "<group>"; };
+		EE5101AD132C9C5BEED07AA5 /* KPLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KPLogManager.h; path = PlayerSDK/PlayerSDK/KPLogManager.h; sourceTree = "<group>"; };
+		EEE6BDFB11AFE878F3FC8A84 /* Snap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14A84ADC6AE1AEA07F8BF26 /* KArchiver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KArchiver.h; path = PlayerSDK/PlayerSDK/KArchiver.h; sourceTree = "<group>"; };
+		F225CDCC9AB04B3B491D3304 /* WViPhoneAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WViPhoneAPI.h; path = PlayerSDK/WViPhoneAPI.h; sourceTree = "<group>"; };
+		F480A950E31D104AB818E59F /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
+		F6A6A85FD5A1B143D5668311 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
+		F730453205FB515DE732EFB2 /* Pods-GoogleAds-IMA-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GoogleAds-IMA-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		F83F9BA581D124DA7FE4D54D /* POPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDefines.h; path = pop/POPDefines.h; sourceTree = "<group>"; };
+		F8FEA2CD8D9B08F777A4B4E6 /* GCKDeviceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceManager.h; path = PlayerSDK/GoogleCast.framework/Versions/A/Headers/GCKDeviceManager.h; sourceTree = "<group>"; };
+		F9CAEF36D758BC9C6963BCD6 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		FA3C46C7542D5A14F09095CF /* Pods-pop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pop-umbrella.h"; sourceTree = "<group>"; };
+		FC95C92875CEE873E01AC7BD /* libWViPhoneAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWViPhoneAPI.a; path = PlayerSDK/libWViPhoneAPI.a; sourceTree = "<group>"; };
+		FF0F74C0C01D29C9B8F80C4A /* POP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POP.h; path = pop/POP.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00DFCCB47E309A76C81A3350 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A441D5B9CD898C68F6CB571 /* AVFoundation.framework in Frameworks */,
+				47CDE6ED5B533F300695CD78 /* AdSupport.framework in Frameworks */,
+				5CBFC070E063A43113A498E1 /* AudioToolbox.framework in Frameworks */,
+				94667D9BB79CC45068564DCF /* CoreFoundation.framework in Frameworks */,
+				FAC77EFAC64B12541B421F22 /* CoreGraphics.framework in Frameworks */,
+				1D0E1CF701A39F7591AFD5C2 /* CoreMedia.framework in Frameworks */,
+				8208581DE81AD9528C7226D1 /* Foundation.framework in Frameworks */,
+				48DEEED0A57F1591E9420B2A /* MessageUI.framework in Frameworks */,
+				0E861D79DAA007AC5D5F4368 /* QuartzCore.framework in Frameworks */,
+				846E5C232AB782413DF18956 /* SystemConfiguration.framework in Frameworks */,
+				BF5F110C08728D7358AF7A14 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B02E09EDEDDE4C2479D2460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E3CD773391F0C35490BDEC /* AVFoundation.framework in Frameworks */,
+				19B73AC67CE47696D67E428D /* AdSupport.framework in Frameworks */,
+				46EAE3C72D61381F3E9EEA27 /* AudioToolbox.framework in Frameworks */,
+				9AA4A7F075238F2C9C8D5CA2 /* CFNetwork.framework in Frameworks */,
+				CE0A2832FDD178F0465072F4 /* CoreFoundation.framework in Frameworks */,
+				9D50D6080300898775EE3166 /* CoreGraphics.framework in Frameworks */,
+				EA6F6A0616725D0674F5FF0A /* Foundation.framework in Frameworks */,
+				53A11D7538BEFDC9370BB02E /* GoogleAds_IMA_iOS_SDK.framework in Frameworks */,
+				EA4A8CBAD86449C4950025B0 /* GoogleCast.framework in Frameworks */,
+				AE5858E78429F5399093E1D2 /* MediaAccessibility.framework in Frameworks */,
+				BC2BE921578F49DD895141B7 /* MediaPlayer.framework in Frameworks */,
+				3038B0456D128DF006B8B49C /* MessageUI.framework in Frameworks */,
+				A62260ED2A5336EFCA6CE855 /* QuartzCore.framework in Frameworks */,
+				E39244942DA605F6982EDD24 /* Social.framework in Frameworks */,
+				4AADD04A9FF048F25615E791 /* SystemConfiguration.framework in Frameworks */,
+				FBE5FEDF760D6DE8C6F71F06 /* UIKit.framework in Frameworks */,
+				4778075FE3D6750E87FC285F /* WebKit.framework in Frameworks */,
+				37055EA0B75623F7639B17FA /* google_cast_sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8551CA5E61A2B93AFCC91F2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408FE12BD91A3B26C0669704 /* Foundation.framework in Frameworks */,
+				ACFEC7FE06EF25E76216C268 /* GoogleCast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95198027DFBAB16617D946D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BB2C9D11E2DA8D34EF33FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11BFA99803E10AAB9361F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA15FE39ABD15BED9C1E45F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E68689AB2D43133E66136810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AE7DC4720D1AB3CF66856EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009C2E2E68A24BA8093BCD28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13BA0CD121D6C36D12355744 /* GoogleAds_IMA_iOS_SDK.framework */,
+				BEEB815F2A6468BF0B980453 /* Pods.framework */,
+				EEE6BDFB11AFE878F3FC8A84 /* Snap.framework */,
+				2031A86FABC3A9C8FEF136E9 /* google_cast_sdk.framework */,
+				8701C2F06666C182A6469D52 /* player_sdk_native_ios.framework */,
+				9EF2419AEE0885C8B8086933 /* pop.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		060123B2AC6ADB7EE05CCC28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC95C92875CEE873E01AC7BD /* libWViPhoneAPI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20254EAD930C7F08467D9309 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0272CF76EFCED6EDFBBE129 /* Info.plist */,
+				F9CAEF36D758BC9C6963BCD6 /* Pods.modulemap */,
+				27E4400B2A38196F0599F2AE /* Pods-acknowledgements.markdown */,
+				AB8E3F699A6432DD9BE7DA80 /* Pods-acknowledgements.plist */,
+				31921AB767FCC7595CA52F1A /* Pods-dummy.m */,
+				592CC2072E4981BC3B6EFD9E /* Pods-environment.h */,
+				AB1C2F8696165B6BB6FDDE40 /* Pods-frameworks.sh */,
+				D8A11A5A6F189CF05106AE7A /* Pods-resources.sh */,
+				CFB34C7055F66C6B34DA6E59 /* Pods-umbrella.h */,
+				3D7C8795085D9E6145A40901 /* Pods.debug.xcconfig */,
+				EA5A4BE611EF528409C27820 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		3D52F635DCBD9708B76701A4 /* GoogleAds-IMA-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ACA62EE0FB80FADA727333B8 /* IMAAVPlayerContentPlayhead.h */,
+				32C9D8ECDE852478BBF49931 /* IMAAd.h */,
+				3453E65CFAFB0F968679A933 /* IMAAdDisplayContainer.h */,
+				CB6E2730DDB2E21890286AFA /* IMAAdError.h */,
+				64376246CF75E6AD5262CEB8 /* IMAAdEvent.h */,
+				D89319234F1664D9F3D6A983 /* IMAAdPlaybackInfo.h */,
+				398A2756573A0D9592E1022E /* IMAAdPodInfo.h */,
+				1BE887B6921D5B9DE175E175 /* IMAAdsLoader.h */,
+				AC848D22D265CCDCD1CAB796 /* IMAAdsManager.h */,
+				CE5CE662B3AF16110C8BEB7E /* IMAAdsRenderingSettings.h */,
+				A9657D1588821A58BCDF9999 /* IMAAdsRequest.h */,
+				BDBB93332AC159DD328A8CB0 /* IMACompanionAdSlot.h */,
+				2C41B72591BD5F2A374A1F71 /* IMAContentPlayhead.h */,
+				4548FF89E220432F7ACE3A9F /* IMAUiElements.h */,
+				5E997D47E648F0CE58FEB045 /* Support Files */,
+			);
+			path = "GoogleAds-IMA-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		49081FFD76C3D843BB6C6E4D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7ADE7D73B05A05763691FE2 /* Info.plist */,
+				228D64ACC7588495B8916817 /* Pods-player-sdk-native-ios.modulemap */,
+				2919156F020BC1196E75C3B9 /* Pods-player-sdk-native-ios.xcconfig */,
+				9D09E3659FF992F012646BD6 /* Pods-player-sdk-native-ios-Private.xcconfig */,
+				3319D90763FE4172F720A6B5 /* Pods-player-sdk-native-ios-dummy.m */,
+				7617D48D4293B6C437843EB8 /* Pods-player-sdk-native-ios-prefix.pch */,
+				3BA73E8315120029DE2B92D0 /* Pods-player-sdk-native-ios-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-player-sdk-native-ios";
+			sourceTree = "<group>";
+		};
+		5E997D47E648F0CE58FEB045 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B35D7505F28C97AF5701C2A /* Info.plist */,
+				B96C79E6B76FF84EBC2B188C /* Pods-GoogleAds-IMA-iOS-SDK.modulemap */,
+				5B2B61ED5513D477F1CD770F /* Pods-GoogleAds-IMA-iOS-SDK.xcconfig */,
+				D29468DAF01A9E1CCA6B3C99 /* Pods-GoogleAds-IMA-iOS-SDK-Private.xcconfig */,
+				2D4DFA24A48864F979BA0C6B /* Pods-GoogleAds-IMA-iOS-SDK-dummy.m */,
+				F730453205FB515DE732EFB2 /* Pods-GoogleAds-IMA-iOS-SDK-prefix.pch */,
+				B1451DD257ADFD42F012E9AB /* Pods-GoogleAds-IMA-iOS-SDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-GoogleAds-IMA-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		6350AF27D526F362E91F7EBA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				20254EAD930C7F08467D9309 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7A3599A53344F7DA900EC3AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38082227F16E5DC4068511A0 /* Info.plist */,
+				313C88C13E21FF5C097E1FC0 /* Pods-Snap.modulemap */,
+				A4794ED6B732A97BC855DDC8 /* Pods-Snap.xcconfig */,
+				03A5C997B89E290FE8A342BB /* Pods-Snap-Private.xcconfig */,
+				C6303CFF00D6845C4BBE7993 /* Pods-Snap-dummy.m */,
+				B6C9BA0BBC2206DBBC4C557A /* Pods-Snap-prefix.pch */,
+				2F55CC08334D2D853164DD0B /* Pods-Snap-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Snap";
+			sourceTree = "<group>";
+		};
+		7F3280F7BD2D2138283DE756 /* google-cast-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				A63812E96FBB8F54B24675BE /* GCKApplicationMetadata.h */,
+				CCE53E33EA41583D33E24887 /* GCKCastChannel.h */,
+				B5C6484545904D290BED5E3B /* GCKColor.h */,
+				DF34533FD008E34A7AEE7ECD /* GCKDevice.h */,
+				911AADAAC1B28DE1D927794A /* GCKDeviceFilter.h */,
+				4A0CF52B8EC067F57E600D2F /* GCKDeviceManager.h */,
+				7F3567CF88CC1B4531E1B434 /* GCKDeviceScanner.h */,
+				70A0B7BA5D63B2D191E4DDA9 /* GCKError.h */,
+				EB53DE9CA8DCDE2EBBE73CFA /* GCKFilterCriteria.h */,
+				E3D29D8B162A5B49C4DED43A /* GCKImage.h */,
+				BF9F5A1EF84F1391D528CEDC /* GCKJSONUtils.h */,
+				774B54F478097060AE361597 /* GCKLogger.h */,
+				A3A9C311C55D4BB737D8898F /* GCKMediaControlChannel.h */,
+				1D993D0C283FCC4E5652247F /* GCKMediaInformation.h */,
+				76E54961D6441E0D82C87194 /* GCKMediaMetadata.h */,
+				2A07B8ACE4033ED0C1568F14 /* GCKMediaStatus.h */,
+				B8D688D79CAE56D27CF575EF /* GCKMediaTextTrackStyle.h */,
+				33BE78D55EB829AA5BC802C7 /* GCKMediaTrack.h */,
+				72705D4FAFAB83E98A4F72CC /* GCKNSDictionary+TypedValueLookup.h */,
+				BA2E9451AF762B40D96910D0 /* GCKSenderApplicationInfo.h */,
+				4CA0F2276858B9FB772B3FD7 /* GoogleCast.h */,
+				DA0E7CC0747FD8D7BB7C0BEF /* Support Files */,
+			);
+			path = "google-cast-sdk";
+			sourceTree = "<group>";
+		};
+		7FB44A87A47232788226644F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B494CC664F72FEA0DA18371 /* GoogleAds_IMA_iOS_SDK.framework */,
+				05FEB4EFA285693087BB53FE /* google_cast_sdk.framework */,
+				BD7B8653CBA2E32FA97AB156 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FECE9CB56226E59C5BF7C42 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				CFD11CC7D76E3BBB2EE4C845 /* FloatConversion.h */,
+				FF0F74C0C01D29C9B8F80C4A /* POP.h */,
+				DA4521745C5632B948DEF215 /* POPAction.h */,
+				94C5D476BFFF115AA68691B6 /* POPAnimatableProperty.h */,
+				A60EBC6871D20EB50D2013E7 /* POPAnimatableProperty.mm */,
+				B915E9B6E52DE2796FCB65DD /* POPAnimation.h */,
+				F480A950E31D104AB818E59F /* POPAnimation.mm */,
+				E80D54FC7328E8E055968961 /* POPAnimationEvent.h */,
+				D9879B0ABA645E367B009D23 /* POPAnimationEvent.mm */,
+				8DA1E86D5CEF7E75ACA84436 /* POPAnimationEventInternal.h */,
+				0E34C4F716574296F897E66F /* POPAnimationExtras.h */,
+				B18C22035BD8F2851BC7FAF0 /* POPAnimationExtras.mm */,
+				44C55DFCAB17BF9243502E40 /* POPAnimationInternal.h */,
+				E05910366A88C6F28271625F /* POPAnimationPrivate.h */,
+				AED37D96D16171CE0B3F8721 /* POPAnimationRuntime.h */,
+				5872960742F16EF35E96B98F /* POPAnimationRuntime.mm */,
+				B21AD22FD2CB9889B4ED110F /* POPAnimationTracer.h */,
+				85CE9F77AB7E241FAE35119A /* POPAnimationTracer.mm */,
+				77D06CCF5440F61E54221F96 /* POPAnimationTracerInternal.h */,
+				A53EBDBB4299A44BABA72538 /* POPAnimator.h */,
+				AC2D77665A5A402F2AB04E29 /* POPAnimator.mm */,
+				32D3FFCF3766B88C72DD8040 /* POPAnimatorPrivate.h */,
+				E277985F20AF88F036B5FE64 /* POPBasicAnimation.h */,
+				F6A6A85FD5A1B143D5668311 /* POPBasicAnimation.mm */,
+				0CF7B6C1D80BCEC3EF910EEB /* POPBasicAnimationInternal.h */,
+				92BA6F3B8A9414BB7C59B914 /* POPCGUtils.h */,
+				8BEC532A6ED978B3FA54FBB3 /* POPCGUtils.mm */,
+				BE2ACE0E5CAF66EBF61207BD /* POPCustomAnimation.h */,
+				89DA73A64D4F81EC841051F9 /* POPCustomAnimation.mm */,
+				6D5E267EAB526C6DE1A190B8 /* POPDecayAnimation.h */,
+				B17600A03ACA30EC508BA561 /* POPDecayAnimation.mm */,
+				891CCFDF6C85E02D96BFA3B9 /* POPDecayAnimationInternal.h */,
+				F83F9BA581D124DA7FE4D54D /* POPDefines.h */,
+				82DD7E8EEE5B32C0009E03D4 /* POPGeometry.h */,
+				D8F36E1CEDBB3A4DC05375DF /* POPGeometry.mm */,
+				E49E6BACC291505E3230D9F4 /* POPLayerExtras.h */,
+				9733361AF741217EF19FBBD6 /* POPLayerExtras.mm */,
+				20C6A9DFA306348EB2EDF115 /* POPMath.h */,
+				021DB5F8B93FB1AB854860D9 /* POPMath.mm */,
+				1D5AEFFA4FA018391B4B2D54 /* POPPropertyAnimation.h */,
+				9739E6DBCC974220A3794860 /* POPPropertyAnimation.mm */,
+				6B36469FB85B99D265F67177 /* POPPropertyAnimationInternal.h */,
+				B28B9CDE0C99E19F655374E4 /* POPSpringAnimation.h */,
+				D8F42F064153A403140C62F4 /* POPSpringAnimation.mm */,
+				63029BC37FC084D1B535E557 /* POPSpringAnimationInternal.h */,
+				0E4BB311FFD6CA3FA9058716 /* POPSpringSolver.h */,
+				2AF2C2776DE045A6F15BC0B3 /* POPVector.h */,
+				9B4AC682D3C91EB11943000F /* POPVector.mm */,
+				24E6A3DC43DBCF6D37B2D143 /* TransformationMatrix.cpp */,
+				ED5F0034F0A56E24C1F424DC /* TransformationMatrix.h */,
+				1F4DC51D1AB3688CE0BC726C /* UnitBezier.h */,
+				A5150710B25EB34DE841252C /* Support Files */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+		8FFDD660A923D5AC9764A368 = {
+			isa = PBXGroup;
+			children = (
+				AAE55ED52F7640DBCFFA40E3 /* Podfile */,
+				7FB44A87A47232788226644F /* Frameworks */,
+				9D5B07222B6E806BF9403EB7 /* Pods */,
+				009C2E2E68A24BA8093BCD28 /* Products */,
+				6350AF27D526F362E91F7EBA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9D5B07222B6E806BF9403EB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D52F635DCBD9708B76701A4 /* GoogleAds-IMA-iOS-SDK */,
+				F52E2E1A2AD0C1A26E4AB077 /* Snap */,
+				7F3280F7BD2D2138283DE756 /* google-cast-sdk */,
+				EAFA44C00A2DF1F705CF4809 /* player-sdk-native-ios */,
+				8FECE9CB56226E59C5BF7C42 /* pop */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5150710B25EB34DE841252C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F99C00F64CE1A60E40F2328 /* Info.plist */,
+				7104FF298072EF1B7AA660C0 /* Pods-pop.modulemap */,
+				8BA571C6F3FE9B07E50F5799 /* Pods-pop.xcconfig */,
+				41BA15502FFC2DDE2E17F909 /* Pods-pop-Private.xcconfig */,
+				9BF73F1420E70613CE9F9BDF /* Pods-pop-dummy.m */,
+				D3FEFDF567003580EDE395EC /* Pods-pop-prefix.pch */,
+				FA3C46C7542D5A14F09095CF /* Pods-pop-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-pop";
+			sourceTree = "<group>";
+		};
+		BD7B8653CBA2E32FA97AB156 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D1FFCCF1A0E58593F0268CF6 /* AVFoundation.framework */,
+				7565BE3DC46473C76BB68A6B /* AdSupport.framework */,
+				2E845C754A683EEA67BB54C2 /* AudioToolbox.framework */,
+				DF055D55C2A652CEB6DDCDB5 /* CFNetwork.framework */,
+				38103616AE604279F9878454 /* CoreFoundation.framework */,
+				B3C0EBF7912BF8666DAC206C /* CoreGraphics.framework */,
+				5CC1F54222F4892EB31DA113 /* CoreMedia.framework */,
+				6DC5A764CF7B206496CF85C6 /* Foundation.framework */,
+				AA3988BBC8C4D7ABE928F51E /* GoogleCast.framework */,
+				9F4580203D0FA60F13446BB1 /* MediaAccessibility.framework */,
+				107196105E4B17E914ACF778 /* MediaPlayer.framework */,
+				DC608E4EE8EF9E72EECC6BCE /* MessageUI.framework */,
+				93B015367DE90FCDE1148794 /* QuartzCore.framework */,
+				3BA86CDDC173B1ADB3A151DC /* Social.framework */,
+				472F00CE51D11BF5CD001FBA /* SystemConfiguration.framework */,
+				130F703AB1458C6646A75B7E /* UIKit.framework */,
+				10ACE31C68E5057FF64736DD /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DA0E7CC0747FD8D7BB7C0BEF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E430B7917E3888F1E2AD7EE /* Info.plist */,
+				E4E86C6281455EBCA6305177 /* Pods-google-cast-sdk.modulemap */,
+				8A1C6EEDFB1CB29EEC10F062 /* Pods-google-cast-sdk.xcconfig */,
+				343D2410962ABECFF9FFB4A1 /* Pods-google-cast-sdk-Private.xcconfig */,
+				7EE5D7CCA5A582A574EF1EEF /* Pods-google-cast-sdk-dummy.m */,
+				0636C7F6D6E010B6CF9C4908 /* Pods-google-cast-sdk-prefix.pch */,
+				9AF640C86A2A2D8EE2EF9768 /* Pods-google-cast-sdk-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-google-cast-sdk";
+			sourceTree = "<group>";
+		};
+		EAFA44C00A2DF1F705CF4809 /* player-sdk-native-ios */ = {
+			isa = PBXGroup;
+			children = (
+				C82414B24CCF9880D41CD9CA /* ChromecastDeviceController.h */,
+				485C9EA66ED2EF85BED298A8 /* ChromecastDeviceController.m */,
+				2F675E1EE21A74754040A8FE /* DeviceParamsHandler.h */,
+				95818FF2D971FD44556BFB9D /* DeviceParamsHandler.m */,
+				20D2C4C83F166A8C5CADE5A8 /* FacebookStrategy.h */,
+				EC7D8A39C040C5A9BC58CAF8 /* FacebookStrategy.m */,
+				0550B5BC31544A52EAC391EF /* GCKApplicationMetadata.h */,
+				542FFF4F702D51D47F233999 /* GCKCastChannel.h */,
+				463A00BC028071DD087DFCA5 /* GCKColor.h */,
+				59138594BC13ADE0F97B77A9 /* GCKDevice.h */,
+				714DF9A620270F6BD64A580D /* GCKDeviceFilter.h */,
+				F8FEA2CD8D9B08F777A4B4E6 /* GCKDeviceManager.h */,
+				AEC5C74184613D2CDC248C57 /* GCKDeviceScanner.h */,
+				6407F4F65AE1229AB900FAB4 /* GCKError.h */,
+				B382CE34A3446CA560A630F1 /* GCKFilterCriteria.h */,
+				C46894DBD2FC9C7080481FA7 /* GCKImage.h */,
+				76A0E1AA42A91869E547AC05 /* GCKJSONUtils.h */,
+				AD99FCFDAF228D90DE9FFA9B /* GCKLogger.h */,
+				6F40C97659D2D62444ECE69A /* GCKMediaControlChannel.h */,
+				5C359960918546EFACA5F90E /* GCKMediaInformation.h */,
+				0B74B5A95E72B3DDC2E2A63E /* GCKMediaMetadata.h */,
+				61BCC094CA20865DA41DEB2F /* GCKMediaStatus.h */,
+				4E08584486C476DDD51A4818 /* GCKMediaTextTrackStyle.h */,
+				3B6379029C9664421202AAE3 /* GCKMediaTrack.h */,
+				55E0F79A1ABFD8AA9E70BF9D /* GCKNSDictionary+TypedValueLookup.h */,
+				C4C9B0ECCC90500603EF0741 /* GCKSenderApplicationInfo.h */,
+				B38323C7D7AF160D565E46F2 /* GoogleCast.h */,
+				658EA2BBF9618B03FC33BF25 /* GooglePlusStrategy.h */,
+				2D7B923FA139713617AE6186 /* GooglePlusStrategy.m */,
+				94787CD62299417B1B4EFEF4 /* IMAAVPlayerContentPlayhead.h */,
+				DFF3766C6E0E8700D7545FBA /* IMAAd.h */,
+				337A311D8F5DE3FCE306F81D /* IMAAdDisplayContainer.h */,
+				0D367465ADCA987DF4CA180E /* IMAAdError.h */,
+				238EE9AC9ABA46D9C2970DD5 /* IMAAdEvent.h */,
+				90E049CDE2B8B3CF79AE0C39 /* IMAAdPlaybackInfo.h */,
+				352FF9B34377820E0E18622E /* IMAAdPodInfo.h */,
+				3FB5A56CC8F8C1C82906FD2E /* IMAAdsLoader.h */,
+				ECC598EEBDD8174E72D738EF /* IMAAdsManager.h */,
+				3BD9C5F37F54E81EFD0A4A53 /* IMAAdsRenderingSettings.h */,
+				93C497FBFE0C834AC24CC612 /* IMAAdsRequest.h */,
+				6BF402082664420142F786BF /* IMACompanionAdSlot.h */,
+				878F0EA68C8193A33A5FA740 /* IMAContentPlayhead.h */,
+				354C4A22E3CC5B12AE84238B /* IMAUiElements.h */,
+				F14A84ADC6AE1AEA07F8BF26 /* KArchiver.h */,
+				7640A3033FCA0CD9391C182E /* KArchiver.m */,
+				CC50D34A64DFDEC65C905B07 /* KPBrowserViewController.h */,
+				0FC73939728004F960F2F29F /* KPBrowserViewController.m */,
+				102349C294857F54D039F100 /* KPChromecast.h */,
+				102E7447481CA9DEF5DDE892 /* KPChromecast.m */,
+				49EFB312E9530A5414ABB998 /* KPControlsWebView.h */,
+				5A0059156FF7CE2E125A1611 /* KPControlsWebView.m */,
+				6A6730F3DBCD47A83A2C6DE7 /* KPIMAPlayerViewController.h */,
+				443B024891D7097B15DF4162 /* KPIMAPlayerViewController.m */,
+				6CBDDC59F61FF72755C416F2 /* KPLog.h */,
+				679AA1D6A722BC94649CA4E7 /* KPLog.m */,
+				EE5101AD132C9C5BEED07AA5 /* KPLogManager.h */,
+				CBD17C70F2B7F33CEBDFC0F4 /* KPLogManager.m */,
+				9A7084694AED0BC5CD5596F7 /* KPPlayerConfig.h */,
+				D3831C77BE3838D8CFA2B0A6 /* KPPlayerConfig.m */,
+				BFF860D8F3C63003DEA5C057 /* KPPlayerDatasourceHandler.h */,
+				2DCE98F2E12BFF3C7AB79BAC /* KPPlayerDatasourceHandler.m */,
+				A76A8569BE9129FC3D378B08 /* KPShareManager.h */,
+				CAF890549898F20EBE454D87 /* KPShareManager.m */,
+				22CF6827FE6F89B5E6B9C0DB /* KPViewController.h */,
+				951674044AEE1610F24CDE91 /* KPViewController.m */,
+				2DB8DE2CC66E9EC2A1776F25 /* KPViewControllerProtocols.h */,
+				441D7D00C3118C3F2B4F38FF /* KPWebKitBrowserViewController.h */,
+				62320D07A9CE46C10F56BF49 /* KPWebKitBrowserViewController.m */,
+				DA192494E0E326C49BD43ED3 /* KalturaPlayer.h */,
+				AA75432B21543FFE97E7B063 /* KalturaPlayer.m */,
+				EDFDD2C2E4F1B818D486D839 /* MailStrategy.h */,
+				0C6B3A415DAF730B24A2037C /* MailStrategy.m */,
+				9A4826C0574BF027C4D81C90 /* MessageStrategy.h */,
+				D9980143CE61AF87D8C1FCE7 /* MessageStrategy.m */,
+				EE4AE10A8A0496996F4F8453 /* NSDictionary+Strategy.h */,
+				7600B44533BC40BE12C9734D /* NSDictionary+Strategy.m */,
+				4DFAC5738DD9E1ECFBD1FD04 /* NSMutableDictionary+AdSupport.h */,
+				418D4372E9AB93393BF69EF7 /* NSMutableDictionary+AdSupport.m */,
+				5DB47C866368BEAD12AE1B6A /* NSString+Utilities.h */,
+				86522FDB603E88A49D1FC4F3 /* NSString+Utilities.m */,
+				1618303B07C79E49C7988694 /* TwitterStrategy.h */,
+				14C7DE7423CE6D44B808CB5B /* TwitterStrategy.m */,
+				BEF0B7E1C33E76D3C757F44F /* Utilities.h */,
+				102144796914CE8A6D494A24 /* WVSettings.h */,
+				B2A2A552B1907608AF2AF295 /* WVSettings.m */,
+				F225CDCC9AB04B3B491D3304 /* WViPhoneAPI.h */,
+				060123B2AC6ADB7EE05CCC28 /* Frameworks */,
+				49081FFD76C3D843BB6C6E4D /* Support Files */,
+			);
+			path = "player-sdk-native-ios";
+			sourceTree = "<group>";
+		};
+		F52E2E1A2AD0C1A26E4AB077 /* Snap */ = {
+			isa = PBXGroup;
+			children = (
+				AFB6F8A64E9DE640EA1E0575 /* Constraint.swift */,
+				34690B6AA74C4459BD2CA2D9 /* ConstraintAttributes.swift */,
+				9FF0C435658CEA10C12D7801 /* ConstraintItem.swift */,
+				052F499F1DA6FF089308C54E /* ConstraintMaker.swift */,
+				4366F3B2DBFB867CEEFA0587 /* ConstraintRelation.swift */,
+				0AAFCCB3CA8D1795124955CA /* EdgeInsets.swift */,
+				724C7461BFD9D75085B10F33 /* LayoutConstraint.swift */,
+				1BE352FE5AFA77D9AD462CC4 /* View+Snap.swift */,
+				7A3599A53344F7DA900EC3AE /* Support Files */,
+			);
+			path = Snap;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09AB4F3AB7B4A91F7E0481B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E20247932E4D9CE738F5BE9 /* ChromecastDeviceController.h in Headers */,
+				0171D63573B2E8E48C4562F1 /* DeviceParamsHandler.h in Headers */,
+				2CDCC25662B38C87D4A2AEF2 /* FacebookStrategy.h in Headers */,
+				5AA339BADDD89791645F1579 /* GCKApplicationMetadata.h in Headers */,
+				6895054451F8174F4916358E /* GCKCastChannel.h in Headers */,
+				ED57A37B4C0393B08E0EA8D6 /* GCKColor.h in Headers */,
+				A45A9EF06AB212479E751410 /* GCKDevice.h in Headers */,
+				CDBFC18D6611239749FD42ED /* GCKDeviceFilter.h in Headers */,
+				8BBF279100DF6CBDF1B1A3D5 /* GCKDeviceManager.h in Headers */,
+				10A9945034C0E0C2089A0FBD /* GCKDeviceScanner.h in Headers */,
+				8E943941CEEE624DF819CADA /* GCKError.h in Headers */,
+				68D1C043E342D14D40C20043 /* GCKFilterCriteria.h in Headers */,
+				868652B9D4D05307553148E3 /* GCKImage.h in Headers */,
+				924AF021727E14E546945006 /* GCKJSONUtils.h in Headers */,
+				D9624253CCC43841B44D74F8 /* GCKLogger.h in Headers */,
+				0CF205AF770D2D5D5A3A5BE7 /* GCKMediaControlChannel.h in Headers */,
+				F1470F5F13668848F749D785 /* GCKMediaInformation.h in Headers */,
+				E2EC37654CAE079B2D66A30D /* GCKMediaMetadata.h in Headers */,
+				4525A6C0887A62F2656C1E9F /* GCKMediaStatus.h in Headers */,
+				7014AB33F58D042A45BE75B5 /* GCKMediaTextTrackStyle.h in Headers */,
+				AB599A4A82CDF0066C8A280A /* GCKMediaTrack.h in Headers */,
+				BADC39653E8319574118BE62 /* GCKNSDictionary+TypedValueLookup.h in Headers */,
+				DC3ED9BEFFAAB22FBE504389 /* GCKSenderApplicationInfo.h in Headers */,
+				B71BD4F59A01B62E66179AFA /* GoogleCast.h in Headers */,
+				37ABC10752085D3DF65C6B78 /* GooglePlusStrategy.h in Headers */,
+				0B46756E9437794E954986BF /* IMAAVPlayerContentPlayhead.h in Headers */,
+				711BBF68B81177812E9EA9B1 /* IMAAd.h in Headers */,
+				8C81912EB0E238B778A44E49 /* IMAAdDisplayContainer.h in Headers */,
+				507A59A925C125BE6472E81E /* IMAAdError.h in Headers */,
+				6AADFBC724D8B4604DE4E41D /* IMAAdEvent.h in Headers */,
+				2373555332B9CD3F81F479A7 /* IMAAdPlaybackInfo.h in Headers */,
+				D7D4D3982D7CDDDB1AD4245B /* IMAAdPodInfo.h in Headers */,
+				92E4C1A9F075C625C758FE70 /* IMAAdsLoader.h in Headers */,
+				F7B49A22E38B14D3287E1603 /* IMAAdsManager.h in Headers */,
+				12B7D2363E1E1DC2A0DA2866 /* IMAAdsRenderingSettings.h in Headers */,
+				47D24D020600AC23B7F9A067 /* IMAAdsRequest.h in Headers */,
+				4DAE3625DF5D02201862F764 /* IMACompanionAdSlot.h in Headers */,
+				EACAE5F9DE3D9563B1795647 /* IMAContentPlayhead.h in Headers */,
+				8CF0520A8A41A7F7B17B05D3 /* IMAUiElements.h in Headers */,
+				5D3FF25C65B1FF7BF634542D /* KArchiver.h in Headers */,
+				806D78F08ADC0FA58EC404EA /* KPBrowserViewController.h in Headers */,
+				8B52CF9F5FC12D3E30579CFF /* KPChromecast.h in Headers */,
+				21025A648855102109D8BFEF /* KPControlsWebView.h in Headers */,
+				1815486538BDCC345A71AA0E /* KPIMAPlayerViewController.h in Headers */,
+				E17AF5A1EC0A15DF7C01432E /* KPLog.h in Headers */,
+				7D0705A7F9E01639957A0436 /* KPLogManager.h in Headers */,
+				3C46E376DCE33DC7F71A4AB2 /* KPPlayerConfig.h in Headers */,
+				B6BDCBF5155CF39FD904CCFE /* KPPlayerDatasourceHandler.h in Headers */,
+				1A7F4CE1C8882A512E8CF184 /* KPShareManager.h in Headers */,
+				FC20742312A0577B3F887587 /* KPViewController.h in Headers */,
+				550D5B47C9FF3CC40FD76F21 /* KPViewControllerProtocols.h in Headers */,
+				541977B90EA21074BC5ED96C /* KPWebKitBrowserViewController.h in Headers */,
+				DD517BBDA6C6E1FA8FE322FC /* KalturaPlayer.h in Headers */,
+				15DCB559758B6C731469C42D /* MailStrategy.h in Headers */,
+				AB99190BA287A2CBF21C4FB8 /* MessageStrategy.h in Headers */,
+				F81B927FE284000525FE593F /* NSDictionary+Strategy.h in Headers */,
+				8C83288BB9E74478CEB7FD47 /* NSMutableDictionary+AdSupport.h in Headers */,
+				00BEFBE1165B894DA259409E /* NSString+Utilities.h in Headers */,
+				434B8E4AB1C84190366554D0 /* Pods-player-sdk-native-ios-umbrella.h in Headers */,
+				F22D986AB19D5C476EEC4933 /* TwitterStrategy.h in Headers */,
+				78947E057972747CB9B7AAA5 /* Utilities.h in Headers */,
+				A974B73A9C560B00AF85828F /* WVSettings.h in Headers */,
+				46E9B44B3C0E23876959A08B /* WViPhoneAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B072631A45A353C0D169BD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97C8A056F72B3576742C67B3 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E79F6CC518E362AAD3DE569 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D2C0FA48BE9B40128774F1 /* FloatConversion.h in Headers */,
+				81FA21A0BE4500ED8A438A7B /* POP.h in Headers */,
+				4C7C8E7BEF1A3924D56E11C5 /* POPAction.h in Headers */,
+				4F58CF43CC8231402EFB570D /* POPAnimatableProperty.h in Headers */,
+				5C52034622FA3839ED539E92 /* POPAnimation.h in Headers */,
+				2D915F47DF145A4EEF0142C8 /* POPAnimationEvent.h in Headers */,
+				341E56BDB4E07E7D43052B1F /* POPAnimationEventInternal.h in Headers */,
+				AA34805BDDBF4E2B68936062 /* POPAnimationExtras.h in Headers */,
+				DF9345F8D2044E768B454021 /* POPAnimationInternal.h in Headers */,
+				2730BA40AF1B04C6E904E54A /* POPAnimationPrivate.h in Headers */,
+				9349B8E5D8DA961B7B660515 /* POPAnimationRuntime.h in Headers */,
+				F2CB8C1BDDC4D9392599C805 /* POPAnimationTracer.h in Headers */,
+				500BFED13D7A068371D76B31 /* POPAnimationTracerInternal.h in Headers */,
+				DB495BB09C6837F283CFCE73 /* POPAnimator.h in Headers */,
+				3F398553B15573E698F153F8 /* POPAnimatorPrivate.h in Headers */,
+				2383ED5CE5FB666453606AF3 /* POPBasicAnimation.h in Headers */,
+				74E454672EB11894C943E478 /* POPBasicAnimationInternal.h in Headers */,
+				97012ABB00B7A4F9155B730F /* POPCGUtils.h in Headers */,
+				F317743240597DEC629824F0 /* POPCustomAnimation.h in Headers */,
+				7A094BBC8D4D0C34F314B37F /* POPDecayAnimation.h in Headers */,
+				384B98A061535322C7D1A467 /* POPDecayAnimationInternal.h in Headers */,
+				18F613D917BB5509318D6F2A /* POPDefines.h in Headers */,
+				6AB04843C21BB6739BC6930E /* POPGeometry.h in Headers */,
+				532CEDAE0D721A1D61D870A6 /* POPLayerExtras.h in Headers */,
+				742FB537EDABDB19A2A4F6F0 /* POPMath.h in Headers */,
+				516ABA18F771E9FE7FFDCB9D /* POPPropertyAnimation.h in Headers */,
+				99483794C210A0978315FEE5 /* POPPropertyAnimationInternal.h in Headers */,
+				A60E2C2AA628EA033C5E73CC /* POPSpringAnimation.h in Headers */,
+				0ABC744ECC2109E512430F6F /* POPSpringAnimationInternal.h in Headers */,
+				8D284E7358A0A323B64C3844 /* POPSpringSolver.h in Headers */,
+				59BDC89B5A3817F15CEAFEAC /* POPVector.h in Headers */,
+				D0BFA1F896B6DB9AACAB6E85 /* Pods-pop-umbrella.h in Headers */,
+				6EE1561A59011BBF6F42746E /* TransformationMatrix.h in Headers */,
+				3DDE446554B4F0950785A0AE /* UnitBezier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F69B936A95E1846FDD36A9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83CA9759D6E0317433281A27 /* Pods-Snap-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A150805F29E4B196CC265719 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3154476B694E21C220C69784 /* IMAAVPlayerContentPlayhead.h in Headers */,
+				4A2A31016982324C611828F2 /* IMAAd.h in Headers */,
+				A3B4555E676C4908BB165C1F /* IMAAdDisplayContainer.h in Headers */,
+				47770B743B656125B50F8607 /* IMAAdError.h in Headers */,
+				9F63F1996A5F3B78FECFBEC2 /* IMAAdEvent.h in Headers */,
+				8EC22BD89BF2C35402DAF784 /* IMAAdPlaybackInfo.h in Headers */,
+				A5E97C186BF33BDF7508F2C7 /* IMAAdPodInfo.h in Headers */,
+				E02C9B9E8A8C5B7DF0462A9C /* IMAAdsLoader.h in Headers */,
+				DB77D4B37B631A707953F9D0 /* IMAAdsManager.h in Headers */,
+				B97D83EA18E253793CF42D1D /* IMAAdsRenderingSettings.h in Headers */,
+				43BA4451A1E68A47CEF67148 /* IMAAdsRequest.h in Headers */,
+				06AFEFB253224890609CEA51 /* IMACompanionAdSlot.h in Headers */,
+				2A52F5CD9FB38764C12E8C57 /* IMAContentPlayhead.h in Headers */,
+				893A17E5AC0ED387BA2BB05A /* IMAUiElements.h in Headers */,
+				718A7094173707B66B28B1F5 /* Pods-GoogleAds-IMA-iOS-SDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FBA1768D5BEA64C55FAE95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39D0B11BC8A4187E944EBA6D /* GCKApplicationMetadata.h in Headers */,
+				0DAE3B9FC6B6205BE0F5BF66 /* GCKCastChannel.h in Headers */,
+				5573BE64543F3167C1922A63 /* GCKColor.h in Headers */,
+				5A8A6C12128AB2C63BB790B2 /* GCKDevice.h in Headers */,
+				C6E6D43D07E8B9E577E7E7F1 /* GCKDeviceFilter.h in Headers */,
+				772AD58EDBF681455C013A35 /* GCKDeviceManager.h in Headers */,
+				D457020DF295FF4F6CB0305F /* GCKDeviceScanner.h in Headers */,
+				8FAEE20E8DC38BBABD76398D /* GCKError.h in Headers */,
+				7C33E70C7D33BEB5D4816B4B /* GCKFilterCriteria.h in Headers */,
+				29F755141A5DCD5900BD4DCC /* GCKImage.h in Headers */,
+				BACDFF8F78F756B5454BABF0 /* GCKJSONUtils.h in Headers */,
+				50550168471558BFBA50D021 /* GCKLogger.h in Headers */,
+				1C7BAA24D404B04D32E18C10 /* GCKMediaControlChannel.h in Headers */,
+				A128415818E6C773673AF587 /* GCKMediaInformation.h in Headers */,
+				4AB144B7BDEF73671C190A37 /* GCKMediaMetadata.h in Headers */,
+				54364A15C2B5A01C39014CA8 /* GCKMediaStatus.h in Headers */,
+				CEB88F7D7E8616CA6CC5F6D7 /* GCKMediaTextTrackStyle.h in Headers */,
+				1E9217FAA497B007A9876609 /* GCKMediaTrack.h in Headers */,
+				7C71807E32289059375E70D4 /* GCKNSDictionary+TypedValueLookup.h in Headers */,
+				C36C845CA9144BDFE230DB61 /* GCKSenderApplicationInfo.h in Headers */,
+				FEED006B54A6C549119939D8 /* GoogleCast.h in Headers */,
+				B8BC9CFC805D9805230CE357 /* Pods-google-cast-sdk-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		275C91CD1B8DAFEDED629C00 /* Pods-player-sdk-native-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79469E35DF76A247B16CBCC7 /* Build configuration list for PBXNativeTarget "Pods-player-sdk-native-ios" */;
+			buildPhases = (
+				4E167D07BC9FBE6DA1160B8F /* Sources */,
+				7B02E09EDEDDE4C2479D2460 /* Frameworks */,
+				09AB4F3AB7B4A91F7E0481B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21046B22DF8C6BF3DA95F3B1 /* PBXTargetDependency */,
+				2B0A0751F40A0F57C7BB9136 /* PBXTargetDependency */,
+			);
+			name = "Pods-player-sdk-native-ios";
+			productName = "Pods-player-sdk-native-ios";
+			productReference = 8701C2F06666C182A6469D52 /* player_sdk_native_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3142DB8FD20DF4AECDB2E438 /* Pods-GoogleAds-IMA-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF6C1F0865A07D495D5CB7B /* Build configuration list for PBXNativeTarget "Pods-GoogleAds-IMA-iOS-SDK" */;
+			buildPhases = (
+				647D5963075D5551209EE932 /* Sources */,
+				00DFCCB47E309A76C81A3350 /* Frameworks */,
+				A150805F29E4B196CC265719 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GoogleAds-IMA-iOS-SDK";
+			productName = "Pods-GoogleAds-IMA-iOS-SDK";
+			productReference = 13BA0CD121D6C36D12355744 /* GoogleAds_IMA_iOS_SDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E8969780E8C33C6C4F2E203 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD8D092D666BC7F2D81E8742 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				77AFF6F97650666CD32CEDE4 /* Sources */,
+				E11BFA99803E10AAB9361F8A /* Frameworks */,
+				0B072631A45A353C0D169BD0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77D9634AF43CCA90A672C314 /* PBXTargetDependency */,
+				F6E8A1144487830BDDAB1FD9 /* PBXTargetDependency */,
+				21DA17E95A7FAF292CD484F0 /* PBXTargetDependency */,
+				044399566D996119EBF4BA1A /* PBXTargetDependency */,
+				B78B459EB3592859EB3AAE72 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = BEEB815F2A6468BF0B980453 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		945B4EA55CC7D9D67F1F8A37 /* Pods-google-cast-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1EE2D0E6D36EA75FC051588 /* Build configuration list for PBXNativeTarget "Pods-google-cast-sdk" */;
+			buildPhases = (
+				DC96E314EFE196F8CBDDDC75 /* Sources */,
+				8551CA5E61A2B93AFCC91F2B /* Frameworks */,
+				C2FBA1768D5BEA64C55FAE95 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-google-cast-sdk";
+			productName = "Pods-google-cast-sdk";
+			productReference = 2031A86FABC3A9C8FEF136E9 /* google_cast_sdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4214A64CB8343E2C235A415 /* Pods-pop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E06BA33BFD40F1EA23E036C6 /* Build configuration list for PBXNativeTarget "Pods-pop" */;
+			buildPhases = (
+				CB89CC92433A84E42045646F /* Sources */,
+				95198027DFBAB16617D946D8 /* Frameworks */,
+				7E79F6CC518E362AAD3DE569 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-pop";
+			productName = "Pods-pop";
+			productReference = 9EF2419AEE0885C8B8086933 /* pop.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D49E98174AE37E1FA73FE6B7 /* Pods-Snap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B17B1894DD725A53443E6C2 /* Build configuration list for PBXNativeTarget "Pods-Snap" */;
+			buildPhases = (
+				0CC4F759F72A050247085B5A /* Sources */,
+				E68689AB2D43133E66136810 /* Frameworks */,
+				8F69B936A95E1846FDD36A9F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Snap";
+			productName = "Pods-Snap";
+			productReference = EEE6BDFB11AFE878F3FC8A84 /* Snap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA461969AC063BCF97E8D362 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 0A1C7C8A5E58ED247B6505C0 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8FFDD660A923D5AC9764A368;
+			productRefGroup = 009C2E2E68A24BA8093BCD28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E8969780E8C33C6C4F2E203 /* Pods */,
+				3142DB8FD20DF4AECDB2E438 /* Pods-GoogleAds-IMA-iOS-SDK */,
+				D49E98174AE37E1FA73FE6B7 /* Pods-Snap */,
+				945B4EA55CC7D9D67F1F8A37 /* Pods-google-cast-sdk */,
+				275C91CD1B8DAFEDED629C00 /* Pods-player-sdk-native-ios */,
+				B4214A64CB8343E2C235A415 /* Pods-pop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CC4F759F72A050247085B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BB36226ED33E434169F8E7 /* Constraint.swift in Sources */,
+				47783DCBCFC8FA5F06D19013 /* ConstraintAttributes.swift in Sources */,
+				0D4D600F82177EE503AEC1F2 /* ConstraintItem.swift in Sources */,
+				3F6F62459A530972FC125BE9 /* ConstraintMaker.swift in Sources */,
+				36B63B24BED1B328D0D97DC1 /* ConstraintRelation.swift in Sources */,
+				96000C01C52D8A69CABD0E6A /* EdgeInsets.swift in Sources */,
+				D05D1F0752E5613666AFFD43 /* LayoutConstraint.swift in Sources */,
+				0685455CFC96A648B787058A /* Pods-Snap-dummy.m in Sources */,
+				44FC30D8A5E5B76F89FFA68D /* View+Snap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E167D07BC9FBE6DA1160B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90E6BBB5AECB7DDC9B6D87AC /* ChromecastDeviceController.m in Sources */,
+				A49EA6F07AF39DA035E12462 /* DeviceParamsHandler.m in Sources */,
+				5C756C38FFBF38239C8475B0 /* FacebookStrategy.m in Sources */,
+				F2968FB6B50F410FC0FFF6D6 /* GooglePlusStrategy.m in Sources */,
+				655D6F4C1D0695B556E8993E /* KArchiver.m in Sources */,
+				2BC424677EFFF04808339A6A /* KPBrowserViewController.m in Sources */,
+				7CDBC451C862A9911996ECAA /* KPChromecast.m in Sources */,
+				35AA484A67F6C987094987AB /* KPControlsWebView.m in Sources */,
+				7C08D38ADF2B05B3D4CC5ADF /* KPIMAPlayerViewController.m in Sources */,
+				286289E1B94A9B5A78D15266 /* KPLog.m in Sources */,
+				0CCAC5EF99067C5B9F05E62D /* KPLogManager.m in Sources */,
+				C8D4FC13599776C3943C6253 /* KPPlayerConfig.m in Sources */,
+				441C6E381FBBE8D9022BEF2F /* KPPlayerDatasourceHandler.m in Sources */,
+				2D04B06EBA087E1EABDC898F /* KPShareManager.m in Sources */,
+				9640C663897F6A9113779DB6 /* KPViewController.m in Sources */,
+				0AA82A8770D093A5E89A4E83 /* KPWebKitBrowserViewController.m in Sources */,
+				4D2FAB62158D2DEA70D476D8 /* KalturaPlayer.m in Sources */,
+				A4BED097D8B056B213A55059 /* MailStrategy.m in Sources */,
+				1CCC467FFB38494982C7281C /* MessageStrategy.m in Sources */,
+				EE412F90119898CA290CFFC8 /* NSDictionary+Strategy.m in Sources */,
+				FF6EC3191569A9D7009C17C5 /* NSMutableDictionary+AdSupport.m in Sources */,
+				0C8DCB01E613375E3B66244E /* NSString+Utilities.m in Sources */,
+				8A8329C2A1BFF3FCD08DA7A9 /* Pods-player-sdk-native-ios-dummy.m in Sources */,
+				1B1CFCDBB1CB9024D7AE46DA /* TwitterStrategy.m in Sources */,
+				16A2993B1B2F993E975D8A81 /* WVSettings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647D5963075D5551209EE932 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC026F56B14EF340BD10DAC3 /* Pods-GoogleAds-IMA-iOS-SDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77AFF6F97650666CD32CEDE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F87EE746EE060CB18F8F0738 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB89CC92433A84E42045646F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9154D38FB61159F8799B18F7 /* POPAnimatableProperty.mm in Sources */,
+				5F2A1C9E2672126EE31423DC /* POPAnimation.mm in Sources */,
+				B5E66F83D4B70FCC7C57D3E2 /* POPAnimationEvent.mm in Sources */,
+				5EF024DB899CBC1D04A5DE92 /* POPAnimationExtras.mm in Sources */,
+				FA8F551DE5CD2BA3A2A809BF /* POPAnimationRuntime.mm in Sources */,
+				3D7527589C6DE3C6256D9F0A /* POPAnimationTracer.mm in Sources */,
+				4B8B914904704ACEDC6BAC75 /* POPAnimator.mm in Sources */,
+				4C48AC9ADA3A1B4299D207F0 /* POPBasicAnimation.mm in Sources */,
+				3E6C182DA0BF2ABEB443E534 /* POPCGUtils.mm in Sources */,
+				0DC903B9670CE927E291A0D0 /* POPCustomAnimation.mm in Sources */,
+				1807880A96EBA2B475C2F9A2 /* POPDecayAnimation.mm in Sources */,
+				2EC2862EE978B4467815D4CE /* POPGeometry.mm in Sources */,
+				C2B1A543A4B4395B11E754BC /* POPLayerExtras.mm in Sources */,
+				1AF66574D375D6620A9A1EAC /* POPMath.mm in Sources */,
+				7937806199B758CC18C7F1D9 /* POPPropertyAnimation.mm in Sources */,
+				E2D5F69D9806CE0B465BBCDC /* POPSpringAnimation.mm in Sources */,
+				A335B94A125B217C29D6431E /* POPVector.mm in Sources */,
+				A747FF9C108B9A3077C7A87F /* Pods-pop-dummy.m in Sources */,
+				832AF571E4CA2DEA0BD613A3 /* TransformationMatrix.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC96E314EFE196F8CBDDDC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C12CEE14C7D5068108511B /* Pods-google-cast-sdk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		044399566D996119EBF4BA1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-player-sdk-native-ios";
+			target = 275C91CD1B8DAFEDED629C00 /* Pods-player-sdk-native-ios */;
+			targetProxy = 68AA190EC56D65CD839E1C02 /* PBXContainerItemProxy */;
+		};
+		21046B22DF8C6BF3DA95F3B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GoogleAds-IMA-iOS-SDK";
+			target = 3142DB8FD20DF4AECDB2E438 /* Pods-GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 461DA3160518F66A3576672D /* PBXContainerItemProxy */;
+		};
+		21DA17E95A7FAF292CD484F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-google-cast-sdk";
+			target = 945B4EA55CC7D9D67F1F8A37 /* Pods-google-cast-sdk */;
+			targetProxy = A3488A6412FAE804070D8D95 /* PBXContainerItemProxy */;
+		};
+		2B0A0751F40A0F57C7BB9136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-google-cast-sdk";
+			target = 945B4EA55CC7D9D67F1F8A37 /* Pods-google-cast-sdk */;
+			targetProxy = AF37223CD3008F95E1F693A4 /* PBXContainerItemProxy */;
+		};
+		77D9634AF43CCA90A672C314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GoogleAds-IMA-iOS-SDK";
+			target = 3142DB8FD20DF4AECDB2E438 /* Pods-GoogleAds-IMA-iOS-SDK */;
+			targetProxy = 4D434E4029CD03173928980F /* PBXContainerItemProxy */;
+		};
+		B78B459EB3592859EB3AAE72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-pop";
+			target = B4214A64CB8343E2C235A415 /* Pods-pop */;
+			targetProxy = CBA02F8F99E785F27789849E /* PBXContainerItemProxy */;
+		};
+		F6E8A1144487830BDDAB1FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Snap";
+			target = D49E98174AE37E1FA73FE6B7 /* Pods-Snap */;
+			targetProxy = 3A037552D2562AEBE4E3AE23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		183419046F132F84A34896E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E66FCB23A7837C89A88CBC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BA15502FFC2DDE2E17F909 /* Pods-pop-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-pop/Pods-pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-pop/Pods-pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4104C0AF8D5800D569E96090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D09E3659FF992F012646BD6 /* Pods-player-sdk-native-ios-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-player-sdk-native-ios/Pods-player-sdk-native-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-player-sdk-native-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-player-sdk-native-ios/Pods-player-sdk-native-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = player_sdk_native_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41603D255CD69F030AE29AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D09E3659FF992F012646BD6 /* Pods-player-sdk-native-ios-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-player-sdk-native-ios/Pods-player-sdk-native-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-player-sdk-native-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-player-sdk-native-ios/Pods-player-sdk-native-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = player_sdk_native_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4B59BDD58E14FA717BDFA121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A5C997B89E290FE8A342BB /* Pods-Snap-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Snap/Pods-Snap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Snap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Snap/Pods-Snap.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Snap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		655545CFA9FA9DC9E9A5B729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BA15502FFC2DDE2E17F909 /* Pods-pop-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-pop/Pods-pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-pop/Pods-pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DD16F16D6922E81AC9B47D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA5A4BE611EF528409C27820 /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A1733381AD651B9C3368F08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A3BB1284DBB171BB8F9B104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343D2410962ABECFF9FFB4A1 /* Pods-google-cast-sdk-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-google-cast-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = google_cast_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B4B70549964F80278578264A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29468DAF01A9E1CCA6B3C99 /* Pods-GoogleAds-IMA-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Pods-GoogleAds-IMA-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Pods-GoogleAds-IMA-iOS-SDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleAds_IMA_iOS_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C48310F96E1E9A8CCC598A38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29468DAF01A9E1CCA6B3C99 /* Pods-GoogleAds-IMA-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Pods-GoogleAds-IMA-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-GoogleAds-IMA-iOS-SDK/Pods-GoogleAds-IMA-iOS-SDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleAds_IMA_iOS_SDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CED884E3A503CEF4EE4D29FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D7C8795085D9E6145A40901 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE60FB56761C2AB42F84F52F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343D2410962ABECFF9FFB4A1 /* Pods-google-cast-sdk-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-google-cast-sdk/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = google_cast_sdk;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F50C7158C5D5FDD5D6B31138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A5C997B89E290FE8A342BB /* Pods-Snap-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Snap/Pods-Snap-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Snap/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Snap/Pods-Snap.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Snap;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A1C7C8A5E58ED247B6505C0 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1733381AD651B9C3368F08F /* Debug */,
+				183419046F132F84A34896E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B17B1894DD725A53443E6C2 /* Build configuration list for PBXNativeTarget "Pods-Snap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B59BDD58E14FA717BDFA121 /* Debug */,
+				F50C7158C5D5FDD5D6B31138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CF6C1F0865A07D495D5CB7B /* Build configuration list for PBXNativeTarget "Pods-GoogleAds-IMA-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C48310F96E1E9A8CCC598A38 /* Debug */,
+				B4B70549964F80278578264A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79469E35DF76A247B16CBCC7 /* Build configuration list for PBXNativeTarget "Pods-player-sdk-native-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41603D255CD69F030AE29AE4 /* Debug */,
+				4104C0AF8D5800D569E96090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD8D092D666BC7F2D81E8742 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED884E3A503CEF4EE4D29FA /* Debug */,
+				8DD16F16D6922E81AC9B47D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E06BA33BFD40F1EA23E036C6 /* Build configuration list for PBXNativeTarget "Pods-pop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				655545CFA9FA9DC9E9A5B729 /* Debug */,
+				2E66FCB23A7837C89A88CBC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1EE2D0E6D36EA75FC051588 /* Build configuration list for PBXNativeTarget "Pods-google-cast-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE60FB56761C2AB42F84F52F /* Debug */,
+				A3BB1284DBB171BB8F9B104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA461969AC063BCF97E8D362 /* Project object */;
+}

@@ -1,0 +1,10 @@
+CLANG_CXX_LANGUAGE_STANDARD = c++11
+CLANG_CXX_LIBRARY = libc++
+FRAMEWORK_SEARCH_PATHS = $(PODS_ROOT)/google-cast-sdk/GoogleCastFramework-2.3.0-Release
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" "${PODS_ROOT}/Headers/Public/google-cast-sdk" "${PODS_ROOT}/Headers/Public/player-sdk-native-ios" "${PODS_ROOT}/Headers/Public/pop"
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/GoogleAds-IMA-iOS-SDK/GoogleIMASDK3/" "$(PODS_ROOT)/player-sdk-native-ios/PlayerSDK"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" -isystem "${PODS_ROOT}/Headers/Public/google-cast-sdk" -isystem "${PODS_ROOT}/Headers/Public/player-sdk-native-ios" -isystem "${PODS_ROOT}/Headers/Public/pop"
+OTHER_LDFLAGS = $(inherited) -ObjC -all_load -l"GoogleIMA3" -l"Pods-GoogleAds-IMA-iOS-SDK" -l"Pods-google-cast-sdk" -l"Pods-player-sdk-native-ios" -l"Pods-pop" -l"System" -l"WViPhoneAPI" -l"c++" -l"stdc++" -l"stdc++.6" -l"stdc++.6.0.9" -l"xml2" -l"xml2.2" -l"z" -framework "AVFoundation" -framework "AdSupport" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreMedia" -framework "Foundation" -framework "GoogleCast" -framework "MediaAccessibility" -framework "MediaPlayer" -framework "MessageUI" -framework "QuartzCore" -framework "Social" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "WebKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
