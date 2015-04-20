@@ -26,10 +26,6 @@ class QuoteModel {
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
                     self.jsonTodaysQuote = jsonDict as? NSArray
                     println("QuoteModel: json in viewDidLoad(). jsonTodaysQuote count is now \(self.jsonTodaysQuote!.count)")
-//                    println("QuoteModel: json in viewDidLoad(). jsonTodaysQuote array is \(self.jsonTodaysQuote![0])")
-                }
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     // Create a quote struct with Today's data, then append that struct to todaysQuote array (which contains only one struct)
                     var quoteOne = QuoteData()
                     quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
@@ -37,6 +33,11 @@ class QuoteModel {
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
                     self.todaysQuote.append(quoteOne)
                     println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    println("QuoteModel: Where Code USED to be")
+
                     
                     // ACTIONS TO TAKE ONCE THE DATA IS LOADED. NOTHING DONE NOW
                     
