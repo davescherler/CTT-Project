@@ -19,6 +19,9 @@ class QuoteModel {
     
     
     init() {
+        var todaysQuoteDefault = QuoteData(quoteText: "This is the default today's quote, created in QuoteModel before the JSON start fetching data from the API", authorName: "Default Quote", termName: "Please read below")
+        self.todaysQuote.append(todaysQuoteDefault)
+        
         //ALEXIS: working on loading JSON for today's quote
         if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
             println("QuoteModel: The json for today's quote url does exist")
