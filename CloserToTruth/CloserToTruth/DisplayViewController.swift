@@ -38,6 +38,7 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("DisplayVC: viewDidLoad()")
         makeNavigationBarButtons()
     }
     
