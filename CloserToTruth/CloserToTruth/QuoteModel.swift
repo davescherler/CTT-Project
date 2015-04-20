@@ -19,7 +19,7 @@ class QuoteModel {
     
     
     init() {
-        var todaysQuoteDefault = QuoteData(quoteText: "This is the default today's quote, created in QuoteModel before the JSON start fetching data from the API", authorName: "Default Quote", termName: "Please read below")
+        var todaysQuoteDefault = QuoteData(quoteText: "This is the default today's quote, created in QuoteModel before the JSON start fetching data from the API. We could actually keep it and this is what would show up when there is no connection", authorName: "Default Quote", termName: "Please read below")
         self.todaysQuote.append(todaysQuoteDefault)
         
         //ALEXIS: working on loading JSON for today's quote
