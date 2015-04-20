@@ -10,6 +10,7 @@ import Foundation
 
 class QuoteModel {
     var quotes = [QuoteData]()
+    var todaysQuote = [QuoteData]()
     
     //ALEXIS: The following variables are to store values for quotes pulled from JSON API
     var jsonTodaysQuote: NSArray?
@@ -25,13 +26,19 @@ class QuoteModel {
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
                     self.jsonTodaysQuote = jsonDict as? NSArray
                     println("QuoteModel: json in viewDidLoad(). jsonTodaysQuote count is now \(self.jsonTodaysQuote!.count)")
+//                    println("QuoteModel: json in viewDidLoad(). jsonTodaysQuote array is \(self.jsonTodaysQuote![0])")
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    // Create a quote struct with Today's data, then append that struct to todaysQuote array (which contains only one struct)
+                    var quoteOne = QuoteData()
+                    quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
+                    quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
+                    quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
+                    self.todaysQuote.append(quoteOne)
+                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
+                    
                     // ACTIONS TO TAKE ONCE THE DATA IS LOADED. NOTHING DONE NOW
-                    
-                    
-                    
                     
                     // IMPORTANT we need to reload the data we got into our table view
                     //                    self.refreshQuoteOnScreen(0, origin: "Today")
@@ -73,6 +80,8 @@ class QuoteModel {
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    
                     // IMPORTANT we need to reload the data we got into our table view
                     //                    self.menu!.table.reloadData()
                 })
