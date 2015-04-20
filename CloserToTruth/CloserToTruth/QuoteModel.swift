@@ -35,6 +35,7 @@ class QuoteModel {
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
                     self.todaysQuote.append(quoteOne)
+                    self.quotes.append(quoteOne)
 //                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
                 }
                 
