@@ -24,6 +24,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    
+    // The function below is to enable ONLY the VideoViewController to be viewable in both portrait and landscape mode
+    // All other VC are only available in portrait mode
+    // Code found at: http://swiftiostutorials.com/ios-orientations-landscape-orientation-one-view-controller/
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+        
+        if self.window?.rootViewController?.presentedViewController is VideoViewController {
+            
+            let secondController = self.window!.rootViewController!.presentedViewController as? VideoViewController
+            
+            if secondController!.isPresented == true {
+                println("the videoViewController is presented")
+                return Int(UIInterfaceOrientationMask.All.rawValue);
+            } else {
+                return Int(UIInterfaceOrientationMask.Portrait.rawValue);
+            }
+        } else {
+            return Int(UIInterfaceOrientationMask.Portrait.rawValue);
+        }
+        
+    }
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -10,11 +10,14 @@ import UIKit
 
 class VideoViewController: UIViewController {
     
+    var isPresented: Bool?
+    
     @IBOutlet weak var closeButton: UIBarButtonItem!
     let closeButtonIcon = UIImage(named: "Close Button White 4042.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isPresented = true
         makeNavigationBarCloseButton()
     }
     
