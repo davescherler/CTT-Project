@@ -32,13 +32,10 @@ class QuoteModel {
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
                     self.todaysQuote.append(quoteOne)
-                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
+//                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
                 }
                 
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    println("QuoteModel: Where Code USED to be")
-
-                    
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in                    
                     // ACTIONS TO TAKE ONCE THE DATA IS LOADED. NOTHING DONE NOW
                     
                     // IMPORTANT we need to reload the data we got into our table view

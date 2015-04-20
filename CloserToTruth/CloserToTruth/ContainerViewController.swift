@@ -34,7 +34,11 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         
         
         displayViewController = UIStoryboard.displayViewController()
-        displayViewController.delegate = self
+        displayViewController?.delegate = self
+        // ALEXIS: the following lines are to pass data from the ContainerVC to displayVC variables that are then used to update the values of the labels on the displayVC view
+        displayViewController.authorNameVar = "New Author"
+        displayViewController.termNameVar = "New Term"
+        displayViewController.quoteTextVar = "New Quote"
         
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
