@@ -46,10 +46,10 @@ class QuoteModel {
                     quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
                     quoteOne.contributorID = self.jsonTodaysQuote![0]["contributor_id"] as! String
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
-                    quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
+                    var cleanText = self.jsonTodaysQuote![0]["quote_text"] as! String
+                    quoteOne.quoteText = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
                     quoteOne.drupalInterviewURL = self.jsonTodaysQuote![0]["drupal_interview_url"] as! String
-                    self.todaysQuote.insert(quoteOne, atIndex: 0)
-                    
+                    self.todaysQuote.insert(quoteOne, atIndex: 0)                    
                     println("Today's quote elements are now: \(self.todaysQuote[0].drupalInterviewURL) and \(self.todaysQuote[0].contributorID)")
                 }
                 else {
@@ -87,13 +87,13 @@ class QuoteModel {
                                 quoteOne.quoteText = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
                             }
                             if let quoteUniqueID = i["quote_id"] as? NSString {
-                                quoteOne.contributorID = quoteUniqueID as String
+                                quoteOne.quoteID = quoteUniqueID as String
                             }
                             if let quoteAuthor = i["contributor_name"] as? NSString {
                                 quoteOne.authorName = quoteAuthor as String
                             }
                             if let authorID = i["contributor_id"] as? NSString {
-                                quoteOne.quoteID = authorID as String
+                                quoteOne.contributorID = authorID as String
                             }
                             if let quoteTerm = i["term_name"] as? NSString {
                                 quoteOne.termName = quoteTerm as String

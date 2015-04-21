@@ -87,7 +87,7 @@ class DisplayViewController: UIViewController {
         self.interviewLink = self.quoteDataToDisplay?.drupalInterviewURL
         self.idOfQuote = self.quoteDataToDisplay?.quoteID
         
-        println("This is to see if all the quote's info is update correctly: authorInfo is \(self.authorInfo) and interviewURL is \(self.interviewLink) and idOfQuote is \(self.idOfQuote)")
+        println("DisplayVC: See if quote's info updates correctly: authorInfo is \(self.authorInfo) and interviewURL is \(self.interviewLink) and idOfQuote is \(self.idOfQuote)")
     }
     
     func makeNavigationBarButtons() {
