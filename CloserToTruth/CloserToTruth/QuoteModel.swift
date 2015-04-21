@@ -26,12 +26,11 @@ class QuoteModel {
     
     
     init() {
-        var todaysQuoteDefault = QuoteData(quoteText: "This is the default today's quote, created in QuoteModel before the JSON start fetching data from the API. We could actually keep it and this is what would show up when there is no connection", authorName: "Default Quote", termName: "Please read below")
+        var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "Couldn't Connect", termName: "---")
         self.todaysQuote.append(todaysQuoteDefault)
         
         //ALEXIS: working on loading JSON for today's quote
         if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
-            println("QuoteModel: The json for today's quote url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
                     self.jsonTodaysQuote = jsonDict as? NSArray
@@ -43,21 +42,16 @@ class QuoteModel {
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
                     self.todaysQuote.insert(quoteOne, atIndex: 0)
                     self.quotes.insert(quoteOne, atIndex: 0)
-//                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
+                }
+                else {
+                    println("QuoteModel: couldn't create jsonDict, which means there was no Internet connection. The no-connection text will show instead of a quote")
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in                    
                     // ACTIONS TO TAKE ONCE THE DATA IS LOADED. NOTHING DONE NOW
-                    println("QuoteModel: Done fetching JSON for today's Quote")
+                    println("QuoteModel: dispatch_async() loading today's Quote")
                     self.delegate?.passingTodaysQuote(0)
-//                    self.delegate?.didSelectQuoteAtIndex(indexPath.row)
                     
-                    // IMPORTANT we need to reload the data we got into our table view
-                    //                    self.refreshQuoteOnScreen(0, origin: "Today")
-                    //                    // Now that the screen is refreshed with Today's quote we need to check whether that quote is one of the favorites
-                    //                    self.checkIfFavorite(self.quoteID)
-                    
-                    //                    self.updateQuoteTextAppearance()
                 })
             })
             task.resume()
@@ -126,7 +120,7 @@ class QuoteModel {
     }
     
     func retrieveTodaysQuote(index: Int) -> QuoteData {
-        return self.quotes[0]
+        return self.todaysQuote[0]
     }
 
 }

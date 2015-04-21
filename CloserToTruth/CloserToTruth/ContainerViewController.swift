@@ -38,12 +38,8 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         
         displayViewController = UIStoryboard.displayViewController()
         displayViewController?.delegate = self
-        // ALEXIS: the following lines are to pass data from the ContainerVC to displayVC variables that are then used to update the values of the labels on the displayVC view
-        println("ContainerVC: viewDidLoad() Trying to load todaysQuote into the DisplayVC")
-        println("ContainerVC: viewDidLoad() the number of quotes in quotes of model is \(self.model.quotes.count) ")
-        println("ContainerVC: viewDidLoad() the first author is \(self.model.quotes[0].authorName)")
 
-        
+
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
         mainNavigationController = UINavigationController(rootViewController: displayViewController)
@@ -119,7 +115,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     
     func passingTodaysQuote(index: Int) {
         // The purpose of this method is to update the quote on the DisplayVC with today's quote from JSON
-            let quoteSelected = self.model.quoteAtIndex(index)
+            let quoteSelected = self.model.retrieveTodaysQuote(index)
             self.displayViewController.quoteDataToDisplay = quoteSelected
     }
     
