@@ -28,7 +28,11 @@ class QuoteModel {
     init() {
         
         // ALEXIS: creating a default quote for the todaysQuote array. This is the quote that will show on screen if no internet connection was etablished at launch
-        var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "Couldn't Connect", termName: "---")
+        var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "Couldn't Connect", termName: "---", contributorID: "", drupalInterviewURL: "", quoteID: "")
+//        var contributorID = ""
+//        var drupalInterviewURL = ""
+//        var quoteID = ""
+        
         self.todaysQuote.append(todaysQuoteDefault)
         
         //ALEXIS: working on loading JSON for today's quote
@@ -38,10 +42,15 @@ class QuoteModel {
                     self.jsonTodaysQuote = jsonArray as? NSArray
                     // Create a quote struct with Today's data, then append that struct to todaysQuote array
                     var quoteOne = QuoteData()
+                    quoteOne.quoteID = self.jsonTodaysQuote![0]["quote_id"] as! String
                     quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
+                    quoteOne.contributorID = self.jsonTodaysQuote![0]["contributor_id"] as! String
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
+                    quoteOne.drupalInterviewURL = self.jsonTodaysQuote![0]["drupal_interview_url"] as! String
                     self.todaysQuote.insert(quoteOne, atIndex: 0)
+                    
+                    println("Today's quote elements are now: \(self.todaysQuote[0].drupalInterviewURL) and \(self.todaysQuote[0].contributorID)")
                 }
                 else {
                     println("QuoteModel: couldn't create jsonArray, which means there was no Internet connection. The no-connection text will show instead of a quote")

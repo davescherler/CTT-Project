@@ -12,7 +12,7 @@ struct QuoteData {
     var quoteText = ""
     var authorName = ""
     var termName = ""
-    //var contributorID = ""
-    //var drupalInterviewURL = ""
-    //var quoteID = ""
+    var contributorID = ""
+    var drupalInterviewURL = ""
+    var quoteID = ""
 }
