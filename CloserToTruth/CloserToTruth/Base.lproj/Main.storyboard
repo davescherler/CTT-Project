@@ -215,11 +215,15 @@
                                     </mask>
                                 </variation>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="O4G-J6-RNl">
+                                <rect key="frame" x="290" y="160" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zwA-2g-FU1" firstAttribute="top" secondItem="xKK-6c-TbY" secondAttribute="bottom" id="1Cv-eG-3YM"/>
                             <constraint firstItem="Q1v-Wd-gap" firstAttribute="top" secondItem="A1k-V0-eo5" secondAttribute="bottom" constant="10" id="Cab-am-ACx"/>
+                            <constraint firstItem="O4G-J6-RNl" firstAttribute="top" secondItem="zwA-2g-FU1" secondAttribute="bottom" constant="140" id="D8z-b9-I9s"/>
                             <constraint firstItem="xKK-6c-TbY" firstAttribute="top" secondItem="zwA-2g-FU1" secondAttribute="bottom" id="Jt9-GV-d28"/>
                             <constraint firstItem="A1k-V0-eo5" firstAttribute="leading" secondItem="gb8-0K-mUZ" secondAttribute="leadingMargin" constant="10" id="MSf-nu-5kV"/>
                             <constraint firstItem="zwA-2g-FU1" firstAttribute="top" secondItem="xKK-6c-TbY" secondAttribute="bottom" id="Nv9-jB-XgX"/>
@@ -234,6 +238,7 @@
                             <constraint firstItem="xKK-6c-TbY" firstAttribute="leading" secondItem="gb8-0K-mUZ" secondAttribute="leadingMargin" constant="-16" id="m5f-sh-8Sq"/>
                             <constraint firstItem="Q1v-Wd-gap" firstAttribute="top" secondItem="xKK-6c-TbY" secondAttribute="bottom" constant="536" id="pfE-ZR-h24"/>
                             <constraint firstItem="uc3-Nh-Hk5" firstAttribute="top" secondItem="zwA-2g-FU1" secondAttribute="bottom" id="qro-M0-6fU"/>
+                            <constraint firstAttribute="centerX" secondItem="O4G-J6-RNl" secondAttribute="centerX" id="rUO-aW-Sn2"/>
                             <constraint firstItem="A1k-V0-eo5" firstAttribute="top" secondItem="ZB9-3U-Jpo" secondAttribute="bottom" constant="40" id="rZ7-hJ-eNs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="A1k-V0-eo5" secondAttribute="trailing" constant="10" id="s8d-MZ-7hp"/>
                         </constraints>
@@ -253,6 +258,7 @@
                         <outlet property="authorImage" destination="uc3-Nh-Hk5" id="le9-hf-OrQ"/>
                         <outlet property="authorName" destination="ZB9-3U-Jpo" id="iAu-M6-QxQ"/>
                         <outlet property="closeButton" destination="o2O-fB-dPm" id="nTq-yz-RTl"/>
+                        <outlet property="loadingImageIndicator" destination="O4G-J6-RNl" id="At2-O7-UUn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15D-sO-mwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
