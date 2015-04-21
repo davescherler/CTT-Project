@@ -14,7 +14,7 @@ enum SlideOutState {
     case MenuExpanded
 }
 
-class ContainerViewController: UIViewController, DisplayViewControllerDelegate, PassingQuote {
+class ContainerViewController: UIViewController, DisplayViewControllerDelegate, PassingQuote, ShowingQuote {
     //create an instance of the model
     var model = QuoteModel()
     var mainNavigationController: UINavigationController!
@@ -31,6 +31,9 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         println("ContainerVC: viewDidLoad()")
+        
+        // ALEXIS Adding ContainerViewVC as a delegate of model
+        model.delegate = self
         
         
         displayViewController = UIStoryboard.displayViewController()
@@ -115,6 +118,13 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         }
         animateMenu(shouldExpand: notAlreadyExpanded)
         println("finished running toggleMenu")
+    }
+    
+    func passingTodaysQuote(index: Int) {
+        // The purpose of this method is to update the quote on the DisplayVC with today's quote from JSON
+//        displayViewController.authorNameVar = self.model.todaysQuote[0].authorName
+            let quoteSelected = self.model.quoteAtIndex(index)
+            self.displayViewController.quoteDataToDisplay = quoteSelected
     }
     
     func didSelectQuoteAtIndex(index: Int) {

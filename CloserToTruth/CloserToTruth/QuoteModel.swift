@@ -8,9 +8,16 @@
 
 import Foundation
 
+protocol ShowingQuote {
+    func passingTodaysQuote(index: Int)
+}
+
+
 class QuoteModel {
     var quotes = [QuoteData]()
     var todaysQuote = [QuoteData]()
+    
+    var delegate: ShowingQuote?
     
     //ALEXIS: The following variables are to store values for quotes pulled from JSON API
     var jsonTodaysQuote: NSArray?
@@ -34,13 +41,16 @@ class QuoteModel {
                     quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
-                    self.todaysQuote.append(quoteOne)
-                    self.quotes.append(quoteOne)
+                    self.todaysQuote.insert(quoteOne, atIndex: 0)
+                    self.quotes.insert(quoteOne, atIndex: 0)
 //                    println("QuoteModel: json in viewDidLoad(). todaysQuote array is \(self.jsonTodaysQuote![0])")
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in                    
                     // ACTIONS TO TAKE ONCE THE DATA IS LOADED. NOTHING DONE NOW
+                    println("QuoteModel: Done fetching JSON for today's Quote")
+                    self.delegate?.passingTodaysQuote(0)
+//                    self.delegate?.didSelectQuoteAtIndex(indexPath.row)
                     
                     // IMPORTANT we need to reload the data we got into our table view
                     //                    self.refreshQuoteOnScreen(0, origin: "Today")
@@ -114,4 +124,9 @@ class QuoteModel {
     func quoteAtIndex(index:Int) -> QuoteData {
         return self.quotes[index]
     }
+    
+    func retrieveTodaysQuote(index: Int) -> QuoteData {
+        return self.quotes[0]
+    }
+
 }
