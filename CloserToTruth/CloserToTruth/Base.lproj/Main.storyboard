@@ -250,6 +250,9 @@
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="authorBio" destination="A1k-V0-eo5" id="c1X-5z-RPr"/>
+                        <outlet property="authorImage" destination="uc3-Nh-Hk5" id="le9-hf-OrQ"/>
+                        <outlet property="authorName" destination="ZB9-3U-Jpo" id="iAu-M6-QxQ"/>
                         <outlet property="closeButton" destination="o2O-fB-dPm" id="nTq-yz-RTl"/>
                     </connections>
                 </viewController>

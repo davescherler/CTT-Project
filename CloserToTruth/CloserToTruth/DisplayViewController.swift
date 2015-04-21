@@ -50,6 +50,11 @@ class DisplayViewController: UIViewController {
     @IBAction func authorInfoButtonPressed(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let authorInfoVC = storyboard.instantiateViewControllerWithIdentifier("AuthorInfoVC") as! AuthorInfoViewController
+        // ALEXIS: Now we're passing to the 'authorInfoVC' AuthorViewController the author ID so that it knows what info to display
+        authorInfoVC.contributorID = self.authorInfo!
+        if let passingName = self.authorName.text {
+            authorInfoVC.textForAuthorName = passingName
+        }
         self.presentViewController(authorInfoVC, animated: true, completion: nil)
     }
 
