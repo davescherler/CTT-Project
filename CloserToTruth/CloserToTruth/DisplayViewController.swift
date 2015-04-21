@@ -19,6 +19,11 @@ class DisplayViewController: UIViewController {
     @IBOutlet weak var termName: UILabel!
     @IBOutlet weak var quoteText: UITextView!
     
+    // ALEXIS: variables to store the values of the quote that do not get displayed on screen but are needed
+    var interviewLink: String?
+    var authorInfo: String?
+    var idOfQuote: String?
+    
     
     //variable for nav bar icons
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
@@ -73,6 +78,11 @@ class DisplayViewController: UIViewController {
         self.authorName.text = self.quoteDataToDisplay?.authorName
         self.termName.text = self.quoteDataToDisplay?.termName
         self.quoteText.text = self.quoteDataToDisplay?.quoteText
+        self.authorInfo = self.quoteDataToDisplay?.contributorID
+        self.interviewLink = self.quoteDataToDisplay?.drupalInterviewURL
+        self.idOfQuote = self.quoteDataToDisplay?.quoteID
+        
+        println("This is to see if all the quote's info is update correctly: authorInfo is \(self.authorInfo) and interviewURL is \(self.interviewLink) and idOfQuote is \(self.idOfQuote)")
     }
     
     func makeNavigationBarButtons() {
