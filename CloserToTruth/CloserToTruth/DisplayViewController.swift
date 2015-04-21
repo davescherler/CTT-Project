@@ -19,10 +19,6 @@ class DisplayViewController: UIViewController {
     @IBOutlet weak var termName: UILabel!
     @IBOutlet weak var quoteText: UITextView!
     
-    var authorNameVar = String()
-    var termNameVar = String()
-    var quoteTextVar = String()
-    
     
     //variable for nav bar icons
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
@@ -44,9 +40,6 @@ class DisplayViewController: UIViewController {
         super.viewDidLoad()
         println("DisplayVC: viewDidLoad()")
         makeNavigationBarButtons()
-        self.authorName.text = authorNameVar
-        self.termName.text = termNameVar
-        self.quoteText.text = quoteTextVar
     }
     
     @IBAction func authorInfoButtonPressed(sender: UIButton) {
