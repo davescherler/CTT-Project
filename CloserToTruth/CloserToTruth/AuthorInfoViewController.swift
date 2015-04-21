@@ -30,6 +30,40 @@ class AuthorInfoViewController: UIViewController {
             super.viewDidLoad()
             self.authorName.text = textForAuthorName
             
+            
+            //ALEXIS: We're going to find the JSON file with the author info
+            var authorURL = "http://www.closertotruth.com/api/contributor?uid=" + self.contributorID
+            if let url = NSURL(string: authorURL) {
+                let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                    if let jsonArray: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                        self.json = jsonArray as? NSArray
+                        println("AuthorInfoVC: json in viewDidLoad(). json count is now \(self.json!.count)")
+                        if let jsonInfo = self.json![0] as? NSDictionary {
+                            //                        if let authorName = jsonInfo["contributor_name"] as? NSString {
+                            //                            self.textForAuthorName = authorName
+                            //                        }
+                            if let authorBiography = jsonInfo["contributor_bio"] as? NSString as? String {
+                                // The authorBiography comes from the server with <p></p> html tags which we need to remove
+                                // so we're using a cleanText variable to store the cleaned up version of the biography
+                                var cleanText = authorBiography.stringByReplacingOccurrencesOfString("<p>", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                                cleanText = cleanText.stringByReplacingOccurrencesOfString("</p>", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                                self.textForAuthorBio = cleanText
+                            }
+                        }
+                    }
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        // IMPORTANT we need to reload the data we got into our table view
+                        //                    self.authorName.text = self.textForAuthorName
+                        self.authorBio.text = self.textForAuthorBio
+                        println("doing thread for displaying info text")
+                    })
+                })
+                task.resume()
+                
+            }
+            
+            
+            
             makeNavigationBarCloseButton()
         }
         
