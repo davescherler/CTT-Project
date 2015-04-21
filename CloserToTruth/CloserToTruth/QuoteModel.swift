@@ -86,13 +86,23 @@ class QuoteModel {
                                 var cleanText = quote as String
                                 quoteOne.quoteText = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
                             }
+                            if let quoteUniqueID = i["quote_id"] as? NSString {
+                                quoteOne.contributorID = quoteUniqueID as String
+                            }
                             if let quoteAuthor = i["contributor_name"] as? NSString {
                                 quoteOne.authorName = quoteAuthor as String
+                            }
+                            if let authorID = i["contributor_id"] as? NSString {
+                                quoteOne.quoteID = authorID as String
                             }
                             if let quoteTerm = i["term_name"] as? NSString {
                                 quoteOne.termName = quoteTerm as String
                             }
+                            if let inteverviewLink = i["drupal_interview_url"] as? NSString {
+                                quoteOne.drupalInterviewURL = inteverviewLink as String
+                            }
                             
+
                             // ALEXIS: append the newly created quote struct to the quotes array
                             self.quotes.append(quoteOne)
                             
