@@ -21,8 +21,9 @@ class AuthorInfoViewController: UIViewController {
     var textForAuthorName = ""
     var textForAuthorBio = ""
     
-    // ALEXIS: need to call another JSON file to retrieve the author info
+    // ALEXIS: need to call another JSON file to retrieve the author info and create a variable to store the author Image info
     var json: NSArray?
+    var dataForPic: NSData?
 
         let closeButtonIcon = UIImage(named: "Close Button White 4042.png")
         
@@ -62,6 +63,29 @@ class AuthorInfoViewController: UIViewController {
                 
             }
             
+            // ALEXIS: Another JSON to get the author picture
+            if let url = NSURL(string: authorURL) {
+                let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                    if let jsonArray: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                        self.json = jsonArray as? NSArray
+                        println("AuthorInfoVC: json in viewDidLoad(). json count is now \(self.json!.count)")
+                        if let jsonInfo = self.json![0] as? NSDictionary {
+                            if let authorPictureLink = jsonInfo["contributor_image"] as? NSString {
+                                let urlForImage = NSURL(string: authorPictureLink as String)
+                                self.dataForPic = NSData(contentsOfURL: urlForImage!)
+                            }
+                        }
+                    }
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        // IMPORTANT we need to reload the data we got into our table view
+//                        self.loadingImageIndicator.stopAnimating()
+//                        self.loadingImageIndicator.hidden = true
+                        self.authorImage.image = UIImage(data: self.dataForPic!)
+                        println("doing thread for loading the picture")
+                    })
+                })
+                task.resume()
+            }
             
             
             makeNavigationBarCloseButton()
