@@ -11,6 +11,7 @@ import UIKit
 class AuthorInfoViewController: UIViewController {
 
 
+    @IBOutlet weak var authorNameLabelTopConstratint: NSLayoutConstraint!
     @IBOutlet weak var closeButton: UIBarButtonItem!
     @IBOutlet weak var authorImage: UIImageView!
     @IBOutlet weak var authorName: UILabel!
@@ -31,6 +32,9 @@ class AuthorInfoViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            println("the author image width is \(self.authorImage.frame.width)")
+            println("the author image height is \(self.authorImage.frame.height)")
+            println("the anuthor name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
             self.authorName.text = textForAuthorName
             
             
@@ -87,6 +91,8 @@ class AuthorInfoViewController: UIViewController {
                     })
                 })
                 task.resume()
+                println("the author image height is \(self.authorImage.frame.height)")
+                println("the anuthor name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
             }
             
             

@@ -31,14 +31,11 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         println("ContainerVC: viewDidLoad()")
-        
         // ALEXIS Adding ContainerViewVC as a delegate of model
         model.delegate = self
         
-        
         displayViewController = UIStoryboard.displayViewController()
         displayViewController?.delegate = self
-
 
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
@@ -48,7 +45,6 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         
         mainNavigationController.didMoveToParentViewController(self)
         println("the number of quote structs is \(model.quotes.count)")
-        
     }
     //all these functions are just to call and show the menu screens.
     func addMenuViewController() {
@@ -123,6 +119,24 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         let quoteSelected = self.model.quoteAtIndex(index)
         self.displayViewController.quoteDataToDisplay = quoteSelected
         toggleMenu()
+        updateBackgroundImage()
+    }
+    
+    func updateBackgroundImage() {
+        var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImageList", ofType: "plist")
+        var imageNames = NSArray(contentsOfFile: imagePath!)
+        //println("the image names are: \(imageNames)")
+        
+        var numberOfImages = imageNames?.count
+        var randomNumber = Int(arc4random_uniform(UInt32(numberOfImages!)))
+        //println("MainViewVC: There are:\(numberOfImages) images and the random number is:\(randomNumber)")
+        
+        let imageArray: [String] = imageNames as! Array
+        
+        var randomImageName = imageArray[randomNumber]
+        //println("the random image is: \(randomImageName)")
+        
+        displayViewController!.backgroundImage.image = UIImage(named: randomImageName)
     }
     
     override func didReceiveMemoryWarning() {

@@ -18,6 +18,7 @@ class DisplayViewController: UIViewController {
     @IBOutlet weak var authorName: UILabel!
     @IBOutlet weak var termName: UILabel!
     @IBOutlet weak var quoteText: UITextView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     // ALEXIS: variables to store the values of the quote that do not get displayed on screen but are needed
     var interviewLink: String?
@@ -40,6 +41,7 @@ class DisplayViewController: UIViewController {
             self.updateQuoteData()
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
