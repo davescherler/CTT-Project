@@ -31,6 +31,7 @@ class VideoViewController: UIViewController {
     }
     
     @IBAction func closeButtonPressed(sender: AnyObject) {
+        self.isPresented = false
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
