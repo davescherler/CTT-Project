@@ -26,25 +26,25 @@ class QuoteModel {
     
     
     init() {
+        
+        // ALEXIS: creating a default quote for the todaysQuote array. This is the quote that will show on screen if no internet connection was etablished at launch
         var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "Couldn't Connect", termName: "---")
         self.todaysQuote.append(todaysQuoteDefault)
         
         //ALEXIS: working on loading JSON for today's quote
         if let url = NSURL(string: "http://www.closertotruth.com/api/todays-quote") {
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
-                    self.jsonTodaysQuote = jsonDict as? NSArray
-                    println("QuoteModel: json in viewDidLoad(). jsonTodaysQuote count is now \(self.jsonTodaysQuote!.count)")
-                    // Create a quote struct with Today's data, then append that struct to todaysQuote array (which contains only one struct)
+                if let jsonArray: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                    self.jsonTodaysQuote = jsonArray as? NSArray
+                    // Create a quote struct with Today's data, then append that struct to todaysQuote array
                     var quoteOne = QuoteData()
                     quoteOne.authorName = self.jsonTodaysQuote![0]["contributor_name"] as! String
                     quoteOne.termName = self.jsonTodaysQuote![0]["term_name"] as! String
                     quoteOne.quoteText = self.jsonTodaysQuote![0]["quote_text"] as! String
                     self.todaysQuote.insert(quoteOne, atIndex: 0)
-                    self.quotes.insert(quoteOne, atIndex: 0)
                 }
                 else {
-                    println("QuoteModel: couldn't create jsonDict, which means there was no Internet connection. The no-connection text will show instead of a quote")
+                    println("QuoteModel: couldn't create jsonArray, which means there was no Internet connection. The no-connection text will show instead of a quote")
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in                    
@@ -60,10 +60,9 @@ class QuoteModel {
         // working on loading JSON for all quotes
         // JSON Trial file https://raw.githubusercontent.com/ASJ3/PlayersGame/master/API_JSON/all-quotes-changed.json
         if let url = NSURL(string: "http://www.closertotruth.com/api/all-quotes") {
-            println("QuoteModel: The json url does exist")
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                if let jsonDict: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
-                    self.json = jsonDict as? NSArray
+                if let jsonArray: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) {
+                    self.json = jsonArray as? NSArray
                     println("QuoteModel: json in viewDidLoad(). json count is now \(self.json!.count)")
                     
                     // Append all the text of quotes to the midtempData array, so that we can show these quotes
@@ -71,12 +70,25 @@ class QuoteModel {
                     if let jsonData = self.json {
                         println("QuoteModel: json in viewDidLoad(). jsonData exists")
                         for i in jsonData {
+                            //ALEXIS: create a default quote struct that will be populated by the JSON data
+                            var quoteOne = QuoteData()
+                            
                             if let quote = i["quote_text"] as? NSString {
                                 var cleanText = quote as String
-                                self.midtempData.append(cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil))
+                                quoteOne.quoteText = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
                             }
+                            if let quoteAuthor = i["contributor_name"] as? NSString {
+                                quoteOne.authorName = quoteAuthor as String
+                            }
+                            if let quoteTerm = i["term_name"] as? NSString {
+                                quoteOne.termName = quoteTerm as String
+                            }
+                            
+                            // ALEXIS: append the newly created quote struct to the quotes array
+                            self.quotes.append(quoteOne)
+                            
                         }
-                        println("QuoteModel: json in viewDidLoad(). midtempData count is now \(self.midtempData.count)")
+                        println("QuoteModel: json in viewDidLoad(). midtempData count is now \(self.quotes.count)")
                         // ALEXIS: need to load the quote into the menu
                         //                        self.menu!.allQuotesData = self.midtempData
                         //                        var menuVCArray = self.menu!.allQuotesData
@@ -94,25 +106,13 @@ class QuoteModel {
             })
             task.resume()
         }
-
-        
-        
         
         
         // Creating dummy data. This is where the JSON code should live.
         // Essentially, the code should parse the JSON data, find all the quote data (name, text, author, url, etc) and create discrete structs of QuoteData for each set of data. We then append each struct to the array above named 'quotes.' All we need to do is have a have to iterate through all the structs created from the JSON data and add each one to the array. The dummy data is easy to add because we know we only have two structs, but in reality we may not know how many structs will be created.
         
-        var quoteOne = QuoteData()
-        quoteOne.authorName = "Dave Scherler"
-        quoteOne.termName = "Origin"
-        quoteOne.quoteText = "I'm from New Jersey!"
-        quotes.append(quoteOne)
         
-        var quoteTwo = QuoteData()
-        quoteTwo.authorName = "Alexis"
-        quoteTwo.termName = "Children"
-        quoteTwo.quoteText = "I have two children!"
-        quotes.append(quoteTwo)
+        
     }
     
     func quoteAtIndex(index:Int) -> QuoteData {
