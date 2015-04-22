@@ -10,7 +10,7 @@ import UIKit
 
 protocol PassingQuote {
     func didSelectQuoteAtIndex(index: Int)
-//    func showSelectedQuote(index: Int, listOrigin: String)
+    func showSelectedQuote(index: Int, listOrigin: String)
 }
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -122,16 +122,16 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        println("MenuViewVC: The selected row is \(indexPath.row)")
-//        var stringToPass: String?
-//        if self.favListSelected == true {
-//            stringToPass = "Favorites"
-//        } else {
-//            stringToPass = "All"
-//        }
+        println("MenuViewVC: The selected row is \(indexPath.row)")
+        var stringToPass: String?
+        if self.tableSelected == "favQuotes" {
+            stringToPass = "Favorites"
+        } else {
+            stringToPass = "All"
+        }
         
-        //println("MenuViewVC: the quote selected was from the \(stringToPass) table")
-        self.delegate?.didSelectQuoteAtIndex(indexPath.row)
+        self.delegate?.showSelectedQuote(indexPath.row, listOrigin: stringToPass!)
+//        self.delegate?.didSelectQuoteAtIndex(indexPath.row)
     }
 
 }

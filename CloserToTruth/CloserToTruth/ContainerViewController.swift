@@ -154,6 +154,21 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         updateBackgroundImage()
     }
     
+    
+    func showSelectedQuote(index: Int, listOrigin: String) {
+        println("ContainerVC: showSelectedQuote() called by the MenuVC table")
+        var quoteSelected = QuoteData()
+        if listOrigin == "All" {
+            quoteSelected = self.model.quoteAtIndex(index)
+        } else {
+            quoteSelected = self.favQuotesData[index]
+            println("favQuotesData is \(self.favQuotesData.count) long")
+        }
+        self.displayViewController.quoteDataToDisplay = quoteSelected
+        toggleMenu()
+        updateBackgroundImage()
+    }
+    
     func updateBackgroundImage() {
         var imagePath = NSBundle.mainBundle().pathForResource("BackgroundImageList", ofType: "plist")
         var imageNames = NSArray(contentsOfFile: imagePath!)
