@@ -29,27 +29,18 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 0:
             println("case 0")
             self.tableSelected = "allQuotes"
+            self.arrayToUseForTable = quotesText
+            self.table.reloadData()
         case 1:
             println("case 1")
             self.tableSelected = "favQuotes"
+            self.arrayToUseForTable = favQuotesData
+            self.table.reloadData()
         default:
             println("default")
             self.tableSelected = "allQuotes"
-//        case 0:
-//            self.tableSelected = "allQuotes"
-//            filter(self.tableSelected!)
-//            self.table.reloadData()
-//            self.favListSelected = false
-//        case 1:
-//            self.tableSelected = "favQuotes"
-//            filter(self.tableSelected!)
-//            self.table.reloadData()
-//            self.favListSelected = true
-//        default:
-//            self.tableSelected = "allQuotes"
-//            filter(self.tableSelected!)
-//            self.table.reloadData()
-//            self.favListSelected = false
+            self.arrayToUseForTable = quotesText
+            self.table.reloadData()
         }
     }
     
