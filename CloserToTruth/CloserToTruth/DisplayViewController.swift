@@ -96,15 +96,17 @@ class DisplayViewController: UIViewController {
         
         var quoteDict = ["quote_id": self.idOfQuote, "quote_text": self.quoteText.text, "term_name": self.termName.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorName.text,  "contributor_id": self.authorInfo]
         
+        // Creating an array of quote IDs that we will use for reference
+        var favQuotesIdArray:[String] = []
+        
         // Creating a mutable array that stores all the favorite quotes
         var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         
         println("number of objects stored in plist is: \(bookmarks!.count)")
         
-        // Creating an array of quote IDs that we will use for reference
+        // Populating favQuotesIdArray with the IDs of the saved quotes in the Favorites.plist
         if bookmarks!.count > 0 {
-            var favQuotesIdArray:[String] = []
             for i in bookmarks! {
                 favQuotesIdArray.append(i["quote_id"] as! NSString as String)
             }
@@ -116,9 +118,18 @@ class DisplayViewController: UIViewController {
             self.isFavorite = false
             println("isFavorite is now \(self.isFavorite)")
             
-            
-            
-            
+            for i in 0..<favQuotesIdArray.count {
+                if favQuotesIdArray[i] == quoteDict["quote_id"]! {
+                    println("found the id at position \(i)")
+//                    // We need to remove reference to the quote in the variables that holds information about favorites
+//                    self.favQuotesArray.removeAtIndex(i)
+//                    self.favQuotesIdArray.removeAtIndex(i)
+//                    bookmarks!.removeObjectAtIndex(i)
+//                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+//                    self.menu?.favQuotesData = self.favQuotesArray
+                    break
+                }
+            }
         } else {
             self.isFavorite = true
             println("isFavorite is now \(self.isFavorite)")
