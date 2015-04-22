@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import CoreData
+
 
 @objc
 protocol DisplayViewControllerDelegate {
@@ -32,7 +34,6 @@ class DisplayViewController: UIViewController {
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
     let logo = UIImage(named: "CTT Logo White.png")
     let hamburgerButton = UIImage(named: "white hamburger.png")
-    let altHambugerButton = UIImage(named: "Fill Bookmark White 40.png")
     let bookmarkButton = UIImage(named: "white bookmark.png")
     
     //delegate for talking to the ContainerVC
@@ -49,6 +50,7 @@ class DisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("DisplayVC: viewDidLoad() No more CoreData")
+
         makeNavigationBarButtons()
     }
     
@@ -89,6 +91,7 @@ class DisplayViewController: UIViewController {
         } else {
             self.isFavorite = true
             println("isFavorite is now \(self.isFavorite)")
+            println("Trying to save quote info to plist")
         }
         
     }

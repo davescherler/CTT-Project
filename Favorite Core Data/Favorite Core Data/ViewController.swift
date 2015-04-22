@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             
             if let favoriteList: [Favorite] = context.executeFetchRequest(fetchFavorites, error: nil) as? [Favorite] {
                 for favorites in favoriteList {
-                    println(favoriteList.count)
+                    println("viewDidLoad(): the nubmer of quotes in coreData is \(favoriteList.count)")
                 }
             }
         }
