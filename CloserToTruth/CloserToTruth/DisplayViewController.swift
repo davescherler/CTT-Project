@@ -49,21 +49,14 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("DisplayVC: viewDidLoad() No more CoreData")
-        
-        
         // Now loading the data from the Favorites plist
         // bookmarksPath is a string that is the path to the Favorites.plist file
         var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         if bookmarks!.count > 0 {
-            // Loop to load from the plist all the favorite quotes into favQuotesArray and all the quote_id from these quotes into favQuotesIdArray
-            for i in bookmarks! {
-//                self.favQuotesArray.append(i["quote_text"] as! NSString as String)
-//                self.favQuotesIdArray.append(i["quote_id"] as! NSString as String)
-            }
+            println("DisplayVC: viewDidLoad() number of objects stored in plist is > 0 at \(bookmarks!.count)")
         } else {
-            println("number of objects stored is: \(bookmarks!.count)")
+            println("DisplayVC: viewDidLoad() number of objects stored in plist is: \(bookmarks!.count)")
         }
         
 
@@ -100,6 +93,15 @@ class DisplayViewController: UIViewController {
     // Dave to Alexis - this where your old addToFavorites code should go. This should create/remove the favorite record based on the pressed. I've added this function as the bookmarkButtons "selector" on line 123. So it should run this code everytime it's clicked. 
     func bookmarkButtonPressed() {
         println("bookmark button pressed!")
+        
+        var quoteDict = ["quote_id": self.idOfQuote, "quote_text": self.quoteText.text, "term_name": self.termName.text, "drupal_interview_url": self.interviewLink, "contributor_name": self.authorName.text,  "contributor_id": self.authorInfo]
+        
+        // Creating a mutable array that stores all the favorite quotes
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        
+        println("number of objects stored in plist is: \(bookmarks!.count)")
+        
         var image: UIImage?
         if self.isFavorite == true {
             self.isFavorite = false
@@ -108,6 +110,11 @@ class DisplayViewController: UIViewController {
             self.isFavorite = true
             println("isFavorite is now \(self.isFavorite)")
             println("Trying to save quote info to plist")
+            
+            // Now we will store the quoteDict dictionary just created into our Favorites plist
+            bookmarks!.insertObject(quoteDict, atIndex: 0)
+            bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+            println("number of objects stored in plist is: \(bookmarks!.count)")
         }
         
     }
