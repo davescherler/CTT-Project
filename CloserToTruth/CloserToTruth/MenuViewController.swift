@@ -10,6 +10,7 @@ import UIKit
 
 protocol PassingQuote {
     func didSelectQuoteAtIndex(index: Int)
+//    func showSelectedQuote(index: Int, listOrigin: String)
 }
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -67,28 +68,28 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         
-        // ALEXIS: Creating a few quoteData to have fav list to work with
-        println("MenuViewVC: viewDidLoad()")
-        var favQuote1 = QuoteData()
-        favQuote1.quoteText = "Fav 1"
-        favQuote1.authorName = "Me"
-        favQuote1.termName = "other"
-        favQuote1.contributorID = "3"
-        favQuote1.drupalInterviewURL = "www.google.com"
-        favQuote1.quoteID = "1"
-        
-        self.favQuotesData.append(favQuote1)
-        
-        var favQuote2 = QuoteData()
-        favQuote2.quoteText = "Fav 2"
-        favQuote2.authorName = "Dave"
-        favQuote2.termName = "New"
-        favQuote2.contributorID = "2"
-        favQuote2.drupalInterviewURL = "www.yahoo.com"
-        favQuote2.quoteID = "20"
-        
-        self.favQuotesData.append(favQuote2)
-        println("MenuViewVC: favQuotesData has now \(self.favQuotesData.count) quotes")
+//        // ALEXIS: Creating a few quoteData to have fav list to work with
+//        println("MenuViewVC: viewDidLoad()")
+//        var favQuote1 = QuoteData()
+//        favQuote1.quoteText = "Fav 1"
+//        favQuote1.authorName = "Me"
+//        favQuote1.termName = "other"
+//        favQuote1.contributorID = "3"
+//        favQuote1.drupalInterviewURL = "www.google.com"
+//        favQuote1.quoteID = "1"
+//        
+//        self.favQuotesData.append(favQuote1)
+//        
+//        var favQuote2 = QuoteData()
+//        favQuote2.quoteText = "Fav 2"
+//        favQuote2.authorName = "Dave"
+//        favQuote2.termName = "New"
+//        favQuote2.contributorID = "2"
+//        favQuote2.drupalInterviewURL = "www.yahoo.com"
+//        favQuote2.quoteID = "20"
+//        
+//        self.favQuotesData.append(favQuote2)
+//        println("MenuViewVC: favQuotesData has now \(self.favQuotesData.count) quotes")
         
         self.arrayToUseForTable = quotesText
         

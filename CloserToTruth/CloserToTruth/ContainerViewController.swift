@@ -17,6 +17,10 @@ enum SlideOutState {
 class ContainerViewController: UIViewController, DisplayViewControllerDelegate, PassingQuote, ShowingQuote {
     //create an instance of the model
     var model = QuoteModel()
+    // ALEXIS: the favQuotes data needs to be called in ContainerVC, maybe later it can be called in a different file, just like allQuotes comes from QuoteModel
+    var favQuotesData = [QuoteData]()
+    
+    
     var mainNavigationController: UINavigationController!
     var displayViewController: DisplayViewController!
     var currentState: SlideOutState = .BothCollapsed { didSet {
@@ -45,6 +49,31 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         
         mainNavigationController.didMoveToParentViewController(self)
         println("the number of quote structs is \(model.quotes.count)")
+        
+        
+                // ALEXIS: Creating a few quoteData to have fav list to work with
+                println("MenuViewVC: viewDidLoad()")
+                var favQuote1 = QuoteData()
+                favQuote1.quoteText = "Fav 1 from ContainerVC"
+                favQuote1.authorName = "Me"
+                favQuote1.termName = "other"
+                favQuote1.contributorID = "3"
+                favQuote1.drupalInterviewURL = "www.google.com"
+                favQuote1.quoteID = "1"
+        
+                self.favQuotesData.append(favQuote1)
+        
+                var favQuote2 = QuoteData()
+                favQuote2.quoteText = "Fav 2 from ContainerVC"
+                favQuote2.authorName = "Dave"
+                favQuote2.termName = "New"
+                favQuote2.contributorID = "2"
+                favQuote2.drupalInterviewURL = "www.yahoo.com"
+                favQuote2.quoteID = "20"
+        
+                self.favQuotesData.append(favQuote2)
+                println("ContainerVC: favQuotesData has now \(self.favQuotesData.count) quotes")
+        
     }
     //all these functions are just to call and show the menu screens.
     func addMenuViewController() {
@@ -55,6 +84,8 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
             menuViewController?.delegate = self
             //pass quotes text to menuViewController
             menuViewController!.quotesText = model.quotes
+            menuViewController!.favQuotesData = self.favQuotesData
+            println("ContainerVC: adding \(self.favQuotesData.count) quotes to MenuVC favQuotesData")
             addChildMenuViewController(menuViewController!)
         }
     }
@@ -116,6 +147,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     }
     
     func didSelectQuoteAtIndex(index: Int) {
+        println("ContainerVC: function called by the MenuVC table")
         let quoteSelected = self.model.quoteAtIndex(index)
         self.displayViewController.quoteDataToDisplay = quoteSelected
         toggleMenu()
