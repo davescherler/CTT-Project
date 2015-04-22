@@ -355,7 +355,7 @@
                                 </constraints>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fTT-4H-ga3">
-                                <rect key="frame" x="282" y="119" width="37" height="37"/>
+                                <rect key="frame" x="282" y="274" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -371,8 +371,8 @@
                             <constraint firstItem="btg-Au-b43" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="216" id="M5L-g4-rCs"/>
                             <constraint firstItem="btg-Au-b43" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="64" id="Ulr-cx-lxj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="btg-Au-b43" secondAttribute="trailing" priority="750" constant="5" id="Yij-X4-fEt"/>
-                            <constraint firstItem="fTT-4H-ga3" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="99" id="jLy-EL-cgt"/>
                             <constraint firstItem="ink-0g-KUE" firstAttribute="top" secondItem="btg-Au-b43" secondAttribute="bottom" id="pT5-Eu-gg2"/>
+                            <constraint firstItem="btg-Au-b43" firstAttribute="centerY" secondItem="fTT-4H-ga3" secondAttribute="centerY" constant="0.5" id="tOj-hK-sky"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
