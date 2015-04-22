@@ -33,6 +33,7 @@
 		55CBA2451AE17F220089665F /* Close Button White 4042.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CBA2441AE17F220089665F /* Close Button White 4042.png */; };
 		55CBA24A1AE187A00089665F /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBA2491AE187A00089665F /* TESTViewController.swift */; };
 		78460D851AE72134008EF954 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78460D841AE72134008EF954 /* Favorite.swift */; };
+		7881133C1AE8606E004C7E92 /* Favorites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7881133B1AE8606E004C7E92 /* Favorites.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		55CBA2441AE17F220089665F /* Close Button White 4042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Button White 4042.png"; sourceTree = "<group>"; };
 		55CBA2491AE187A00089665F /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
 		78460D841AE72134008EF954 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		7881133B1AE8606E004C7E92 /* Favorites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Favorites.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				5540F7161ADF541700A123E2 /* QuoteData.swift */,
 				78460D841AE72134008EF954 /* Favorite.swift */,
 				5540F6E81ADF505800A123E2 /* Main.storyboard */,
+				7881133B1AE8606E004C7E92 /* Favorites.plist */,
 				5540F6EB1ADF505800A123E2 /* Images.xcassets */,
 				5540F6ED1ADF505800A123E2 /* LaunchScreen.xib */,
 				5540F6E31ADF505800A123E2 /* CloserToTruth.xcdatamodeld */,
@@ -271,6 +274,7 @@
 				5540F71D1ADF60F800A123E2 /* CTT Logo White.png in Resources */,
 				5540F7091ADF508200A123E2 /* Meaning.jpg in Resources */,
 				5540F7071ADF508200A123E2 /* Consciousness.jpg in Resources */,
+				7881133C1AE8606E004C7E92 /* Favorites.plist in Resources */,
 				55CBA2451AE17F220089665F /* Close Button White 4042.png in Resources */,
 				5540F7111ADF531500A123E2 /* BackgroundImageList.plist in Resources */,
 				5540F6EA1ADF505800A123E2 /* Main.storyboard in Resources */,

@@ -50,6 +50,22 @@ class DisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("DisplayVC: viewDidLoad() No more CoreData")
+        
+        
+        // Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        if bookmarks!.count > 0 {
+            // Loop to load from the plist all the favorite quotes into favQuotesArray and all the quote_id from these quotes into favQuotesIdArray
+            for i in bookmarks! {
+//                self.favQuotesArray.append(i["quote_text"] as! NSString as String)
+//                self.favQuotesIdArray.append(i["quote_id"] as! NSString as String)
+            }
+        } else {
+            println("number of objects stored is: \(bookmarks!.count)")
+        }
+        
 
         makeNavigationBarButtons()
     }
