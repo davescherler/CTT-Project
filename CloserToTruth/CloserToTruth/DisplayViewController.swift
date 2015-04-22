@@ -102,10 +102,23 @@ class DisplayViewController: UIViewController {
         
         println("number of objects stored in plist is: \(bookmarks!.count)")
         
+        // Creating an array of quote IDs that we will use for reference
+        if bookmarks!.count > 0 {
+            var favQuotesIdArray:[String] = []
+            for i in bookmarks! {
+                favQuotesIdArray.append(i["quote_id"] as! NSString as String)
+            }
+            println("bookmarks IDs are now: \(favQuotesIdArray)")
+        }
+        
         var image: UIImage?
         if self.isFavorite == true {
             self.isFavorite = false
             println("isFavorite is now \(self.isFavorite)")
+            
+            
+            
+            
         } else {
             self.isFavorite = true
             println("isFavorite is now \(self.isFavorite)")
