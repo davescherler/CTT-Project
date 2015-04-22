@@ -18,6 +18,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var favListSelected: Bool?
     var tableSelected: String?
     var favQuotesData = [QuoteData]()
+    var arrayToUseForTable = [QuoteData]()
     
 
     @IBOutlet weak var table: UITableView!
@@ -96,7 +97,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         favQuote2.quoteID = "20"
         
         self.favQuotesData.append(favQuote2)
+        println("MenuViewVC: favQuotesData has now \(self.favQuotesData.count) quotes")
         
+        self.arrayToUseForTable = quotesText
         
         self.table.reloadData()
     }
@@ -106,7 +109,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.quotesText.count
+        return self.arrayToUseForTable.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -117,7 +120,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         cell.textLabel?.textColor = UIColor.blackColor()
         cell.backgroundColor = UIColor.clearColor()
-        cell.textLabel?.text = quotesText[indexPath.row].quoteText
+        cell.textLabel?.text = arrayToUseForTable[indexPath.row].quoteText
         return cell
     }
     
