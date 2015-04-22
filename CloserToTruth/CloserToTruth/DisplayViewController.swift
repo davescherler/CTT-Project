@@ -25,11 +25,14 @@ class DisplayViewController: UIViewController {
     var authorInfo: String?
     var idOfQuote: String?
     
+    var isFavorite: Bool?
+    
     
     //variable for nav bar icons
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
     let logo = UIImage(named: "CTT Logo White.png")
     let hamburgerButton = UIImage(named: "white hamburger.png")
+    let altHambugerButton = UIImage(named: "Fill Bookmark White 40.png")
     let bookmarkButton = UIImage(named: "white bookmark.png")
     
     //delegate for talking to the ContainerVC
@@ -78,6 +81,15 @@ class DisplayViewController: UIViewController {
 //    }
     // Dave to Alexis - this where your old addToFavorites code should go. This should create/remove the favorite record based on the pressed. I've added this function as the bookmarkButtons "selector" on line 123. So it should run this code everytime it's clicked. 
     func bookmarkButtonPressed() {
+        println("bookmark button pressed!")
+        var image: UIImage?
+        if self.isFavorite == true {
+            self.isFavorite = false
+            println("isFavorite is now \(self.isFavorite)")
+        } else {
+            self.isFavorite = true
+            println("isFavorite is now \(self.isFavorite)")
+        }
         
     }
     
@@ -120,7 +132,7 @@ class DisplayViewController: UIViewController {
         let bookmarkButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
         bookmarkButton.frame = CGRectMake(0, 0, 10, 20)
         bookmarkButton.setImage(self.bookmarkButton, forState: .Normal)
-        bookmarkButton.addTarget(self, action: "bookmarkButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        bookmarkButton.addTarget(self, action: "bookmarkButtonPressed", forControlEvents: .TouchUpInside)
         
         var rightBarButtonItem = UIBarButtonItem(customView: bookmarkButton)
         navigationItem.setRightBarButtonItem(rightBarButtonItem, animated: false)
