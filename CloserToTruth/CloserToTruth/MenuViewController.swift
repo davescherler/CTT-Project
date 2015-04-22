@@ -27,10 +27,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         switch filterStatus.selectedSegmentIndex {
         case 0:
             println("case 0")
+            self.tableSelected = "allQuotes"
         case 1:
             println("case 1")
+            self.tableSelected = "favQuotes"
         default:
             println("default")
+            self.tableSelected = "allQuotes"
 //        case 0:
 //            self.tableSelected = "allQuotes"
 //            filter(self.tableSelected!)
@@ -48,6 +51,18 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 //            self.favListSelected = false
         }
     }
+    
+    func filter(filter: String) {
+        if filter == "favQuotes" {
+//            self.dataForCells = self.favQuotesData
+//            println("MenuViewVC: filter() called for favQuotes. Number of favQuotes is \(self.favQuotesData.count)")
+        } else {
+//            self.dataForCells = self.quotesText
+//            println("MenuViewVC: filter() called for allQuotes. Number of allQuotes is \(self.allQuotesData.count)")
+        }
+    }
+    
+    
     
     var delegate: PassingQuote?
     var quotesText: [QuoteData] = [] {
