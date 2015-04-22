@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 @objc
 protocol DisplayViewControllerDelegate {
@@ -20,6 +22,9 @@ class DisplayViewController: UIViewController {
     @IBOutlet weak var quoteText: UITextView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    // Alexis to Dave: From Dave's Favorite Core Data: creating an appDelegate var as part of using coreData to store favorite Quotes
+    let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+    
     // ALEXIS: variables to store the values of the quote that do not get displayed on screen but are needed
     var interviewLink: String?
     var authorInfo: String?
@@ -32,7 +37,6 @@ class DisplayViewController: UIViewController {
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
     let logo = UIImage(named: "CTT Logo White.png")
     let hamburgerButton = UIImage(named: "white hamburger.png")
-    let altHambugerButton = UIImage(named: "Fill Bookmark White 40.png")
     let bookmarkButton = UIImage(named: "white bookmark.png")
     
     //delegate for talking to the ContainerVC
@@ -48,7 +52,21 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("DisplayVC: viewDidLoad()")
+        println("DisplayVC: viewDidLoad() beginning")
+        // Alexis to Dave: From Dave's Favorite Core Data: way to check how many fav quotes are stored
+        if let context = self.appDelegate.managedObjectContext {
+            let fetchFavorites = NSFetchRequest(entityName: "Favorite")
+        
+            // if statement to check how many favorite quotes are saved
+            if let favoriteList: [Favorite] = context.executeFetchRequest(fetchFavorites, error: nil) as? [Favorite] {
+                for favorites in favoriteList {
+                    println("DisplayVC: viewDidLoad() the number of saved favorite Quotes is \(favoriteList.count)")
+                }
+            }
+        }
+        
+        
+        
         makeNavigationBarButtons()
     }
     
@@ -89,6 +107,13 @@ class DisplayViewController: UIViewController {
         } else {
             self.isFavorite = true
             println("isFavorite is now \(self.isFavorite)")
+            println("Trying to save quote info to coreData")
+            //this is saving all the info from the text fields to Core Data.
+            if let context = self.appDelegate.managedObjectContext {
+                //class func from the Favorite.swift file to simply code.
+                Favorite.createNewFavoriteEntry(context, quote_id: self.idOfQuote!, quote_text: self.quoteText.text, term_name: self.termName.text!, drupal_interview_url: self.interviewLink!, contributor_id: self.authorInfo!, contributor_name: self.self.authorName.text!)
+                appDelegate.saveContext()
+            }
         }
         
     }
