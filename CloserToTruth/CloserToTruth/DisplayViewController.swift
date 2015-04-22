@@ -62,11 +62,11 @@ class DisplayViewController: UIViewController {
 
     
     @IBAction func videoButtonPressed(sender: UIButton) {
-
         println("video button pressed!")
         
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let videoVC = storyboard.instantiateViewControllerWithIdentifier("VideoVC") as! VideoViewController
+        videoVC.urlstring = self.interviewLink
         self.presentViewController(videoVC, animated: true, completion: nil)
     }
     
