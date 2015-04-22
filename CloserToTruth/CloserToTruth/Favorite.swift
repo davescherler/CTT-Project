@@ -1,8 +1,8 @@
 //
 //  Favorite.swift
-//  Favorite Core Data
+//  CloserToTruth
 //
-//  Created by Dave Scherler on 4/2/15.
+//  Created by Alexis Saint-Jean on 4/21/15.
 //  Copyright (c) 2015 DaveScherler. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import CoreData
 @objc(Favorite)
 
 class Favorite: NSManagedObject {
-
+    
     @NSManaged var quote_id: String
     @NSManaged var quote_text: String
     @NSManaged var term_name: String

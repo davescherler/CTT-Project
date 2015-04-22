@@ -73,6 +73,8 @@ class DisplayViewController: UIViewController {
     
     @IBAction func bookmarkPressed(sender: UIBarButtonItem) {
         println("bookmark pressed")
+        
+        
     }
     
     //this is what actually slides the menuViewContoller in, the displayViewController out. 

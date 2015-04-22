@@ -32,6 +32,7 @@
 		55715F751AE14A960016A956 /* Fill Bookmark White 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 55715F741AE14A960016A956 /* Fill Bookmark White 40.png */; };
 		55CBA2451AE17F220089665F /* Close Button White 4042.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CBA2441AE17F220089665F /* Close Button White 4042.png */; };
 		55CBA24A1AE187A00089665F /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBA2491AE187A00089665F /* TESTViewController.swift */; };
+		78460D851AE72134008EF954 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78460D841AE72134008EF954 /* Favorite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		55715F741AE14A960016A956 /* Fill Bookmark White 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fill Bookmark White 40.png"; sourceTree = "<group>"; };
 		55CBA2441AE17F220089665F /* Close Button White 4042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Button White 4042.png"; sourceTree = "<group>"; };
 		55CBA2491AE187A00089665F /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
+		78460D841AE72134008EF954 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				55CBA2491AE187A00089665F /* TESTViewController.swift */,
 				5540F7181ADF546000A123E2 /* QuoteModel.swift */,
 				5540F7161ADF541700A123E2 /* QuoteData.swift */,
+				78460D841AE72134008EF954 /* Favorite.swift */,
 				5540F6E81ADF505800A123E2 /* Main.storyboard */,
 				5540F6EB1ADF505800A123E2 /* Images.xcassets */,
 				5540F6ED1ADF505800A123E2 /* LaunchScreen.xib */,
@@ -302,6 +305,7 @@
 				5540F6E51ADF505800A123E2 /* CloserToTruth.xcdatamodeld in Sources */,
 				5540F7131ADF539700A123E2 /* ContainerViewController.swift in Sources */,
 				556465621AE18CD10093335E /* AuthorInfoViewController.swift in Sources */,
+				78460D851AE72134008EF954 /* Favorite.swift in Sources */,
 				5540F6E21ADF505800A123E2 /* AppDelegate.swift in Sources */,
 				5540F7191ADF546000A123E2 /* QuoteModel.swift in Sources */,
 				5564655E1AE1891C0093335E /* VideoViewController.swift in Sources */,

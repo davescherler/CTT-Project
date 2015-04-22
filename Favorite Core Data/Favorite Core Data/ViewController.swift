@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var contributor_name: UITextField!
     @IBOutlet weak var display: UITextView!
     
-    let appDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+    let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     
     override func viewDidLoad() {
         super.viewDidLoad()
