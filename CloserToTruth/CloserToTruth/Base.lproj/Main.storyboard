@@ -355,22 +355,23 @@
                                 </constraints>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fTT-4H-ga3">
-                                <rect key="frame" x="282" y="274" width="37" height="37"/>
+                                <rect key="frame" x="282" y="119" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="btg-Au-b43" secondAttribute="centerX" id="3da-4r-Azc"/>
-                            <constraint firstAttribute="centerY" secondItem="fTT-4H-ga3" secondAttribute="centerY" constant="7.5" id="6eL-Qd-syz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mKr-lx-378" secondAttribute="trailing" constant="-16" id="6hP-Md-nDE"/>
+                            <constraint firstItem="ink-0g-KUE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="btg-Au-b43" secondAttribute="bottom" constant="25" id="Cmq-pI-et9"/>
                             <constraint firstItem="mKr-lx-378" firstAttribute="leading" secondItem="pfq-dG-JsN" secondAttribute="leadingMargin" constant="-16" id="D5T-Yb-etG"/>
                             <constraint firstItem="mKr-lx-378" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" id="Fc0-tL-X8h"/>
                             <constraint firstAttribute="centerX" secondItem="fTT-4H-ga3" secondAttribute="centerX" constant="-0.5" id="JKU-zY-zkK"/>
-                            <constraint firstItem="btg-Au-b43" firstAttribute="leading" secondItem="pfq-dG-JsN" secondAttribute="leadingMargin" constant="5" id="K6v-mF-DlA"/>
+                            <constraint firstItem="btg-Au-b43" firstAttribute="leading" secondItem="pfq-dG-JsN" secondAttribute="leadingMargin" priority="750" constant="5" id="K6v-mF-DlA"/>
                             <constraint firstItem="btg-Au-b43" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="216" id="M5L-g4-rCs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="btg-Au-b43" secondAttribute="trailing" constant="5" id="Yij-X4-fEt"/>
-                            <constraint firstAttribute="centerY" secondItem="btg-Au-b43" secondAttribute="centerY" constant="7" id="ceF-zW-Fct"/>
+                            <constraint firstItem="btg-Au-b43" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="64" id="Ulr-cx-lxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="btg-Au-b43" secondAttribute="trailing" priority="750" constant="5" id="Yij-X4-fEt"/>
+                            <constraint firstItem="fTT-4H-ga3" firstAttribute="top" secondItem="xly-ri-biK" secondAttribute="bottom" constant="99" id="jLy-EL-cgt"/>
                             <constraint firstItem="ink-0g-KUE" firstAttribute="top" secondItem="btg-Au-b43" secondAttribute="bottom" id="pT5-Eu-gg2"/>
                         </constraints>
                         <variation key="default">
