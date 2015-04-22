@@ -13,10 +13,40 @@ protocol PassingQuote {
 }
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // ALEXIS: variables to work on showing the right table
+    var favListSelected: Bool?
+    var tableSelected: String?
+    var favQuotesData = ["Local Fav One","Local Fav Two", "Local Fav Three"]
+    
 
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var filterStatus: UISegmentedControl!
     @IBAction func filterQuotes(sender: UISegmentedControl) {
+        
+        switch filterStatus.selectedSegmentIndex {
+        case 0:
+            println("case 0")
+        case 1:
+            println("case 1")
+        default:
+            println("default")
+//        case 0:
+//            self.tableSelected = "allQuotes"
+//            filter(self.tableSelected!)
+//            self.table.reloadData()
+//            self.favListSelected = false
+//        case 1:
+//            self.tableSelected = "favQuotes"
+//            filter(self.tableSelected!)
+//            self.table.reloadData()
+//            self.favListSelected = true
+//        default:
+//            self.tableSelected = "allQuotes"
+//            filter(self.tableSelected!)
+//            self.table.reloadData()
+//            self.favListSelected = false
+        }
     }
     
     var delegate: PassingQuote?
