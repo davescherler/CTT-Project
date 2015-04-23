@@ -28,17 +28,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch filterStatus.selectedSegmentIndex {
         case 0:
-            println("case 0")
+            println("MenuVC case 0")
             self.tableSelected = "allQuotes"
             self.arrayToUseForTable = quotesText
             self.table.reloadData()
         case 1:
-            println("case 1")
+            println("MenuVC case 1")
             self.tableSelected = "favQuotes"
             self.arrayToUseForTable = favQuotesData
             self.table.reloadData()
         default:
-            println("default")
+            println("MenuVC default")
             self.tableSelected = "allQuotes"
             self.arrayToUseForTable = quotesText
             self.table.reloadData()
@@ -60,7 +60,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     var delegate: PassingQuote?
     var quotesText: [QuoteData] = [] {
         didSet {
-            println(quotesText)
+//            println(quotesText)
             self.table?.reloadData()
         } }
 

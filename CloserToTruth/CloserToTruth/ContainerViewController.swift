@@ -68,6 +68,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         println("ContainerVC: addMenuViewController()")
         
         if (menuViewController == nil) {
+            
             menuViewController = UIStoryboard.menuViewController()
             menuViewController?.delegate = self
             //pass quotes text to menuViewController
@@ -210,12 +211,6 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         for i in 0..<favQuotesIdArray.count {
             if favQuotesIdArray[i] == quoteIdToCheck {
                 println("found the id at position \(i)")
-                //                    // We need to remove reference to the quote in the variables that holds information about favorites
-                //                    self.favQuotesArray.removeAtIndex(i)
-                //                    self.favQuotesIdArray.removeAtIndex(i)
-                //                    bookmarks!.removeObjectAtIndex(i)
-                //                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
-                //                    self.menu?.favQuotesData = self.favQuotesArray
                 resultOfCheck = true
                 break
             }
