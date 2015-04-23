@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let secondController = self.window!.rootViewController!.presentedViewController as? VideoViewController
             
             if secondController!.isPresented == true {
-                println("the videoViewController is presented")
+//                println("the videoViewController is presented")
                 return Int(UIInterfaceOrientationMask.All.rawValue);
             } else {
                 return Int(UIInterfaceOrientationMask.Portrait.rawValue);

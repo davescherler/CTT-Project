@@ -108,7 +108,7 @@ class DisplayViewController: UIViewController {
         var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         
-        println("number of objects stored in plist is: \(bookmarks!.count)")
+//        println("number of objects stored in plist is: \(bookmarks!.count)")
         
         // Populating favQuotesIdArray with the IDs of the saved quotes in the Favorites.plist
         if bookmarks!.count > 0 {
@@ -139,7 +139,7 @@ class DisplayViewController: UIViewController {
             self.isFavorite = true
             self.bookmarkButton.setImage(self.bookmarkFillImage, forState: .Normal)
             println("isFavorite is now \(self.isFavorite)")
-            println("Trying to save quote info to plist")
+//            println("Trying to save quote info to plist")
             
             // Now we will store the quoteDict dictionary just created into our Favorites plist
             bookmarks!.insertObject(quoteDict, atIndex: 0)
@@ -164,7 +164,7 @@ class DisplayViewController: UIViewController {
         self.interviewLink = self.quoteDataToDisplay?.drupalInterviewURL
         self.idOfQuote = self.quoteDataToDisplay?.quoteID
         
-        println("DisplayVC: See if quote's info updates correctly: authorInfo is \(self.authorInfo) and interviewURL is \(self.interviewLink) and idOfQuote is \(self.idOfQuote)")
+//        println("DisplayVC: See if quote's info updates correctly: authorInfo is \(self.authorInfo) and interviewURL is \(self.interviewLink) and idOfQuote is \(self.idOfQuote)")
     }
     
     func makeNavigationBarButtons() {

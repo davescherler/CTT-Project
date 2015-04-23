@@ -34,7 +34,7 @@ class AuthorInfoViewController: UIViewController {
             super.viewDidLoad()
             println("the author image width is \(self.authorImage.frame.width)")
             println("the author image height is \(self.authorImage.frame.height)")
-            println("the anuthor name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
+//            println("the author name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
             self.authorName.text = textForAuthorName
             
             
@@ -91,8 +91,8 @@ class AuthorInfoViewController: UIViewController {
                     })
                 })
                 task.resume()
-                println("the author image height is \(self.authorImage.frame.height)")
-                println("the anuthor name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
+//                println("the author image height is \(self.authorImage.frame.height)")
+//                println("the author name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
             }
             
             

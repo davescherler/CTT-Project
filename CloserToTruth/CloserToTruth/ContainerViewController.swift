@@ -87,7 +87,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     }
     
     func animateMenu(#shouldExpand: Bool) {
-        println("ContainerVC: animateMenu()")
+//        println("ContainerVC: animateMenu()")
         if (shouldExpand) {
             currentState = .MenuExpanded
             
@@ -103,14 +103,14 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     }
     
     func animateMainViewControllerXPosition(#targetPosition: CGFloat, completion: ((Bool) -> Void)! = nil) {
-        println("ContainerVC: animateMainViewControllerXPosition()")
+//        println("ContainerVC: animateMainViewControllerXPosition()")
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseInOut, animations: {
             self.mainNavigationController.view.frame.origin.x = targetPosition
             }, completion: completion)
     }
     
     func showShadowForDisplayViewController(shouldShowShadow: Bool) {
-        println("ContainerVC: showShadowForMainViewController()")
+//        println("ContainerVC: showShadowForMainViewController()")
         if (shouldShowShadow) {
             mainNavigationController.view.layer.shadowOpacity = 0.8
         } else {
@@ -126,7 +126,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
             addMenuViewController()
         }
         animateMenu(shouldExpand: notAlreadyExpanded)
-        println("finished running toggleMenu")
+//        println("finished running toggleMenu")
     }
     
     func refreshFavoritesList() {
