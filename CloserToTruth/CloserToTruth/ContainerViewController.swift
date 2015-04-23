@@ -49,30 +49,8 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         
         mainNavigationController.didMoveToParentViewController(self)
         println("the number of quote structs is \(model.quotes.count)")
-        
-        
-                // ALEXIS: Creating a few quoteData to have fav list to work with
-                println("MenuViewVC: viewDidLoad()")
-                var favQuote1 = QuoteData()
-                favQuote1.quoteText = "Fav 1 from ContainerVC"
-                favQuote1.authorName = "Me"
-                favQuote1.termName = "other"
-                favQuote1.contributorID = "3"
-                favQuote1.drupalInterviewURL = "www.google.com"
-                favQuote1.quoteID = "1"
-        
-                self.favQuotesData.append(favQuote1)
-        
-                var favQuote2 = QuoteData()
-                favQuote2.quoteText = "Fav 2 from ContainerVC"
-                favQuote2.authorName = "Dave"
-                favQuote2.termName = "New"
-                favQuote2.contributorID = "2"
-                favQuote2.drupalInterviewURL = "www.yahoo.com"
-                favQuote2.quoteID = "20"
-        
-                self.favQuotesData.append(favQuote2)
-                println("ContainerVC: favQuotesData has now \(self.favQuotesData.count) quotes")
+        println("MenuViewVC: viewDidLoad()")
+
         
         // ALEXIS: Now loading the data from the Favorites plist
         // bookmarksPath is a string that is the path to the Favorites.plist file
@@ -187,19 +165,63 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
     func showSelectedQuote(index: Int, listOrigin: String) {
         println("ContainerVC: showSelectedQuote() called by the MenuVC table")
         var quoteSelected = QuoteData()
+        var quoteId = String()
         if listOrigin == "All" {
             quoteSelected = self.model.quoteAtIndex(index)
+            quoteId = quoteSelected.quoteID
         } else {
             quoteSelected = self.favQuotesData[index]
-            println("favQuotesData is \(self.favQuotesData.count) long")
+            quoteId = quoteSelected.quoteID
+            println("ContainerVC showSelectedQuote() favQuotesData is \(self.favQuotesData.count) long")
         }
         self.displayViewController.quoteDataToDisplay = quoteSelected
-        // ALEXIS: need to force the isFavorite to false each time
+        println("Container showSelectedQuote(): check if quote is favorite or not")
+        var isFavoriteQuote = checkIfFavorite(quoteId)
+        
+        if isFavoriteQuote == false {
         self.displayViewController.isFavorite = false
         self.displayViewController.bookmarkButton.setImage(displayViewController.bookmarkPlainImage, forState: .Normal)
+        } else {
+           self.displayViewController.isFavorite = true
+           self.displayViewController.bookmarkButton.setImage(displayViewController.bookmarkFillImage, forState: .Normal)
+        }
         
         toggleMenu()
         updateBackgroundImage()
+    }
+    
+    func checkIfFavorite(quoteIdToCheck: String)->Bool{
+        var resultOfCheck = false
+        // Creating an array of quote IDs that we will use for reference
+        var favQuotesIdArray:[String] = []
+        
+        // Creating a mutable array that stores all the favorite quotes
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        
+        // Populating favQuotesIdArray with the IDs of the saved quotes in the Favorites.plist
+        if bookmarks!.count > 0 {
+            for i in bookmarks! {
+                favQuotesIdArray.append(i["quote_id"] as! NSString as String)
+            }
+            println("ContainerVC checkIfFavorite(): bookmarks IDs are now: \(favQuotesIdArray)")
+        }
+        
+        for i in 0..<favQuotesIdArray.count {
+            if favQuotesIdArray[i] == quoteIdToCheck {
+                println("found the id at position \(i)")
+                //                    // We need to remove reference to the quote in the variables that holds information about favorites
+                //                    self.favQuotesArray.removeAtIndex(i)
+                //                    self.favQuotesIdArray.removeAtIndex(i)
+                //                    bookmarks!.removeObjectAtIndex(i)
+                //                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+                //                    self.menu?.favQuotesData = self.favQuotesArray
+                resultOfCheck = true
+                break
+            }
+        }
+        println("End of checkIfFavorite(): the result is \(resultOfCheck)")
+        return resultOfCheck
     }
     
     func updateBackgroundImage() {
