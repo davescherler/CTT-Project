@@ -29,7 +29,7 @@
 		556465621AE18CD10093335E /* AuthorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556465611AE18CD10093335E /* AuthorInfoViewController.swift */; };
 		55715F6B1AE1473C0016A956 /* Author Button White.png in Resources */ = {isa = PBXBuildFile; fileRef = 55715F6A1AE1473C0016A956 /* Author Button White.png */; };
 		55715F6F1AE148190016A956 /* Play Button White.png in Resources */ = {isa = PBXBuildFile; fileRef = 55715F6E1AE148190016A956 /* Play Button White.png */; };
-		55715F751AE14A960016A956 /* Fill Bookmark White 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 55715F741AE14A960016A956 /* Fill Bookmark White 40.png */; };
+		55715F751AE14A960016A956 /* bookmark Fill White.png in Resources */ = {isa = PBXBuildFile; fileRef = 55715F741AE14A960016A956 /* bookmark Fill White.png */; };
 		55CBA2451AE17F220089665F /* Close Button White 4042.png in Resources */ = {isa = PBXBuildFile; fileRef = 55CBA2441AE17F220089665F /* Close Button White 4042.png */; };
 		55CBA24A1AE187A00089665F /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CBA2491AE187A00089665F /* TESTViewController.swift */; };
 		78460D851AE72134008EF954 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78460D841AE72134008EF954 /* Favorite.swift */; };
@@ -73,7 +73,7 @@
 		556465611AE18CD10093335E /* AuthorInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorInfoViewController.swift; sourceTree = "<group>"; };
 		55715F6A1AE1473C0016A956 /* Author Button White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Author Button White.png"; sourceTree = "<group>"; };
 		55715F6E1AE148190016A956 /* Play Button White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button White.png"; sourceTree = "<group>"; };
-		55715F741AE14A960016A956 /* Fill Bookmark White 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fill Bookmark White 40.png"; sourceTree = "<group>"; };
+		55715F741AE14A960016A956 /* bookmark Fill White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bookmark Fill White.png"; sourceTree = "<group>"; };
 		55CBA2441AE17F220089665F /* Close Button White 4042.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Button White 4042.png"; sourceTree = "<group>"; };
 		55CBA2491AE187A00089665F /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
 		78460D841AE72134008EF954 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				5540F71C1ADF60F800A123E2 /* CTT Logo White.png */,
 				5540F70B1ADF52B400A123E2 /* white hamburger.png */,
 				5540F70C1ADF52B400A123E2 /* white bookmark.png */,
-				55715F741AE14A960016A956 /* Fill Bookmark White 40.png */,
+				55715F741AE14A960016A956 /* bookmark Fill White.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 				5540F70D1ADF52B400A123E2 /* white hamburger.png in Resources */,
 				55715F6B1AE1473C0016A956 /* Author Button White.png in Resources */,
 				55715F6F1AE148190016A956 /* Play Button White.png in Resources */,
-				55715F751AE14A960016A956 /* Fill Bookmark White 40.png in Resources */,
+				55715F751AE14A960016A956 /* bookmark Fill White.png in Resources */,
 				5540F6EF1ADF505800A123E2 /* LaunchScreen.xib in Resources */,
 				5540F6EC1ADF505800A123E2 /* Images.xcassets in Resources */,
 			);

@@ -34,7 +34,11 @@ class DisplayViewController: UIViewController {
     let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 85, height: 30))
     let logo = UIImage(named: "CTT Logo White.png")
     let hamburgerButton = UIImage(named: "white hamburger.png")
-    let bookmarkButton = UIImage(named: "white bookmark.png")
+//    let bookmarkButton = UIImage(named: "white bookmark.png")
+    let bookmarkPlainImage = UIImage(named: "white bookmark.png")
+    let bookmarkFillImage = UIImage(named: "bookmark Fill White.png")
+    var bookmarkButton = UIButton()
+//    var bookmarkButtonSelected: Bool = false
     
     //delegate for talking to the ContainerVC
     var delegate: DisplayViewControllerDelegate?
@@ -113,9 +117,9 @@ class DisplayViewController: UIViewController {
             println("bookmarks IDs are now: \(favQuotesIdArray)")
         }
         
-        var image: UIImage?
         if self.isFavorite == true {
             self.isFavorite = false
+            self.bookmarkButton.setImage(self.bookmarkPlainImage, forState: .Normal)
             println("isFavorite is now \(self.isFavorite)")
             
             for i in 0..<favQuotesIdArray.count {
@@ -132,6 +136,7 @@ class DisplayViewController: UIViewController {
             }
         } else {
             self.isFavorite = true
+            self.bookmarkButton.setImage(self.bookmarkFillImage, forState: .Normal)
             println("isFavorite is now \(self.isFavorite)")
             println("Trying to save quote info to plist")
             
@@ -179,12 +184,12 @@ class DisplayViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
         
         //make bookmarkbutton
-        let bookmarkButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        bookmarkButton.frame = CGRectMake(0, 0, 10, 20)
-        bookmarkButton.setImage(self.bookmarkButton, forState: .Normal)
-        bookmarkButton.addTarget(self, action: "bookmarkButtonPressed", forControlEvents: .TouchUpInside)
+        self.bookmarkButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        self.bookmarkButton.frame = CGRectMake(0, 0, 10, 20)
+        self.bookmarkButton.setImage(self.bookmarkPlainImage, forState: .Normal)
+        self.bookmarkButton.addTarget(self, action: "bookmarkButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
         
-        var rightBarButtonItem = UIBarButtonItem(customView: bookmarkButton)
+        var rightBarButtonItem = UIBarButtonItem(customView: self.bookmarkButton)
         navigationItem.setRightBarButtonItem(rightBarButtonItem, animated: false)
         navigationItem.rightBarButtonItem?.tintColor = UIColor.whiteColor()
     }
