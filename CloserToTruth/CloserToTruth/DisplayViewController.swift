@@ -126,11 +126,11 @@ class DisplayViewController: UIViewController {
             for i in 0..<favQuotesIdArray.count {
                 if favQuotesIdArray[i] == quoteDict["quote_id"]! {
                     println("found the id at position \(i)")
-//                    // We need to remove reference to the quote in the variables that holds information about favorites
+                    // We need to remove reference to the quote in the variables that holds information about favorites
 //                    self.favQuotesArray.removeAtIndex(i)
 //                    self.favQuotesIdArray.removeAtIndex(i)
-//                    bookmarks!.removeObjectAtIndex(i)
-//                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
+                    bookmarks!.removeObjectAtIndex(i)
+                    bookmarks?.writeToFile(bookmarksPath!, atomically: true)
 //                    self.menu?.favQuotesData = self.favQuotesArray
                     break
                 }
