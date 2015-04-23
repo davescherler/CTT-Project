@@ -152,6 +152,18 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         // The purpose of this method is to update the quote on the DisplayVC with today's quote from JSON
             let quoteSelected = self.model.retrieveTodaysQuote(index)
             self.displayViewController.quoteDataToDisplay = quoteSelected
+        println("ContainerVC passingTodaysQuote(): checking if the quote is a favorite")
+        var isFavoriteQuote = checkIfFavorite(quoteSelected.quoteID)
+        
+        if isFavoriteQuote == false {
+            self.displayViewController.isFavorite = false
+            self.displayViewController.bookmarkButton.setImage(displayViewController.bookmarkPlainImage, forState: .Normal)
+        } else {
+            self.displayViewController.isFavorite = true
+            self.displayViewController.bookmarkButton.setImage(displayViewController.bookmarkFillImage, forState: .Normal)
+        }
+
+        
     }
     
     func didSelectQuoteAtIndex(index: Int) {
