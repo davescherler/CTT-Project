@@ -174,6 +174,10 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
             println("favQuotesData is \(self.favQuotesData.count) long")
         }
         self.displayViewController.quoteDataToDisplay = quoteSelected
+        // ALEXIS: need to force the isFavorite to false each time
+        self.displayViewController.isFavorite = false
+        self.displayViewController.bookmarkButton.setImage(displayViewController.bookmarkPlainImage, forState: .Normal)
+        
         toggleMenu()
         updateBackgroundImage()
     }
