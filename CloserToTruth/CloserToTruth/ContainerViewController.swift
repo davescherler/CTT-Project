@@ -80,6 +80,17 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         if bookmarks!.count > 0 {
             println("ContainerVC: viewDidLoad() number of objects stored in plist is > 0 at \(bookmarks!.count)")
+            for i in bookmarks! {
+                var favQuoteFromPlist = QuoteData()
+                favQuoteFromPlist.quoteText = i["quote_text"] as! String
+                favQuoteFromPlist.authorName = i["contributor_name"] as! String
+                favQuoteFromPlist.termName = i["term_name"] as! String
+                favQuoteFromPlist.contributorID = i["contributor_id"] as! String
+                favQuoteFromPlist.drupalInterviewURL = i["drupal_interview_url"] as! String
+                favQuoteFromPlist.quoteID = i["quote_id"] as! String
+                
+                self.favQuotesData.append(favQuoteFromPlist)
+            }
         } else {
             println("ContainerVC: viewDidLoad() number of objects stored in plist is: \(bookmarks!.count)")
         }
