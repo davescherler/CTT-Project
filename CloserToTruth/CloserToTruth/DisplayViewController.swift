@@ -13,6 +13,7 @@ import UIKit
 @objc
 protocol DisplayViewControllerDelegate {
     optional func toggleMenu()
+    optional func refreshFavoritesList()
 }
 
 class DisplayViewController: UIViewController {
@@ -145,7 +146,8 @@ class DisplayViewController: UIViewController {
             bookmarks?.writeToFile(bookmarksPath!, atomically: true)
             println("number of objects stored in plist is: \(bookmarks!.count)")
         }
-        
+        delegate?.refreshFavoritesList!()
+        println("End of button pressed")
     }
     
     //this is what actually slides the menuViewContoller in, the displayViewController out. 

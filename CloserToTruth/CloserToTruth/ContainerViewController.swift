@@ -80,17 +80,7 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
         if bookmarks!.count > 0 {
             println("ContainerVC: viewDidLoad() number of objects stored in plist is > 0 at \(bookmarks!.count)")
-            for i in bookmarks! {
-                var favQuoteFromPlist = QuoteData()
-                favQuoteFromPlist.quoteText = i["quote_text"] as! String
-                favQuoteFromPlist.authorName = i["contributor_name"] as! String
-                favQuoteFromPlist.termName = i["term_name"] as! String
-                favQuoteFromPlist.contributorID = i["contributor_id"] as! String
-                favQuoteFromPlist.drupalInterviewURL = i["drupal_interview_url"] as! String
-                favQuoteFromPlist.quoteID = i["quote_id"] as! String
-                
-                self.favQuotesData.append(favQuoteFromPlist)
-            }
+            refreshFavoritesList()
         } else {
             println("ContainerVC: viewDidLoad() number of objects stored in plist is: \(bookmarks!.count)")
         }
@@ -158,6 +148,25 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
         }
         animateMenu(shouldExpand: notAlreadyExpanded)
         println("finished running toggleMenu")
+    }
+    
+    func refreshFavoritesList() {
+        println("ContainerVC: refreshFavoritesList()")
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        // ALEXIS: empty favQuotesData and reload with the latest from the plist
+            self.favQuotesData = []
+            for i in bookmarks! {
+                var favQuoteFromPlist = QuoteData()
+                favQuoteFromPlist.quoteText = i["quote_text"] as! String
+                favQuoteFromPlist.authorName = i["contributor_name"] as! String
+                favQuoteFromPlist.termName = i["term_name"] as! String
+                favQuoteFromPlist.contributorID = i["contributor_id"] as! String
+                favQuoteFromPlist.drupalInterviewURL = i["drupal_interview_url"] as! String
+                favQuoteFromPlist.quoteID = i["quote_id"] as! String
+                
+                self.favQuotesData.append(favQuoteFromPlist)
+            }
     }
     
     func passingTodaysQuote(index: Int) {
