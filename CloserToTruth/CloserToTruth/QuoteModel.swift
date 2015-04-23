@@ -28,10 +28,7 @@ class QuoteModel {
     init() {
         
         // ALEXIS: creating a default quote for the todaysQuote array. This is the quote that will show on screen if no internet connection was etablished at launch
-        var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "Couldn't Connect", termName: "---", contributorID: "", drupalInterviewURL: "", quoteID: "")
-//        var contributorID = ""
-//        var drupalInterviewURL = ""
-//        var quoteID = ""
+        var todaysQuoteDefault = QuoteData(quoteText: "A connection with the Closer To Truth website could not be established. Either your phone doesn't have access to the Internet, or Closer To Truth servers are unavailable. Please try again later.", authorName: "", termName: "Couldn't Connect", contributorID: "", drupalInterviewURL: "", quoteID: "")
         
         self.todaysQuote.append(todaysQuoteDefault)
         
