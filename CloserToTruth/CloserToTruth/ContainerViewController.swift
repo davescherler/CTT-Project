@@ -74,6 +74,15 @@ class ContainerViewController: UIViewController, DisplayViewControllerDelegate, 
                 self.favQuotesData.append(favQuote2)
                 println("ContainerVC: favQuotesData has now \(self.favQuotesData.count) quotes")
         
+        // ALEXIS: Now loading the data from the Favorites plist
+        // bookmarksPath is a string that is the path to the Favorites.plist file
+        var bookmarksPath = NSBundle.mainBundle().pathForResource("Favorites", ofType: "plist")
+        var bookmarks = NSMutableArray(contentsOfFile: bookmarksPath!)
+        if bookmarks!.count > 0 {
+            println("ContainerVC: viewDidLoad() number of objects stored in plist is > 0 at \(bookmarks!.count)")
+        } else {
+            println("ContainerVC: viewDidLoad() number of objects stored in plist is: \(bookmarks!.count)")
+        }
     }
     //all these functions are just to call and show the menu screens.
     func addMenuViewController() {

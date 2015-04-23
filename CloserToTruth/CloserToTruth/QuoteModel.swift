@@ -50,7 +50,7 @@ class QuoteModel {
                     quoteOne.quoteText = cleanText.stringByReplacingOccurrencesOfString("&#039;", withString: "'", options: NSStringCompareOptions.LiteralSearch, range: nil)
                     quoteOne.drupalInterviewURL = self.jsonTodaysQuote![0]["drupal_interview_url"] as! String
                     self.todaysQuote.insert(quoteOne, atIndex: 0)                    
-                    println("Today's quote elements are now: \(self.todaysQuote[0].drupalInterviewURL) and \(self.todaysQuote[0].contributorID)")
+//                    println("Today's quote elements are now: \(self.todaysQuote[0].drupalInterviewURL) and \(self.todaysQuote[0].contributorID)")
                 }
                 else {
                     println("QuoteModel: couldn't create jsonArray, which means there was no Internet connection. The no-connection text will show instead of a quote")
