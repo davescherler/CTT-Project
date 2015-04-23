@@ -18,6 +18,9 @@ class AuthorInfoViewController: UIViewController {
     @IBOutlet weak var authorBio: UITextView!
     @IBOutlet weak var loadingImageIndicator: UIActivityIndicatorView!
     
+    // ALEXIS: variable to check if there is no internet connection. If a connection cannot be established, then a message will display
+    var isOffline: Bool?
+    
     // ALEXIS: variables to store the Author info that get passed from the DisplayVC
     var contributorID = "none"
     var textForAuthorName = ""
@@ -32,6 +35,7 @@ class AuthorInfoViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            self.isOffline = false
             println("the author image width is \(self.authorImage.frame.width)")
             println("the author image height is \(self.authorImage.frame.height)")
 //            println("the author name label top constraint is \(self.authorNameLabelTopConstratint.constant)")
@@ -57,12 +61,21 @@ class AuthorInfoViewController: UIViewController {
                                 self.textForAuthorBio = cleanText
                             }
                         }
+                    } else {
+                        println("AuthorInfoVC Author Text: There was no internet connection so setting isOffline to true")
+                        self.isOffline = true
+                        
                     }
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         // IMPORTANT we need to reload the data we got into our table view
                         //                    self.authorName.text = self.textForAuthorName
+                        if self.isOffline == false {
                         self.authorBio.text = self.textForAuthorBio
-                        println("doing thread for displaying info text")
+                        println("AuthorInfoVC: doing thread for displaying info text")
+                        } else {
+                            println("AuthorInfoVC: show author bio because isOffline is true")
+                            self.authorBio.text = "Couldn't connect to Closer To Truth server"
+                        }
                     })
                 })
                 task.resume()
@@ -81,13 +94,21 @@ class AuthorInfoViewController: UIViewController {
                                 self.dataForPic = NSData(contentsOfURL: urlForImage!)
                             }
                         }
+                    } else {
+                        println("AuthorInfoVC Picture: There was no internet connection so setting isOffline to true")
+                        self.isOffline = true
+                        
                     }
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        if self.isOffline == false {
                         // IMPORTANT we need to reload the data we got into our table view
                         self.loadingImageIndicator.stopAnimating()
                         self.loadingImageIndicator.hidden = true
                         self.authorImage.image = UIImage(data: self.dataForPic!)
-                        println("doing thread for loading the picture")
+                        println("AuthorInfoVC: doing thread for loading the picture")
+                        } else {
+                            println("AuthorInfoVC: didn't show picture because isOffline is true")
+                        }
                     })
                 })
                 task.resume()
