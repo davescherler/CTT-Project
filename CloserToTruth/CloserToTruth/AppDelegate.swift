@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let containerViewController = ContainerViewController()
         
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         window!.rootViewController = containerViewController
         window!.makeKeyAndVisible()
         
